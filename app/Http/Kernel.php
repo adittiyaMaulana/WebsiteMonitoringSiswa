@@ -59,9 +59,18 @@ class Kernel extends HttpKernel
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        
+        'isAdmin' =>  \App\Http\Middleware\isAdmin::class,
+        'isOrangTua' =>  \App\Http\Middleware\isOrangTua::class,
+        'isOrangTuaMiddleware' =>  \App\Http\Middleware\isOrangTuaMiddleware::class,
+        'isGuru' =>  \App\Http\Middleware\isGuru::class,
+
         'password.confirm' => \Illuminate\Auth\Middleware\RequirePassword::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+
+        
+        
     ];
 }
