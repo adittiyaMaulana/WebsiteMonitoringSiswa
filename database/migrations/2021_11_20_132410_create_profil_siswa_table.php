@@ -16,6 +16,14 @@ class CreateProfilSiswaTable extends Migration
         Schema::create('profil_siswa', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('id_kelas');
+            $table->foreign('id_kelas')->references('id')->on('kelas');
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
+            $table->string('nama',50);
+            $table->date('ttl');
+            $table->string('kelas',3);
+            $table->string('semester',2);
         });
     }
 

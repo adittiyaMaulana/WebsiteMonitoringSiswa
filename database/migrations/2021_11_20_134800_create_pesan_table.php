@@ -16,6 +16,9 @@ class CreatePesanTable extends Migration
         Schema::create('pesan', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
+            $table->string('isi',1000);
         });
     }
 

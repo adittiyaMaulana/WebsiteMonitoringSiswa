@@ -16,6 +16,10 @@ class CreateSaranDanMasukanTable extends Migration
         Schema::create('saran_dan_masukan', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
+            $table->string('judul',50);
+            $table->string('isi',1000);
         });
     }
 

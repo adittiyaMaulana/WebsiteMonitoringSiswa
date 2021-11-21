@@ -16,6 +16,12 @@ class CreateDaftarNilaiTable extends Migration
         Schema::create('daftar_nilai', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
+            $table->integer('nilai_uts');
+            $table->integer('nilai_uas');
+            $table->integer('semester');
+            $table->string('periode');
         });
     }
 

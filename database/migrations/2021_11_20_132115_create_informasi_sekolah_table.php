@@ -16,6 +16,9 @@ class CreateInformasiSekolahTable extends Migration
         Schema::create('informasi_sekolah', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('judul',50);
+            $table->string('konten',1000);
+            $table->string('gambar',50);
         });
     }
 

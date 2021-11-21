@@ -16,6 +16,9 @@ class CreateJadwalPelajaranTable extends Migration
         Schema::create('jadwal_pelajaran', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('id_mapel');
+            $table->foreign('id_mapel')->references('id')->on('mata_pelajaran');
+            $table->dateTime('jam_pelajaran');
         });
     }
 

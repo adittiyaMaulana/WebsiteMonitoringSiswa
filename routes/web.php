@@ -42,7 +42,7 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
 
 ///////////////////////////////////////Guru////////////////////////////////////////////////////
 Route::group(['prefix'=>'user', 'middleware'=>['isGuru','auth']], function(){
-    Route::get('dashboard',[GuruController::class,'index'])->name('user.dashboard');
+    Route::get('dashboard',[GuruController::class,'index'])->name('guru.homepage');
     // Route::get('profile',[UserController::class,'profile'])->name('user.profile');
     // Route::get('settings',[UserController::class,'settings'])->name('user.settings');
 });

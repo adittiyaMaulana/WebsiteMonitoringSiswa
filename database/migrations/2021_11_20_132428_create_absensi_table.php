@@ -16,6 +16,12 @@ class CreateAbsensiTable extends Migration
         Schema::create('absensi', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
+            $table->integer('kehadiran');
+            $table->integer('alpa');
+            $table->integer('sakit');
+            $table->integer('izin');
         });
     }
 
