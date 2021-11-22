@@ -18,6 +18,8 @@ class CreateAbsensiTable extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('id_user');
             $table->foreign('id_user')->references('id')->on('users');
+            $table->unsignedBigInteger('id_siswa');
+            $table->foreign('id_siswa')->references('id')->on('profil_siswa');
             $table->integer('kehadiran');
             $table->integer('alpa');
             $table->integer('sakit');
