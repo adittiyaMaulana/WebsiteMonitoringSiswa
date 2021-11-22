@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.my-content {
+    margin-left: 320px;
+}
+
+.container1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.box {
+    width: 100vh;
+    height: 312px;
+    margin: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0 8px 8px -4px lightblue;
+    background: #fff;
+
+}
+
+/* untuk profile */
+.profile {
+    padding: 30px;
+    height: 312px;
+    text-align: center;
+}
+
+.profile h4 {
+    font-weight: 500;
+    color: #404040;
+    font-size: 30px;
+}
+
+.nis {
+    font-weight: 400;
+    color: #CEBCBC;
+}
+
+/* untuk kehadiean siswa sebagian */
+.kehadiran_sebagian {
+    padding: 30px;
+    height: 312px;
+}
+
+.kehadiran_sebagian p {
+    font-weight: 600;
+}
+
+.kehadiran_sebagian p a {
+    text-decoration: none;
+    color: #A79494;
+    font-weight: 400;
+}
+
+/* nilai siswa */
+.nilaiSiswa {
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-right: 40px;
+}
+
+.boxNilai {
+    background: #ffffff;
+    height: 428px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 8px -4px lightblue;
+}
+
+.isi {
+    padding: 30px;
+}
+
+.isi p {
+    font-weight: 600;
+}
+
+.isi p a {
+    text-decoration: none;
+    color: #A79494;
+    font-weight: 400;
+}
+
+/* limit text row nilai siswa sebagian di homepage*/
+.limit_name_nilai{
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+}
+
+.limit_kehadiran{
+    width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+}
+
