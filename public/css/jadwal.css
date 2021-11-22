@@ -1,0 +1,23 @@
+.navbar_pilihan ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar_pilihan li {
+    float: left;
+}
+
+.navbar_pilihan li a {
+    display: block;
+    color: 404040;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar_pilihan .active {
+    background-color: #8dcff4;
+    border-radius: 20px;
+}

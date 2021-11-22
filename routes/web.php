@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
@@ -28,21 +28,21 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 ///////////////////////////////////////ADMIN////////////////////////////////////////////////////
 Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
-    Route::get('homepage',[AdminController::class,'index'])->name('admin.homepage');
+    Route::get('/homepageAdmin',[AdminController::class,'index'])->name('admin.homepage');
     // Route::get('profile',[AdminController::class,'profile'])->name('admin.profile');
     // Route::get('settings',[AdminController::class,'settings'])->name('admin.settings');
 });
 
 ///////////////////////////////////////ORANG TUA////////////////////////////////////////////////////
 Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth']], function(){
-    Route::get('homepage',[OrangTuaController::class,'homepage'])->name('orangTua.homepage');
+    Route::get('/homepage',[OrangTuaController::class,'homepage'])->name('orangTua.homepage');
     // Route::get('profile',[UserController::class,'profile'])->name('user.profile');
     // Route::get('settings',[UserController::class,'settings'])->name('user.settings');
 });
 
 ///////////////////////////////////////Guru////////////////////////////////////////////////////
 Route::group(['prefix'=>'user', 'middleware'=>['isGuru','auth']], function(){
-    Route::get('dashboard',[GuruController::class,'index'])->name('guru.homepage');
+    Route::get('/homepageGuru',[GuruController::class,'index'])->name('guru.homepage');
     // Route::get('profile',[UserController::class,'profile'])->name('user.profile');
     // Route::get('settings',[UserController::class,'settings'])->name('user.settings');
 });
