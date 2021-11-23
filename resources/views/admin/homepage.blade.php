@@ -8,7 +8,7 @@
 <div class="sidebar">
     <ul>
         <li class="list active">
-            <a href="/homepageAdmin">
+            <a href="/admin/admin/homepageAdmin">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -17,7 +17,7 @@
         </li>
 
         <li class="list">
-            <a href="/jadwalKelasSiswa">
+            <a href="/admin/jadwalKelasSiswa">
                 <span class="icon">
                     <ion-icon name="calendar-outline"></ion-icon>
                 </span>
@@ -26,7 +26,7 @@
         </li>
 
         <li class="list">
-            <a href="/finansialSiswa">
+            <a href="/admin/finansialSiswa">
                 <span class="icon">
                     <ion-icon name="wallet-outline"></ion-icon>
                 </span>
@@ -35,7 +35,7 @@
         </li>
 
         <li class="list">
-            <a href="/beritaAdmin">
+            <a href="/admin/beritaAdmin">
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
@@ -44,7 +44,7 @@
         </li>
 
         <li class="list">
-            <a href="/data">
+            <a href="/admin/data">
                 <span class="icon">
                     <ion-icon name="clipboard-outline"></ion-icon>
                 </span>
@@ -53,7 +53,7 @@
         </li>
 
         <li class="list">
-            <a href="/dokumenFiturBantuan">
+            <a href="/admin/dokumenFiturBantuan">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
                 </span>
@@ -62,7 +62,7 @@
         </li>
 
         <li class="list">
-            <a href="/tentangSekolahAdmin">
+            <a href="/admin/tentangSekolahAdmin">
                 <span class="icon">
                     <ion-icon name="alert-circle-outline"></ion-icon>
                 </span>
@@ -107,14 +107,14 @@
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon pengaduan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/saranDanMasukanAdmin">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/saranDanMasukanAdmin">
                     <span class="icon">
                         <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
                 </a>
 
                 <!-- Icon pesan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/pesanAdmin">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/pesanAdmin">
                     <span class="icon">
                         <ion-icon name="mail" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
@@ -143,7 +143,7 @@
             <p>Silahkan memulai aktivitas anda</p>
         </div>
 
-        <img src="image/chracter.svg" style="margin-top: 20px;">
+        <img src="{{asset('image/chracter.svg')}}" style="margin-top: 20px;">
 
     </div>
 
