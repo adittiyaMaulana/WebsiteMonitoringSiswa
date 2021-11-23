@@ -159,7 +159,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr data-href="/formUpdateData">
+                    <tr data-href="/admin/formUpdateData">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -171,7 +171,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/formUpdateData">
+                    <tr data-href="/admin/formUpdateData">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -183,7 +183,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/formUpdateData">
+                    <tr data-href="/admin/formUpdateData">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -195,7 +195,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/formUpdateData">
+                    <tr data-href="/admin/formUpdateData">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -207,7 +207,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/formUpdateData">
+                    <tr data-href="/admin/formUpdateData">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -219,7 +219,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/formUpdateData">
+                    <tr data-href="/admin/formUpdateData">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -232,7 +232,7 @@
                         </td>
                     </tr>
                     
-                    <tr data-href="/formUpdateData">
+                    <tr data-href="/admin/formUpdateData">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>

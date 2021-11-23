@@ -167,7 +167,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr data-href="/formUpdateJadwalNonAkademik">
+                    <tr data-href="/admin/formUpdateJadwalNonAkademik">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -179,7 +179,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/formUpdateJadwalNonAkademik">
+                    <tr data-href="/admin/formUpdateJadwalNonAkademik">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -191,7 +191,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/formUpdateJadwalNonAkademik">
+                    <tr data-href="/admin/formUpdateJadwalNonAkademik">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -203,7 +203,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/formUpdateJadwalNonAkademik">
+                    <tr data-href="/admin/formUpdateJadwalNonAkademik">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -215,7 +215,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/formUpdateJadwalNonAkademik">
+                    <tr data-href="/admin/formUpdateJadwalNonAkademik">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -227,7 +227,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/formUpdateJadwalNonAkademik">
+                    <tr data-href="/admin/formUpdateJadwalNonAkademik">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -239,7 +239,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/formUpdateJadwalNonAkademik">
+                    <tr data-href="/admin/formUpdateJadwalNonAkademik">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -251,7 +251,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/formUpdateJadwalNonAkademik">
+                    <tr data-href="/admin/formUpdateJadwalNonAkademik">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
