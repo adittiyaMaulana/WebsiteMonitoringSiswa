@@ -28,7 +28,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 ///////////////////////////////////////ADMIN////////////////////////////////////////////////////
 Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
-    Route::get('/homepageAdmin',[AdminController::class,'index'])->name('admin.homepage');
+    Route::get('/homepageAdmin',[AdminController::class,'homepage'])->name('admin.homepage');
     // Route::get('profile',[AdminController::class,'profile'])->name('admin.profile');
     // Route::get('settings',[AdminController::class,'settings'])->name('admin.settings');
 });
@@ -42,7 +42,7 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
 
 ///////////////////////////////////////Guru////////////////////////////////////////////////////
 Route::group(['prefix'=>'user', 'middleware'=>['isGuru','auth']], function(){
-    Route::get('/homepageGuru',[GuruController::class,'index'])->name('guru.homepage');
+    Route::get('/homepageGuru',[GuruController::class,'homepage'])->name('guru.homepage');
     // Route::get('profile',[UserController::class,'profile'])->name('user.profile');
     // Route::get('settings',[UserController::class,'settings'])->name('user.settings');
 });

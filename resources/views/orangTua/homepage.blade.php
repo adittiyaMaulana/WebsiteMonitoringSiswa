@@ -80,11 +80,15 @@
         </li>
 
         <li class="list">
-            <a href="#">
+            <a class="nav-link" href="{{ route('login') }}" onclick="event.preven-tDefault();
+                            document.getElementById('logout-form').submit();">
                 <span class="icon">
                     <ion-icon name="log-out-outline"></ion-icon>
                 </span>
                 <span class="title">Sign Out</span>
+                <form id="logout-form" action="{{ route('login') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
             </a>
         </li>
 
@@ -127,7 +131,8 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
+                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
+                        loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -147,7 +152,8 @@
 
             <!-- ==================== bagian profile======================== -->
             <div class="profile">
-                <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="105" alt="" loading="lazy" />
+                <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="105" alt=""
+                    loading="lazy" />
                 <h4>Username</h4>
                 <h5 class="nis">NIS</h5>
                 <h5>Email</h5>
@@ -211,19 +217,25 @@
 
     <div class="berita ml-4 mr-4">
         <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top"
+                style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
             <div class="card-body">
                 <div class="text-berita">
-                    <p class="card-text limit_berita_text" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                    <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                        aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
                 </div>
             </div>
         </div>
 
         <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top"
+                style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
             <div class="card-body">
                 <div class="text-berita">
-                    <p class="card-text limit_berita_text" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                    <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                        aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
                 </div>
             </div>
         </div>

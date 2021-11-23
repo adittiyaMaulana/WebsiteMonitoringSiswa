@@ -26,19 +26,19 @@ class UserSeeder extends Seeder
             ],[
                 'email' => "nurul@gmail.com",
                 'password' => Hash::make('password'),
-                'role' => 2
+                'role' => 3
             ],[
                 'email' => "Johar@gmail.com",
                 'password' => Hash::make('password'),
-                'role' => 2
+                'role' => 3
             ],[
                 'email' => "Jatmiko@gmail.com",
                 'password' => Hash::make('password'),
-                'role' => 2
+                'role' => 1
             ],[
                 'email' => "Retno@gmail.com",
                 'password' => Hash::make('password'),
-                'role' => 2
+                'role' => 1
             ]
         ];
         \DB::table('users')->insert($users);
