@@ -37,4 +37,23 @@ class AdminController extends Controller {
     }
     
     //UPDATE DATA ORTU
+    public function edit_ortu($id)
+    {
+        $ortu = OrangTua::find($id);
+        return view('admin.ortu.edit', compact(
+            'ortu'
+        ));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $ortu = OrangTua::find($id);
+        $ortu->nama = $request->nama;
+        $ortu->ttl = $request->ttl;
+        $ortu->alamat = $request->alamat;
+        $ortu->email = $request->email;
+        $ortu->save();
+
+        return redirect('homepageAdmin')->with('success', "Data berhasil diperbaharui");
+    }
 }
