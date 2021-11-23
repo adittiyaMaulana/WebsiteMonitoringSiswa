@@ -136,8 +136,6 @@ class AdminController extends Controller {
         
     }
 
-    
-
     //ADD DATA ORANG TUA BY ADMIN
     public function insert_ortu() {
         $ortu = new OrangTua;
