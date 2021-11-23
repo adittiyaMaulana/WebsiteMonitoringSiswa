@@ -1,0 +1,70 @@
+.gambar img{
+    width: 100%;
+    height: 411px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+/* posisi box tentang sekolah */
+.container-tentang-sekolah{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* box sekolah */
+.box-tentang-sekolah{
+    position: relative;
+    width: 100vh;
+    height: auto;
+    margin: 20px;
+}
+
+/* center text tentang kami */
+.center p{
+    position: absolute;
+    font-weight: 700;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* visi - misi  */
+.visi-misi {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #C68B59;
+    border-radius: 20px;
+}
+
+.judul-visi-misi{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.isi-visi-misi{
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+/* struktur organisasi */
+.struktur-organisasi p {
+    font-weight: 700;
+    font-size: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+

@@ -1,0 +1,62 @@
+/* limit text row finansial sebagian di homepage*/
+.limit_name_nilai{
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+}
+
+
+
+.limit_kehadiran{
+    width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+}
+
+/* bagian berita */
+.title_berita{
+    padding-top: 10vh;
+    font-weight: 600;
+    padding-left: 3vh;
+    padding-bottom: 2vh;
+}
+
+.berita{
+    height: auto;
+    width: 95%;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.cardBerita {
+    width: 446px;
+    height: 312px;
+    margin: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0 8px 8px -4px lightblue;
+    background:#fff;
+}
+
+.image {
+    width: 20px;
+    height: 20px;
+}
+
+.text-berita{
+    width: 400px;
+}
+
+.limit_berita_text{
+    display: -webkit-box;
+    height: 3.6em; 
+    line-height: 1.3em;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
