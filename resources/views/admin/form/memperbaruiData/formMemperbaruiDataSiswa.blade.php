@@ -6,81 +6,85 @@
     <!-- ============================================================================================= -->
     <!-- sidebar -->
     <div class="sidebar">
-        <ul>
-            <li class="list">
-                <a href="/homepageAdmin">
-                    <span class="icon">
-                        <ion-icon name="home-outline"></ion-icon>
-                    </span>
-                    <span class="title">Home</span>
-                </a>
-            </li>
+    <ul>
+        <li class="list">
+            <a href="/admin/homepageAdmin">
+                <span class="icon">
+                    <ion-icon name="home-outline"></ion-icon>
+                </span>
+                <span class="title">Home</span>
+            </a>
+        </li>
 
-            <li class="list">
-                <a href="/jadwalKelasSiswa">
-                    <span class="icon">
-                        <ion-icon name="calendar-outline"></ion-icon>
-                    </span>
-                    <span class="title">Jadwal</span>
-                </a>
-            </li>
+        <li class="list">
+            <a href="/admin/jadwalKelasSiswa">
+                <span class="icon">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                </span>
+                <span class="title">Jadwal</span>
+            </a>
+        </li>
 
-            <li class="list">
-                <a href="/finansialSiswa">
-                    <span class="icon">
-                        <ion-icon name="wallet-outline"></ion-icon>
-                    </span>
-                    <span class="title">Finansial</span>
-                </a>
-            </li>
+        <li class="list">
+            <a href="/admin/finansialSiswa">
+                <span class="icon">
+                    <ion-icon name="wallet-outline"></ion-icon>
+                </span>
+                <span class="title">Finansial</span>
+            </a>
+        </li>
 
-            <li class="list">
-                <a href="/beritaAdmin">
-                    <span class="icon">
-                        <ion-icon name="newspaper-outline"></ion-icon>
-                    </span>
-                    <span class="title">Berita</span>
-                </a>
-            </li>
+        <li class="list">
+            <a href="/admin/beritaAdmin">
+                <span class="icon">
+                    <ion-icon name="newspaper-outline"></ion-icon>
+                </span>
+                <span class="title">Berita</span>
+            </a>
+        </li>
 
-            <li class="list active">
-                <a href="/data">
-                    <span class="icon">
-                        <ion-icon name="clipboard-outline"></ion-icon>
-                    </span>
-                    <span class="title">Data</span>
-                </a>
-            </li>
+        <li class="list active">
+            <a href="/admin/data">
+                <span class="icon">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </span>
+                <span class="title">Data</span>
+            </a>
+        </li>
 
-            <li class="list">
-                <a href="/dokumenFiturBantuan">
-                    <span class="icon">
-                        <ion-icon name="download-outline"></ion-icon>
-                    </span>
-                    <span class="title">Fitur Bantuan</span>
-                </a>
-            </li>
+        <li class="list">
+            <a href="/admin/dokumenFiturBantuan">
+                <span class="icon">
+                    <ion-icon name="download-outline"></ion-icon>
+                </span>
+                <span class="title">Fitur Bantuan</span>
+            </a>
+        </li>
 
-            <li class="list">
-                <a href="/tentangSekolahAdmin">
-                    <span class="icon">
-                        <ion-icon name="alert-circle-outline"></ion-icon>
-                    </span>
-                    <span class="title">Tentang</span>
-                </a>
-            </li>
+        <li class="list">
+            <a href="/admin/tentangSekolahAdmin">
+                <span class="icon">
+                    <ion-icon name="alert-circle-outline"></ion-icon>
+                </span>
+                <span class="title">Tentang</span>
+            </a>
+        </li>
 
-            <li class="list">
-                <a href="#">
-                    <span class="icon">
-                        <ion-icon name="log-out-outline"></ion-icon>
-                    </span>
-                    <span class="title">Sign Out</span>
-                </a>
-            </li>
+        <li class="list">
+            <a class="nav-link" href="{{ route('login') }}" onclick="event.preven-tDefault();
+                            document.getElementById('logout-form').submit();">
+                <span class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                </span>
+                <span class="title">Sign Out</span>
+                <form id="logout-form" action="{{ route('login') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+            </a>
+        </li>
 
-        </ul>
-    </div>
+    </ul>
+</div>
 
     <!-- contentt -->
 
@@ -103,14 +107,14 @@
                 <!-- Right elements -->
                 <div class="d-flex align-items-center">
                     <!-- Icon pengaduan -->
-                    <a class=" d-flex align-items-center mr-3 mt-2" href="/saranDanMasukanAdmin">
+                    <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/saranDanMasukanAdmin">
                         <span class="icon">
                             <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                         </span>
                     </a>
 
                     <!-- Icon pesan -->
-                    <a class=" d-flex align-items-center mr-3 mt-2" href="/pesanAdmin">
+                    <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/pesanAdmin">
                         <span class="icon">
                             <ion-icon name="mail" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                         </span>

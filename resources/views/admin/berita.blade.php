@@ -9,7 +9,7 @@
 <div class="sidebar">
     <ul>
         <li class="list">
-            <a href="/homepageAdmin">
+            <a href="/admin/homepageAdmin">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -18,7 +18,7 @@
         </li>
 
         <li class="list">
-            <a href="/jadwalKelasSiswa">
+            <a href="/admin/jadwalKelasSiswa">
                 <span class="icon">
                     <ion-icon name="calendar-outline"></ion-icon>
                 </span>
@@ -27,7 +27,7 @@
         </li>
 
         <li class="list">
-            <a href="/finansialSiswa">
+            <a href="/admin/finansialSiswa">
                 <span class="icon">
                     <ion-icon name="wallet-outline"></ion-icon>
                 </span>
@@ -36,7 +36,7 @@
         </li>
 
         <li class="list active">
-            <a href="/beritaAdmin">
+            <a href="/admin/beritaAdmin">
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
@@ -45,7 +45,7 @@
         </li>
 
         <li class="list">
-            <a href="/data">
+            <a href="/admin/data">
                 <span class="icon">
                     <ion-icon name="clipboard-outline"></ion-icon>
                 </span>
@@ -54,7 +54,7 @@
         </li>
 
         <li class="list">
-            <a href="/dokumenFiturBantuan">
+            <a href="/admin/dokumenFiturBantuan">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
                 </span>
@@ -63,7 +63,7 @@
         </li>
 
         <li class="list">
-            <a href="/tentangSekolahAdmin">
+            <a href="/admin/tentangSekolahAdmin">
                 <span class="icon">
                     <ion-icon name="alert-circle-outline"></ion-icon>
                 </span>
@@ -72,11 +72,15 @@
         </li>
 
         <li class="list">
-            <a href="#">
+            <a class="nav-link" href="{{ route('login') }}" onclick="event.preven-tDefault();
+                            document.getElementById('logout-form').submit();">
                 <span class="icon">
                     <ion-icon name="log-out-outline"></ion-icon>
                 </span>
                 <span class="title">Sign Out</span>
+                <form id="logout-form" action="{{ route('login') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
             </a>
         </li>
 
@@ -104,14 +108,14 @@
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon pengaduan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/saranDanMasukanAdmin">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/saranDanMasukanAdmin">
                     <span class="icon">
                         <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
                 </a>
 
                 <!-- Icon pesan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/pesanAdmin">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/pesanAdmin">
                     <span class="icon">
                         <ion-icon name="mail" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
@@ -135,7 +139,7 @@
     <!-- buttonn -->
     <div class="button_area">
         <a href="#"><button type="button" class="btn btn-primary">Kirim<i class="bi bi-send-fill ml-4"></i></button></a>
-        <a href="/formBerita"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
+        <a href="/admin/formBerita"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
     </div>
 
     <!-- table -->
@@ -155,7 +159,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr data-href="/formUpdateBerita">
+                <tr data-href="/admin/formUpdateBerita">
                     <td>7-1</td>
                     <td>System Architect</td>
                     <td>Edinburgh</td>
@@ -167,7 +171,7 @@
                         <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                     </td>
                 </tr>
-                <tr data-href="/formUpdateBerita">
+                <tr data-href="/admin/formUpdateBerita">
                     <td>7-1</td>
                     <td>System Architect</td>
                     <td>Edinburgh</td>
@@ -179,7 +183,7 @@
                         <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                     </td>
                 </tr>
-                <tr data-href="/formUpdateBerita">
+                <tr data-href="/admin/formUpdateBerita">
                     <td>7-1</td>
                     <td>System Architect</td>
                     <td>Edinburgh</td>
@@ -191,7 +195,7 @@
                         <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                     </td>
                 </tr>
-                <tr data-href="/formUpdateBerita">
+                <tr data-href="/admin/formUpdateBerita">
                     <td>7-1</td>
                     <td>System Architect</td>
                     <td>Edinburgh</td>
@@ -203,7 +207,7 @@
                         <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                     </td>
                 </tr>
-                <tr data-href="/formUpdateBerita">
+                <tr data-href="/admin/formUpdateBerita">
                     <td>7-1</td>
                     <td>System Architect</td>
                     <td>Edinburgh</td>
@@ -215,7 +219,7 @@
                         <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                     </td>
                 </tr>
-                <tr data-href="/formUpdateBerita">
+                <tr data-href="/admin/formUpdateBerita">
                     <td>7-1</td>
                     <td>System Architect</td>
                     <td>Edinburgh</td>
@@ -227,7 +231,7 @@
                         <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                     </td>
                 </tr>
-                <tr data-href="/formUpdateBerita">
+                <tr data-href="/admin/formUpdateBerita">
                     <td>7-1</td>
                     <td>System Architect</td>
                     <td>Edinburgh</td>
