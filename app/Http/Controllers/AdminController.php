@@ -11,4 +11,8 @@ class AdminController extends Controller
     {
         return view('admin.homepage');
     }
+
+    public function data(){
+        return view('admin.data');
+    }
 }

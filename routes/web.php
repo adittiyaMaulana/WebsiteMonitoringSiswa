@@ -29,7 +29,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 ///////////////////////////////////////ADMIN////////////////////////////////////////////////////
 Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
     Route::get('/homepageAdmin',[AdminController::class,'homepage'])->name('admin.homepage');
-    // Route::get('profile',[AdminController::class,'profile'])->name('admin.profile');
+    Route::get('/data',[AdminController::class,'data'])->name('admin.data');
     // Route::get('settings',[AdminController::class,'settings'])->name('admin.settings');
 });
 
