@@ -13,6 +13,20 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $admin = [
+            [
+                'nama' => "Jatmiko",
+                'ttl' => '1980-07-13',
+                'alamat' => 'Jl. Cendrawasih, Cengkareng Barat',
+                'email' => "jatmiko@gmail.com",
+
+            ],[
+                'nama' => 'Retno',
+                'ttl' => '1980-07-14',
+                'alamat' => 'Jl. Cendrawasih, Cengkareng Barat',
+                'email' => "isna@gmail.com"
+            ]
+        ];
+        \DB::table('admin')->insert($admin);
     }
 }
