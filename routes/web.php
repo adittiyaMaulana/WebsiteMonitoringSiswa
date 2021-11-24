@@ -121,7 +121,7 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
 });
 
 ///////////////////////////////////////Guru////////////////////////////////////////////////////
-Route::group(['prefix'=>'user', 'middleware'=>['isGuru','auth']], function(){
+Route::group(['prefix'=>'guru', 'middleware'=>['isGuru','auth']], function(){
     Route::get('/homepageGuru',[GuruController::class,'homepageGuru'])->name('guru.homepage');
     // nilai siswa
     Route::get('/nilaiSiswa', [GuruController::class, 'nilaiSiswa'])->name('guru.nilaiSiswa');
