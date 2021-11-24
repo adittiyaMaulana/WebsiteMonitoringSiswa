@@ -8,7 +8,7 @@
 <div class="sidebar">
     <ul>
         <li class="list active">
-            <a href="/homepageGuru">
+            <a href="/guru/homepageGuru">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -17,7 +17,7 @@
         </li>
 
         <li class="list">
-            <a href="/nilaiSiswa">
+            <a href="/guru/nilaiSiswa">
                 <span class="icon">
                     <ion-icon name="bar-chart-outline"></ion-icon>
                 </span>
@@ -26,7 +26,7 @@
         </li>
 
         <li class="list">
-            <a href="/kehadiranSiswa">
+            <a href="/guru/kehadiranSiswa">
                 <span class="icon">
                     <ion-icon name="create-outline"></ion-icon>
                 </span>
@@ -36,7 +36,7 @@
 
 
         <li class="list">
-            <a class="nav-link" href="{{ route('login') }}" onclick="event.preven-tDefault();
+            <a href="{{ route('login') }}" onclick="event.preven-tDefault();
                             document.getElementById('logout-form').submit();">
                 <span class="icon">
                     <ion-icon name="log-out-outline"></ion-icon>
@@ -72,7 +72,7 @@
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon pengaduan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/saranDanMasukanGuru">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/guru/saranDanMasukanGuru">
                     <span class="icon">
                         <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
@@ -80,8 +80,7 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
-                        loading="lazy" />
+                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -101,8 +100,7 @@
 
             <!-- ==================== bagian profile======================== -->
             <div class="profile">
-                <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="105" alt=""
-                    loading="lazy" />
+                <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="105" alt="" loading="lazy" />
                 <h4>Username</h4>
                 <h5 class="nis">Nomer induk guru</h5>
                 <h5>Email</h5>
@@ -115,7 +113,7 @@
             <div class="kehadiran_sebagian">
                 <p style="text-align:left;">
                     Kehadiran Siswa
-                    <a href="/kehadiranSiswa"><span style="float:right;">
+                    <a href="/guru/kehadiranSiswa"><span style="float:right;">
                             Lihat Semua >>>
                         </span></a>
                 </p>
@@ -167,7 +165,7 @@
             <div class="isi">
                 <p style="text-align:left;">
                     Nilai Siswa
-                    <a href="/nilaiSiswa"><span style="float:right;">
+                    <a href="/guru/nilaiSiswa"><span style="float:right;">
                             Lihat Semua >>>
                         </span></a>
                 </p>
