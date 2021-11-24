@@ -94,6 +94,40 @@ class AdminController extends Controller {
         return view('admin.form.memperbaruiData.formMemperbaruiDataSiswa');
     }
     
+    // data guruuuuuuuuuuuuu
+    public function dataGuru()
+    {
+        return view('admin.dataGuru');
+    }
+    
+    public function formDataGuru()
+    {
+        return view('admin.form.menambahkanData.formDataGuru');
+    }
+    
+    public function formUpdateDataGuru()
+    {
+        return view('admin.form.memperbaruiData.formMemperbaruiDataGuru');
+    }
+    
+    // data orang tua
+    public function dataOrangtua()
+    {
+        return view('admin.dataOrangtua');
+    }
+    
+    public function formDataOrangtua()
+    {
+        return view('admin.form.menambahkanData.formDataOrangtua');
+    }
+    
+    public function formUpdateDataOrangtua()
+    {
+        return view('admin.form.memperbaruiData.formMemperbaruiDataOrangtua');
+    }
+
+
+
     // fitur bantuannnnn
     public function dokumenFiturBantuan()
     {
