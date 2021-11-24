@@ -101,7 +101,7 @@
                 <div class="collapse navbar-collapse">
                     <!-- Navbar brand -->
                     <a class="navbar-brand mt-2">
-                        <h4>Data Siswa</h4>
+                        <h4>Data OrangTua</h4>
                     </a>
                 </div>
 
@@ -137,9 +137,9 @@
 
         <div class="navbar_pilihan mt-5 ml-3">
             <ul>
-                <li><a class="active" href="/admin/data">Siswa</a></li>
+                <li><a href="/admin/data">Siswa</a></li>
                 <li><a href="/admin/dataGuru">Guru</a></li>
-                <li><a href="/admin/dataOrangtua">Orang Tua</a></li>
+                <li><a class="active" href="/admin/dataOrangtua">Orang Tua</a></li>
             </ul>
         </div>
 
@@ -147,7 +147,7 @@
         <!-- button -->
         <div class="button_area">
             <a href="#"><button type="button" class="btn btn-primary">Kirim<i class="bi bi-send-fill ml-4"></i></button></a>
-            <a href="/admin/formData"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
+            <a href="/admin/formDataOrangtua"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
         </div>
 
         <!-- table -->
@@ -167,7 +167,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr data-href="/admin/formUpdateData">
+                    <tr data-href="/admin/formUpdateDataOrangtua">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -179,7 +179,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/admin/formUpdateData">
+                    <tr data-href="/admin/formUpdateDataOrangtua">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -191,7 +191,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/admin/formUpdateData">
+                    <tr data-href="/admin/formUpdateDataOrangtua">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -203,7 +203,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/admin/formUpdateData">
+                    <tr data-href="/admin/formUpdateDataOrangtua">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -215,7 +215,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/admin/formUpdateData">
+                    <tr data-href="/admin/formUpdateDataOrangtua">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -227,7 +227,7 @@
                             <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                         </td>
                     </tr>
-                    <tr data-href="/admin/formUpdateData">
+                    <tr data-href="/admin/formUpdateDataOrangtua">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>
@@ -240,7 +240,7 @@
                         </td>
                     </tr>
                     
-                    <tr data-href="/admin/formUpdateData">
+                    <tr data-href="/admin/formUpdateDataOrangtua">
                         <td>7-1</td>
                         <td>System Architect</td>
                         <td>Edinburgh</td>

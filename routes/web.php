@@ -51,11 +51,21 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
     Route::get('/formBerita', [AdminController::class, 'formBerita'])->name('admin.formBerita');
     Route::get('/formUpdateBerita', [AdminController::class, 'formUpdateBerita'])->name('admin.formUpdateBerita');
 
-    // data siswa
+    // data siswa /////////////////////////////////
     Route::get('/data',[AdminController::class,'data'])->name('admin.data');
-
     Route::get('/formData', [AdminController::class, 'formData'])->name('admin.formData');
     Route::get('/formUpdateData', [AdminController::class, 'formUpdateData'])->name('admin.formUpdateData');
+    
+    // data guru
+    Route::get('/dataGuru',[AdminController::class,'dataGuru'])->name('admin.dataGuru');
+    Route::get('/formDataGuru', [AdminController::class, 'formDataGuru'])->name('admin.formDataGuru');
+    Route::get('/formUpdateDataGuru', [AdminController::class, 'formUpdateDataGuru'])->name('admin.formUpdateDataGuru');
+    
+    // data OrangTua
+    Route::get('/dataOrangtua',[AdminController::class,'dataOrangtua'])->name('admin.dataOrangtua');
+    Route::get('/formDataOrangtua', [AdminController::class, 'formDataOrangtua'])->name('admin.formDataOrangtua');
+    Route::get('/formUpdateDataOrangtua', [AdminController::class, 'formUpdateDataOrangtua'])->name('admin.formUpdateDataOrangtua');
+
 
     // fitur bantuan
     Route::get('/dokumenFiturBantuan', [AdminController::class, 'dokumenFiturBantuan'])->name('admin.dokumenFiturBantuan');
