@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
 use App\Models\OrangTua;
+use App\Models\Guru;
 
 class AdminController extends Controller {
     
@@ -97,7 +97,7 @@ class AdminController extends Controller {
     // data guruuuuuuuuuuuuu
     public function dataGuru()
     {
-        return view('admin.dataGuru');
+        return view('admin.guru.dataGuru');
     }
     
     public function formDataGuru()
@@ -113,7 +113,7 @@ class AdminController extends Controller {
     // data orang tua
     public function dataOrangtua()
     {
-        return view('admin.dataOrangtua');
+        return view('admin.ortu.dataOrangtua');
     }
     
     public function formDataOrangtua()
@@ -170,6 +170,15 @@ class AdminController extends Controller {
         
     }
 
+
+    
+
+    ////////////////////FOR ORANG TUA////////////////////////////////////////
+
+    public function view_ortu(){
+
+    }
+
     //ADD DATA ORANG TUA BY ADMIN
     public function insert_ortu() {
         $ortu = new OrangTua;
@@ -189,6 +198,7 @@ class AdminController extends Controller {
         return redirect('homepageAdmin')->with('success', "Data berhasil disimpan");
     }
     
+
     //UPDATE DATA ORTU
     public function edit_ortu($id)
     {
@@ -198,7 +208,7 @@ class AdminController extends Controller {
         ));
     }
 
-    public function update(Request $request, $id)
+    public function update_ortu(Request $request, $id)
     {
         $ortu = OrangTua::find($id);
         $ortu->nama = $request->nama;
@@ -208,5 +218,67 @@ class AdminController extends Controller {
         $ortu->save();
 
         return redirect('homepageAdmin')->with('success', "Data berhasil diperbaharui");
+    }
+
+    //DELETE DATA ORTU
+    public function delete_ortu($id){
+        $ortu = OrangTua::find($id);
+        $ortu->delete();
+        return redirect('homepageAdmin');
+    }
+
+
+    ////////////////////FOR GURU////////////////////////////////////////
+
+    public function view_guru(){
+        $guru = Guru::all();
+        return view('data.guru.dataGuru');
+    }
+
+    //ADD DATA ORANG TUA BY ADMIN
+    public function insert_guru() {
+        $guru = new Guru;
+        return view('admin.guru.insert', compact(
+            'guru'
+        ));
+    }
+    
+    public function store_guru(Request $request) {
+        $guru = new Guru;
+        $guru->nama = $request->nama;
+        $guru->ttl = $request->ttl;
+        $guru->alamat = $request->alamat;
+        $guru->email = $request->email;
+        $guru->save();
+    
+        return redirect('homepageAdmin')->with('success', "Data berhasil disimpan");
+    }
+    
+    //UPDATE DATA guru
+    public function edit_guru($id)
+    {
+        $guru = Guru::find($id);
+        return view('admin.guru.edit', compact(
+            'guru'
+        ));
+    }
+
+    public function update_guru(Request $request, $id)
+    {
+        $guru = Guru::find($id);
+        $guru->nama = $request->nama;
+        $guru->ttl = $request->ttl;
+        $guru->alamat = $request->alamat;
+        $guru->email = $request->email;
+        $guru->save();
+
+        return redirect('homepageAdmin')->with('success', "Data berhasil diperbaharui");
+    }
+
+    //DELETE DATA guru
+    public function delete_guru($id){
+        $guru = Guru::find($id);
+        $guru->delete();
+        return redirect('homepageAdmin');
     }
 }
