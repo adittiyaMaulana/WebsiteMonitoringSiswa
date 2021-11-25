@@ -157,9 +157,9 @@ class AdminController extends Controller {
         return view('admin.saranDanMasukanAdmin');
     }
 
-    public function saranDanMasukanDetail()
+    public function saranDanMasukanAdminDetail()
     {
-        return view('admin.saranDanMasukanDetail');
+        return view('admin.saranDanMasukanAdminDetail');
     }
     
     // fitur pesan

@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title','Menambahkan Finansial')
+@section('title','Detail Saran dan Masukan')
 
 @section('content')
 <!-- ============================================================================================= -->
 <!-- sidebar -->
 <div class="sidebar">
     <ul>
-        <li class="list">
+        <li class="list active">
             <a href="/admin/homepageAdmin">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
@@ -25,7 +25,7 @@
             </a>
         </li>
 
-        <li class="list active">
+        <li class="list">
             <a href="/admin/finansialSiswa">
                 <span class="icon">
                     <ion-icon name="wallet-outline"></ion-icon>
@@ -85,7 +85,6 @@
 
     </ul>
 </div>
-
 <!-- contentt -->
 
 <div class="my-content">
@@ -100,7 +99,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Form Finansial</h4>
+                    <h4>Saran dan Masukan</h4>
                 </a>
             </div>
 
@@ -134,34 +133,16 @@
         </div>
     </nav>
 
-    <!-- form -->
-    <div class="form">
-        <form action="" method="" enctype="multipart/form-data">
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
+    <div class="detailsaranmasukan mt-5 ml-4 mr-4">
+        <p class="dari">Dari</p>
+        <p class="namaUser">nama User</p>
 
+        <p class="mt-5">Saran</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatibus quisquam pariatur corrupti facere a eligendi eaque excepturi minima rem est, at earum accusamus ratione officiis possimus deleniti consequatur dolor.</p>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <p class="mt-5">masukan</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatibus quisquam pariatur corrupti facere a eligendi eaque excepturi minima rem est, at earum accusamus ratione officiis possimus deleniti consequatur dolor.</p>
     </div>
-
-
-
-
 
 
     <!-- end my-content / semua content -->

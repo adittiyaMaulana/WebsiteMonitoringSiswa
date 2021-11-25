@@ -71,7 +71,7 @@
         </li>
 
         <li class="list">
-            <a class="nav-link" href="{{ route('login') }}" onclick="event.preven-tDefault();
+            <a href="{{ route('login') }}" onclick="event.preven-tDefault();
                             document.getElementById('logout-form').submit();">
                 <span class="icon">
                     <ion-icon name="log-out-outline"></ion-icon>
@@ -122,8 +122,7 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
-                        loading="lazy" />
+                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
                 </a>
 
                 <!-- nama user -->

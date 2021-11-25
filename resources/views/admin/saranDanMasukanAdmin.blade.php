@@ -71,7 +71,7 @@
         </li>
 
         <li class="list">
-            <a class="nav-link" href="{{ route('login') }}" onclick="event.preven-tDefault();
+            <a href="{{ route('login') }}" onclick="event.preven-tDefault();
                             document.getElementById('logout-form').submit();">
                 <span class="icon">
                     <ion-icon name="log-out-outline"></ion-icon>
@@ -150,7 +150,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr data-href="/saranDanMasukanDetail">
+                <tr data-href="/admin/saranDanMasukanAdminDetail">
                     <td>7-1</td>
                     <td>System Architect</td>
                     <td>Edinburgh</td>
@@ -159,7 +159,7 @@
                     <td>$320,800</td>
                     <td>$320,800</td>
                 </tr>
-                <tr data-href="/saranDanMasukanDetail">
+                <tr data-href="/admin/saranDanMasukanAdminDetail">
                     <td>9-3</td>
                     <td>System Architect</td>
                     <td>Edinburgh</td>
@@ -168,7 +168,7 @@
                     <td>$320,800</td>
                     <td>$320,800</td>
                 </tr>
-                <tr data-href="/saranDanMasukanDetail">
+                <tr data-href="/admin/saranDanMasukanAdminDetail">
                     <td>9-2</td>
                     <td>System Architect</td>
                     <td>Edinburgh</td>
@@ -177,7 +177,7 @@
                     <td>$320,800</td>
                     <td>$320,800</td>
                 </tr>
-                <tr data-href="/saranDanMasukanDetail">
+                <tr data-href="/admin/saranDanMasukanAdminDetail">
                     <td>8-1</td>
                     <td>System Architect</td>
                     <td>Edinburgh</td>
@@ -186,7 +186,7 @@
                     <td>$320,800</td>
                     <td>$320,800</td>
                 </tr>
-                <tr data-href="/saranDanMasukanDetail">
+                <tr data-href="/admin/saranDanMasukanAdminDetail">
                     <td>7-2</td>
                     <td>System Architect</td>
                     <td>Edinburgh</td>
@@ -195,7 +195,7 @@
                     <td>$320,800</td>
                     <td>$320,800</td>
                 </tr>
-                <tr data-href="/saranDanMasukanDetail">
+                <tr data-href="/admin/saranDanMasukanAdminDetail">
                     <td>9-1</td>
                     <td>System Architect</td>
                     <td>Edinburgh</td>

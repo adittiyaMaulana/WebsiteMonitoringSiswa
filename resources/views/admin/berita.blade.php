@@ -72,7 +72,7 @@
         </li>
 
         <li class="list">
-            <a class="nav-link" href="{{ route('login') }}" onclick="event.preven-tDefault();
+            <a href="{{ route('login') }}" onclick="event.preven-tDefault();
                             document.getElementById('logout-form').submit();">
                 <span class="icon">
                     <ion-icon name="log-out-outline"></ion-icon>
@@ -138,7 +138,6 @@
 
     <!-- buttonn -->
     <div class="button_area">
-        <a href="#"><button type="button" class="btn btn-primary">Kirim<i class="bi bi-send-fill ml-4"></i></button></a>
         <a href="/admin/formBerita"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
     </div>
 
