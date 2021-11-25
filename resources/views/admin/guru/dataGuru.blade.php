@@ -167,7 +167,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($g as $data)
+                @foreach($guru as $data)
                     <tr data-href="/admin/formUpdateDataGuru">
                         <td>{{ $data->id }}</td>
                         <td>

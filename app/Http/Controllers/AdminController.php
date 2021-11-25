@@ -97,8 +97,8 @@ class AdminController extends Controller {
     // data guruuuuuuuuuuuuu
     public function dataGuru()
     {
-        $g = Guru::all();
-        return view('admin.guru.dataGuru', ['g' => $g]);
+        $guru = Guru::all();
+        return view('admin.guru.dataGuru', ['guru' => $guru]);
     }
     
     public function formDataGuru()
