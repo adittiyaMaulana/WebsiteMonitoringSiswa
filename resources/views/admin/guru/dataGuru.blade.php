@@ -123,7 +123,8 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
+                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
+                        loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -147,7 +148,8 @@
     <!-- button -->
     <div class="button_area">
         <a href="#"><button type="button" class="btn btn-primary">Kirim<i class="bi bi-send-fill ml-4"></i></button></a>
-        <a href="/admin/formDataGuru"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
+        <a href="/admin/formDataGuru"><button type="button" class="btn btn-success">Tambah Data<i
+                    class="bi bi-plus ml-2"></i></button></a>
     </div>
 
     <!-- table -->
@@ -156,7 +158,7 @@
         <table id="tableAdmin" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
-                    <th>NUPTK</th>
+                    <th>ID</th>
                     <th>Nama Guru</th>
                     <th>Tempat Tanggal Lahir</th>
                     <th>Alamat Tinggal</th>
@@ -165,6 +167,7 @@
                 </tr>
             </thead>
             <tbody>
+<<<<<<< HEAD
                 <tr data-href="/admin/formUpdateDataGuru">
                     <td>182937485069273</td>
                     <td>
@@ -381,6 +384,25 @@
                         <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                     </td>
                 </tr>
+=======
+                @foreach($guru as $data)
+                    <tr data-href="/admin/formUpdateDataGuru">
+                        <td>{{ $data->id }}</td>
+                        <td>
+                            <p class="limit_kehadiran">{{ $data->nama }}</p>
+                        </td>
+                        <td>
+                            <p class="limit_kehadiran">{{ $data->ttl }}</p>
+                        </td>
+                        <td>
+                            <p class="limit_kehadiran">{{ $data->email }}</p>
+                        </td>
+                        <td>
+                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                        </td>
+                    </tr>
+                @endforeach
+>>>>>>> a383f6f086950de8f2df2054998206db2739f7df
             </tbody>
         </table>
     </div>

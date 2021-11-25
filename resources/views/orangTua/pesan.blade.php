@@ -8,7 +8,7 @@
 <div class="sidebar">
     <ul>
         <li class="list active">
-            <a href="/orangTua/homepage">
+            <a href="/homepage">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -17,7 +17,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/jadwalKelas">
+            <a href="/jadwalKelas">
                 <span class="icon">
                     <ion-icon name="calendar-outline"></ion-icon>
                 </span>
@@ -26,7 +26,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/finansial">
+            <a href="/finansial">
                 <span class="icon">
                     <ion-icon name="wallet-outline"></ion-icon>
                 </span>
@@ -35,7 +35,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/berita">
+            <a href="/berita">
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
@@ -44,7 +44,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/nilai">
+            <a href="/nilai">
                 <span class="icon">
                     <ion-icon name="bar-chart-outline"></ion-icon>
                 </span>
@@ -53,7 +53,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/kehadiran">
+            <a href="/kehadiran">
                 <span class="icon">
                     <ion-icon name="create-outline"></ion-icon>
                 </span>
@@ -62,7 +62,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/fiturBantuan">
+            <a href="/fiturBantuan">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
                 </span>
@@ -71,7 +71,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/tentangSekolah">
+            <a href="/tentangSekolah">
                 <span class="icon">
                     <ion-icon name="alert-circle-outline"></ion-icon>
                 </span>
@@ -80,15 +80,11 @@
         </li>
 
         <li class="list">
-            <a href="{{ route('login') }}" onclick="event.preven-tDefault();
-                            document.getElementById('logout-form').submit();">
+            <a href="#">
                 <span class="icon">
                     <ion-icon name="log-out-outline"></ion-icon>
                 </span>
                 <span class="title">Sign Out</span>
-                <form id="logout-form" action="{{ route('login') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
             </a>
         </li>
 
@@ -116,14 +112,14 @@
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon pengaduan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/orangTua/saranDanMasukan">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/saranDanMasukan">
                     <span class="icon">
                         <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
                 </a>
 
                 <!-- Icon pesan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/orangTua/pesanAdmin">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/pesanAdmin">
                     <span class="icon">
                         <ion-icon name="mail" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
@@ -144,7 +140,7 @@
     </nav>
 
     <div class="listuser">
-
+        
     </div>
 
 </div>

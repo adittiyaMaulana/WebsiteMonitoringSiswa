@@ -16,9 +16,10 @@
     margin-top: 10px;
 }
 
-.truncate {
-    width: 250px;
+.limit_word{
+    width: 170px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
+    font-style: normal;
+}

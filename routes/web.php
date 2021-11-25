@@ -89,30 +89,30 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
 Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth']], function(){
     Route::get('/homepage',[OrangTuaController::class,'homepage'])->name('orangTua.homepage');
 
-    Route::get('/jadwalKelas', [OrangTuaController::class, 'jadwalKelas'])->name('orangTua.jadwalKelas');
-    Route::get('/jadwalNonAkademik', [OrangTuaController::class, 'jadwalNonAkademik'])->name('orangTua.jadwalNonAkademik');
+    Route::get('/jadwalKelas', [OrangTuaController::class, 'jadwalKelas']);
+    Route::get('/jadwalNonAkademik', [OrangTuaController::class, 'jadwalNonAkademik']);
 
     // finansial
-    Route::get('/finansial', [OrangTuaController::class, 'finansial'])->name('orangTua.finansial');
+    Route::get('/finansial', [OrangTuaController::class, 'finansial']);
 
     // berita
-    Route::get('/berita', [OrangTuaController::class, 'berita'])->name('orangTua.berita');
-    Route::get('/beritaDetail', [OrangTuaController::class, 'beritaDetail'])->name('orangTua.beritaDetail');
+    Route::get('/berita', [OrangTuaController::class, 'berita']);
+    Route::get('/beritaDetail', [OrangTuaController::class, 'beritaDetail']);
 
     // nilai
-    Route::get('/nilai', [OrangTuaController::class, 'nilai'])->name('orangTua.nilai');
+    Route::get('/nilai', [OrangTuaController::class, 'nilai']);
 
     // kehadiran
-    Route::get('/kehadiran', [OrangTuaController::class, 'kehadiran'])->name('orangTua.kehadiran');
+    Route::get('/kehadiran', [OrangTuaController::class, 'kehadiran']);
 
     // fitur bantuan
-    Route::get('/fiturBantuan', [OrangTuaController::class, 'fiturBantuan'])->name('orangTua.fiturBantuan');
+    Route::get('/fiturBantuan', [OrangTuaController::class, 'fiturBantuan']);
 
     // tentang
-    Route::get('/tentangSekolah', [OrangTuaController::class, 'tentangSekolah'])->name('orangTua.tentangSekolah');
+    Route::get('/tentangSekolah', [OrangTuaController::class, 'tentangSekolah']);
 
     // pesan
-    Route::get('/pesan', [OrangTuaController::class, 'pesan'])->name('orangTua.pesan');
+    Route::get('/pesan', [OrangTuaController::class, 'pesan']);
 
     // saranDanMasukan
     Route::get('/saranDanMasukan', [OrangTuaController::class, 'saranDanMasukan']);
@@ -124,15 +124,15 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
 Route::group(['prefix'=>'guru', 'middleware'=>['isGuru','auth']], function(){
     Route::get('/homepageGuru',[GuruController::class,'homepageGuru'])->name('guru.homepage');
     // nilai siswa
-    Route::get('/nilaiSiswa', [GuruController::class, 'nilaiSiswa'])->name('guru.nilaiSiswa');
-    Route::get('/updateNilaiSiswa', [GuruController::class, 'updateNilaiSiswa'])->name('guru.updateNilaiSiswa');
+    Route::get('/nilaiSiswa', [GuruController::class, 'nilaiSiswa']);
+    Route::get('/updateNilaiSiswa', [GuruController::class, 'updateNilaiSiswa']);
 
     // kehadiran siswa
-    Route::get('/kehadiranSiswa', [GuruController::class, 'kehadiranSiswa'])->name('guru.kehadiranSiswa');
-    Route::get('/updatekehadiranSiswa', [GuruController::class, 'updatekehadiranSiswa'])->name('guru.updatekehadiranSiswa');
+    Route::get('/kehadiranSiswa', [GuruController::class, 'kehadiranSiswa']);
+    Route::get('/updatekehadiranSiswa', [GuruController::class, 'updatekehadiranSiswa']);
 
     // saranDanMasukan
-    Route::get('/saranDanMasukanGuru', [GuruController::class, 'saranDanMasukanGuru'])->name('guru.saranDanMasukanGuru');
+    Route::get('/saranDanMasukanGuru', [GuruController::class, 'saranDanMasukanGuru']);
     
     // Route::get('profile',[UserController::class,'profile'])->name('user.profile');
     // Route::get('settings',[UserController::class,'settings'])->name('user.settings');
