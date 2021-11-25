@@ -97,7 +97,8 @@ class AdminController extends Controller {
     // data guruuuuuuuuuuuuu
     public function dataGuru()
     {
-        return view('admin.guru.dataGuru');
+        $g = Guru::all();
+        return view('admin.guru.dataGuru', ['g' => $g]);
     }
     
     public function formDataGuru()
@@ -113,7 +114,8 @@ class AdminController extends Controller {
     // data orang tua
     public function dataOrangtua()
     {
-        return view('admin.ortu.dataOrangtua');
+        $ortu = OrangTua::all();
+        return view('admin.ortu.dataOrangTua', ['ortu' => $ortu]);
     }
     
     public function formDataOrangtua()
@@ -176,7 +178,7 @@ class AdminController extends Controller {
     ////////////////////FOR ORANG TUA////////////////////////////////////////
 
     public function view_ortu(){
-
+        
     }
 
     //ADD DATA ORANG TUA BY ADMIN
@@ -231,8 +233,7 @@ class AdminController extends Controller {
     ////////////////////FOR GURU////////////////////////////////////////
 
     public function view_guru(){
-        $guru = Guru::all();
-        return view('data.guru.dataGuru');
+        
     }
 
     //ADD DATA ORANG TUA BY ADMIN

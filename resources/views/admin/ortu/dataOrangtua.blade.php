@@ -167,91 +167,23 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr data-href="/admin/formUpdateDataOrangtua">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    <tr data-href="/admin/formUpdateDataOrangtua">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    <tr data-href="/admin/formUpdateDataOrangtua">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    <tr data-href="/admin/formUpdateDataOrangtua">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    <tr data-href="/admin/formUpdateDataOrangtua">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    <tr data-href="/admin/formUpdateDataOrangtua">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    
-                    <tr data-href="/admin/formUpdateDataOrangtua">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
+                    @foreach($ortu as $data)
+                        <tr data-href="/admin/formUpdateDataGuru">
+                            <td>{{ $data->id }}</td>
+                            <td>
+                                <p class="limit_kehadiran">{{ $data->nama }}</p>
+                            </td>
+                            <td>
+                                <p class="limit_kehadiran">{{ $data->ttl }}</p>
+                            </td>
+                            <td>
+                                <p class="limit_kehadiran">{{ $data->email }}</p>
+                            </td>
+                            <td>
+                                <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
