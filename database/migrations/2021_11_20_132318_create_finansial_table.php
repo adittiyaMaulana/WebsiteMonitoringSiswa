@@ -16,9 +16,9 @@ class CreateFinansialTable extends Migration
         Schema::create('finansial', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users');
-            $table->string('nama_bayaran',50);
+            $table->unsignedBigInteger('id_siswa');
+            $table->foreign('id_siswa')->references('id')->on('profil_siswa');
+            $table->string('nama_bayaran');
             $table->integer('jumlah');
             $table->date('jatuh_tempo');
         });

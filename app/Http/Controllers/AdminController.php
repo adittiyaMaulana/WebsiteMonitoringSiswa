@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\OrangTua;
 use App\Models\Guru;
+use App\Models\ProfilSiswa;
+use App\Models\Finansial;
+use App\Models\PusatUnduhan;
 
 class AdminController extends Controller {
     
@@ -49,7 +52,8 @@ class AdminController extends Controller {
     // finansiall
     public function finansialSiswa()
     {
-        return view('admin.finansialSiswa');
+        $finansial = Finansial::all();
+        return view('admin.finansialSiswa', ['finansial' => $finansial]);
     }
     
     public function formFinansial()
@@ -81,12 +85,13 @@ class AdminController extends Controller {
     // data siswaaaaa
     public function data()
     {
-        return view('admin.data');
+        $siswa = ProfilSiswa::all();
+        return view('admin.data', ['siswa' => $siswa]);
     }
     
-    public function formData()
+    public function formData(Request $request)
     {
-        return view('admin.form.menambahkanData.formDataSiswa');
+        return redirect('formData')->with('success', "Data berhasil disimpan");
     }
     
     public function formUpdateData()
@@ -101,9 +106,16 @@ class AdminController extends Controller {
         return view('admin.guru.dataGuru', ['guru' => $guru]);
     }
     
-    public function formDataGuru()
+    public function formDataGuru(Request $request)
     {
-        return view('admin.form.menambahkanData.formDataGuru');
+        $guru = new OrangTua;
+        $guru->nama = $request->nama;
+        $guru->ttl = $request->ttl;
+        $guru->alamat = $request->alamat;
+        $guru->email = $request->email;
+        $guru->save();
+    
+        return redirect('admin.dataGuru')->with('success', "Data berhasil disimpan");
     }
     
     public function formUpdateDataGuru()
@@ -118,9 +130,16 @@ class AdminController extends Controller {
         return view('admin.ortu.dataOrangTua', ['ortu' => $ortu]);
     }
     
-    public function formDataOrangtua()
+    public function formDataOrangtua(Request $request)
     {
-        return view('admin.form.menambahkanData.formDataOrangtua');
+        $ortu = new OrangTua;
+        $ortu->nama = $request->nama;
+        $ortu->ttl = $request->ttl;
+        $ortu->alamat = $request->alamat;
+        $ortu->email = $request->email;
+        $ortu->save();
+    
+        return redirect('admin.dataGuru')->with('success', "Data berhasil disimpan");
     }
     
     public function formUpdateDataOrangtua()
@@ -133,7 +152,8 @@ class AdminController extends Controller {
     // fitur bantuannnnn
     public function dokumenFiturBantuan()
     {
-        return view('admin.fiturBantuan');
+        $unduhan = PusatUnduhan::all();
+        return view('admin.fiturBantuan', ['unduhan'=>$unduhan]);
     }
     
     public function formFiturBantuan()

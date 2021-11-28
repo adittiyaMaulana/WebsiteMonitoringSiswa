@@ -18,11 +18,11 @@ class CreateProfilSiswaTable extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('id_kelas');
             $table->foreign('id_kelas')->references('id')->on('kelas');
-            $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->unsignedBigInteger('id_orang_tua');
+            $table->foreign('id_orang_tua')->references('id')->on('orang_tua');
             $table->string('nama',50);
             $table->date('ttl');
-            $table->string('kelas',3);
+            $table->string('alamat');
             $table->string('semester',2);
         });
     }

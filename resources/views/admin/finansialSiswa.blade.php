@@ -147,115 +147,23 @@
             <table id="tableAdmin" class="table table-hover" style="width:100%">
                 <thead class="table-dark">
                     <tr>
-                        <th>Kelas</th>
-                        <th>Semester</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                        <th>Salary</th>
+                        <th>Pembayaran</th>
+                        <th>Due date</th>
+                        <th>Jumlah</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr data-href="/admin/formUpdateFinansial">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    <tr data-href="/admin/formUpdateFinansial">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    <tr data-href="/admin/formUpdateFinansial">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    <tr data-href="/admin/formUpdateFinansial">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    <tr data-href="/admin/formUpdateFinansial">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    <tr data-href="/admin/formUpdateFinansial">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    <tr data-href="/admin/formUpdateFinansial">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    <tr data-href="/admin/formUpdateFinansial">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-
-
+                    @foreach($finansial as $f)
+                        <tr data-href="/admin/formUpdateFinansial">
+                            <td>{{$f->nama_bayaran}}</td>
+                            <td>{{$f->jatuh_tempo}}</td>
+                            <td>{{$f->jumlah}}</td>
+                            <td>
+                                <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

@@ -159,30 +159,31 @@
             <thead class="table-dark">
                 <tr>
                     <th>ID</th>
-                    <th>Nama Guru</th>
-                    <th>Tempat Tanggal Lahir</th>
-                    <th>Alamat Tinggal</th>
+                    <th>Nama</th>
+                    <th>Tanggal Lahir</th>
                     <th>Email</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($guru as $data)
-                    <tr data-href="/admin/formUpdateDataGuru">
-                        <td>{{ $data->id }}</td>
-                        <td>
-                            <p class="limit_kehadiran">{{ $data->nama }}</p>
-                        </td>
-                        <td>
-                            <p class="limit_kehadiran">{{ $data->ttl }}</p>
-                        </td>
-                        <td>
-                            <p class="limit_kehadiran">{{ $data->email }}</p>
-                        </td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
+                <tr data-href="/admin/formUpdateDataGuru">
+                    <td>
+                        <p class="limit_kehadiran">{{ $data->id }}</p>
+                    </td>
+                    <td>
+                        <p class="limit_kehadiran">{{ $data->nama }}</p>
+                    </td>
+                    <td>
+                        <p class="limit_kehadiran">{{ $data->ttl }}</p>
+                    </td>
+                    <td>
+                        <p class="limit_kehadiran">{{ $data->email }}</p>
+                    </td>
+                    <td>
+                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                    </td>
+                </tr>
                 @endforeach
             </tbody>
         </table>
