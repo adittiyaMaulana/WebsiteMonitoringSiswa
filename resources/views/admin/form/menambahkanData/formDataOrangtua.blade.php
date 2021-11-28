@@ -71,7 +71,7 @@
         </li>
 
         <li class="list">
-            <a class="nav-link" href="{{ route('login') }}" onclick="event.preven-tDefault();
+            <a href="{{ route('login') }}" onclick="event.preven-tDefault();
                             document.getElementById('logout-form').submit();">
                 <span class="icon">
                     <ion-icon name="log-out-outline"></ion-icon>
@@ -82,7 +82,6 @@
                 </form>
             </a>
         </li>
-
     </ul>
 </div>
 
@@ -138,38 +137,37 @@
     <div class="form">
         <form action="" method="" enctype="multipart/form-data">
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="inputKode" class="form-label">Kode</label>
+                <input type="text" class="form-control" id="inputKode">
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="inputNama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="inputNama">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="inputNamaSiswa" class="form-label">Nama Siswa</label>
+                <input type="text" class="form-control" list="suggestions" id="inputNamaSiswa">
+                <datalist id="suggestions">
+                    <option value="memek basah">
+                    <option value="kontol">
+                    <option value="penis">
+                    <option value="vagina">
+                    <option value="bool">
+                </datalist>
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="inputTTL" class="form-label">Tempat Tanggal Lahir</label>
+                <input type="date" class="form-control" id="inputTTL">
             </div>
 
+            <div class="mb-3">
+                <label for="inputAlamatTinggal" class="form-label">Alamat Tinggal</label>
+                <input type="text" class="form-control" id="inputAlamatTinggal">
+            </div>
+            <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail">
+            </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>

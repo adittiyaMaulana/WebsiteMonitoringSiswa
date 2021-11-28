@@ -24,7 +24,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/login.css')}}">
     <link rel="stylesheet" href="{{ asset('css/sidebar.css')}}">
-    <link rel="stylesheet" href="{{ asset ('css/content.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/content.css')}}">
     <link rel="stylesheet" href="{{ asset('css/orangtua/homepageOrtu.css')}}">
     <link rel="stylesheet" href="{{ asset('css/jadwal.css')}}">
     <link rel="stylesheet" href="{{ asset('css/orangtua/detailBerita.css')}}">
@@ -43,6 +43,8 @@
     <link rel="stylesheet" href="{{ asset('css/admin/finansial.css')}}">
     <link rel="stylesheet" href="{{ asset('css/admin/saranDanBantuan.css')}}">
     <link rel="stylesheet" href="{{ asset('css/admin/form.css')}}">
+    <link rel="stylesheet" href="{{asset('css/admin/saranDanBantuan.css')}}">
+
 
     <!-- table -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -68,7 +70,6 @@
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

@@ -72,7 +72,7 @@
         </li>
 
         <li class="list">
-            <a class="nav-link" href="{{ route('login') }}" onclick="event.preven-tDefault();
+            <a href="{{ route('login') }}" onclick="event.preven-tDefault();
                             document.getElementById('logout-form').submit();">
                 <span class="icon">
                     <ion-icon name="log-out-outline"></ion-icon>
@@ -166,6 +166,224 @@
                 </tr>
             </thead>
             <tbody>
+<<<<<<< HEAD
+                <tr data-href="/admin/formUpdateDataGuru">
+                    <td>182937485069273</td>
+                    <td>
+                        <p class="limit_text">poqwugyjsfvdjasdvasjhkasvhk</p>
+                    </td>
+                    <td>Edinburgh</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                    </td>
+                </tr>
+
+                <tr data-href="/admin/formUpdateDataGuru">
+                    <td>182937485069273</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>Edinburgh</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                    </td>
+                </tr>
+                <tr data-href="/admin/formUpdateDataGuru">
+                    <td>182937485069273</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>Edinburgh</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                    </td>
+                </tr>
+                <tr data-href="/admin/formUpdateDataGuru">
+                    <td>182937485069273</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>Edinburgh</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                    </td>
+                </tr>
+                <tr data-href="/admin/formUpdateDataGuru">
+                    <td>182937485069273</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>Edinburgh</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                    </td>
+                </tr>
+                <tr data-href="/admin/formUpdateDataGuru">
+                    <td>182937485069273</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>Edinburgh</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                    </td>
+                </tr>
+
+                <tr data-href="/admin/formUpdateDataGuru">
+                    <td>182937485069273</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>Edinburgh</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                    </td>
+                </tr>
+
+                <tr data-href="/admin/formUpdateDataGuru">
+                    <td>182937485069273</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>Edinburgh</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                    </td>
+                </tr>
+
+                <tr data-href="/admin/formUpdateDataGuru">
+                    <td>182937485069273</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>Edinburgh</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                    </td>
+                </tr>
+
+                <tr data-href="/admin/formUpdateDataGuru">
+                    <td>182937485069273</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>Edinburgh</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                    </td>
+                </tr>
+
+                <tr data-href="/admin/formUpdateDataGuru">
+                    <td>182937485069273</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>Edinburgh</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                    </td>
+                </tr>
+
+                <tr data-href="/admin/formUpdateDataGuru">
+                    <td>182937485069273</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>Edinburgh</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                    </td>
+                </tr>
+
+                <tr data-href="/admin/formUpdateDataGuru">
+                    <td>182937485069273</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>Edinburgh</td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
+                    </td>
+                    <td>
+                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
+                    </td>
+                </tr>
+=======
                 @foreach($guru as $data)
                 <tr data-href="/admin/formUpdateDataGuru">
                     <td>
@@ -185,6 +403,7 @@
                     </td>
                 </tr>
                 @endforeach
+>>>>>>> a383f6f086950de8f2df2054998206db2739f7df
             </tbody>
         </table>
     </div>

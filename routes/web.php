@@ -77,7 +77,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
 
     //saranDanMasukanAdmin
     Route::get('/saranDanMasukanAdmin', [AdminController::class, 'saranDanMasukanAdmin'])->name('admin.saranDanMasukanAdmin');
-    Route::get('/saranDanMasukanDetail', [AdminController::class, 'saranDanMasukanDetail'])->name('admin.saranDanMasukanDetail');
+    Route::get('/saranDanMasukanAdminDetail', [AdminController::class, 'saranDanMasukanAdminDetail'])->name('admin.saranDanMasukanAdminDetail');
 
     //pesan
     Route::get('/pesanAdmin', [AdminController::class, 'pesanAdmin'])->name('admin.pesanAdmin');
