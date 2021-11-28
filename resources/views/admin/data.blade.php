@@ -103,8 +103,6 @@
                     <h4>Data Siswa</h4>
                 </a>
             </div>
-<<<<<<< HEAD
-
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon pengaduan -->
@@ -127,30 +125,6 @@
                         loading="lazy" />
                 </a>
 
-=======
-
-            <!-- Right elements -->
-            <div class="d-flex align-items-center">
-                <!-- Icon pengaduan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/saranDanMasukanAdmin">
-                    <span class="icon">
-                        <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
-                    </span>
-                </a>
-
-                <!-- Icon pesan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/pesanAdmin">
-                    <span class="icon">
-                        <ion-icon name="mail" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
-                    </span>
-                </a>
-
-                <!-- gambar user -->
-                <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
-                </a>
-
->>>>>>> 2cab32ecbd7693ff081cf7893822e3999caa7714
                 <!-- nama user -->
                 <a class=" d-flex align-items-center ml-3 mt-3" style="text-decoration: none; color: #404040;">
                     <p>Admin</p>
@@ -159,17 +133,6 @@
             </div>
         </div>
     </nav>
-<<<<<<< HEAD
-
-    <div class="navbar_pilihan mt-5 ml-3">
-        <ul>
-            <li><a class="active" href="/admin/data">Siswa</a></li>
-            <li><a href="/admin/dataGuru">Guru</a></li>
-            <li><a href="/admin/dataOrangtua">Orang Tua</a></li>
-        </ul>
-    </div>
-=======
->>>>>>> 2cab32ecbd7693ff081cf7893822e3999caa7714
 
     <div class="navbar_pilihan mt-5 ml-3">
         <ul>
@@ -179,7 +142,6 @@
         </ul>
     </div>
 
-<<<<<<< HEAD
     <!-- button -->
     <div class="button_area">
         <a href="#"><button type="button" class="btn btn-primary">Kirim<i class="bi bi-send-fill ml-4"></i></button></a>
@@ -189,39 +151,18 @@
 
     <!-- table -->
 
-=======
-
-    <!-- button -->
-    <div class="button_area">
-        <a href="/admin/formData"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
-    </div>
-
-    <!-- table -->
-
->>>>>>> 2cab32ecbd7693ff081cf7893822e3999caa7714
     <div class="my-table mt-5 ml-3 mr-4 mb-5">
         <table id="tableAdmin" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
-<<<<<<< HEAD
                     <th>ID</th>
                     <th>ID KELAS</th>
                     <th>Nama</th>
                     <th>Tanggal Lahir</th>
-=======
-                    <th>Kelas</th>
-                    <th>Semester</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                    <th>Salary</th>
->>>>>>> 2cab32ecbd7693ff081cf7893822e3999caa7714
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-<<<<<<< HEAD
                 @foreach($siswa as $data)
                 <tr data-href="/admin/formUpdateDataGuru">
                     <td>
@@ -236,111 +177,15 @@
                     <td>
                         <p class="limit_kehadiran">{{ $data->ttl }}</p>
                     </td>
-=======
-                <tr data-href="/admin/formUpdateData">
-                    <td>7-1</td>
-                    <td>
-                        <p class="limit_text">dfgsdfgsdfgherta rtearnrarbsjkabrjkbasjkrbjkasdjklrsdjkl</p>
-                    </td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
                     <td>
                         <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
                     </td>
-                </tr>
-                <tr data-href="/admin/formUpdateData">
-                    <td>7-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-                <tr data-href="/admin/formUpdateData">
-                    <td>7-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-                <tr data-href="/admin/formUpdateData">
-                    <td>7-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-                <tr data-href="/admin/formUpdateData">
-                    <td>7-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-                <tr data-href="/admin/formUpdateData">
-                    <td>7-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-
-                <tr data-href="/admin/formUpdateData">
-                    <td>7-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
->>>>>>> 2cab32ecbd7693ff081cf7893822e3999caa7714
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-<<<<<<< HEAD
                 @endforeach
-=======
->>>>>>> 2cab32ecbd7693ff081cf7893822e3999caa7714
             </tbody>
         </table>
     </div>
 
-
-
-
-
     <!-- end my-content / semua content -->
 </div>
-<<<<<<< HEAD
 @endsection
-=======
-@endsection
->>>>>>> 2cab32ecbd7693ff081cf7893822e3999caa7714
+

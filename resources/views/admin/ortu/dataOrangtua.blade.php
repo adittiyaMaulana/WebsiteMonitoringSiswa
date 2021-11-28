@@ -123,7 +123,6 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-<<<<<<< HEAD
                     <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
                         loading="lazy" />
                 </a>
@@ -145,76 +144,13 @@
         </ul>
     </div>
 
-=======
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
-                </a>
-
-                <!-- nama user -->
-                <a class=" d-flex align-items-center ml-3 mt-3" style="text-decoration: none; color: #404040;">
-                    <p>Admin</p>
-                </a>
-
-            </div>
-        </div>
-    </nav>
-
-<<<<<<< HEAD
-    <div class="navbar_pilihan mt-5 ml-3">
-        <ul>
-            <li><a href="/admin/data">Siswa</a></li>
-            <li><a href="/admin/dataGuru">Guru</a></li>
-            <li><a class="active" href="/admin/dataOrangtua">Orang Tua</a></li>
-        </ul>
-    </div>
-=======
-        <!-- table -->
-
-        <div class="my-table mt-5 ml-3 mr-4 mb-5">
-            <table id="tableAdmin" class="table table-hover" style="width:100%">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Kelas</th>
-                        <th>Semester</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                        <th>Salary</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($ortu as $data)
-                        <tr data-href="/admin/formUpdateDataGuru">
-                            <td>{{ $data->id }}</td>
-                            <td>
-                                <p class="limit_kehadiran">{{ $data->nama }}</p>
-                            </td>
-                            <td>
-                                <p class="limit_kehadiran">{{ $data->ttl }}</p>
-                            </td>
-                            <td>
-                                <p class="limit_kehadiran">{{ $data->email }}</p>
-                            </td>
-                            <td>
-                                <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                            </td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
->>>>>>> a383f6f086950de8f2df2054998206db2739f7df
->>>>>>> 2cab32ecbd7693ff081cf7893822e3999caa7714
-
-    <!-- button -->
+   <!-- button -->
     <div class="button_area">
         <a href="#"><button type="button" class="btn btn-primary">Kirim<i class="bi bi-send-fill ml-4"></i></button></a>
         <a href="/admin/formDataOrangtua"><button type="button" class="btn btn-success">Tambah Data<i
                     class="bi bi-plus ml-2"></i></button></a>
     </div>
 
-<<<<<<< HEAD
     <!-- table -->
 
     <div class="my-table mt-5 ml-3 mr-4 mb-5">
@@ -250,190 +186,10 @@
                 @endforeach
             </tbody>
         </table>
-=======
     <!-- button -->
     <div class="button_area">
         <a href="#"><button type="button" class="btn btn-primary">Kirim<i class="bi bi-send-fill ml-4"></i></button></a>
         <a href="/admin/formDataOrangtua"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
->>>>>>> 2cab32ecbd7693ff081cf7893822e3999caa7714
-    </div>
-
-    <!-- table -->
-
-    <div class="my-table mt-5 ml-3 mr-4 mb-5">
-        <table id="tableAdmin" class="table table-hover" style="width:100%">
-            <thead class="table-dark">
-                <tr>
-                    <th>Kode</th>
-                    <th>Nama</th>
-                    <th>Nama Siswa</th>
-                    <th>Tanggal Lahir</th>
-                    <th>Alamat Tinggal</th>
-                    <th>Email</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr data-href="/admin/formUpdateDataOrangtua">
-                    <td>182937485069273</td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-                <tr data-href="/admin/formUpdateDataOrangtua">
-                    <td>182937485069273</td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-                <tr data-href="/admin/formUpdateDataOrangtua">
-                    <td>182937485069273</td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-                <tr data-href="/admin/formUpdateDataOrangtua">
-                    <td>182937485069273</td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-                <tr data-href="/admin/formUpdateDataOrangtua">
-                    <td>182937485069273</td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-                <tr data-href="/admin/formUpdateDataOrangtua">
-                    <td>182937485069273</td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-
-<<<<<<< HEAD
-
-
     <!-- end my-content / semua content -->
 </div>
 @endsection
-=======
-                <tr data-href="/admin/formUpdateDataOrangtua">
-                    <td>1</td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <p class="limit_text">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                    </td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- end my-content / semua content -->
-</div>
-@endsection
->>>>>>> 2cab32ecbd7693ff081cf7893822e3999caa7714
