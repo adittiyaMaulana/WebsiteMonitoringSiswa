@@ -107,11 +107,11 @@
         </div>
     </nav>
 
-
-    <div class="mr-4 ml-4">
+    <!-- vertical tab -->
+    <div class="mr-4 ml-4 mt-5">
 
         <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'orangTua')" id="defaultOpen">orangTua</button>
+            <button class="tablinks" style="border-top-left-radius: 20px ;" onclick="openCity(event, 'orangTua')" id="defaultOpen">orangTua</button>
             <button class="tablinks" onclick="openCity(event, 'Nilai')">Nilai</button>
             <button class="tablinks" onclick="openCity(event, 'Jadwal')">Jadwal</button>
             <button class="tablinks" onclick="openCity(event, 'Kelas')">Kelas</button>
@@ -120,55 +120,66 @@
         </div>
 
         <div id="orangTua" class="tabcontent">
-            <h3>London</h3>
-            <p>London is the capital city of England.</p>
+            <div class="ml-3 mr-3 mt-5"></div>
+            <h4 class="mb-5">Import Data Orang Tua</h4>
+            <form>
+                <div class="mb-3">
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+            </form>
         </div>
 
         <div id="Nilai" class="tabcontent">
-            <h3>Paris</h3>
-            <p>Paris is the capital of France.</p>
+            <div class="ml-3 mr-3 mt-5"></div>
+            <h4 class="mb-5">Import Data Nilai</h4>
+            <form>
+                <div class="mb-3">
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+            </form>
         </div>
 
         <div id="Jadwal" class="tabcontent">
-            <h3>Tokyo</h3>
-            <p>Tokyo is the capital of Japan.</p>
+        <div class="ml-3 mr-3 mt-5"></div>
+            <h4 class="mb-5">Import Data Jadwal</h4>
+            <form>
+                <div class="mb-3">
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+            </form>
         </div>
 
         <div id="Kelas" class="tabcontent">
-            <h3>Tokyo</h3>
-            <p>Tokyo is the capital of Japan.</p>
+        <div class="ml-3 mr-3 mt-5"></div>
+            <h4 class="mb-5">Import Data Kelas</h4>
+            <form>
+                <div class="mb-3">
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+            </form>
         </div>
 
         <div id="mapel" class="tabcontent">
-            <h3>Tokyo</h3>
-            <p>Tokyo is the capital of Japan.</p>
+        <div class="ml-3 mr-3 mt-5"></div>
+            <h4 class="mb-5">Import Data Mata Pelajaran</h4>
+            <form>
+                <div class="mb-3">
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+            </form>
         </div>
 
         <div id="Finansial" class="tabcontent">
-            <h3>Tokyo</h3>
-            <p>Tokyo is the capital of Japan.</p>
+        <div class="ml-3 mr-3 mt-5"></div>
+            <h4 class="mb-5">Import Data Finansial</h4>
+            <form>
+                <div class="mb-3">
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+            </form>
+
         </div>
     </div>
-
-    <script>
-        function openCity(evt, cityName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-    </script>
-
 
     <!-- end my-content / semua content -->
 </div>

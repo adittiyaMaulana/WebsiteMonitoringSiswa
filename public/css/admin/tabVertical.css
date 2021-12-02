@@ -2,9 +2,11 @@
         .tab {
             float: left;
             border: 1px solid #ccc;
-            background-color: #f1f1f1;
+            background-color: #ffffff;
             width: 30%;
             height: 450px;
+            border-top-left-radius: 20px ;
+            border-bottom-left-radius: 20px;
         }
 
         /* Style the buttons inside the tab */
@@ -37,7 +39,10 @@
             float: left;
             padding: 0px 12px;
             border: 1px solid #ccc;
+            background-color: #ffffff;
             width: 70%;
             border-left: none;
             height: 450px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
         }

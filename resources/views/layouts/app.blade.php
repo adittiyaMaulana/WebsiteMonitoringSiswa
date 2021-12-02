@@ -11,7 +11,7 @@
     <title>@yield('title')</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/tabVertical.js') }}" defer></script>
 
 
     <!-- Styles -->
