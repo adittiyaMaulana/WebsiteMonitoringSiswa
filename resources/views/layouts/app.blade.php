@@ -39,6 +39,7 @@
     <!-- admin -->
     <link rel="stylesheet" href="{{ asset('css/admin/homepageAdmin.css')}}">
     <link rel="stylesheet" href="{{ asset('css/admin/finansial.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/admin/tabVertical.css')}}">
 
     <link rel="stylesheet" href="{{ asset('css/admin/homepageAdmin.css')}}">
     <link rel="stylesheet" href="{{ asset('css/admin/finansial.css')}}">

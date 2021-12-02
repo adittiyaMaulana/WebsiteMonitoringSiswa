@@ -302,4 +302,10 @@ class AdminController extends Controller {
         $guru->delete();
         return redirect('homepageAdmin');
     }
+
+    // import data
+    public function importData()
+    {
+        return view('admin.import');
+    }
 }

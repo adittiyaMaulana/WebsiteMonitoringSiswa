@@ -9,29 +9,11 @@
 <div class="sidebar">
     <ul>
         <li class="list">
-            <a href="/admin/homepageAdmin">
+            <a href="/admin/admin/homepageAdmin">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
                 <span class="title">Home</span>
-            </a>
-        </li>
-
-        <li class="list">
-            <a href="/admin/jadwalKelasSiswa">
-                <span class="icon">
-                    <ion-icon name="calendar-outline"></ion-icon>
-                </span>
-                <span class="title">Jadwal</span>
-            </a>
-        </li>
-
-        <li class="list">
-            <a href="/admin/finansialSiswa">
-                <span class="icon">
-                    <ion-icon name="wallet-outline"></ion-icon>
-                </span>
-                <span class="title">Finansial</span>
             </a>
         </li>
 
@@ -45,15 +27,6 @@
         </li>
 
         <li class="list">
-            <a href="/admin/data">
-                <span class="icon">
-                    <ion-icon name="clipboard-outline"></ion-icon>
-                </span>
-                <span class="title">Data</span>
-            </a>
-        </li>
-
-        <li class="list">
             <a href="/admin/dokumenFiturBantuan">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
@@ -63,11 +36,11 @@
         </li>
 
         <li class="list">
-            <a href="/admin/tentangSekolahAdmin">
+            <a href="/admin/importData">
                 <span class="icon">
-                    <ion-icon name="alert-circle-outline"></ion-icon>
+                    <ion-icon name="cloud-upload-outline"></ion-icon>
                 </span>
-                <span class="title">Tentang</span>
+                <span class="title">importData</span>
             </a>
         </li>
 
@@ -101,7 +74,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Data Siswa</h4>
+                    <h4>Informasi</h4>
                 </a>
             </div>
 
@@ -137,9 +110,9 @@
 
 
     <!-- buttonn -->
-    <div class="button_area">
+    <!-- <div class="button_area">
         <a href="/admin/formBerita"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
-    </div>
+    </div> -->
 
     <!-- table -->
 

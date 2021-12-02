@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Fitur Bantuan')
+@section('title','importData')
 
 @section('content')
 <!-- ============================================================================================= -->
@@ -25,7 +25,7 @@
             </a>
         </li>
 
-        <li class="list active">
+        <li class="list">
             <a href="/admin/dokumenFiturBantuan">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
@@ -34,7 +34,7 @@
             </a>
         </li>
 
-        <li class="list">
+        <li class="list active">
             <a href="/admin/importData">
                 <span class="icon">
                     <ion-icon name="cloud-upload-outline"></ion-icon>
@@ -58,6 +58,7 @@
 
     </ul>
 </div>
+
 <!-- contentt -->
 
 <div class="my-content">
@@ -72,7 +73,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Fitur Bantuan</h4>
+                    <h4>Import Data</h4>
                 </a>
             </div>
 
@@ -107,35 +108,68 @@
     </nav>
 
 
-    <!-- buttonn -->
-    <!-- <div class="button_area">
-        <a href="/admin/formFiturBantuan"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
-    </div> -->
+    <div class="mr-4 ml-4">
 
-    <!-- table -->
-
-        <div class="my-table mt-5 ml-3 mr-4">
-            <table id="tableAdmin" class="table table-hover" style="width:100%">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Nama File</th>
-                        <th>Ukuran</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($unduhan as $u)
-                    <tr data-href="/admin/formUpdateFiturBantuan">
-                        <td>{{$u->nama}}</td>
-                        <td>{{$u->ukuran}} kb</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'orangTua')" id="defaultOpen">orangTua</button>
+            <button class="tablinks" onclick="openCity(event, 'Nilai')">Nilai</button>
+            <button class="tablinks" onclick="openCity(event, 'Jadwal')">Jadwal</button>
+            <button class="tablinks" onclick="openCity(event, 'Kelas')">Kelas</button>
+            <button class="tablinks" onclick="openCity(event, 'mapel')">Mata Pelajaran</button>
+            <button class="tablinks" onclick="openCity(event, 'Finansial')">Finansial</button>
         </div>
+
+        <div id="orangTua" class="tabcontent">
+            <h3>London</h3>
+            <p>London is the capital city of England.</p>
+        </div>
+
+        <div id="Nilai" class="tabcontent">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="Jadwal" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div id="Kelas" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div id="mapel" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div id="Finansial" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+    </div>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+
     <!-- end my-content / semua content -->
 </div>
 

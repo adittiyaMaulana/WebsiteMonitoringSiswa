@@ -42,13 +42,13 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
     // Route::get('/formUpdateJadwalNonAkademik', [AdminController::class, 'formUpdateJadwalNonAkademik'])->name('admin.formUpdateJadwalNonAkademik');
 
     // Finansial √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
-    Route::get('/finansialSiswa', [AdminController::class, 'finansialSiswa'])->name('admin.finansialSiswa');  //√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
-    Route::get('/formFinansial', [AdminController::class, 'formFinansial'])->name('admin.formFinansial');
-    Route::get('/formUpdateFinansial', [AdminController::class, 'formUpdateFinansial'])->name('admin.formUpdateFinansial');
+    // Route::get('/finansialSiswa', [AdminController::class, 'finansialSiswa'])->name('admin.finansialSiswa');  
+    // Route::get('/formFinansial', [AdminController::class, 'formFinansial'])->name('admin.formFinansial');
+    // Route::get('/formUpdateFinansial', [AdminController::class, 'formUpdateFinansial'])->name('admin.formUpdateFinansial');
 
     // berita √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/beritaAdmin', [AdminController::class, 'beritaAdmin'])->name('admin.beritaAdmin');
-    Route::get('/formBerita', [AdminController::class, 'formBerita'])->name('admin.formBerita');
+    // Route::get('/formBerita', [AdminController::class, 'formBerita'])->name('admin.formBerita');
     Route::get('/formUpdateBerita', [AdminController::class, 'formUpdateBerita'])->name('admin.formUpdateBerita');
 
     // data siswa XXXXXXXXX
@@ -69,15 +69,18 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
 
     // fitur bantuan √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/dokumenFiturBantuan', [AdminController::class, 'dokumenFiturBantuan'])->name('admin.dokumenFiturBantuan');
-    Route::get('/formFiturBantuan', [AdminController::class, 'formFiturBantuan'])->name('admin.formFiturBantuan');
+    // Route::get('/formFiturBantuan', [AdminController::class, 'formFiturBantuan'])->name('admin.formFiturBantuan');
     Route::get('/formUpdateFiturBantuan', [AdminController::class, 'formUpdateFiturBantuan'])->name('admin.formUpdateFiturBantuan');
 
     // tentang sekolah √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
-    Route::get('/tentangSekolahAdmin', [AdminController::class, 'tentangSekolahAdmin'])->name('admin.tentangSekolahAdmin');
+    // Route::get('/tentangSekolahAdmin', [AdminController::class, 'tentangSekolahAdmin'])->name('admin.tentangSekolahAdmin');
 
     //saranDanMasukanAdmin √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/saranDanMasukanAdmin', [AdminController::class, 'saranDanMasukanAdmin'])->name('admin.saranDanMasukanAdmin');
     Route::get('/saranDanMasukanAdminDetail', [AdminController::class, 'saranDanMasukanAdminDetail'])->name('admin.saranDanMasukanAdminDetail');
+    
+    // import dataaaaaaaaaaaaaaaaaaaaaa
+    Route::get('/importData', [AdminController::class, 'importData'])->name('admin.importData');
 
     //pesan
     // Route::get('/pesanAdmin', [AdminController::class, 'pesanAdmin'])->name('admin.pesanAdmin');
