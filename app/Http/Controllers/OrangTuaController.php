@@ -19,9 +19,9 @@ class OrangTuaController extends Controller
     }
 
     // jadwal Non Akademik
-    public function jadwalNonAkademik()
+    public function jadwalAkadanNonAkademik()
     {
-        return view('orangTua.jadwalNonAkademik');
+        return view('orangTua.jadwalAkadanNonAkademik');
     }
 
     // finansial

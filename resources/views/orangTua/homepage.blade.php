@@ -8,7 +8,7 @@
 <div class="sidebar">
     <ul>
         <li class="list active">
-            <a href="/homepage">
+            <a href="/orangTua/homepage">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -17,7 +17,7 @@
         </li>
 
         <li class="list">
-            <a href="/jadwalKelas">
+            <a href="/orangTua/jadwalKelas">
                 <span class="icon">
                     <ion-icon name="calendar-outline"></ion-icon>
                 </span>
@@ -26,7 +26,7 @@
         </li>
 
         <li class="list">
-            <a href="/finansial">
+            <a href="/orangTua/finansial">
                 <span class="icon">
                     <ion-icon name="wallet-outline"></ion-icon>
                 </span>
@@ -35,7 +35,7 @@
         </li>
 
         <li class="list">
-            <a href="/berita">
+            <a href="/orangTua/berita">
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
@@ -44,7 +44,7 @@
         </li>
 
         <li class="list">
-            <a href="/nilai">
+            <a href="/orangTua/nilai">
                 <span class="icon">
                     <ion-icon name="bar-chart-outline"></ion-icon>
                 </span>
@@ -53,7 +53,7 @@
         </li>
 
         <li class="list">
-            <a href="/kehadiran">
+            <a href="/orangTua/kehadiran">
                 <span class="icon">
                     <ion-icon name="create-outline"></ion-icon>
                 </span>
@@ -62,7 +62,7 @@
         </li>
 
         <li class="list">
-            <a href="/fiturBantuan">
+            <a href="/orangTua/fiturBantuan">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
                 </span>
@@ -71,7 +71,7 @@
         </li>
 
         <li class="list">
-            <a href="/tentangSekolah">
+            <a href="/orangTua/tentangSekolah">
                 <span class="icon">
                     <ion-icon name="alert-circle-outline"></ion-icon>
                 </span>
@@ -80,7 +80,7 @@
         </li>
 
         <li class="list">
-            <a class="nav-link" href="{{ route('login') }}" onclick="event.preven-tDefault();
+            <a href="{{ route('login') }}" onclick="event.preven-tDefault();
                             document.getElementById('logout-form').submit();">
                 <span class="icon">
                     <ion-icon name="log-out-outline"></ion-icon>
@@ -116,14 +116,14 @@
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon pengaduan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/saranDanMasukan">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/orangTua/saranDanMasukan">
                     <span class="icon">
                         <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
                 </a>
 
                 <!-- Icon pesan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/pesan">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/orangTua/pesan">
                     <span class="icon">
                         <ion-icon name="mail" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
@@ -131,8 +131,7 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
-                        loading="lazy" />
+                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -152,8 +151,7 @@
 
             <!-- ==================== bagian profile======================== -->
             <div class="profile">
-                <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="105" alt=""
-                    loading="lazy" />
+                <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="105" alt="" loading="lazy" />
                 <h4>Username</h4>
                 <h5 class="nis">NIS</h5>
                 <h5>Email</h5>
@@ -166,7 +164,7 @@
             <div class="finansial_sebagian">
                 <p style="text-align:left;">
                     History Pembayaran
-                    <a href="/finansial"><span style="float:right;">
+                    <a href="/orangTua/finansial"><span style="float:right;">
                             Lihat Semua >>>
                         </span></a>
                 </p>
@@ -217,8 +215,7 @@
 
     <div class="berita ml-4 mr-4">
         <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top"
-                style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
             <div class="card-body">
                 <div class="text-berita">
                     <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -229,8 +226,7 @@
         </div>
 
         <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top"
-                style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
             <div class="card-body">
                 <div class="text-berita">
                     <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.

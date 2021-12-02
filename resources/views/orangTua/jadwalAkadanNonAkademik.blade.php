@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
-@section('title','Fitur Bantuan')
+@section('title','Jadwal Non Akademik')
 
 @section('content')
-
 <!-- ============================================================================================= -->
 <!-- sidebar -->
 <div class="sidebar">
@@ -17,7 +16,7 @@
             </a>
         </li>
 
-        <li class="list">
+        <li class="list active">
             <a href="/orangTua/jadwalKelas">
                 <span class="icon">
                     <ion-icon name="calendar-outline"></ion-icon>
@@ -62,7 +61,7 @@
             </a>
         </li>
 
-        <li class="list active">
+        <li class="list">
             <a href="/orangTua/fiturBantuan">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
@@ -110,7 +109,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Pusat Unduhan</h4>
+                    <h4>Jadwal Akademik dan Non Akademik</h4>
                 </a>
             </div>
 
@@ -144,6 +143,14 @@
         </div>
     </nav>
 
+    <!-- pilihan -->
+    <div class="navbar_pilihan ml-2 mt-5">
+        <ul>
+            <li><a href="/orangTua/jadwalKelas">Kelas</a></li>
+            <li><a class="active" href="/orangTua/jadwalAkadanNonAkademik">Akademik dan Non Akademik</a></li>
+        </ul>
+    </div>
+
     <!-- table -->
 
     <div class="my-table mt-5 ml-4 mr-4">
@@ -156,7 +163,7 @@
                     <th>Age</th>
                     <th>Start date</th>
                     <th>Salary</th>
-                    <th>Aksi</th>
+                    <th>Salary</th>
                 </tr>
             </thead>
             <tbody>
@@ -167,10 +174,7 @@
                     <td>67</td>
                     <td>2011/04/25</td>
                     <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                        </ion-icon>
-                    </td>
+                    <td>$320,800</td>
                 </tr>
                 <tr>
                     <td>Kelas 9</td>
@@ -179,9 +183,7 @@
                     <td>56</td>
                     <td>2011/04/25</td>
                     <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                    </td>
+                    <td>$320,800</td>
                 </tr>
                 <tr>
                     <td>Kelas 9</td>
@@ -190,9 +192,7 @@
                     <td>66</td>
                     <td>2011/04/25</td>
                     <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                    </td>
+                    <td>$320,800</td>
                 </tr>
                 <tr>
                     <td>Kelas 8</td>
@@ -201,9 +201,7 @@
                     <td>20</td>
                     <td>2011/04/25</td>
                     <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                    </td>
+                    <td>$320,800</td>
                 </tr>
                 <tr>
                     <td>Kelas 7</td>
@@ -212,9 +210,7 @@
                     <td>1</td>
                     <td>2011/04/25</td>
                     <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                    </td>
+                    <td>$320,800</td>
                 </tr>
                 <tr>
                     <td>Kelas 9</td>
@@ -223,9 +219,7 @@
                     <td>6</td>
                     <td>2011/04/25</td>
                     <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                    </td>
+                    <td>$320,800</td>
                 </tr>
 
             </tbody>
@@ -233,5 +227,6 @@
     </div>
 
 </div>
+
 
 @endsection

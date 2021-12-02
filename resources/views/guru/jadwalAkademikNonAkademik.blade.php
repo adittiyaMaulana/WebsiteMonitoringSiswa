@@ -1,15 +1,14 @@
 @extends('layouts.app')
 
-@section('title','Fitur Bantuan')
+@section('title','Homepage')
 
 @section('content')
-
 <!-- ============================================================================================= -->
 <!-- sidebar -->
 <div class="sidebar">
     <ul>
         <li class="list">
-            <a href="/orangTua/homepage">
+            <a href="/guru/homepageGuru">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -18,7 +17,34 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/jadwalKelas">
+            <a href="/guru/nilaiSiswa">
+                <span class="icon">
+                    <ion-icon name="bar-chart-outline"></ion-icon>
+                </span>
+                <span class="title">Nilai Siswa</span>
+            </a>
+        </li>
+
+        <li class="list">
+            <a href="/guru/kehadiranSiswa">
+                <span class="icon">
+                    <ion-icon name="create-outline"></ion-icon>
+                </span>
+                <span class="title">Kehadiran Siswa</span>
+            </a>
+        </li>
+
+        <li class="list">
+            <a href="/guru/pusatBantuanGuru">
+                <span class="icon">
+                    <ion-icon name="download-outline"></ion-icon>
+                </span>
+                <span class="title">Pusat Bantuan</span>
+            </a>
+        </li>
+
+        <li class="list active">
+            <a href="/guru/jadwalAkadaNonAkaGuru">
                 <span class="icon">
                     <ion-icon name="calendar-outline"></ion-icon>
                 </span>
@@ -27,58 +53,14 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/finansial">
-                <span class="icon">
-                    <ion-icon name="wallet-outline"></ion-icon>
-                </span>
-                <span class="title">Finansial</span>
-            </a>
-        </li>
-
-        <li class="list">
-            <a href="/orangTua/berita">
+            <a href="/guru/beritaGuru">
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
-                <span class="title">Berita</span>
+                <span class="title">Informasi</span>
             </a>
         </li>
 
-        <li class="list">
-            <a href="/orangTua/nilai">
-                <span class="icon">
-                    <ion-icon name="bar-chart-outline"></ion-icon>
-                </span>
-                <span class="title">Nilai</span>
-            </a>
-        </li>
-
-        <li class="list">
-            <a href="/orangTua/kehadiran">
-                <span class="icon">
-                    <ion-icon name="create-outline"></ion-icon>
-                </span>
-                <span class="title">Kehadiran</span>
-            </a>
-        </li>
-
-        <li class="list active">
-            <a href="/orangTua/fiturBantuan">
-                <span class="icon">
-                    <ion-icon name="download-outline"></ion-icon>
-                </span>
-                <span class="title">Fitur Bantuan</span>
-            </a>
-        </li>
-
-        <li class="list">
-            <a href="/orangTua/tentangSekolah">
-                <span class="icon">
-                    <ion-icon name="alert-circle-outline"></ion-icon>
-                </span>
-                <span class="title">Tentang</span>
-            </a>
-        </li>
 
         <li class="list">
             <a href="{{ route('login') }}" onclick="event.preven-tDefault();
@@ -110,21 +92,21 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Pusat Unduhan</h4>
+                    <h4>jadwal Akademik & Non Akademik</h4>
                 </a>
             </div>
 
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon pengaduan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/orangTua/saranDanMasukan">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/guru/saranDanMasukanGuru">
                     <span class="icon">
                         <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
                 </a>
 
                 <!-- Icon pesan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/orangTua/pesan">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/guru/pesanGuru">
                     <span class="icon">
                         <ion-icon name="mail" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
@@ -144,10 +126,8 @@
         </div>
     </nav>
 
-    <!-- table -->
-
     <div class="my-table mt-5 ml-4 mr-4">
-        <table id="tableOrangTua" class="table table-hover" style="width:100%">
+        <table id="tableGuru" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
                     <th>Kelas</th>
@@ -156,7 +136,7 @@
                     <th>Age</th>
                     <th>Start date</th>
                     <th>Salary</th>
-                    <th>Aksi</th>
+                    <th>Salary</th>
                 </tr>
             </thead>
             <tbody>
@@ -167,10 +147,7 @@
                     <td>67</td>
                     <td>2011/04/25</td>
                     <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                        </ion-icon>
-                    </td>
+                    <td>$320,800</td>
                 </tr>
                 <tr>
                     <td>Kelas 9</td>
@@ -179,9 +156,7 @@
                     <td>56</td>
                     <td>2011/04/25</td>
                     <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                    </td>
+                    <td>$320,800</td>
                 </tr>
                 <tr>
                     <td>Kelas 9</td>
@@ -190,9 +165,7 @@
                     <td>66</td>
                     <td>2011/04/25</td>
                     <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                    </td>
+                    <td>$320,800</td>
                 </tr>
                 <tr>
                     <td>Kelas 8</td>
@@ -201,9 +174,7 @@
                     <td>20</td>
                     <td>2011/04/25</td>
                     <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                    </td>
+                    <td>$320,800</td>
                 </tr>
                 <tr>
                     <td>Kelas 7</td>
@@ -212,9 +183,7 @@
                     <td>1</td>
                     <td>2011/04/25</td>
                     <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                    </td>
+                    <td>$320,800</td>
                 </tr>
                 <tr>
                     <td>Kelas 9</td>
@@ -223,15 +192,15 @@
                     <td>6</td>
                     <td>2011/04/25</td>
                     <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                    </td>
+                    <td>$320,800</td>
                 </tr>
 
             </tbody>
         </table>
     </div>
 
+
+    <!-- end my-content / semua content -->
 </div>
 
 @endsection

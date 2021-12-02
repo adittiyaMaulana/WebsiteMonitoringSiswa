@@ -39,4 +39,36 @@ class GuruController extends Controller
     {
         return view('guru.saranDanMasukanGuru');
     }
+    
+    // pesan
+    public function pesanGuru()
+    {
+        return view('guru.pesan');
+    }
+    
+    // fitur bantuan
+    public function pusatBantuanGuru()
+    {
+        return view('guru.fiturBantuan');
+    }
+    
+    // jadwal
+    public function jadwalAkadaNonAkaGuru()
+    {
+        return view('guru.jadwalAkademikNonAkademik');
+    }
+    
+    // informasi
+    public function beritaGuru()
+    {
+        return view('guru.berita');
+    }
+    
+    public function beritaDetailGuru()
+    {
+        return view('guru.beritaDetail');
+        
+    }
+
+
 }

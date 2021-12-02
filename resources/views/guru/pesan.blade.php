@@ -34,33 +34,6 @@
             </a>
         </li>
 
-        <li class="list">
-            <a href="/guru/pusatBantuanGuru">
-                <span class="icon">
-                    <ion-icon name="download-outline"></ion-icon>
-                </span>
-                <span class="title">Pusat Bantuan</span>
-            </a>
-        </li>
-
-        <li class="list">
-            <a href="/guru/jadwalAkadaNonAkaGuru">
-                <span class="icon">
-                    <ion-icon name="calendar-outline"></ion-icon>
-                </span>
-                <span class="title">Jadwal</span>
-            </a>
-        </li>
-
-        <li class="list">
-            <a href="/guru/beritaGuru">
-                <span class="icon">
-                    <ion-icon name="newspaper-outline"></ion-icon>
-                </span>
-                <span class="title">Informasi</span>
-            </a>
-        </li>
-
 
         <li class="list">
             <a href="{{ route('login') }}" onclick="event.preven-tDefault();
@@ -92,7 +65,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>MOS</h4>
+                    <h4>Pesan</h4>
                 </a>
             </div>
 
@@ -194,77 +167,6 @@
     <!-- ===================================================================== -->
     <!-- Nilai Siswa -->
 
-    <div class="nilaiSiswa ml-3 mr-5">
-        <div class="boxNilai">
-            <div class="isi">
-                <p style="text-align:left;">
-                    Nilai Siswa
-                    <a href="/guru/nilaiSiswa"><span style="float:right;">
-                            Lihat Semua >>>
-                        </span></a>
-                </p>
-
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">NIS</th>
-                            <th scope="col">Nama Siswa</th>
-                            <th scope="col">Kelas</th>
-                            <th scope="col">UAS</th>
-                            <th scope="col">UTS</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>17283945</td>
-                            <td class="name">
-                                <p class="limit_name_nilai">OTONGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG</p>
-                            </td>
-                            <td>7-1</td>
-                            <td>100</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>17283945</td>
-                            <td class="name">
-                                <p class="limit_name_nilai">Manusia Biasa</p>
-                            </td>
-                            <td>7-1</td>
-                            <td>100</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>17283945</td>
-                            <td class="name">
-                                <p class="limit_name_nilai">hai</p>
-                            </td>
-                            <td>7-1</td>
-                            <td>100</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>17283945</td>
-                            <td class="name">
-                                <p class="limit_name_nilai">hai</p>
-                            </td>
-                            <td>7-1</td>
-                            <td>100</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>17283945</td>
-                            <td class="name">
-                                <p class="limit_name_nilai">hai</p>
-                            </td>
-                            <td>7-1</td>
-                            <td>100</td>
-                            <td>-</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
 
 
     <!-- end my-content / semua content -->

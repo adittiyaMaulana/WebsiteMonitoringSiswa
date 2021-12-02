@@ -34,6 +34,7 @@
     <!-- guru -->
     <link rel="stylesheet" href="{{ asset('css/guru/homepageGuru.css')}}">
     <link rel="stylesheet" href="{{asset('css/sarandanmasukan.css')}}">
+    <link rel="stylesheet" href="{{asset('css/guru/informasi.css')}}">
 
     <!-- admin -->
     <link rel="stylesheet" href="{{ asset('css/admin/homepageAdmin.css')}}">
