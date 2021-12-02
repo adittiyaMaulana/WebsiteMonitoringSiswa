@@ -8,7 +8,7 @@
 <div class="sidebar">
     <ul>
         <li class="list active">
-            <a href="/homepageAdmin">
+            <a href="/admin/homepageAdmin">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>

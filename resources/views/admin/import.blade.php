@@ -8,7 +8,7 @@
 <div class="sidebar">
     <ul>
         <li class="list">
-            <a href="/admin/admin/homepageAdmin">
+            <a href="/admin/homepageAdmin">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -111,7 +111,7 @@
     <div class="mr-4 ml-4 mt-5">
 
         <div class="tab">
-            <button class="tablinks" style="border-top-left-radius: 20px ;" onclick="openCity(event, 'orangTua')" id="defaultOpen">orangTua</button>
+            <button class="tablinks" style="border-top-left-radius: 20px ;" onclick="openCity(event, 'orangTua')" id="defaultOpen">OrangTua</button>
             <button class="tablinks" onclick="openCity(event, 'Nilai')">Nilai</button>
             <button class="tablinks" onclick="openCity(event, 'Jadwal')">Jadwal</button>
             <button class="tablinks" onclick="openCity(event, 'Kelas')">Kelas</button>

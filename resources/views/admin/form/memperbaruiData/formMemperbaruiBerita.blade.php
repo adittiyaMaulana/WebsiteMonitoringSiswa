@@ -17,39 +17,12 @@
             </a>
         </li>
 
-        <li class="list">
-            <a href="/admin/jadwalKelasSiswa">
-                <span class="icon">
-                    <ion-icon name="calendar-outline"></ion-icon>
-                </span>
-                <span class="title">Jadwal</span>
-            </a>
-        </li>
-
-        <li class="list">
-            <a href="/admin/finansialSiswa">
-                <span class="icon">
-                    <ion-icon name="wallet-outline"></ion-icon>
-                </span>
-                <span class="title">Finansial</span>
-            </a>
-        </li>
-
         <li class="list active">
             <a href="/admin/beritaAdmin">
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
                 <span class="title">Berita</span>
-            </a>
-        </li>
-
-        <li class="list">
-            <a href="/admin/data">
-                <span class="icon">
-                    <ion-icon name="clipboard-outline"></ion-icon>
-                </span>
-                <span class="title">Data</span>
             </a>
         </li>
 
@@ -63,11 +36,11 @@
         </li>
 
         <li class="list">
-            <a href="/admin/tentangSekolahAdmin">
+            <a href="/admin/importData">
                 <span class="icon">
-                    <ion-icon name="alert-circle-outline"></ion-icon>
+                    <ion-icon name="cloud-upload-outline"></ion-icon>
                 </span>
-                <span class="title">Tentang</span>
+                <span class="title">importData</span>
             </a>
         </li>
 
