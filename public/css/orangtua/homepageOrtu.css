@@ -16,6 +16,11 @@
 }
 
 /* bagian berita */
+.bagianinformasi{
+    height: auto;
+    width: 95%;
+}
+
 .title_berita{
     padding-top: 10vh;
     font-weight: 600;
@@ -26,6 +31,13 @@
 .berita{
     height: auto;
     width: 95%;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.listberita{
+    height: auto;
+    width: auto;
     margin-bottom: 20px;
     display: flex;
 }

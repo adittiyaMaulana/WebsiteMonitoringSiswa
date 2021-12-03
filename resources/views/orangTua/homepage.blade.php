@@ -208,34 +208,111 @@
         <!-- enddd content 1 -->
     </div>
 
+
+    <!-- bagian grafik nilai -->
+
+    <!--  -->
+
     <!-- ===================================================================== -->
     <!-- Berita -->
 
-    <h3 class="title_berita">Berita</h3>
-
-    <div class="berita ml-4 mr-4">
-        <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-            <div class="card-body">
-                <div class="text-berita">
-                    <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                        aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+    <div class="bagianinformasi">
+        <h3 class="title_berita">Informasi</h3>
+        
+        <div class="listberita ml-4 mr-4 mb-5">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
+                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                        <div class="card-body">
+                            <div class="text-berita">
+                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-            <div class="card-body">
-                <div class="text-berita">
-                    <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                        aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                <div class="item">
+                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
+                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                        <div class="card-body">
+                            <div class="text-berita">
+                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="item">
+                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
+                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                        <div class="card-body">
+                            <div class="text-berita">
+                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
+                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                        <div class="card-body">
+                            <div class="text-berita">
+                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
+                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                        <div class="card-body">
+                            <div class="text-berita">
+                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
+                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                        <div class="card-body">
+                            <div class="text-berita">
+                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
+                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                        <div class="card-body">
+                            <div class="text-berita">
+                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
             </div>
+    
         </div>
     </div>
+
+    <!--  -->
+
 
 
     <!-- end my-content / semua content -->
