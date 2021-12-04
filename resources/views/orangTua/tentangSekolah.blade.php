@@ -144,98 +144,81 @@
 
         </div>
 
-        <div class="struktur-organisasi ml-4 mr-4 mb-5">
-            <p>Struktur organisasi</p>
+        <div class="list-struktur-organisasi ml-4 mr-4 mb-5 mt-5">
+            <p class="title-struktur-organisasi">Struktur Organisasi</p>
 
-            <div class="owl-carousel owl-theme">
+            <div class="owl-struktur-organisasi owl-carousel owl-theme">
                 <div class="item">
-                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-                        <div class="card-body">
-                            <div class="text-berita">
-                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
-                            </div>
+                    <div class="card-informasi ">
+                        <div class="isi-informasi">
+                            <img src="{{asset('image/school1.jpg')}}" width="5%" style="border-radius: 50%;" />
+                            <p class="nama-guru">Bapake Namanya Saha </p>
+                            <p>Kepala Sekolah</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-                        <div class="card-body">
-                            <div class="text-berita">
-                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
-                            </div>
+                    <div class="card-informasi ">
+                        <div class="isi-informasi">
+                            <img src="{{asset('image/school1.jpg')}}" width="5%" style="border-radius: 50%;" />
+                            <p class="nama-guru">Bapake Namanya Saha </p>
+                            <p>Kepala Sekolah</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-                        <div class="card-body">
-                            <div class="text-berita">
-                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
-                            </div>
+                    <div class="card-informasi ">
+                        <div class="isi-informasi">
+                            <img src="{{asset('image/school1.jpg')}}" width="5%" style="border-radius: 50%;" />
+                            <p class="nama-guru">Bapake Namanya Saha </p>
+                            <p>Kepala Sekolah</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-                        <div class="card-body">
-                            <div class="text-berita">
-                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
-                            </div>
+                    <div class="card-informasi ">
+                        <div class="isi-informasi">
+                            <img src="{{asset('image/school1.jpg')}}" width="5%" style="border-radius: 50%;" />
+                            <p class="nama-guru">Bapake Namanya Saha </p>
+                            <p>Kepala Sekolah</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-                        <div class="card-body">
-                            <div class="text-berita">
-                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
-                            </div>
+                    <div class="card-informasi ">
+                        <div class="isi-informasi">
+                            <img src="{{asset('image/school1.jpg')}}" width="5%" style="border-radius: 50%;" />
+                            <p class="nama-guru">Bapake Namanya Saha </p>
+                            <p>Kepala Sekolah</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-                        <div class="card-body">
-                            <div class="text-berita">
-                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
-                            </div>
+                    <div class="card-informasi ">
+                        <div class="isi-informasi">
+                            <img src="{{asset('image/school1.jpg')}}" width="5%" style="border-radius: 50%;" />
+                            <p class="nama-guru">Bapake Namanya Saha </p>
+                            <p>Kepala Sekolah</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="item">
-                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-                        <div class="card-body">
-                            <div class="text-berita">
-                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
-                            </div>
+                    <div class="card-informasi ">
+                        <div class="isi-informasi">
+                            <img src="{{asset('image/school1.jpg')}}" width="5%" style="border-radius: 50%;" />
+                            <p class="nama-guru">Bapake Namanya Saha </p>
+                            <p>Kepala Sekolah</p>
                         </div>
                     </div>
                 </div>
 
             </div>
-
-
 
         </div>
     </div>

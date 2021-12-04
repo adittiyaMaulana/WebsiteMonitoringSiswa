@@ -155,7 +155,6 @@
                 <h4>Username</h4>
                 <h5 class="nis">NIS</h5>
                 <h5>Email</h5>
-
             </div>
         </div>
 
@@ -220,7 +219,7 @@
         <h3 class="title_berita">Informasi</h3>
         
         <div class="listberita ml-4 mr-4 mb-5">
-            <div class="owl-carousel owl-theme">
+            <div class="owl-informasi owl-carousel owl-theme">
                 <div class="item">
                     <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
                         <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
