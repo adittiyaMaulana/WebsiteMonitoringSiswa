@@ -10,6 +10,17 @@ use App\Models\ProfilSiswa;
 use App\Models\Finansial;
 use App\Models\PusatUnduhan;
 
+use App\Imports\OrangTuaImport;
+use App\Imports\GuruImport;
+use App\Imports\FinansialImport;
+use App\Imports\KelasImport;
+use App\Imports\MataPelajaranImport;
+use App\Imports\NilaiImport;
+use App\Imports\SiswaImport;
+use App\Imports\UsersImport;
+
+use Maatwebsite\Excel\Facades\Excel;
+
 class AdminController extends Controller {
     
     public function homepage()
@@ -192,120 +203,57 @@ class AdminController extends Controller {
         
     }
 
-
-    
-
-    ////////////////////FOR ORANG TUA////////////////////////////////////////
-
-    public function view_ortu(){
-        
-    }
-
-    //ADD DATA ORANG TUA BY ADMIN
-    public function insert_ortu() {
-        $ortu = new OrangTua;
-        return view('admin.ortu.insert', compact(
-            'ortu'
-        ));
-    }
-    
-    public function store_ortu(Request $request) {
-        $ortu = new OrangTua;
-        $ortu->nama = $request->nama;
-        $ortu->ttl = $request->ttl;
-        $ortu->alamat = $request->alamat;
-        $ortu->email = $request->email;
-        $ortu->save();
-    
-        return redirect('homepageAdmin')->with('success', "Data berhasil disimpan");
-    }
-    
-
-    //UPDATE DATA ORTU
-    public function edit_ortu($id)
-    {
-        $ortu = OrangTua::find($id);
-        return view('admin.ortu.edit', compact(
-            'ortu'
-        ));
-    }
-
-    public function update_ortu(Request $request, $id)
-    {
-        $ortu = OrangTua::find($id);
-        $ortu->nama = $request->nama;
-        $ortu->ttl = $request->ttl;
-        $ortu->alamat = $request->alamat;
-        $ortu->email = $request->email;
-        $ortu->save();
-
-        return redirect('homepageAdmin')->with('success', "Data berhasil diperbaharui");
-    }
-
-    //DELETE DATA ORTU
-    public function delete_ortu($id){
-        $ortu = OrangTua::find($id);
-        $ortu->delete();
-        return redirect('homepageAdmin');
-    }
-
-
-    ////////////////////FOR GURU////////////////////////////////////////
-
-    public function view_guru(){
-        
-    }
-
-    //ADD DATA ORANG TUA BY ADMIN
-    public function insert_guru() {
-        $guru = new Guru;
-        return view('admin.guru.insert', compact(
-            'guru'
-        ));
-    }
-    
-    public function store_guru(Request $request) {
-        $guru = new Guru;
-        $guru->nama = $request->nama;
-        $guru->ttl = $request->ttl;
-        $guru->alamat = $request->alamat;
-        $guru->email = $request->email;
-        $guru->save();
-    
-        return redirect('homepageAdmin')->with('success', "Data berhasil disimpan");
-    }
-    
-    //UPDATE DATA guru
-    public function edit_guru($id)
-    {
-        $guru = Guru::find($id);
-        return view('admin.guru.edit', compact(
-            'guru'
-        ));
-    }
-
-    public function update_guru(Request $request, $id)
-    {
-        $guru = Guru::find($id);
-        $guru->nama = $request->nama;
-        $guru->ttl = $request->ttl;
-        $guru->alamat = $request->alamat;
-        $guru->email = $request->email;
-        $guru->save();
-
-        return redirect('homepageAdmin')->with('success', "Data berhasil diperbaharui");
-    }
-
-    //DELETE DATA guru
-    public function delete_guru($id){
-        $guru = Guru::find($id);
-        $guru->delete();
-        return redirect('homepageAdmin');
-    }
-
     // import data
     public function importData()
     {
         return view('admin.import');
+    }
+
+    public function importOrangTua()
+    {
+        Excel::import(new OrangTuaImport,request()->file('file'));
+        return view('admin.import');  
+    }
+
+    public function importGuru()
+    {
+        Excel::import(new GuruImport,request()->file('file'));
+        return view('admin.import');  
+    }
+
+    public function importUsers()
+    {
+        Excel::import(new UsersImport,request()->file('file'));
+        return view('admin.import');  
+    }
+
+    public function importNilai()
+    {
+        Excel::import(new NilaiImport,request()->file('file'));
+        return view('admin.import');  
+    }
+
+    public function importKelas()
+    {
+        Excel::import(new KelasImport,request()->file('file'));
+        return view('admin.import');  
+    }
+
+    public function importMataPelajaran()
+    {
+        Excel::import(new MataPelajaranImport,request()->file('file'));
+        return view('admin.import');  
+    }
+
+    public function importFinansial()
+    {
+        Excel::import(new FinansialImport,request()->file('file'));
+        return view('admin.import');  
+    }
+
+    public function importSiswa()
+    {
+        Excel::import(new SiswaImport,request()->file('file'));
+        return view('admin.import');  
     }
 }

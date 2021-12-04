@@ -15,11 +15,11 @@ class CreateOrangTuaTable extends Migration
     {
         Schema::create('orang_tua', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('nama',50);
             $table->date('ttl');
             $table->string('alamat',225);
             $table->string('email')->unique();
+            $table->timestamps();
         });
     }
 

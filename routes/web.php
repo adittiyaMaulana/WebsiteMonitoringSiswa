@@ -30,6 +30,21 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
     Route::get('/homepageAdmin',[AdminController::class,'homepage'])->name('admin.homepage');
 
+    // IMPORT DATA //
+    Route::get('/importData', [AdminController::class, 'importData'])->name('admin.importData');
+
+    Route::post('importOrangTua', [AdminController::class, 'importOrangTua'])->name('importOrangTua');
+    Route::post('importGuru', [AdminController::class, 'importGuru'])->name('importGuru');
+    Route::post('importUsers', [AdminController::class, 'importUsers'])->name('importUsers');
+    Route::post('importNilai', [AdminController::class, 'importNilai'])->name('importNilai');
+    Route::post('importKelas', [AdminController::class, 'importKelas'])->name('importKelas');
+    Route::post('importMataPelajaran', [AdminController::class, 'importMataPelajaran'])->name('importMataPelajaran');
+    Route::post('importFinansial', [AdminController::class, 'importFinansial'])->name('importFinansial');
+    Route::post('importSiswa', [AdminController::class, 'importSiswa'])->name('importSiswa');
+    // END OF IMPORT DATA SESSION //
+
+
+
     // jadwal
     // jadwal kelasXXXXXXX
     // Route::get('/jadwalKelasSiswa', [AdminController::class, 'jadwalKelasSiswa'])->name('admin.jadwalKelasSiswa');
@@ -79,8 +94,6 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
     Route::get('/saranDanMasukanAdmin', [AdminController::class, 'saranDanMasukanAdmin'])->name('admin.saranDanMasukanAdmin');
     Route::get('/saranDanMasukanAdminDetail', [AdminController::class, 'saranDanMasukanAdminDetail'])->name('admin.saranDanMasukanAdminDetail');
     
-    // import dataaaaaaaaaaaaaaaaaaaaaa
-    Route::get('/importData', [AdminController::class, 'importData'])->name('admin.importData');
 
     //pesan
     // Route::get('/pesanAdmin', [AdminController::class, 'pesanAdmin'])->name('admin.pesanAdmin');

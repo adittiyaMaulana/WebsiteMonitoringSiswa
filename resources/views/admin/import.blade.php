@@ -122,9 +122,11 @@
         <div id="orangTua" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Orang Tua</h4>
-            <form>
+            <form method="POST" action="{{ route('importOrangTua') }}" enctype="multipart/form-data">
+                @csrf
                 <div class="mb-3">
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" name="file" id="formFile">
+                    <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
         </div>
@@ -132,9 +134,11 @@
         <div id="Nilai" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Nilai</h4>
-            <form>
+            <form method="POST" action="{{ route('importNilai') }}" enctype="multipart/form-data">
+                @csrf
                 <div class="mb-3">
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" name="file" id="formFile">
+                    <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
         </div>
