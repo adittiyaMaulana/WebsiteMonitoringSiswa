@@ -156,9 +156,11 @@
         <div id="Kelas" class="tabcontent">
         <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Kelas</h4>
-            <form>
+            <form method="POST" action="{{ route('importKelas') }}" enctype="multipart/form-data">
+                @csrf
                 <div class="mb-3">
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" name="file" id="formFile">
+                    <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
         </div>
@@ -166,9 +168,11 @@
         <div id="mapel" class="tabcontent">
         <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Mata Pelajaran</h4>
-            <form>
+            <form method="POST" action="{{ route('importMataPelajaran') }}" enctype="multipart/form-data">
+                @csrf
                 <div class="mb-3">
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" name="file" id="formFile">
+                    <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
         </div>
@@ -176,9 +180,11 @@
         <div id="Finansial" class="tabcontent">
         <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Finansial</h4>
-            <form>
+            <form method="POST" action="{{ route('importFinansial') }}" enctype="multipart/form-data">
+                @csrf
                 <div class="mb-3">
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" name="file" id="formFile">
+                    <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
 
