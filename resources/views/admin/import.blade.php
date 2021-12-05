@@ -108,15 +108,21 @@
     </nav>
 
     <!-- vertical tab -->
-    <div class="mr-4 ml-4 mt-5">
+    <div class="mr-4 ml-4 mt-5 mb-4">
 
         <div class="tab">
             <button class="tablinks" style="border-top-left-radius: 20px ;" onclick="openCity(event, 'orangTua')" id="defaultOpen">OrangTua</button>
+            <button class="tablinks" onclick="openCity(event, 'Guru')">Guru</button>
+            <button class="tablinks" onclick="openCity(event, 'Admin')">Admin</button>
+            <button class="tablinks" onclick="openCity(event, 'Users')">Users</button>
             <button class="tablinks" onclick="openCity(event, 'Nilai')">Nilai</button>
-            <button class="tablinks" onclick="openCity(event, 'Jadwal')">Jadwal</button>
+            <button class="tablinks" onclick="openCity(event, 'JadwalKelas')">Jadwal Kelas</button>
+            <button class="tablinks" onclick="openCity(event, 'JadwalAkaNoAka')">Jadwal Akademik / Non Akademik</button>
             <button class="tablinks" onclick="openCity(event, 'Kelas')">Kelas</button>
             <button class="tablinks" onclick="openCity(event, 'mapel')">Mata Pelajaran</button>
             <button class="tablinks" onclick="openCity(event, 'Finansial')">Finansial</button>
+            <button class="tablinks" onclick="openCity(event, 'Siswa')">Siswa</button>
+            <button class="tablinks" style="border-bottom-left-radius: 20px ;" onclick="openCity(event, 'Absensi')">Absensi</button>
         </div>
 
         <div id="orangTua" class="tabcontent">
@@ -124,8 +130,44 @@
             <h4 class="mb-5">Import Data Orang Tua</h4>
             <form method="POST" action="{{ route('importOrangTua') }}" enctype="multipart/form-data">
                 @csrf
+                <div class=" mb-3">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile">
+                    <button class="btn btn-success">Import Data</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="Guru" class="tabcontent">
+            <div class="ml-3 mr-3 mt-5"></div>
+            <h4 class="mb-5">Import Data Guru</h4>
+            <form method="POST" action="" enctype="multipart/form-data">
+                @csrf
                 <div class="mb-3">
-                    <input class="form-control" type="file" name="file" id="formFile">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile">
+                    <button class="btn btn-success">Import Data</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="Admin" class="tabcontent">
+            <div class="ml-3 mr-3 mt-5"></div>
+            <h4 class="mb-5">Import Data Admin</h4>
+            <form method="POST" action="" enctype="multipart/form-data">
+                @csrf
+                <div class="mb-3">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile">
+                    <button class="btn btn-success">Import Data</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="Users" class="tabcontent">
+            <div class="ml-3 mr-3 mt-5"></div>
+            <h4 class="mb-5">Import Data Users</h4>
+            <form method="POST" action="" enctype="multipart/form-data">
+                @csrf
+                <div class="mb-3">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile">
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
@@ -137,59 +179,98 @@
             <form method="POST" action="{{ route('importNilai') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control" type="file" name="file" id="formFile">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile">
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
         </div>
 
-        <div id="Jadwal" class="tabcontent">
-        <div class="ml-3 mr-3 mt-5"></div>
-            <h4 class="mb-5">Import Data Jadwal</h4>
+        <div id="JadwalKelas" class="tabcontent">
+            <div class="ml-3 mr-3 mt-5"></div>
+            <h4 class="mb-5">Import Data Jadwal Kelas</h4>
             <form>
                 <div class="mb-3">
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control mb-3" type="file" id="formFile">
+                    <button class="btn btn-success">Import Data</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="JadwalAkaNoAka" class="tabcontent">
+            <div class="ml-3 mr-3 mt-5"></div>
+            <h4 class="mb-5">Import Data Jadwal Akademik / Non Akademik</h4>
+            <form>
+                <div class="mb-3">
+                    <input class="form-control mb-3" type="file" id="formFile">
+                    <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
         </div>
 
         <div id="Kelas" class="tabcontent">
-        <div class="ml-3 mr-3 mt-5"></div>
+            <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Kelas</h4>
             <form method="POST" action="{{ route('importKelas') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control" type="file" name="file" id="formFile">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile">
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
         </div>
 
         <div id="mapel" class="tabcontent">
-        <div class="ml-3 mr-3 mt-5"></div>
+            <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Mata Pelajaran</h4>
             <form method="POST" action="{{ route('importMataPelajaran') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control" type="file" name="file" id="formFile">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile">
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
         </div>
 
         <div id="Finansial" class="tabcontent">
-        <div class="ml-3 mr-3 mt-5"></div>
+            <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Finansial</h4>
             <form method="POST" action="{{ route('importFinansial') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control" type="file" name="file" id="formFile">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile">
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
+        </div>
 
+        <div id="Siswa" class="tabcontent">
+            <div class="ml-3 mr-3 mt-5"></div>
+            <h4 class="mb-5">Import Data Siswa</h4>
+            <form method="POST" action="" enctype="multipart/form-data">
+                @csrf
+                <div class="mb-3">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile">
+                    <button class="btn btn-success">Import Data</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="Absensi" class="tabcontent">
+            <div class="ml-3 mr-3 mt-5"></div>
+            <h4 class="mb-5">Import Data Absensi</h4>
+            <form method="POST" action="" enctype="multipart/form-data">
+                @csrf
+                <div class="mb-3">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile">
+                    <button class="btn btn-success">Import Data</button>
+                </div>
+            </form>
         </div>
     </div>
+
+    <div style=" height: 900px;">
+    </div>
+
 
     <!-- end my-content / semua content -->
 </div>

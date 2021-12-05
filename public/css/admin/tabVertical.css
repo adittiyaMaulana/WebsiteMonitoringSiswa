@@ -4,12 +4,11 @@
     border: 1px solid #ccc;
     background-color: #ffffff;
     width: 30%;
-    height: 450px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    height: auto;
+    border-radius: 20px 0 0 20px;
 }
 
-/* Style the buttons inside the tab */
+/* untukk button */
 .tab button {
     background-color: inherit;
     color: black;
@@ -19,7 +18,7 @@
     outline: none;
     text-align: left;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s;
     font-size: 17px;
 }
 
@@ -34,7 +33,7 @@
     color: white;
 }
 
-/* style content tab */
+/* kontent dari setiap tab */
 .tabcontent {
     float: left;
     padding: 0px 12px;
@@ -42,7 +41,8 @@
     background-color: #ffffff;
     width: 70%;
     border-left: none;
-    height: 450px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    height: 835px;
+    border-radius: 0 20px 20px 0;
 }
+
+
