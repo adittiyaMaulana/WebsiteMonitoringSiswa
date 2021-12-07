@@ -17,7 +17,7 @@ class CreateJadwalPelajaranTable extends Migration
             $table->id();
             $table->timestamps();
             $table->unsignedBigInteger('id_mapel');
-            $table->foreign('id_mapel')->references('id')->on('mata_pelajaran');
+            $table->foreign('id_mapel')->references('id')->on('mata_pelajaran')->onDelete('cascade')->onUpdate('cascade');
             $table->dateTime('jam_pelajaran');
         });
     }

@@ -16,10 +16,8 @@ class CreateAbsensiTable extends Migration
         Schema::create('absensi', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users');
             $table->unsignedBigInteger('id_siswa');
-            $table->foreign('id_siswa')->references('id')->on('profil_siswa');
+            $table->foreign('id_siswa')->references('id')->on('profil_siswa')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('kehadiran');
             $table->integer('alpa');
             $table->integer('sakit');

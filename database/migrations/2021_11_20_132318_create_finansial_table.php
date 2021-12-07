@@ -17,7 +17,7 @@ class CreateFinansialTable extends Migration
             $table->id();
             $table->timestamps();
             $table->unsignedBigInteger('id_siswa');
-            $table->foreign('id_siswa')->references('id')->on('profil_siswa');
+            $table->foreign('id_siswa')->references('id')->on('profil_siswa')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nama_bayaran');
             $table->integer('jumlah');
             $table->date('jatuh_tempo');
