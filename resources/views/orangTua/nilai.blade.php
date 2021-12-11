@@ -147,6 +147,17 @@
     <!-- table -->
 
     <div class="my-table mt-5 ml-4 mr-4">
+        
+        <select class="form-select mb-5" aria-label="Default select example">
+            <option selected>Pilih Semester</option>
+            <option value="1">Kelas 7 Semester Ganjil</option>
+            <option value="2">Kelas 7 Semester Genap</option>
+            <option value="3">Kelas 8 Semester Ganjil</option>
+            <option value="4">Kelas 8 Semester Genap</option>
+            <option value="5">Kelas 9 Semester Ganjil</option>
+            <option value="6">Kelas 9 Semester Genap</option>
+        </select>
+
         <table id="tableOrangTua" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>

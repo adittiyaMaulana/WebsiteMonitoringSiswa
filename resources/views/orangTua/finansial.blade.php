@@ -146,6 +146,13 @@
     <!-- table -->
 
     <div class="my-table mt-5 ml-4 mr-4">
+
+        <select class="form-select mb-5" aria-label="Default select example">
+            <option selected>Pilih Status</option>
+            <option value="1">Sudah dibayar</option>
+            <option value="2">Belum dibayar</option>
+        </select>
+
         <table id="tableOrangTua" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
