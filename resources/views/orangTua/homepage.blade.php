@@ -209,6 +209,16 @@
 
 
     <!-- bagian grafik nilai -->
+    <div class="ml-4 mr-4 mt-4 mb-3">
+        <div class="card">
+            <div class="card-header">
+                Nilai
+            </div>
+            <div class="card-body">
+                <div id="bar-chart"></div>
+            </div>
+        </div>
+    </div>
 
     <!--  -->
 
@@ -217,7 +227,7 @@
 
     <div class="bagianinformasi">
         <h3 class="title_berita">Informasi</h3>
-        
+
         <div class="listberita ml-4 mr-4 mb-5">
             <div class="owl-informasi owl-carousel owl-theme">
                 <div class="item">
@@ -304,9 +314,9 @@
                         </div>
                     </div>
                 </div>
-    
+
             </div>
-    
+
         </div>
     </div>
 
@@ -316,5 +326,9 @@
 
     <!-- end my-content / semua content -->
 </div>
+
+<script>
+
+</script>
 
 @endsection
