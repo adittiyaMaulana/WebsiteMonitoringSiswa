@@ -75,6 +75,41 @@ class OrangTuaSeeder extends Seeder
                 'ttl' => '1980-07-14',
                 'alamat' => 'Jl. Cendrawasih, Cengkareng Barat',
                 'email' => "nadim@gmail.com"
+            ],[
+                'nama' => 'Satria',
+                'ttl' => '1980-07-14',
+                'alamat' => 'Jl. Cendrawasih, Cengkareng Barat',
+                'email' => "satria@gmail.com"
+            ],[
+                'nama' => 'Dani',
+                'ttl' => '1980-07-14',
+                'alamat' => 'Jl. Cendrawasih, Cengkareng Barat',
+                'email' => "dani@gmail.com"
+            ],[
+                'nama' => 'Denis',
+                'ttl' => '1980-07-14',
+                'alamat' => 'Jl. Cendrawasih, Cengkareng Barat',
+                'email' => "denis@gmail.com"
+            ],[
+                'nama' => 'Kasim',
+                'ttl' => '1980-07-14',
+                'alamat' => 'Jl. Cendrawasih, Cengkareng Barat',
+                'email' => "kasim@gmail.com"
+            ],[
+                'nama' => 'Fikri',
+                'ttl' => '1980-07-14',
+                'alamat' => 'Jl. Cendrawasih, Cengkareng Barat',
+                'email' => "Sutisno@gmail.com"
+            ],[
+                'nama' => 'Asep',
+                'ttl' => '1980-07-14',
+                'alamat' => 'Jl. Cendrawasih, Cengkareng Barat',
+                'email' => "asep@gmail.com"
+            ],[
+                'nama' => 'Mario',
+                'ttl' => '1980-07-14',
+                'alamat' => 'Jl. Cendrawasih, Cengkareng Barat',
+                'email' => "mario@gmail.com"
             ]
         ];
         \DB::table('orang_tua')->insert($orang_tua);
