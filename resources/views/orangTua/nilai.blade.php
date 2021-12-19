@@ -147,7 +147,19 @@
     <!-- table -->
 
     <div class="my-table mt-5 ml-4 mr-4">
-        
+  
+    <div class="row">
+    <div class="col-sm-6 col-xl-3">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title" align="center">Grafik Nilai</h4>
+                 <canvas id="mataChart" class="chartjs" width="2300" height="3000"></canvas>
+            </div>
+          </div>
+        </div>                
+    </div>
+</div>
+       
         <select class="form-select mb-5" aria-label="Default select example">
             <option selected>Pilih Semester</option>
             <option value="1">Kelas 7 Semester Ganjil</option>
@@ -231,5 +243,30 @@
     </div>
 
 </div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js" integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+    var ctx = document.getElementById("mataChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: <?php echo json_encode($label); ?>,
+        datasets: [{
+        label: 'Nilai',
+        backgroundColor: '#ADD8E6',
+        borderColor: '#93C3D2',
+        data: [<?php echo json_encode($tugas); ?>,<?php echo json_encode($uts); ?>,<?php echo json_encode($uas); ?>]
+        }],
+      options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+   },
+ });
+</script>
 
 @endsection
