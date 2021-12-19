@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\OrangTua;
 use App\Models\Guru;
 use App\Models\ProfilSiswa;
+use App\Models\Finansial;
 use App\Models\PusatUnduhan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
