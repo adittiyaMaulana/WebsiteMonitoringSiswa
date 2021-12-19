@@ -15,23 +15,32 @@ class KelasSeeder extends Seeder
     {
         $kelas = [
             [
-                'nama_kelas' => "7A"
+                'nama_kelas' => "7A",
+                'kelas' => 7
             ],[
-                'nama_kelas' => "7B"
+                'nama_kelas' => "7B",
+                'kelas' => 7
             ],[
-                'nama_kelas' => "7C"
+                'nama_kelas' => "7C",
+                'kelas' => 7
             ],[
-                'nama_kelas' => "8A"
+                'nama_kelas' => "8A",
+                'kelas' => 8
             ],[
-                'nama_kelas' => "8B"
+                'nama_kelas' => "8B",
+                'kelas' => 8
             ],[
-                'nama_kelas' => "8C"
+                'nama_kelas' => "8C",
+                'kelas' => 8
             ],[
-                'nama_kelas' => "9A"
+                'nama_kelas' => "9A",
+                'kelas' => 9
             ],[
-                'nama_kelas' => "9B"
+                'nama_kelas' => "9B",
+                'kelas' => 9
             ],[
-                'nama_kelas' => "9C"
+                'nama_kelas' => "9C",
+                'kelas' => 9
             ]
         ];
         \DB::table('kelas')->insert($kelas);

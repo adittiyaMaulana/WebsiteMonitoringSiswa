@@ -94,12 +94,14 @@
     <!-- untuk owl carousel script -->
     <script src="{{ asset('assetsowlcarousel/owlcarousel/owl.carousel.js')}}"></script>
     <script src="{{ asset('js/carouselOwl.js') }}"></script>
+   
 
     <!-- grapik -->
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    
 
     @livewireScripts
 
