@@ -133,7 +133,8 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
     Route::get('/tentangSekolah', [OrangTuaController::class, 'tentangSekolah']);
 
     // pesan √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
-    Route::get('/pesan', [OrangTuaController::class, 'pesan']);
+    // Route::get('/pesan', [OrangTuaController::class, 'pesan']);
+    Route::view('/pesan', 'livechatings.messages');
 
     // saranDanMasukan √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/saranDanMasukan', [OrangTuaController::class, 'saranDanMasukan']);
@@ -156,7 +157,8 @@ Route::group(['prefix'=>'guru', 'middleware'=>['isGuru','auth']], function(){
     Route::get('/saranDanMasukanGuru', [GuruController::class, 'saranDanMasukanGuru']);
     
     // PESAN
-    Route::get('/pesanGuru', [GuruController::class, 'pesanGuru']);
+    // Route::get('/pesanGuru', [GuruController::class, 'pesanGuru']);
+    Route::view('/pesanGuru', 'livechatings.messages-guru');
     
     // FITUR BANTUANNNN
     Route::get('/pusatBantuanGuru', [GuruController::class, 'pusatBantuanGuru']);
@@ -172,3 +174,6 @@ Route::group(['prefix'=>'guru', 'middleware'=>['isGuru','auth']], function(){
     // Route::get('profile',[UserController::class,'profile'])->name('user.profile');
     // Route::get('settings',[UserController::class,'settings'])->name('user.settings');
 });
+
+// Route::view('/chat', 'livechatings.messages');
+
