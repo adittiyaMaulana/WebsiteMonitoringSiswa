@@ -149,11 +149,11 @@
     <div class="my-table mt-5 ml-4 mr-4">
   
     <div class="row">
-    <div class="col-sm-6 col-xl-3">
+    <div class="col-sm-8 col-xl-8">
         <div class="card">
             <div class="card-body">
                 <h4 class="header-title" align="center">Grafik Nilai</h4>
-                 <canvas id="mataChart" class="chartjs" width="2300" height="3000"></canvas>
+                 <canvas id="mataChart" class="chartjs" width="5000" height="4000"></canvas>
             </div>
           </div>
         </div>                
@@ -252,9 +252,16 @@
             labels: <?php echo json_encode($label); ?>,
         datasets: [{
         label: 'Nilai',
-        backgroundColor: '#ADD8E6',
+        backgroundColor: 
+                    '#F0DB4F'
+                    ,
         borderColor: '#93C3D2',
-        data: [<?php echo json_encode($tugas); ?>,<?php echo json_encode($uts); ?>,<?php echo json_encode($uas); ?>]
+        data: [<?php echo json_encode($tugas_7_1); ?>,<?php echo json_encode($uts_7_1); ?>,<?php echo json_encode($uas_7_1); ?>,
+        <?php echo json_encode($tugas_7_2); ?>,<?php echo json_encode($uts_7_2); ?>,<?php echo json_encode($uas_7_2); ?>,
+        <?php echo json_encode($tugas_8_1); ?>,<?php echo json_encode($uts_8_1); ?>,<?php echo json_encode($uas_8_1); ?>,
+        <?php echo json_encode($tugas_8_2); ?>,<?php echo json_encode($uts_8_2); ?>,<?php echo json_encode($uas_8_2); ?>,
+        <?php echo json_encode($tugas_9_1); ?>,<?php echo json_encode($uts_9_1); ?>,<?php echo json_encode($uas_9_1); ?>,
+        <?php echo json_encode($tugas_9_2); ?>,<?php echo json_encode($uts_9_2); ?>,<?php echo json_encode($uas_9_2); ?>,]
         }],
       options: {
         scales: {
