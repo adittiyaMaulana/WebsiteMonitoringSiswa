@@ -70,14 +70,14 @@
             </a>
         </li>
 
-        <li class="list">
+        <!-- <li class="list">
             <a href="/orangTua/tentangSekolah">
                 <span class="icon">
                     <ion-icon name="alert-circle-outline"></ion-icon>
                 </span>
                 <span class="title">Tentang</span>
             </a>
-        </li>
+        </li> -->
 
         <li class="list">
             <a href="{{ route('login') }}" onclick="event.preven-tDefault();
@@ -270,140 +270,278 @@
                 </div>
             </div> -->
 
-            <div class="card mb-3 ml-4" style="max-width: 540px;">
-                <div class="row g-0" data-href="/orangTua/beritaDetail">
-                    <div class="col-md-4">
-                        <img src="{{asset('image/logo.png')}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card mb-3 ml-4" style="max-width: 540px;">
-                <div class="row g-0" data-href="/orangTua/beritaDetail">
-                    <div class="col-md-4">
-                        <img src="{{asset('image/logo.png')}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card mb-3 ml-4" style="max-width: 540px;">
-                <div class="row g-0" data-href="/orangTua/beritaDetail">
-                    <div class="col-md-4">
-                        <img src="{{asset('image/logo.png')}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card mb-3 ml-4" style="max-width: 540px;">
-                <div class="row g-0" data-href="/orangTua/beritaDetail">
-                    <div class="col-md-4">
-                        <img src="{{asset('image/logo.png')}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card mb-3 ml-4" style="max-width: 540px;">
-                <div class="row g-0" data-href="/orangTua/beritaDetail">
-                    <div class="col-md-4">
-                        <img src="{{asset('image/logo.png')}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card mb-3 ml-4" style="max-width: 540px;">
-                <div class="row g-0" data-href="/orangTua/beritaDetail">
-                    <div class="col-md-4">
-                        <img src="{{asset('image/logo.png')}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card mb-3 ml-4" style="max-width: 540px;">
-                <div class="row g-0" data-href="/orangTua/beritaDetail">
-                    <div class="col-md-4">
-                        <img src="{{asset('image/logo.png')}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card mb-3 ml-4" style="max-width: 540px;">
-                <div class="row g-0" data-href="/orangTua/beritaDetail">
-                    <div class="col-md-4">
-                        <img src="{{asset('image/logo.png')}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="card mb-3 ml-4" style="max-width: 540px;">
+            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+ 
+            <!-- <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
                 <div class="row g-0" data-href="/orangTua/beritaDetail">
                     <div class="col-md-4">
-                        <img src="{{asset('image/logo.png')}}" class="img-fluid rounded-start" alt="...">
+                        <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+
+
 
         </div>
     </div>

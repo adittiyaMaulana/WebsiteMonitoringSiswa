@@ -21,8 +21,8 @@ body{
     width: 300px;
     border-radius: 0px;
     box-sizing: initial;
-    border-left: 5px solid #8dcff4;
-    background: #8dcff4;
+    /* border-left: 5px solid #323333; */
+    background: #323333;
     transition: 0.5s;
 }
 

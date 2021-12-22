@@ -130,7 +130,7 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
     Route::get('/fiturBantuan', [OrangTuaController::class, 'fiturBantuan']);
 
     // tentang √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
-    Route::get('/tentangSekolah', [OrangTuaController::class, 'tentangSekolah']);
+    // Route::get('/tentangSekolah', [OrangTuaController::class, 'tentangSekolah']);
 
     // pesan √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     // Route::get('/pesan', [OrangTuaController::class, 'pesan']);
