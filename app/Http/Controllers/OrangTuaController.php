@@ -17,42 +17,7 @@ class OrangTuaController extends Controller
     // homepage
     public function homepage()
     {
-        return view('orangTua.homepage');
-    }
-
-    // jadwal Kelas
-    public function jadwalKelas()
-    {
-        return view('orangTua.jadwalKelas');
-    }
-
-    // jadwal Non Akademik
-    public function jadwalAkadanNonAkademik()
-    {
-        return view('orangTua.jadwalAkadanNonAkademik');
-    }
-
-    // finansial
-    public function finansial()
-    {
-        return view('orangTua.finansial');
-    }
-
-    // berita
-    public function berita()
-    {
-        return view('orangTua.berita');
-    }
-
-    public function beritaDetail()
-    {
-        return view('orangTua.beritaDetail');
-    }
-
-    // nilai
-    public function nilai()
-    {
-
+        
         $tugas_7_1[] = null;
         $tugas_7_2[] = null;
         $tugas_8_1[] = null;
@@ -242,10 +207,75 @@ class OrangTuaController extends Controller
           }
         
         
-        return view('orangTua.nilai',compact('title','label',
+        return view('orangTua.homepage',compact('title','label',
         'tugas_7_1','tugas_7_2', 'tugas_8_1','tugas_8_2', 'tugas_9_1', 'tugas_9_2',
         'uts_7_1','uts_7_2','uts_8_1','uts_8_2','uts_9_1','uts_9_2',
         'uas_7_1','uas_7_2','uas_8_1','uas_8_2','uas_9_1','uas_9_2',));
+    }
+
+    // jadwal Kelas
+    public function jadwalKelas()
+    {
+        return view('orangTua.jadwalKelas');
+    }
+
+    // jadwal Non Akademik
+    public function jadwalAkadanNonAkademik()
+    {
+        return view('orangTua.jadwalAkadanNonAkademik');
+    }
+
+    // finansial
+    public function finansial()
+    {
+        //get email orang tua berdasar login
+        $email_login = Auth::user()->email;
+
+        // menampilkan data yang sudah terbayar
+        $paid = DB::table('finansial')
+                ->join('profil_siswa', 'finansial.id_siswa','=','profil_siswa.id')
+                ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
+                ->select('finansial.nama_bayaran', 'finansial.jumlah', 'finansial.jatuh_tempo', 'finansial.status')
+                ->where('orang_tua.email','=','darmi@gmail.com','AND',
+                'finansial.status', '=', 'belum terbayar')
+                ->get();
+
+        // menampilkan data yang belum terbayar
+        $unpaid = DB::table('finansial')
+                ->join('profil_siswa', 'finansial.id_siswa','=','profil_siswa.id')
+                ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
+                ->select('finansial.nama_bayaran', 'finansial.jumlah', 'finansial.jatuh_tempo', 'finansial.status')
+                ->where('orang_tua.email','=','darmi@gmail.com','AND',
+                'finansial.status', '=', 'belum terbayar')
+                ->get();
+        return view('orangTua.finansial', compact('paid','unpaid'));
+    }
+
+    // berita
+    public function berita()
+    {
+        return view('orangTua.berita');
+    }
+
+    public function beritaDetail()
+    {
+        return view('orangTua.beritaDetail');
+    }
+
+    // nilai
+    public function nilai()
+    {
+        $nilai = DB::table('daftar_nilai')
+                ->join('profil_siswa', 'daftar_nilai.id_siswa','=','profil_siswa.id')
+                ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
+                ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'daftar_nilai.id_mapel')
+                ->select('mata_pelajaran.nama', 'daftar_nilai.nilai_tugas', 
+                'daftar_nilai.nilai_uts', 'daftar_nilai.nilai_uas')
+                ->where('orang_tua.email','=','darmi@gmail.com','AND',
+                'daftar_nilai.kelas', '=', 7, 'AND',
+                'daftar_nilai.semester', '=', 1)
+                ->get();
+        return view('orangTua.nilai', compact('nilai'));
     }
 
     // kehadiran

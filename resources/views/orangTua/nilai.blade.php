@@ -231,16 +231,7 @@
         </table>
 
 
-        <div class="row mt-4">
-            <div class="col-sm-8 col-xl-8">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="header-title" align="center">Grafik Nilai</h4>
-                        <canvas id="mataChart" class="chartjs" width="5000" height="4000"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
     </div>
 
@@ -248,36 +239,6 @@
 </div>
 
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js" integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script type="text/javascript">
-    var ctx = document.getElementById("mataChart").getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: <?php echo json_encode($label); ?>,
-            datasets: [{
-                label: 'Nilai',
-                backgroundColor: '#F0DB4F',
-                borderColor: '#93C3D2',
-                data: [<?php echo json_encode($tugas_7_1); ?>, <?php echo json_encode($uts_7_1); ?>, <?php echo json_encode($uas_7_1); ?>,
-                    <?php echo json_encode($tugas_7_2); ?>, <?php echo json_encode($uts_7_2); ?>, <?php echo json_encode($uas_7_2); ?>,
-                    <?php echo json_encode($tugas_8_1); ?>, <?php echo json_encode($uts_8_1); ?>, <?php echo json_encode($uas_8_1); ?>,
-                    <?php echo json_encode($tugas_8_2); ?>, <?php echo json_encode($uts_8_2); ?>, <?php echo json_encode($uas_8_2); ?>,
-                    <?php echo json_encode($tugas_9_1); ?>, <?php echo json_encode($uts_9_1); ?>, <?php echo json_encode($uas_9_1); ?>,
-                    <?php echo json_encode($tugas_9_2); ?>, <?php echo json_encode($uts_9_2); ?>, <?php echo json_encode($uas_9_2); ?>,
-                ]
-            }],
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        },
-    });
-</script>
+
 
 @endsection

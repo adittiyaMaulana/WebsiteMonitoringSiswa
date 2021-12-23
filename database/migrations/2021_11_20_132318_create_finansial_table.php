@@ -21,6 +21,7 @@ class CreateFinansialTable extends Migration
             $table->string('nama_bayaran');
             $table->integer('jumlah');
             $table->date('jatuh_tempo');
+            $table->string('status');
         });
     }
 
