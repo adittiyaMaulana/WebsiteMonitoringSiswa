@@ -117,7 +117,8 @@
     <!-- table -->
 
     <div class="my-table mt-5 ml-3 mr-4">
-        <table id="tableAdmin" class="table table-hover" style="width:100%">
+        <!-- gk kepake -->
+        <!-- <table id="tableAdmin" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
                     <th>Kelas</th>
@@ -217,7 +218,234 @@
                 </tr>
 
             </tbody>
-        </table>
+        </table> -->
+
+        <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+            
+            <a href="/admin/formUpdateBerita" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/admin/formUpdateBerita" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/admin/formUpdateBerita" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/admin/formUpdateBerita" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/admin/formUpdateBerita" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/admin/formUpdateBerita" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/admin/formUpdateBerita" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/admin/formUpdateBerita" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/admin/formUpdateBerita" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/admin/formUpdateBerita" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/admin/formUpdateBerita" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/admin/formUpdateBerita" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/admin/formUpdateBerita" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4" style="width: 540px; height: 165px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; margin-left: -12px;" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+
+
+        </div>
     </div>
 
 
