@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Fitur Bantuan')
+@section('title','Menambahkan Fitur Bantuan')
 
 @section('content')
 <!-- ============================================================================================= -->
@@ -17,11 +17,38 @@
         </li>
 
         <li class="list">
+            <a href="/admin/jadwalKelasSiswa">
+                <span class="icon">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                </span>
+                <span class="title">Jadwal</span>
+            </a>
+        </li>
+
+        <li class="list">
+            <a href="/admin/finansialSiswa">
+                <span class="icon">
+                    <ion-icon name="wallet-outline"></ion-icon>
+                </span>
+                <span class="title">Finansial</span>
+            </a>
+        </li>
+
+        <li class="list">
             <a href="/admin/beritaAdmin">
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
                 <span class="title">Berita</span>
+            </a>
+        </li>
+
+        <li class="list">
+            <a href="/admin/data">
+                <span class="icon">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </span>
+                <span class="title">Data</span>
             </a>
         </li>
 
@@ -35,11 +62,11 @@
         </li>
 
         <li class="list">
-            <a href="/admin/importData">
+            <a href="/admin/tentangSekolahAdmin">
                 <span class="icon">
-                    <ion-icon name="cloud-upload-outline"></ion-icon>
+                    <ion-icon name="alert-circle-outline"></ion-icon>
                 </span>
-                <span class="title">importData</span>
+                <span class="title">Tentang</span>
             </a>
         </li>
 
@@ -72,7 +99,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Fitur Bantuan</h4>
+                    <h4>Form Fitur Bantuan</h4>
                 </a>
             </div>
 
@@ -106,36 +133,40 @@
         </div>
     </nav>
 
+    <!-- form -->
+    <div class="form">
+        <form action="" method="" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
 
-    <!-- buttonn -->
-    <div class="button_area">
-        <a href="/admin/formFiturBantuan"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
+            <div class="input-group mb-3">
+                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 
-    <!-- table -->
 
-        <div class="my-table mt-5 ml-3 mr-4">
-            <table id="tableAdmin" class="table table-hover" style="width:100%">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Nama File</th>
-                        <th>Ukuran</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($unduhan as $u)
-                    <tr data-href="/admin/formUpdateFiturBantuan">
-                        <td>{{$u->nama}}</td>
-                        <td>{{$u->ukuran}} kb</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
+
+
+
+
     <!-- end my-content / semua content -->
 </div>
 

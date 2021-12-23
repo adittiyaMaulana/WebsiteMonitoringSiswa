@@ -110,9 +110,9 @@
 
 
     <!-- buttonn -->
-    <!-- <div class="button_area">
+    <div class="button_area">
         <a href="/admin/formBerita"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
-    </div> -->
+    </div>
 
     <!-- table -->
 
