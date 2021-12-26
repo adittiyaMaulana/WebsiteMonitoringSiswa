@@ -147,6 +147,8 @@
 
     <div class="my-table mt-5 ml-3 mr-4">
         <table id="tableAdmin" class="table table-hover" style="width:100%">
+    <div class="my-table mt-5 ml-4 mr-4">
+        <!-- <table id="tableOrangTua" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
                     <th>No</th>
