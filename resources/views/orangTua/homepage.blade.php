@@ -70,14 +70,14 @@
             </a>
         </li>
 
-        <li class="list">
+        <!-- <li class="list">
             <a href="/orangTua/tentangSekolah">
                 <span class="icon">
                     <ion-icon name="alert-circle-outline"></ion-icon>
                 </span>
                 <span class="title">Tentang</span>
             </a>
-        </li>
+        </li> -->
 
         <li class="list">
             <a href="{{ route('login') }}" onclick="event.preven-tDefault();
@@ -243,88 +243,159 @@
             <div class="owl-informasi owl-carousel owl-theme">
                 <div class="item">
                     <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-                        <div class="card-body">
-                            <div class="text-berita">
-                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                        <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                            <div class="card-body">
+                                <div class="text-berita">
+                                    <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                        aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-                        <div class="card-body">
-                            <div class="text-berita">
-                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                        <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                            <div class="card-body">
+                                <div class="text-berita">
+                                    <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                        aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-                        <div class="card-body">
-                            <div class="text-berita">
-                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                        <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                            <div class="card-body">
+                                <div class="text-berita">
+                                    <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                        aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-                        <div class="card-body">
-                            <div class="text-berita">
-                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                        <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                            <div class="card-body">
+                                <div class="text-berita">
+                                    <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                        aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-                        <div class="card-body">
-                            <div class="text-berita">
-                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                        <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                            <div class="card-body">
+                                <div class="text-berita">
+                                    <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                        aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-                        <div class="card-body">
-                            <div class="text-berita">
-                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                        <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                            <div class="card-body">
+                                <div class="text-berita">
+                                    <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                        aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
-                        <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
-                        <div class="card-body">
-                            <div class="text-berita">
-                                <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
-                                    aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                        <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                            <div class="card-body">
+                                <div class="text-berita">
+                                    <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                        aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
+                <div class="item">
+                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
+                        <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                            <div class="card-body">
+                                <div class="text-berita">
+                                    <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                        aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
+                        <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                            <div class="card-body">
+                                <div class="text-berita">
+                                    <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                        aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
+                        <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                            <div class="card-body">
+                                <div class="text-berita">
+                                    <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                        aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card mr-5" style="width: 416px; height: 400px; border-radius: 20px;">
+                        <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+                            <img src="{{ asset('image/school1.jpg')}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
+                            <div class="card-body">
+                                <div class="text-berita">
+                                    <p class="card-text limit_berita_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Dolorum sed sapiente aut, nihil inventore tempore quidem consectetur autem iste molestiae
+                                        aliquid quisquam, itaque eaque dolore odit, numquam voluptatum reprehenderit eveniet.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
 
             </div>
 

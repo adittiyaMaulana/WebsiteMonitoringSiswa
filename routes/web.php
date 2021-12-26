@@ -70,6 +70,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
 	Route::put('/updateberita/{id}', 'App\Http\Controllers\AdminController@updateberita')->name('admin.updateberita');
 	Route::get('/hapusberita/{id}', 'App\Http\Controllers\AdminController@hapusberita')->name('admin.hapusberita');
     // Route::get('/formBerita', [AdminController::class, 'formBerita'])->name('admin.formBerita');
+    Route::get('/formBerita', [AdminController::class, 'formBerita'])->name('admin.formBerita');
     Route::get('/formUpdateBerita', [AdminController::class, 'formUpdateBerita'])->name('admin.formUpdateBerita');
 
     // data siswa XXXXXXXXX
@@ -93,6 +94,8 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
   	Route::get('/tambahunduhan', [AdminController::class, 'tambahunduhan'])->name('admin.tambahunduhan');
     Route::post('/saveunduhan', 'App\Http\Controllers\AdminController@saveunduhan')->name('admin.saveunduhan');
     Route::get('/hapusunduhan/{id}', 'App\Http\Controllers\AdminController@hapusunduhan')->name('admin.hapusunduhan');
+    Route::get('/formFiturBantuan', [AdminController::class, 'formFiturBantuan'])->name('admin.formFiturBantuan');
+    Route::get('/formUpdateFiturBantuan', [AdminController::class, 'formUpdateFiturBantuan'])->name('admin.formUpdateFiturBantuan');
 
     // tentang sekolah √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     // Route::get('/tentangSekolahAdmin', [AdminController::class, 'tentangSekolahAdmin'])->name('admin.tentangSekolahAdmin');
@@ -140,7 +143,7 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
     
 
     // tentang √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
-    Route::get('/tentangSekolah', [OrangTuaController::class, 'tentangSekolah']);
+    // Route::get('/tentangSekolah', [OrangTuaController::class, 'tentangSekolah']);
 
     // pesan √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     // Route::get('/pesan', [OrangTuaController::class, 'pesan']);

@@ -336,10 +336,10 @@ class OrangTuaController extends Controller
     }
 
     // tentang Sekolah
-    public function tentangSekolah()
-    {
-        return view('orangTua.tentangSekolah');
-    }
+    // public function tentangSekolah()
+    // {
+    //     return view('orangTua.tentangSekolah');
+    // }
 
     // pusatbantuan
     public function saranDanMasukan()

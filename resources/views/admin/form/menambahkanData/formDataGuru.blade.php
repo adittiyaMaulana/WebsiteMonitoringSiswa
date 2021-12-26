@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Finansial')
+@section('title','Menambahkan Data')
 
 @section('content')
 <!-- ============================================================================================= -->
@@ -8,7 +8,7 @@
 <div class="sidebar">
     <ul>
         <li class="list">
-            <a href="/orangTua/homepage">
+            <a href="/admin/homepageAdmin">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -17,7 +17,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/jadwalKelas">
+            <a href="/admin/jadwalKelasSiswa">
                 <span class="icon">
                     <ion-icon name="calendar-outline"></ion-icon>
                 </span>
@@ -25,8 +25,8 @@
             </a>
         </li>
 
-        <li class="list active">
-            <a href="/orangTua/finansial">
+        <li class="list">
+            <a href="/admin/finansialSiswa">
                 <span class="icon">
                     <ion-icon name="wallet-outline"></ion-icon>
                 </span>
@@ -35,7 +35,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/berita">
+            <a href="/admin/beritaAdmin">
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
@@ -43,26 +43,17 @@
             </a>
         </li>
 
-        <li class="list">
-            <a href="/orangTua/nilai">
+        <li class="list active">
+            <a href="/admin/data">
                 <span class="icon">
-                    <ion-icon name="bar-chart-outline"></ion-icon>
+                    <ion-icon name="clipboard-outline"></ion-icon>
                 </span>
-                <span class="title">Nilai</span>
+                <span class="title">Data</span>
             </a>
         </li>
 
         <li class="list">
-            <a href="/orangTua/kehadiran">
-                <span class="icon">
-                    <ion-icon name="create-outline"></ion-icon>
-                </span>
-                <span class="title">Kehadiran</span>
-            </a>
-        </li>
-
-        <li class="list">
-            <a href="/orangTua/fiturBantuan">
+            <a href="/admin/dokumenFiturBantuan">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
                 </span>
@@ -70,14 +61,14 @@
             </a>
         </li>
 
-        <!-- <li class="list">
-            <a href="/orangTua/tentangSekolah">
+        <li class="list">
+            <a href="/admin/tentangSekolahAdmin">
                 <span class="icon">
                     <ion-icon name="alert-circle-outline"></ion-icon>
                 </span>
                 <span class="title">Tentang</span>
             </a>
-        </li> -->
+        </li>
 
         <li class="list">
             <a href="{{ route('login') }}" onclick="event.preven-tDefault();
@@ -109,21 +100,21 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Pembayaran Sekolah</h4>
+                    <h4>Form Data Guru</h4>
                 </a>
             </div>
 
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon pengaduan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/orangTua/saranDanMasukan">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/saranDanMasukanAdmin">
                     <span class="icon">
                         <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
                 </a>
 
                 <!-- Icon pesan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/orangTua/pesan">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/pesanAdmin">
                     <span class="icon">
                         <ion-icon name="mail" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
@@ -136,45 +127,44 @@
 
                 <!-- nama user -->
                 <a class=" d-flex align-items-center ml-3 mt-3" style="text-decoration: none; color: #404040;">
-                    <p>user</p>
+                    <p>Admin</p>
                 </a>
 
             </div>
         </div>
     </nav>
 
-    <!-- table -->
+    <!-- form -->
+    <div class="form">
+        <form action="" method="" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="inputNUPTK" class="form-label">NUPTK</label>
+                <input type="text" class="form-control" id="inputNUPTK" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="inputNama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="inputNama">
+            </div>
+            <div class="mb-3">
+                <label for="inputTTL" class="form-label">Tempat Tanggal Lahir</label>
+                <input type="date" class="form-control" id="inputTTL" aria-describedby="emailHelp">
+            </div>
 
-    <div class="my-table mt-5 ml-4 mr-4">
+            <div class="mb-3">
+                <label for="inputAlamatTinggal" class="form-label">Alamat Tinggal</label>
+                <input type="text" class="form-control" id="inputAlamatTinggal" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail">
+            </div>
 
-        <select class="form-select mb-5" aria-label="Default select example">
-            <option selected>Pilih Status</option>
-            <option value="1">Sudah dibayar</option>
-            <option value="2">Belum dibayar</option>
-        </select>
-
-        <table id="tableOrangTua" class="table table-hover" style="width:100%">
-            <thead class="table-dark">
-                <tr>
-                    <th>Pembayaran</th>
-                    <th>Jumlah</th>
-                    <th>Jatuh Tempo</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($paid as $p)
-                <tr>
-                    <td>{{$p->nama_bayaran}}</td>
-                    <td>{{$p->jumlah}}</td>
-                    <td>{{$p->jatuh_tempo}}</td>
-                    <td>{{$p->status}}</td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 
+
+    <!-- end my-content / semua content -->
 </div>
 
 @endsection
