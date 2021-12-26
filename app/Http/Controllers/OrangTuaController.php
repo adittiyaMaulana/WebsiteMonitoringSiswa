@@ -11,6 +11,7 @@ use App\Models\PusatUnduhan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\Berita;
 
 class OrangTuaController extends Controller
 {
@@ -254,7 +255,15 @@ class OrangTuaController extends Controller
     // berita
     public function berita()
     {
-        return view('orangTua.berita');
+    	$berita = Berita::All();
+        return view('orangTua.berita',compact('berita'));
+    }
+    
+     public function lihatberita(Request $request)
+    {
+       
+        $berita = Berita::where('id',$request->id)->first(); 
+        return view('orangtua.lihatberita', compact('berita'));
     }
 
     public function beritaDetail()
@@ -270,13 +279,48 @@ class OrangTuaController extends Controller
                 ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
                 ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'daftar_nilai.id_mapel')
                 ->select('mata_pelajaran.nama', 'daftar_nilai.nilai_tugas', 
-                'daftar_nilai.nilai_uts', 'daftar_nilai.nilai_uas')
-                ->where('orang_tua.email','=','darmi@gmail.com','AND',
-                'daftar_nilai.kelas', '=', 7, 'AND',
-                'daftar_nilai.semester', '=', 1)
+                'daftar_nilai.nilai_uts', 'daftar_nilai.nilai_uas', 'daftar_nilai.kelas', 'daftar_nilai.semester')
+                ->where('orang_tua.email','=','darmi@gmail.com')
+                ->where('daftar_nilai.kelas', '=', 7)
+                ->where('daftar_nilai.semester', '=', 1)
                 ->get();
         return view('orangTua.nilai', compact('nilai'));
     }
+    
+    public function filternilai($id)
+    {
+    	if($id==0){
+        $nilai = DB::table('daftar_nilai')
+                ->join('profil_siswa', 'daftar_nilai.id_siswa','=','profil_siswa.id')
+                ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
+                ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'daftar_nilai.id_mapel')
+                ->select('mata_pelajaran.nama', 'daftar_nilai.nilai_tugas', 
+                'daftar_nilai.nilai_uts', 'daftar_nilai.nilai_uas', 'daftar_nilai.kelas', 'daftar_nilai.semester')
+                ->where('orang_tua.email','=','darmi@gmail.com')
+                ->where('daftar_nilai.kelas', '=', 7)
+                ->where('daftar_nilai.semester', '=', 1)
+                ->get();
+		}else{
+			$string = "$id";
+			$kelas = $string[0];
+			$sem = $string[1]; 
+			$nilai = DB::table('daftar_nilai')
+                ->join('profil_siswa', 'daftar_nilai.id_siswa','=','profil_siswa.id')
+                ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
+                ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'daftar_nilai.id_mapel')
+                ->select('mata_pelajaran.nama', 'daftar_nilai.nilai_tugas', 
+                'daftar_nilai.nilai_uts', 'daftar_nilai.nilai_uas', 'daftar_nilai.kelas', 'daftar_nilai.semester')
+                ->where('orang_tua.email','=','darmi@gmail.com')
+                ->where('daftar_nilai.kelas', '=', $kelas)
+                ->where('daftar_nilai.semester', '=', $sem)
+                ->get();
+		}
+                
+                
+        return $nilai;
+    }
+    
+    
 
     // kehadiran
     public function kehadiran()
@@ -287,7 +331,8 @@ class OrangTuaController extends Controller
     // fitur Bantuan
     public function fiturBantuan()
     {
-        return view('orangTua.fiturBantuan');
+    	$unduhan = PusatUnduhan::all();
+        return view('orangTua.fiturBantuan',compact('unduhan'));
     }
 
     // tentang Sekolah

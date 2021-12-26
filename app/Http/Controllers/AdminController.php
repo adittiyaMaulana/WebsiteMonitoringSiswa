@@ -9,6 +9,7 @@ use App\Models\Guru;
 use App\Models\ProfilSiswa;
 use App\Models\Finansial;
 use App\Models\PusatUnduhan;
+use App\Models\Berita;
 
 use App\Imports\OrangTuaImport;
 use App\Imports\GuruImport;
@@ -80,18 +81,72 @@ class AdminController extends Controller {
     // beritaAdmin
     public function beritaAdmin()
     {
-        return view('admin.berita');
+    	$berita = Berita::All();
+        return view('admin.berita',compact('berita'));
     }
 
-    public function formBerita()
+    public function tambahberita()
     {
-        return view('admin.form.menambahkanData.formBerita');
+        return view('admin.tambahberita');
     }
     
-    public function formUpdateBerita()
+    public function saveberita(Request $request)
     {
-        return view('admin.form.memperbaruiData.formMemperbaruiBerita');
+    		$this->validate($request, [
+			'foto' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+			]);
+		$file = $request->file('foto');
+		$nama_file = time()."_".$file->getClientOriginalName();
+		$tujuan_upload = 'foto';
+		$file->move($tujuan_upload,$nama_file);
+ 
+		Berita::create([
+			'judul' => $request->judul,
+			'isi' => $request->isi,
+			'foto' => $nama_file,
+		]);
+ 
+		return redirect('admin/beritaAdmin');
     }
+    
+    public function editberita(Request $request)
+    {
+       
+        $berita = Berita::where('id',$request->id)->first(); 
+        return view('admin.editberita', compact('berita'));
+    }
+     public function updateberita(Request $request, $id)
+    {
+        $berita = Berita::find($id);
+        $berita->judul = $request->input('judul');
+        $berita->isi = $request->input('isi');
+        
+        if($request->hasFile('foto')){ 
+        $file = $request->file('foto');
+		$nama_file = time()."_".$file->getClientOriginalName();
+		$tujuan_upload = 'foto';
+		$file->move($tujuan_upload,$nama_file);
+        	$berita->foto = $nama_file;
+        }else{
+			$berita->foto = $request->input('foto2');
+		}
+        
+        $berita->update();
+        return redirect('admin/beritaAdmin');
+    }
+    public function hapusberita($id)
+    {
+        $berita = Berita::find($id);
+        $berita-> delete();
+        return redirect('admin/beritaAdmin');
+    }
+    public function lihatberita(Request $request)
+    {
+       
+        $berita = Berita::where('id',$request->id)->first(); 
+        return view('admin.lihatberita', compact('berita'));
+    }
+
     
     // data siswaaaaa
     public function data()
@@ -164,18 +219,42 @@ class AdminController extends Controller {
     public function dokumenFiturBantuan()
     {
         $unduhan = PusatUnduhan::all();
-        return view('admin.fiturBantuan', ['unduhan'=>$unduhan]);
+        return view('admin.fiturBantuan',compact('unduhan'));
     }
     
-    public function formFiturBantuan()
+    public function tambahunduhan()
     {
-        return view('admin.form.menambahkanData.formFiturBantuan');
+        return view('admin.tambahunduhan');
     }
     
-    public function formUpdateFiturBantuan()
+    public function saveunduhan(Request $request)
     {
-        return view('admin.form.memperbaruiData.formMemperbaruiFiturBantuan');
+    		$this->validate($request, [
+			'file' => 'required|file|mimes:pdf|max:2048',
+			]);
+		$file = $request->file('file');
+		$nama_file = $file->getClientOriginalName();
+		$ukuran = $file->getSize();
+		$tujuan_upload = 'unduhan';
+		$file->move($tujuan_upload,$nama_file);
+ 
+		PusatUnduhan::create([
+			
+			'nama' => $nama_file,
+			'ukuran' => $ukuran,
+		]);
+ 
+		return redirect('admin/dokumenFiturBantuan');
     }
+    
+   
+    public function hapusunduhan($id)
+    {
+        $unduhan = PusatUnduhan::find($id);
+        $unduhan-> delete();
+        return redirect('admin/dokumenFiturBantuan');
+    }
+    
     
     // fitur tentang sekolah
     public function tentangSekolahAdmin()

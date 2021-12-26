@@ -126,91 +126,33 @@
         </div>
     </nav>
 
-    <div class="my-table mt-5 ml-4 mr-4">
-        <table id="tableGuru" class="table table-hover" style="width:100%">
+    <table id="tableAdmin" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
-                    <th>Kelas</th>
-                    <th>Semester</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                    <th>Aksi</th>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Ukuran</th>
+                    <th>aksi</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Kelas 7</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                        </ion-icon>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Kelas 9</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>56</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Kelas 9</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>66</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Kelas 8</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>20</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Kelas 7</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>1</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Kelas 9</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>6</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>
-                        <ion-icon name="download-outline" style="font-size: 20px;"></ion-icon>
-                    </td>
-                </tr>
-
+                @forelse ($unduhan as $data)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{$data->nama}}</td>
+                                            <td>{{ number_format((float)$data->ukuran/1000, 2, '.', '')}} Kb</td>
+                                            <td>
+                                                <a href="/unduhan/{{$data->nama}}" class="btn btn-success" download><i class="far fa-download"></i> Download</a>
+                                                
+                                            </td>
+                                        </tr>
+                                        @empty
+                                        <tr>
+                                            <td colspan="6" class="text-center">Tidak ada data</td>
+                                        </tr>
+                                        @endforelse
             </tbody>
         </table>
-    </div>
 
 
     <!-- end my-content / semua content -->

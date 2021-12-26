@@ -145,78 +145,36 @@
 
     <!-- table -->
 
-    <div class="my-table mt-5 ml-4 mr-4">
-        <table id="tableOrangTua" class="table table-hover" style="width:100%">
+    <div class="my-table mt-5 ml-3 mr-4">
+        <table id="tableAdmin" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
-                    <th>Kelas</th>
-                    <th>Semester</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                    <th>Salary</th>
+                    <th>No</th>
+                    <th>Judul</th>
+                    <th>Tanggal</th>
+                    <th>aksi</th>
                 </tr>
             </thead>
             <tbody>
-                <tr data-href="/orangTua/beritaDetail">
-                    <td>7-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr data-href="/orangTua/beritaDetail">
-                    <td>9-3</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>56</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr data-href="/orangTua/beritaDetail">
-                    <td>9-2</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>66</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr data-href="/orangTua/beritaDetail">
-                    <td>8-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>20</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr data-href="/orangTua/beritaDetail">
-                    <td>7-2</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>1</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr data-href="/orangTua/beritaDetail">
-                    <td>9-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>6</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-
+                @forelse ($berita as $data)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{$data->judul}}</td>
+                                            <td>{{$data->created_at}}</td>
+                                            <td>
+                                                <a href="{{route('orangTua.lihatberita', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
+                                               
+                                            </td>
+                                        </tr>
+                                        @empty
+                                        <tr>
+                                            <td colspan="6" class="text-center">Tidak ada data</td>
+                                        </tr>
+                                        @endforelse
             </tbody>
         </table>
     </div>
+
 
 </div>
 

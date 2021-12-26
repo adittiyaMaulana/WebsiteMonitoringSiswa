@@ -115,107 +115,36 @@
     </div> -->
 
     <!-- table -->
-
+<div class="card-header">
+                            <a href="{{ route('admin.tambahberita')}}" class="btn btn-success"><i class="fas fa-plus"></i> Tambah</a>
+                        </div>
     <div class="my-table mt-5 ml-3 mr-4">
         <table id="tableAdmin" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
-                    <th>Kelas</th>
-                    <th>Semester</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                    <th>Salary</th>
+                    <th>No</th>
+                    <th>Judul</th>
+                    <th>Tanggal</th>
                     <th>aksi</th>
                 </tr>
             </thead>
             <tbody>
-                <tr data-href="/admin/formUpdateBerita">
-                    <td>7-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-                <tr data-href="/admin/formUpdateBerita">
-                    <td>7-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-                <tr data-href="/admin/formUpdateBerita">
-                    <td>7-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-                <tr data-href="/admin/formUpdateBerita">
-                    <td>7-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-                <tr data-href="/admin/formUpdateBerita">
-                    <td>7-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-                <tr data-href="/admin/formUpdateBerita">
-                    <td>7-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-                <tr data-href="/admin/formUpdateBerita">
-                    <td>7-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                    <td>
-                        <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                    </td>
-                </tr>
-
+                @forelse ($berita as $data)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{$data->judul}}</td>
+                                            <td>{{$data->created_at}}</td>
+                                            <td>
+                                                <a href="{{route('admin.lihatberita', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
+                                                <a href="{{route('admin.editberita', $data->id)}}" class="btn btn-warning"><i class="fas fa-pen"></i></a>
+                                                <a href="{{route('admin.hapusberita', $data->id)}}" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus ?')"><i class="fas fa-trash-alt"></i></a>
+                                            </td>
+                                        </tr>
+                                        @empty
+                                        <tr>
+                                            <td colspan="6" class="text-center">Tidak ada data</td>
+                                        </tr>
+                                        @endforelse
             </tbody>
         </table>
     </div>

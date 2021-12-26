@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ProfilSiswaSeeder::class);
         $this->call(DaftarNilaiSeeder::class);
         $this->call(FinansialSeeder::class);
+        $this->call(BeritaSeeder::class);
         // $this->call(PusatUnduhanSeeder::class);
     }
 }

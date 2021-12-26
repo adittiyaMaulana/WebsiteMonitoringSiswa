@@ -113,29 +113,39 @@
     </div> -->
 
     <!-- table -->
-
+<div class="card-header">
+                            <a href="{{ route('admin.tambahunduhan')}}" class="btn btn-success"><i class="fas fa-plus"></i> Tambah</a>
+                        </div>
         <div class="my-table mt-5 ml-3 mr-4">
-            <table id="tableAdmin" class="table table-hover" style="width:100%">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Nama File</th>
-                        <th>Ukuran</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($unduhan as $u)
-                    <tr data-href="/admin/formUpdateFiturBantuan">
-                        <td>{{$u->nama}}</td>
-                        <td>{{$u->ukuran}} kb</td>
-                        <td>
-                            <a href="#"><i class="bi bi-trash-fill" style="color: black;"></i></a>
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
+        <table id="tableAdmin" class="table table-hover" style="width:100%">
+            <thead class="table-dark">
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Ukuran</th>
+                    <th>aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                @forelse ($unduhan as $data)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{$data->nama}}</td>
+                                            <td>{{ number_format((float)$data->ukuran/1000, 2, '.', '')}} Kb</td>
+                                            <td>
+                                                <a href="/unduhan/{{$data->nama}}" class="btn btn-success" download><i class="far fa-download"></i> Download</a>
+                                                <a href="{{route('admin.hapusunduhan', $data->id)}}" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus ?')"><i class="fas fa-trash-alt"></i></a>
+                                            </td>
+                                        </tr>
+                                        @empty
+                                        <tr>
+                                            <td colspan="6" class="text-center">Tidak ada data</td>
+                                        </tr>
+                                        @endforelse
+            </tbody>
+        </table>
+    </div>
+
     <!-- end my-content / semua content -->
 </div>
 

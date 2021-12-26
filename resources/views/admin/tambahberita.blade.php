@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Fitur Bantuan')
+@section('title','Berita')
 
 @section('content')
 
@@ -9,7 +9,7 @@
 <div class="sidebar">
     <ul>
         <li class="list">
-            <a href="/orangTua/homepage">
+            <a href="/admin/homepageAdmin">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -17,26 +17,8 @@
             </a>
         </li>
 
-        <li class="list">
-            <a href="/orangTua/jadwalKelas">
-                <span class="icon">
-                    <ion-icon name="calendar-outline"></ion-icon>
-                </span>
-                <span class="title">Jadwal</span>
-            </a>
-        </li>
-
-        <li class="list">
-            <a href="/orangTua/finansial">
-                <span class="icon">
-                    <ion-icon name="wallet-outline"></ion-icon>
-                </span>
-                <span class="title">Finansial</span>
-            </a>
-        </li>
-
-        <li class="list">
-            <a href="/orangTua/berita">
+        <li class="list active">
+            <a href="/admin/beritaAdmin">
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
@@ -45,25 +27,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/nilai">
-                <span class="icon">
-                    <ion-icon name="bar-chart-outline"></ion-icon>
-                </span>
-                <span class="title">Nilai</span>
-            </a>
-        </li>
-
-        <li class="list">
-            <a href="/orangTua/kehadiran">
-                <span class="icon">
-                    <ion-icon name="create-outline"></ion-icon>
-                </span>
-                <span class="title">Kehadiran</span>
-            </a>
-        </li>
-
-        <li class="list active">
-            <a href="/orangTua/fiturBantuan">
+            <a href="/admin/dokumenFiturBantuan">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
                 </span>
@@ -72,11 +36,11 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/tentangSekolah">
+            <a href="/admin/importData">
                 <span class="icon">
-                    <ion-icon name="alert-circle-outline"></ion-icon>
+                    <ion-icon name="cloud-upload-outline"></ion-icon>
                 </span>
-                <span class="title">Tentang</span>
+                <span class="title">importData</span>
             </a>
         </li>
 
@@ -110,21 +74,21 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Pusat Unduhan</h4>
+                    <h4>Tambah Berita</h4>
                 </a>
             </div>
 
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon pengaduan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/orangTua/saranDanMasukan">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/saranDanMasukanAdmin">
                     <span class="icon">
                         <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
                 </a>
 
                 <!-- Icon pesan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/orangTua/pesan">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/pesanAdmin">
                     <span class="icon">
                         <ion-icon name="mail" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
@@ -137,43 +101,53 @@
 
                 <!-- nama user -->
                 <a class=" d-flex align-items-center ml-3 mt-3" style="text-decoration: none; color: #404040;">
-                    <p>user</p>
+                    <p>Admin</p>
                 </a>
 
             </div>
         </div>
     </nav>
 
+
+    <!-- buttonn -->
+    <!-- <div class="button_area">
+        <a href="/admin/formBerita"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
+    </div> -->
+
     <!-- table -->
 
-    <table id="tableAdmin" class="table table-hover" style="width:100%">
-            <thead class="table-dark">
-                <tr>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>Ukuran</th>
-                    <th>aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                @forelse ($unduhan as $data)
-                                        <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>{{$data->nama}}</td>
-                                            <td>{{ number_format((float)$data->ukuran/1000, 2, '.', '')}} Kb</td>
-                                            <td>
-                                                <a href="/unduhan/{{$data->nama}}" class="btn btn-success" download><i class="far fa-download"></i> Download</a>
-                                                
-                                            </td>
-                                        </tr>
-                                        @empty
-                                        <tr>
-                                            <td colspan="6" class="text-center">Tidak ada data</td>
-                                        </tr>
-                                        @endforelse
-            </tbody>
-        </table>
+    <div class="my-table mt-5 ml-3 mr-4">
+        <div class="col-md-8 col-sm-12 bg-white p-4">
+    <form method="post" action="{{route('admin.saveberita')}}" enctype="multipart/form-data">
+    @csrf
+        <div class="form-group">
+            <label>Judul Artikel</label>
+            <input type="text" class="form-control" name="judul" placeholder="Judul artikel" required>
+        </div>
+        <div class="form-group">
+            <label>Isi Artikel</label>
+            <textarea class="form-control" name="isi" rows="15" required></textarea>
+        </div>
+        <div class="form-group">
+            <label>Upload Foto</label>
+           <input type="file" name="foto" class="form-control" required>
+        </div>
+        <div class="form-group">
+       
+        <input type="submit" class="form-control btn btn-primary" value="Simpan">
+    </div>
+</div>
 
+ 
+
+</form>
+    </div>
+
+
+
+
+
+    <!-- end my-content / semua content -->
 </div>
 
 @endsection

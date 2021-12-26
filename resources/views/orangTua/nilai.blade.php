@@ -149,14 +149,14 @@
     <div class="my-table mt-5 ml-4 mr-4 mb-5">
 
         
-        <select class="form-select mb-5" aria-label="Default select example">
+        <select class="form-select mb-5" aria-label="Default select example" id="sem">
             <option selected>Pilih Semester</option>
-            <option value="1">Kelas 7 Semester Ganjil</option>
-            <option value="2">Kelas 7 Semester Genap</option>
-            <option value="3">Kelas 8 Semester Ganjil</option>
-            <option value="4">Kelas 8 Semester Genap</option>
-            <option value="5">Kelas 9 Semester Ganjil</option>
-            <option value="6">Kelas 9 Semester Genap</option>
+            <option value="71">Kelas 7 Semester Ganjil</option>
+            <option value="72">Kelas 7 Semester Genap</option>
+            <option value="81">Kelas 8 Semester Ganjil</option>
+            <option value="82">Kelas 8 Semester Genap</option>
+            <option value="91">Kelas 9 Semester Ganjil</option>
+            <option value="92">Kelas 9 Semester Genap</option>
         </select>
     
         <table id="tableOrangTua" class="table table-hover" style="width:100%">
@@ -164,68 +164,29 @@
                 <tr>
                     <th>Kelas</th>
                     <th>Semester</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                    <th>Salary</th>
+                    <th>Mapel</th>
+                    <th>N. Tugas</th>
+                    <th>N. UTS</th>
+                    <th>N. UAS</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Kelas 7</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr>
-                    <td>Kelas 9</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>56</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr>
-                    <td>Kelas 9</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>66</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr>
-                    <td>Kelas 8</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>20</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr>
-                    <td>Kelas 7</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>1</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr>
-                    <td>Kelas 9</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>6</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
+            <tbody id="nilai">
+        
+                 @forelse ($nilai as $data)
+                                        <tr>
+                                            <td>{{ $data->kelas }}</td>
+                                            <td>{{$data->semester}}</td>
+                                            <td>{{$data->nama}}</td>
+                                            <td>{{$data->nilai_tugas}}</td>
+                                            <td>{{$data->nilai_uts}}</td>
+                                            <td>{{$data->nilai_uas}}</td>
+                                           
+                                        </tr>
+                                        @empty
+                                        <tr>
+                                            <td colspan="6" class="text-center">Tidak ada data</td>
+                                        </tr>
+                                        @endforelse
     
             </tbody>
         </table>
@@ -240,5 +201,23 @@
 
 </div>
 
-
+<script
+			  src="https://code.jquery.com/jquery-2.2.4.js"
+			  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+			  crossorigin="anonymous"></script>
+<script>
+	$(document).ready(function(){
+		$('#sem').on('change', function(e){
+			var id = e.target.value;
+			$.get('{{ url('orangTua/filternilai')}}/'+id, function(data){
+			console.log(id);
+			console.log(data);
+			$('#nilai').empty();
+			$.each(data, function(index, element){
+				$('#nilai').append("<tr><td>"+element.kelas+"</td><td>"+element.semester+"</td><td>"+element.nama+"</td><td>"+element.nilai_tugas+"</td><td>"+element.nilai_uts+"</td><td>"+element.nilai_uas+"</td></tr>")
+			});
+			});
+		});	
+	});
+</script>
 @endsection

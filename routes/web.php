@@ -63,6 +63,12 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
 
     // berita √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/beritaAdmin', [AdminController::class, 'beritaAdmin'])->name('admin.beritaAdmin');
+    Route::get('/tambahberita', [AdminController::class, 'tambahberita'])->name('admin.tambahberita');
+    Route::post('/saveberita', 'App\Http\Controllers\AdminController@saveberita')->name('admin.saveberita');
+    Route::get('/lihatberita/{id}', 'App\Http\Controllers\AdminController@lihatberita')->name('admin.lihatberita');
+    Route::get('/editberita/{id}', 'App\Http\Controllers\AdminController@editberita')->name('admin.editberita');
+	Route::put('/updateberita/{id}', 'App\Http\Controllers\AdminController@updateberita')->name('admin.updateberita');
+	Route::get('/hapusberita/{id}', 'App\Http\Controllers\AdminController@hapusberita')->name('admin.hapusberita');
     // Route::get('/formBerita', [AdminController::class, 'formBerita'])->name('admin.formBerita');
     Route::get('/formUpdateBerita', [AdminController::class, 'formUpdateBerita'])->name('admin.formUpdateBerita');
 
@@ -84,8 +90,9 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
 
     // fitur bantuan √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/dokumenFiturBantuan', [AdminController::class, 'dokumenFiturBantuan'])->name('admin.dokumenFiturBantuan');
-    // Route::get('/formFiturBantuan', [AdminController::class, 'formFiturBantuan'])->name('admin.formFiturBantuan');
-    Route::get('/formUpdateFiturBantuan', [AdminController::class, 'formUpdateFiturBantuan'])->name('admin.formUpdateFiturBantuan');
+  	Route::get('/tambahunduhan', [AdminController::class, 'tambahunduhan'])->name('admin.tambahunduhan');
+    Route::post('/saveunduhan', 'App\Http\Controllers\AdminController@saveunduhan')->name('admin.saveunduhan');
+    Route::get('/hapusunduhan/{id}', 'App\Http\Controllers\AdminController@hapusunduhan')->name('admin.hapusunduhan');
 
     // tentang sekolah √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     // Route::get('/tentangSekolahAdmin', [AdminController::class, 'tentangSekolahAdmin'])->name('admin.tentangSekolahAdmin');
@@ -118,16 +125,19 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
 
     // berita √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/berita', [OrangTuaController::class, 'berita']);
+    Route::get('/lihatberita/{id}', 'App\Http\Controllers\OrangTuaController@lihatberita')->name('orangTua.lihatberita');
     Route::get('/beritaDetail', [OrangTuaController::class, 'beritaDetail']);
 
     // nilai √√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/nilai', [OrangTuaController::class, 'nilai']);
+     Route::get('/filternilai/{id}', 'App\Http\Controllers\OrangTuaController@filternilai')->name('orangTua.filternilai');
 
     // kehadiran √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/kehadiran', [OrangTuaController::class, 'kehadiran']);
 
     // fitur bantuan √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/fiturBantuan', [OrangTuaController::class, 'fiturBantuan']);
+    
 
     // tentang √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/tentangSekolah', [OrangTuaController::class, 'tentangSekolah']);
@@ -168,6 +178,7 @@ Route::group(['prefix'=>'guru', 'middleware'=>['isGuru','auth']], function(){
     
     // beritaa
     Route::get('/beritaGuru', [GuruController::class, 'beritaGuru']);
+    Route::get('/lihatberita/{id}', 'App\Http\Controllers\GuruController@lihatberita')->name('guru.lihatberita');
     Route::get('/beritaDetailGuru', [GuruController::class, 'beritaDetailGuru']);
 
     

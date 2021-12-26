@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Berita;
 
 class GuruController extends Controller
 {
@@ -49,7 +50,8 @@ class GuruController extends Controller
     // fitur bantuan
     public function pusatBantuanGuru()
     {
-        return view('guru.fiturBantuan');
+    	$unduhan = PusatUnduhan::all();
+        return view('guru.fiturBantuan',compact('unduhan'));
     }
     
     // jadwal
@@ -61,7 +63,15 @@ class GuruController extends Controller
     // informasi
     public function beritaGuru()
     {
-        return view('guru.berita');
+       $berita = Berita::All();
+        return view('guru.berita',compact('berita'));
+    }
+    
+     public function lihatberita(Request $request)
+    {
+       
+        $berita = Berita::where('id',$request->id)->first(); 
+        return view('guru.lihatberita', compact('berita'));
     }
     
     public function beritaDetailGuru()
