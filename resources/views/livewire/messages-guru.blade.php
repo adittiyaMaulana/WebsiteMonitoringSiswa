@@ -96,10 +96,10 @@
 
                     </div>
                     <div class="card-footer">
-                        <form wire:submit.prevent="SendMessage">
+                        <form wire:submit.prevent="SendMessage" class="was-validated">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <input class="form-control input shadow-none w-100 d-inline-block" type="text" wire:model="message" placeholder="Type a Message Required">
+                                    <input class="form-control input shadow-none w-100 d-inline-block is-invalid" type="text" wire:model="message" placeholder="Masukan Pesan" required>
                                 </div>
 
                                 <div class="col-md-4">
