@@ -19,4 +19,9 @@ class ProfilSiswa extends Model
     ];
 
     protected $table = "profil_siswa";
+    
+    public function kelas()
+{
+    return $this->belongsTo(Kelas::class, 'id_kelas', 'id');
+}
 }

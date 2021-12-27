@@ -22,14 +22,14 @@ class ProfilSiswaSeeder extends Seeder
                 'alamat' => 'Jl. Cendrawasih, Cengkareng Barat',
                 'semester' => '1'
             ],[
-                'id_kelas' => 1,
+                'id_kelas' => 4,
                 'id_orang_tua' => 2,
                 'nama' => "Johnatan",
                 'ttl' => '2009-07-14',
                 'alamat' => 'Jl. Cendrawasih, Cengkareng Barat',
                 'semester' => '1'
             ],[
-                'id_kelas' => 2,
+                'id_kelas' => 7,
                 'id_orang_tua' => 3,
                 'nama' => "Nirina",
                 'ttl' => '2009-07-14',

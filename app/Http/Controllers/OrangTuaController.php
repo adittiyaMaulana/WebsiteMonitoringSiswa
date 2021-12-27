@@ -232,24 +232,42 @@ class OrangTuaController extends Controller
         //get email orang tua berdasar login
         $email_login = Auth::user()->email;
 
-        // menampilkan data yang sudah terbayar
-        $paid = DB::table('finansial')
-                ->join('profil_siswa', 'finansial.id_siswa','=','profil_siswa.id')
-                ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
-                ->select('finansial.nama_bayaran', 'finansial.jumlah', 'finansial.jatuh_tempo', 'finansial.status')
-                ->where('orang_tua.email','=','darmi@gmail.com','AND',
-                'finansial.status', '=', 'belum terbayar')
-                ->get();
-
         // menampilkan data yang belum terbayar
-        $unpaid = DB::table('finansial')
+        $finansial = DB::table('finansial')
                 ->join('profil_siswa', 'finansial.id_siswa','=','profil_siswa.id')
                 ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
                 ->select('finansial.nama_bayaran', 'finansial.jumlah', 'finansial.jatuh_tempo', 'finansial.status')
-                ->where('orang_tua.email','=','darmi@gmail.com','AND',
-                'finansial.status', '=', 'belum terbayar')
+                ->where('orang_tua.email','=',$email_login,'AND',
+                'finansial.status', '=', '"belum terbayar"')
                 ->get();
-        return view('orangTua.finansial', compact('paid','unpaid'));
+        return view('orangTua.finansial', compact('finansial'));
+    }
+
+    public function filterfinansial($id){
+
+        //get email orang tua berdasar login
+        $email_login = Auth::user()->email;
+
+  	 if($id!=''){
+                $finansial = DB::table('finansial')
+                ->join('profil_siswa', 'finansial.id_siswa','=','profil_siswa.id')
+                ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
+                ->select('finansial.nama_bayaran', 'finansial.jumlah', 'finansial.jatuh_tempo', 'finansial.status')
+                ->where('orang_tua.email','=',$email_login)
+                ->where('finansial.status', '=', "$id")
+                ->get();
+		}else{
+			 $finansial = DB::table('finansial')
+                ->join('profil_siswa', 'finansial.id_siswa','=','profil_siswa.id')
+                ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
+                ->select('finansial.nama_bayaran', 'finansial.jumlah', 'finansial.jatuh_tempo', 'finansial.status')
+                ->where('orang_tua.email','=',$email_login)
+                ->get();
+		}
+            
+                    
+                    
+            return $finansial;
     }
 
     // berita
@@ -274,21 +292,65 @@ class OrangTuaController extends Controller
     // nilai
     public function nilai()
     {
+
+        //get email orang tua berdasar login
+        $email_login = Auth::user()->email;
+
+        //get riwayat kelas siswa
+        $riwayat_kelas = collect(DB::SELECT("SELECT
+        kelas.kelas
+        FROM
+        profil_siswa JOIN kelas ON profil_siswa.id_kelas = kelas.id
+        JOIN orang_tua ON profil_siswa.id_orang_tua = orang_tua.id
+        WHERE
+        orang_tua.email = '$email_login'"))->pluck('kelas');
+
+        //get semester siswa dalam suatu kelas
+        $riwayat_semester = collect(DB::SELECT("SELECT
+        profil_siswa.semester
+        FROM
+        profil_siswa JOIN kelas ON profil_siswa.id_kelas = kelas.id
+        JOIN orang_tua ON profil_siswa.id_orang_tua = orang_tua.id
+        WHERE
+        orang_tua.email = '$email_login'"))->pluck('semester');
+
         $nilai = DB::table('daftar_nilai')
                 ->join('profil_siswa', 'daftar_nilai.id_siswa','=','profil_siswa.id')
                 ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
                 ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'daftar_nilai.id_mapel')
                 ->select('mata_pelajaran.nama', 'daftar_nilai.nilai_tugas', 
                 'daftar_nilai.nilai_uts', 'daftar_nilai.nilai_uas', 'daftar_nilai.kelas', 'daftar_nilai.semester')
-                ->where('orang_tua.email','=','darmi@gmail.com')
-                ->where('daftar_nilai.kelas', '=', 7)
-                ->where('daftar_nilai.semester', '=', 1)
+                ->where('orang_tua.email','=',$email_login)
+                ->where('daftar_nilai.kelas', '=', $riwayat_kelas)
+                ->where('daftar_nilai.semester', '=', $riwayat_semester)
                 ->get();
         return view('orangTua.nilai', compact('nilai'));
     }
     
     public function filternilai($id)
     {
+        
+        //get email orang tua berdasar login
+        $email_login = Auth::user()->email;
+
+        //get riwayat kelas siswa
+        $riwayat_kelas = collect(DB::SELECT("SELECT
+        kelas.kelas
+        FROM
+        profil_siswa JOIN kelas ON profil_siswa.id_kelas = kelas.id
+        JOIN orang_tua ON profil_siswa.id_orang_tua = orang_tua.id
+        WHERE
+        orang_tua.email = '$email_login'"))->pluck('kelas');
+
+        //get semester siswa dalam suatu kelas
+        $riwayat_semester = collect(DB::SELECT("SELECT
+        profil_siswa.semester
+        FROM
+        profil_siswa JOIN kelas ON profil_siswa.id_kelas = kelas.id
+        JOIN orang_tua ON profil_siswa.id_orang_tua = orang_tua.id
+        WHERE
+        orang_tua.email = '$email_login'"))->pluck('semester');
+
     	if($id==0){
         $nilai = DB::table('daftar_nilai')
                 ->join('profil_siswa', 'daftar_nilai.id_siswa','=','profil_siswa.id')
@@ -296,9 +358,9 @@ class OrangTuaController extends Controller
                 ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'daftar_nilai.id_mapel')
                 ->select('mata_pelajaran.nama', 'daftar_nilai.nilai_tugas', 
                 'daftar_nilai.nilai_uts', 'daftar_nilai.nilai_uas', 'daftar_nilai.kelas', 'daftar_nilai.semester')
-                ->where('orang_tua.email','=','darmi@gmail.com')
-                ->where('daftar_nilai.kelas', '=', 7)
-                ->where('daftar_nilai.semester', '=', 1)
+                ->where('orang_tua.email','=',$email_login)
+                ->where('daftar_nilai.kelas', '=', $riwayat_kelas)
+                ->where('daftar_nilai.semester', '=', $riwayat_semester)
                 ->get();
 		}else{
 			$string = "$id";
@@ -310,7 +372,7 @@ class OrangTuaController extends Controller
                 ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'daftar_nilai.id_mapel')
                 ->select('mata_pelajaran.nama', 'daftar_nilai.nilai_tugas', 
                 'daftar_nilai.nilai_uts', 'daftar_nilai.nilai_uas', 'daftar_nilai.kelas', 'daftar_nilai.semester')
-                ->where('orang_tua.email','=','darmi@gmail.com')
+                ->where('orang_tua.email','=',$email_login)
                 ->where('daftar_nilai.kelas', '=', $kelas)
                 ->where('daftar_nilai.semester', '=', $sem)
                 ->get();

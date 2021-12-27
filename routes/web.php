@@ -125,6 +125,7 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
 
     // finansial √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/finansial', [OrangTuaController::class, 'finansial']);
+    Route::get('/filterfinansial/{id}', [OrangTuaController::class, 'filterfinansial'])->name('orangTua.filterfinansial');
 
     // berita √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/berita', [OrangTuaController::class, 'berita']);
@@ -133,7 +134,7 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
 
     // nilai √√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/nilai', [OrangTuaController::class, 'nilai']);
-     Route::get('/filternilai/{id}', 'App\Http\Controllers\OrangTuaController@filternilai')->name('orangTua.filternilai');
+    Route::get('/filternilai/{id}', [OrangTuaController::class, 'filternilai'])->name('orangTua.filternilai');
 
     // kehadiran √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/kehadiran', [OrangTuaController::class, 'kehadiran']);
@@ -160,6 +161,8 @@ Route::group(['prefix'=>'guru', 'middleware'=>['isGuru','auth']], function(){
     Route::get('/homepageGuru',[GuruController::class,'homepageGuru'])->name('guru.homepage');
     // nilai siswa
     Route::get('/nilaiSiswa', [GuruController::class, 'nilaiSiswa']);
+    Route::get('/listsiswa/{id}', 'App\Http\Controllers\GuruController@listsiswa')->name('guru.listsiswa');
+    Route::get('/listnilai/{id}', 'App\Http\Controllers\GuruController@listnilai')->name('guru.listnilai');
     Route::get('/updateNilaiSiswa', [GuruController::class, 'updateNilaiSiswa']);
 
     // kehadiran siswa

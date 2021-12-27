@@ -11,8 +11,12 @@ class DaftarNilai extends Model
 
     protected $fillable = [
         'id_siswa',
+        'id_mapel',
         'nilai_tugas',
         'nilai_uts',
-        'nilai_uas'
+        'nilai_uas',
+        'semester',
+        'kelas',
     ];
+     protected $table = "daftar_nilai";
 }

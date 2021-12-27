@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Nilai Siswa')
+@section('title','Nilai')
 
 @section('content')
 
@@ -53,7 +53,7 @@
             </a>
         </li>
 
-        <li class="list">
+        <li class="list ">
             <a href="/guru/beritaGuru">
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
@@ -93,21 +93,21 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Nilai Siswa</h4>
+                    <h4>Nilai</h4>
                 </a>
             </div>
 
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon pengaduan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/guru/saranDanMasukanGuru">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/orangTua/saranDanMasukan">
                     <span class="icon">
                         <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
                 </a>
 
                 <!-- Icon pesan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/guru/pesanGuru">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/orangTua/pesan">
                     <span class="icon">
                         <ion-icon name="mail" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
@@ -129,38 +129,70 @@
 
     <!-- table -->
 
-    <div class="my-table mt-5 ml-3 mr-3">
-        <table id="tableGuru" class="table table-hover" style="width:100%">
+    <div class="my-table mt-5 ml-4 mr-4 mb-5">
+
+        
+     	<p>Nama : {{$siswa->nama}}</p>
+        <table id="nilai" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
-                    <th>No</th>
-                    <th>Nama Kelas</th>
-                    <th>Lihat</th>
+                    <th>Kelas</th>
+                    <th>Semester</th>
+                    <th>Mapel</th>
+                    <th>N. Tugas</th>
+                    <th>N. UTS</th>
+                    <th>N. UAS</th>
                 </tr>
             </thead>
-            <tbody>
-               @forelse ($kelas as $data)
+            <tbody id="nilai">
+        
+                 @forelse ($nilai as $data)
                                         <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>{{$data->nama_kelas}}</td>
-                                            <td>
-                                                <a href="{{route('guru.listsiswa', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
-                                               
-                                            </td>
+                                            <td>{{ $data->kelas }}</td>
+                                            <td>{{$data->semester}}</td>
+                                            <td>{{$data->nama}}</td>
+                                            <td>{{$data->nilai_tugas}}</td>
+                                            <td>{{$data->nilai_uts}}</td>
+                                            <td>{{$data->nilai_uas}}</td>
+                                           
                                         </tr>
                                         @empty
                                         <tr>
                                             <td colspan="6" class="text-center">Tidak ada data</td>
                                         </tr>
                                         @endforelse
-
+    
             </tbody>
         </table>
+
+
+        
+
     </div>
 
 
-
-    <!-- end my-content / semua content -->
 </div>
 
+</div>
+
+<script
+			  src="https://code.jquery.com/jquery-2.2.4.js"
+			  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+			  crossorigin="anonymous">
+</script>
+<script>
+	$(document).ready(function(){
+		$('#sem').on('change', function(e){
+			var id = e.target.value;
+			$.get('{{ url('orangTua/filternilai')}}/'+id, function(data){
+			console.log(id);
+			console.log(data);
+			$('#nilai').empty();
+			$.each(data, function(index, element){
+				$('#nilai').append("<tr><td>"+element.kelas+"</td><td>"+element.semester+"</td><td>"+element.nama+"</td><td>"+element.nilai_tugas+"</td><td>"+element.nilai_uts+"</td><td>"+element.nilai_uas+"</td></tr>")
+			});
+			});
+		});	
+	});
+</script>
 @endsection

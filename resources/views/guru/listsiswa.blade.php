@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
-@section('title','Nilai Siswa')
+@section('title','Homepage')
 
 @section('content')
-
 <!-- ============================================================================================= -->
 <!-- sidebar -->
 <div class="sidebar">
@@ -53,7 +52,7 @@
             </a>
         </li>
 
-        <li class="list">
+        <li class="list ">
             <a href="/guru/beritaGuru">
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
@@ -93,7 +92,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Nilai Siswa</h4>
+                    <h4>List Siswa</h4>
                 </a>
             </div>
 
@@ -129,22 +128,24 @@
 
     <!-- table -->
 
-    <div class="my-table mt-5 ml-3 mr-3">
-        <table id="tableGuru" class="table table-hover" style="width:100%">
+    <div class="my-table mt-5 ml-3 mr-4">
+        <table id="tableAdmin" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
                     <th>No</th>
+                    <th>Nama Siswa</th>
                     <th>Nama Kelas</th>
-                    <th>Lihat</th>
+                    <th>aksi</th>
                 </tr>
             </thead>
             <tbody>
-               @forelse ($kelas as $data)
+                @forelse ($siswa as $data)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td>{{$data->nama_kelas}}</td>
+                                            <td>{{$data->nama}}</td>
+                                            <td>{{$data->kelas->nama_kelas}}</td>
                                             <td>
-                                                <a href="{{route('guru.listsiswa', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
+                                                <a href="{{route('guru.listnilai', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
                                                
                                             </td>
                                         </tr>
@@ -153,11 +154,9 @@
                                             <td colspan="6" class="text-center">Tidak ada data</td>
                                         </tr>
                                         @endforelse
-
             </tbody>
         </table>
     </div>
-
 
 
     <!-- end my-content / semua content -->
