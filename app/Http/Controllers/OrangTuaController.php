@@ -18,7 +18,9 @@ class OrangTuaController extends Controller
     // homepage
     public function homepage()
     {
-        
+
+
+        // proses olah data nilai // START
         $tugas_7_1[] = null;
         $tugas_7_2[] = null;
         $tugas_8_1[] = null;
@@ -217,12 +219,29 @@ class OrangTuaController extends Controller
                 $uts_9_2[] = 0;
                 $uas_9_2[] =  0;
           }
+
+          //END
+
+          //PROSES OLAHDATA FINANSIAL // START
+
+          // menampilkan data yang belum terbayar
+            $finansial = DB::table('finansial')
+            ->join('profil_siswa', 'finansial.id_siswa','=','profil_siswa.id')
+            ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
+            ->select('finansial.nama_bayaran', 'finansial.jumlah', 'finansial.jatuh_tempo', 'finansial.status')
+            ->where('orang_tua.email','=',$email_login,'AND',
+            'finansial.status', '=', 'terbayar')
+            ->get();
+
+          //END
         
         
         return view('orangTua.homepage',compact('title','label',
         'tugas_7_1','tugas_7_2', 'tugas_8_1','tugas_8_2', 'tugas_9_1', 'tugas_9_2',
         'uts_7_1','uts_7_2','uts_8_1','uts_8_2','uts_9_1','uts_9_2',
-        'uas_7_1','uas_7_2','uas_8_1','uas_8_2','uas_9_1','uas_9_2',));
+        'uas_7_1','uas_7_2','uas_8_1','uas_8_2','uas_9_1','uas_9_2',
+    
+        'finansial'));
     }
 
     // jadwal Kelas
