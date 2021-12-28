@@ -148,14 +148,14 @@
         <!-- bagian form -->
         <div class="pusatbantuan ml-4 mr-4 mt-5">
 
-            <form>
+            <form class="was-validated">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Saran</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Masukan</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Kirim</button>
