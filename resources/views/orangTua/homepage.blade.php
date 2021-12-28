@@ -169,35 +169,21 @@
                 </p>
 
                 <table class="table table-borderless">
-                    <thead>
+                    <thead class="table-dark">
                         <tr>
-                            <th scope="col">Pembayaran</th>
-                            <th scope="col">tanggal</th>
-                            <th scope="col">Status</th>
+                            <th>Pembayaran</th>
+                            <th>Jatuh Tempo</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($finansial as $data)
                         <tr>
-                            <td>
-                                <p class="limit_kehadiran">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                            </td>
-                            <td>17283945</td>
-                            <td>4</td>
+                            <td>{{$data->nama_bayaran}}</td>
+                            <td>{{$data->jatuh_tempo}}</td>
+                            <td>{{$data->status}}</td>
                         </tr>
-                        <tr>
-                            <td>
-                                <p class="limit_kehadiran">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                            </td>
-                            <td>17283947</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="limit_kehadiran">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                            </td>
-                            <td>17283960</td>
-                            <td>4</td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
 

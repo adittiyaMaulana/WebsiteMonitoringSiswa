@@ -115,7 +115,8 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
+                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
+                        loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -139,20 +140,21 @@
                 </tr>
             </thead>
             <tbody>
-               @forelse ($kelas as $data)
-                                        <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>{{$data->nama_kelas}}</td>
-                                            <td>
-                                                <a href="{{route('guru.listsiswa', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
-                                               
-                                            </td>
-                                        </tr>
-                                        @empty
-                                        <tr>
-                                            <td colspan="6" class="text-center">Tidak ada data</td>
-                                        </tr>
-                                        @endforelse
+                @forelse ($kelas as $data)
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{$data->nama_kelas}}</td>
+                    <td>
+                        <a href="{{route('guru.listsiswa', $data->id)}}" class="btn btn-success"><i
+                                class="far fa-eye"></i></a>
+                        <i>lihat disini</i>
+                    </td>
+                </tr>
+                @empty
+                <tr>
+                    <td colspan="6" class="text-center">Tidak ada data</td>
+                </tr>
+                @endforelse
 
             </tbody>
         </table>

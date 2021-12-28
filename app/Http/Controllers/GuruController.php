@@ -85,7 +85,10 @@ class GuruController extends Controller
     // jadwal
     public function jadwalAkadaNonAkaGuru()
     {
-        return view('guru.jadwalAkademikNonAkademik');
+        $jadwal = DB::table('jadwal_akademik')
+                ->select('nama_kegiatan','jadwal_kegiatan')
+                ->get();
+        return view('guru.jadwalAkademikNonAkademik',compact('jadwal'));
     }
     
     // informasi

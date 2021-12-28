@@ -16,8 +16,8 @@ class CreateJadwalAkademikTable extends Migration
         Schema::create('jadwal_akademik', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nama_kegiatan',50);
-            $table->date('jadwal_kegiatan');
+            $table->string('nama_kegiatan',100);
+            $table->string('jadwal_kegiatan');
         });
     }
 
