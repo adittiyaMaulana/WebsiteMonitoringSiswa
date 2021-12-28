@@ -98,8 +98,9 @@ class OrangTuaController extends Controller
             }
           
           } catch (\Exception $e) {
-          
-              
+                $tugas_7_1[] = 0;
+                $uts_7_1[] = 0;
+                $uas_7_1[] =  0;
           }
           
         //KELAS 7 SEMESTER 2
@@ -120,7 +121,9 @@ class OrangTuaController extends Controller
             }
           
           } catch (\Exception $e) {
-          
+                $tugas_7_2[] = 0;
+                $uts_7_2[] = 0;
+                $uas_7_2[] =  0;
           }
 
           // //KELAS 8 SEMESTER 1
@@ -140,7 +143,9 @@ class OrangTuaController extends Controller
             }
           
           } catch (\Exception $e) {
-          
+                $tugas_8_1[] = 0;
+                $uts_8_1[] = 0;
+                $uas_8_1[] =  0;
           }
         
 
@@ -161,7 +166,9 @@ class OrangTuaController extends Controller
                 WHERE c.email = '$email_login' AND a.kelas = 8 AND a.semester = 2"))->first()->nilai_uas;
             }
           } catch (\Exception $e) {
-          
+                $tugas_8_2[] = 0;
+                $uts_8_2[] = 0;
+                $uas_8_2[] =  0;
           }
 
         // //KELAS 9 SEMESTER 1
@@ -182,7 +189,9 @@ class OrangTuaController extends Controller
             }
           
           } catch (\Exception $e) {
-          
+                $tugas_9_1[] = 0;
+                $uts_9_1[] = 0;
+                $uas_9_1[] =  0;
           }
         
 
@@ -204,7 +213,9 @@ class OrangTuaController extends Controller
             }
           
           } catch (\Exception $e) {
-          
+                $tugas_9_2[] = 0;
+                $uts_9_2[] = 0;
+                $uas_9_2[] =  0;
           }
         
         
@@ -223,7 +234,10 @@ class OrangTuaController extends Controller
     // jadwal Non Akademik
     public function jadwalAkadanNonAkademik()
     {
-        return view('orangTua.jadwalAkadanNonAkademik');
+        $jadwal = DB::table('jadwal_akademik')
+                ->select('nama_kegiatan','jadwal_kegiatan')
+                ->get();
+        return view('orangTua.jadwalAkadanNonAkademik',compact('jadwal'));
     }
 
     // finansial
@@ -264,9 +278,6 @@ class OrangTuaController extends Controller
                 ->where('orang_tua.email','=',$email_login)
                 ->get();
 		}
-            
-                    
-                    
             return $finansial;
     }
 
@@ -396,13 +407,7 @@ class OrangTuaController extends Controller
     	$unduhan = PusatUnduhan::all();
         return view('orangTua.fiturBantuan',compact('unduhan'));
     }
-
-    // tentang Sekolah
-    // public function tentangSekolah()
-    // {
-    //     return view('orangTua.tentangSekolah');
-    // }
-
+    
     // pusatbantuan
     public function saranDanMasukan()
     {

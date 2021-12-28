@@ -154,74 +154,20 @@
     <!-- table -->
 
     <div class="my-table mt-5 ml-4 mr-4">
-        <table id="tableOrangTua" class="table table-hover" style="width:100%">
+        <table id="tableGuru" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
-                    <th>Kelas</th>
-                    <th>Semester</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                    <th>Salary</th>
+                    <th>Kegiatan</th>
+                    <th>Jadwal</th>
                 </tr>
             </thead>
             <tbody>
+                @foreach($jadwal as $data)
                 <tr>
-                    <td>Kelas 7</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
+                    <td>{{$data->nama_kegiatan}}</td>
+                    <td>{{$data->jadwal_kegiatan}}</td>
                 </tr>
-                <tr>
-                    <td>Kelas 9</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>56</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr>
-                    <td>Kelas 9</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>66</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr>
-                    <td>Kelas 8</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>20</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr>
-                    <td>Kelas 7</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>1</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr>
-                    <td>Kelas 9</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>6</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-
+                @endforeach
             </tbody>
         </table>
     </div>

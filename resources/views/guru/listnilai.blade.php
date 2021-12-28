@@ -115,7 +115,8 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
+                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
+                        loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -131,8 +132,8 @@
 
     <div class="my-table mt-5 ml-4 mr-4 mb-5">
 
-        
-     	<p>Nama : {{$siswa->nama}}</p>
+
+        <p>Nama : {{$siswa->nama}}</p>
         <table id="nilai" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
@@ -145,28 +146,28 @@
                 </tr>
             </thead>
             <tbody id="nilai">
-        
-                 @forelse ($nilai as $data)
-                                        <tr>
-                                            <td>{{ $data->kelas }}</td>
-                                            <td>{{$data->semester}}</td>
-                                            <td>{{$data->nama}}</td>
-                                            <td>{{$data->nilai_tugas}}</td>
-                                            <td>{{$data->nilai_uts}}</td>
-                                            <td>{{$data->nilai_uas}}</td>
-                                           
-                                        </tr>
-                                        @empty
-                                        <tr>
-                                            <td colspan="6" class="text-center">Tidak ada data</td>
-                                        </tr>
-                                        @endforelse
-    
+
+                @forelse ($nilai as $data)
+                <tr>
+                    <td>{{$data->kelas}}</td>
+                    <td>{{$data->semester}}</td>
+                    <td>{{$data->nama}}</td>
+                    <td>{{$data->nilai_tugas}}</td>
+                    <td>{{$data->nilai_uts}}</td>
+                    <td>{{$data->nilai_uas}}</td>
+
+                </tr>
+                @empty
+                <tr>
+                    <td colspan="6" class="text-center">Tidak ada data</td>
+                </tr>
+                @endforelse
+
             </tbody>
         </table>
 
 
-        
+
 
     </div>
 
