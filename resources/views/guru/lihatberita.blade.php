@@ -58,7 +58,7 @@
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
-                <span class="title">Informasi</span>
+                <span class="title">Berita</span>
             </a>
         </li>
 
@@ -120,7 +120,7 @@
 
                 <!-- nama user -->
                 <a class=" d-flex align-items-center ml-3 mt-3" style="text-decoration: none; color: #404040;">
-                    <p>Admin</p>
+                    <p>User</p>
                 </a>
 
             </div>

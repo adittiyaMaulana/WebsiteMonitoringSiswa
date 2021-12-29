@@ -86,13 +86,6 @@
                     </span>
                 </a>
 
-                <!-- Icon pesan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/pesanAdmin">
-                    <span class="icon">
-                        <ion-icon name="mail" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
-                    </span>
-                </a>
-
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
                     <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
@@ -128,10 +121,10 @@
         <div id="orangTua" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Orang Tua</h4>
-            <form method="POST" action="{{ route('importOrangTua') }}" enctype="multipart/form-data">
+            <form class="was-validated" method="POST" action="{{ route('importOrangTua') }}" enctype="multipart/form-data">
                 @csrf
                 <div class=" mb-3">
-                    <input class="form-control mb-3" type="file" name="file" id="formFile">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
@@ -140,10 +133,10 @@
         <div id="Guru" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Guru</h4>
-            <form method="POST" action="" enctype="multipart/form-data">
+            <form class="was-validated" method="POST" action="" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control mb-3" type="file" name="file" id="formFile">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
@@ -152,10 +145,10 @@
         <div id="Admin" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Admin</h4>
-            <form method="POST" action="" enctype="multipart/form-data">
+            <form class="was-validated" method="POST" action="" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control mb-3" type="file" name="file" id="formFile">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
@@ -164,10 +157,10 @@
         <div id="Users" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Users</h4>
-            <form method="POST" action="" enctype="multipart/form-data">
+            <form class="was-validated" method="POST" action="" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control mb-3" type="file" name="file" id="formFile">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
@@ -176,10 +169,10 @@
         <div id="Nilai" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Nilai</h4>
-            <form method="POST" action="{{ route('importNilai') }}" enctype="multipart/form-data">
+            <form class="was-validated" method="POST" action="{{ route('importNilai') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control mb-3" type="file" name="file" id="formFile">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
@@ -188,9 +181,9 @@
         <div id="JadwalKelas" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Jadwal Kelas</h4>
-            <form>
+            <form class="was-validated"> 
                 <div class="mb-3">
-                    <input class="form-control mb-3" type="file" id="formFile">
+                    <input class="form-control mb-3" type="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
@@ -199,9 +192,9 @@
         <div id="JadwalAkaNoAka" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Jadwal Akademik / Non Akademik</h4>
-            <form>
+            <form class="was-validated">
                 <div class="mb-3">
-                    <input class="form-control mb-3" type="file" id="formFile">
+                    <input class="form-control mb-3" type="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
@@ -210,10 +203,10 @@
         <div id="Kelas" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Kelas</h4>
-            <form method="POST" action="{{ route('importKelas') }}" enctype="multipart/form-data">
+            <form class="was-validated" method="POST" action="{{ route('importKelas') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control mb-3" type="file" name="file" id="formFile">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
@@ -222,10 +215,10 @@
         <div id="mapel" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Mata Pelajaran</h4>
-            <form method="POST" action="{{ route('importMataPelajaran') }}" enctype="multipart/form-data">
+            <form class="was-validated" method="POST" action="{{ route('importMataPelajaran') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control mb-3" type="file" name="file" id="formFile">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
@@ -234,10 +227,10 @@
         <div id="Finansial" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Finansial</h4>
-            <form method="POST" action="{{ route('importFinansial') }}" enctype="multipart/form-data">
+            <form class="was-validated" method="POST" action="{{ route('importFinansial') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control mb-3" type="file" name="file" id="formFile">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
@@ -246,10 +239,10 @@
         <div id="Siswa" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Siswa</h4>
-            <form method="POST" action="" enctype="multipart/form-data">
+            <form class="was-validated" method="POST" action="" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control mb-3" type="file" name="file" id="formFile">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
@@ -258,10 +251,10 @@
         <div id="Absensi" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Absensi</h4>
-            <form method="POST" action="" enctype="multipart/form-data">
+            <form class="was-validated" method="POST" action="" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control mb-3" type="file" name="file" id="formFile">
+                    <input class="form-control mb-3" type="file" name="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
