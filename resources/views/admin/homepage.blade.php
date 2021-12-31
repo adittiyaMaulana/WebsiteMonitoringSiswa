@@ -86,12 +86,6 @@
                     </span>
                 </a>
 
-                <!-- Icon pesan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/pesanAdmin">
-                    <span class="icon">
-                        <ion-icon name="mail" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
-                    </span>
-                </a>
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">

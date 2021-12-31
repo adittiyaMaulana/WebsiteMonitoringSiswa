@@ -17,7 +17,7 @@
             </a>
         </li>
 
-        <li class="list active">
+        <li class="list">
             <a href="/admin/beritaAdmin">
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
@@ -26,7 +26,7 @@
             </a>
         </li>
 
-        <li class="list">
+        <li class="list active">
             <a href="/admin/dokumenFiturBantuan">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
@@ -87,12 +87,6 @@
                     </span>
                 </a>
 
-                <!-- Icon pesan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/pesanAdmin">
-                    <span class="icon">
-                        <ion-icon name="mail" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
-                    </span>
-                </a>
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
@@ -118,25 +112,25 @@
 
     <div class="my-table mt-5 ml-3 mr-4">
         <div class="col-md-8 col-sm-12 bg-white p-4">
-        @if($errors->any())
-    {{ implode('', $errors->all(':message')) }}
-@endif
-    <form method="post" action="{{route('admin.saveunduhan')}}" enctype="multipart/form-data">
-    @csrf
-        
-        <div class="form-group">
-            <label>Upload File (Pdf Only)</label>
-           <input type="file" name="file" class="form-control" required>
+            @if($errors->any())
+            {{ implode('', $errors->all(':message')) }}
+            @endif
+            <form class="was-validated" method="post" action="{{route('admin.saveunduhan')}}" enctype="multipart/form-data">
+                @csrf
+
+                <div class="form-group">
+                    <label>Upload File (Pdf Only)</label>
+                    <input type="file" name="file" class="form-control" required>
+                </div>
+                <div class="form-group">
+
+                    <input type="submit" class="form-control btn btn-primary" value="Simpan">
+                </div>
         </div>
-        <div class="form-group">
-       
-        <input type="submit" class="form-control btn btn-primary" value="Simpan">
-    </div>
-</div>
 
- 
 
-</form>
+
+        </form>
     </div>
 
 

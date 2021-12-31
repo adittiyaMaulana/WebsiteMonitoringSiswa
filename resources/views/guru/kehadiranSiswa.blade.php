@@ -57,7 +57,7 @@
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
-                <span class="title">Informasi</span>
+                <span class="title">Berita</span>
             </a>
         </li>
 
