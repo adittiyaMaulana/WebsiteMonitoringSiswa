@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Berita;
-use App\Models\Kelas;
+use App\Models\OrangTua;
+use App\Models\Guru;
 use App\Models\ProfilSiswa;
-use App\Models\DaftarNilai;
+use App\Models\Finansial;
+use App\Models\PusatUnduhan;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Models\Berita;
 
 class GuruController extends Controller
 {
