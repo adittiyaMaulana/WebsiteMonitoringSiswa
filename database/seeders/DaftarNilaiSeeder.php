@@ -86,12 +86,156 @@ class DaftarNilaiSeeder extends Seeder
                 'nilai_uas' => 87,
                 'semester' => 1,
                 'kelas' => 7
+            ],[
+                'id_siswa' => 2,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 2,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 2,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 2,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 2,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 2,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 2,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 2,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 2,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 3,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 3,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 3,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 3,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 3,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 3,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 3,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 3,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 3,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
             ],
 
 
-            // id siswa 2
+            // id siswa 4
             [
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 1,
                 'nilai_tugas' => 85,
                 'nilai_uts' => 90,
@@ -99,7 +243,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 2,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -107,7 +251,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 3,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -115,7 +259,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 4,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -123,7 +267,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 5,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -131,7 +275,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 6,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -139,7 +283,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 7,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -147,7 +291,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 8,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -155,7 +299,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 9,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -163,7 +307,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 1,
                 'nilai_tugas' => 85,
                 'nilai_uts' => 90,
@@ -171,7 +315,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 2,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -179,7 +323,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 3,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -187,7 +331,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 4,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -195,7 +339,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 5,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -203,7 +347,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 6,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -211,7 +355,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 7,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -219,7 +363,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 8,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -227,7 +371,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 9,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -235,7 +379,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 1,
                 'nilai_tugas' => 85,
                 'nilai_uts' => 90,
@@ -243,7 +387,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 2,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -251,7 +395,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 3,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -259,7 +403,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 4,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -267,7 +411,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 5,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -275,7 +419,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 6,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -283,7 +427,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 7,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -291,7 +435,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
                 'id_mapel' => 8,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -299,7 +443,439 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 2,
+                'id_siswa' => 4,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 5,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 6,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 6,
                 'id_mapel' => 9,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -308,9 +884,9 @@ class DaftarNilaiSeeder extends Seeder
                 'kelas' => 8
             ],
 
-            // id siswa 3
+            // id siswa 7
             [
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 1,
                 'nilai_tugas' => 85,
                 'nilai_uts' => 90,
@@ -318,7 +894,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 2,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -326,7 +902,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 3,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -334,7 +910,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 4,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -342,7 +918,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 5,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -350,7 +926,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 6,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -358,7 +934,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 7,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -366,7 +942,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 8,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -374,7 +950,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 9,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -382,7 +958,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 1,
                 'nilai_tugas' => 85,
                 'nilai_uts' => 90,
@@ -390,7 +966,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 2,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -398,7 +974,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 3,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -406,7 +982,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 4,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -414,7 +990,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 5,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -422,7 +998,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 6,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -430,7 +1006,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 7,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -438,7 +1014,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 8,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -446,7 +1022,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 9,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -454,7 +1030,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 1,
                 'nilai_tugas' => 85,
                 'nilai_uts' => 90,
@@ -462,7 +1038,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 2,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -470,7 +1046,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 3,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -478,7 +1054,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 4,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -486,7 +1062,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 5,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -494,7 +1070,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 6,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -502,7 +1078,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 7,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -510,7 +1086,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 8,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -518,7 +1094,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 9,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -526,7 +1102,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 1,
                 'nilai_tugas' => 85,
                 'nilai_uts' => 90,
@@ -534,7 +1110,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 2,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -542,7 +1118,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 3,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -550,7 +1126,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 4,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -558,7 +1134,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 5,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -566,7 +1142,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 6,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -574,7 +1150,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 7,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -582,7 +1158,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 8,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -590,7 +1166,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 9,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -598,7 +1174,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 1,
                 'nilai_tugas' => 85,
                 'nilai_uts' => 90,
@@ -606,7 +1182,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 2,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -614,7 +1190,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 3,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -622,7 +1198,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 4,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -630,7 +1206,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 5,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -638,7 +1214,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 6,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -646,7 +1222,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 7,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -654,7 +1230,7 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
                 'id_mapel' => 8,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
@@ -662,7 +1238,727 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 3,
+                'id_siswa' => 7,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 8,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 9,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 1,
+                'nilai_tugas' => 85,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 2,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 3,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 4,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 5,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 6,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 7,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 9,
+                'id_mapel' => 8,
+                'nilai_tugas' => 78,
+                'nilai_uts' => 90,
+                'nilai_uas' => 87,
+                'semester' => 1,
+                'kelas' => 9
+            ],[
+                'id_siswa' => 9,
                 'id_mapel' => 9,
                 'nilai_tugas' => 78,
                 'nilai_uts' => 90,
