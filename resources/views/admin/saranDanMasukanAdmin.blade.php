@@ -30,7 +30,7 @@
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
                 </span>
-                <span class="title">Fitur Bantuan</span>
+                <span class="title">Pusat Unduhan</span>
             </a>
         </li>
 
@@ -73,7 +73,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Saran dan Bantuan</h4>
+                    <h4>Saran dan Masukan</h4>
                 </a>
             </div>
 

@@ -22,7 +22,7 @@
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
                 <span class="title">Berita</span>
-            </a>
+            </a> 
         </li>
 
         <li class="list">
@@ -30,7 +30,7 @@
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
                 </span>
-                <span class="title">Fitur Bantuan</span>
+                <span class="title">Pusat Unduhan</span>
             </a>
         </li>
 

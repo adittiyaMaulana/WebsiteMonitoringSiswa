@@ -34,6 +34,33 @@
             </a>
         </li>
 
+        <li class="list">
+            <a href="/guru/pusatBantuanGuru">
+                <span class="icon">
+                    <ion-icon name="download-outline"></ion-icon>
+                </span>
+                <span class="title">Pusat Unduhan</span>
+            </a>
+        </li>
+
+        <li class="list">
+            <a href="/guru/jadwalAkadaNonAkaGuru">
+                <span class="icon">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                </span>
+                <span class="title">Jadwal</span>
+            </a>
+        </li>
+
+        <li class="list">
+            <a href="/guru/beritaGuru">
+                <span class="icon">
+                    <ion-icon name="newspaper-outline"></ion-icon>
+                </span>
+                <span class="title">Berita</span>
+            </a>
+        </li>
+
 
         <li class="list">
             <a href="{{ route('login') }}" onclick="event.preven-tDefault();
@@ -65,7 +92,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>MOS</h4>
+                    <h4>Masukan dan Saran</h4>
                 </a>
             </div>
 

@@ -66,7 +66,7 @@
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
                 </span>
-                <span class="title">Fitur Bantuan</span>
+                <span class="title">Pusat Unduhan</span>
             </a>
         </li>
 
@@ -146,7 +146,7 @@
     <!-- pilihan -->
     <div class="navbar_pilihan ml-2 mt-5">
         <ul>
-            <li><a href="/orangTua/jadwalKelas">Kelas</a></li>
+            <li><a href="/orangTua/jadwalKelas">Pelajaran</a></li>
             <li><a class="active" href="/orangTua/jadwalAkadanNonAkademik">Akademik dan Non Akademik</a></li>
         </ul>
     </div>
