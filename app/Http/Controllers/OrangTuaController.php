@@ -44,6 +44,7 @@ class OrangTuaController extends Controller
 
         //get email orang tua berdasar login
         $email_login = Auth::user()->email;
+        $username = Auth::user()->name;
 
         $title         = 'Tabel Contoh';
       
@@ -229,8 +230,8 @@ class OrangTuaController extends Controller
             ->join('profil_siswa', 'finansial.id_siswa','=','profil_siswa.id')
             ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
             ->select('finansial.nama_bayaran', 'finansial.jumlah', 'finansial.jatuh_tempo', 'finansial.status')
-            ->where('orang_tua.email','=',$email_login,'AND',
-            'finansial.status', '=', 'terbayar')
+            ->where('orang_tua.email','=',$email_login)
+            ->where('finansial.status', '=', 'belum terbayar')
             ->get();
 
           //END
@@ -241,7 +242,9 @@ class OrangTuaController extends Controller
         'uts_7_1','uts_7_2','uts_8_1','uts_8_2','uts_9_1','uts_9_2',
         'uas_7_1','uas_7_2','uas_8_1','uas_8_2','uas_9_1','uas_9_2',
     
-        'finansial'));
+        'finansial',
+    
+        'email_login', 'username'));
     }
 
     // jadwal Kelas
