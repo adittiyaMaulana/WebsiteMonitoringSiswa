@@ -131,7 +131,8 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
+                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
+                        loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -164,16 +165,16 @@
             </thead>
             <tbody id="finansial">
                 @forelse ($finansial as $data)
-                                        <tr>
-                                            <td>{{$data->nama_bayaran }}</td>
-                                            <td>{{$data->jumlah}}</td>
-                                            <td>{{$data->jatuh_tempo}}</td>
-                                            <td>{{$data->status}}</td>
-                                        </tr>
-                                        @empty
-                                        <tr>
-                                            <td colspan="6" class="text-center">Tidak ada data</td>
-                                        </tr>
+                <tr>
+                    <td>{{$data->nama_bayaran }}</td>
+                    <td>{{$data->jumlah}}</td>
+                    <td>{{$data->jatuh_tempo}}</td>
+                    <td>{{$data->status}}</td>
+                </tr>
+                @empty
+                <tr>
+                    <td colspan="6" class="text-center">Tidak ada data</td>
+                </tr>
                 @endforelse
             </tbody>
         </table>
@@ -185,7 +186,7 @@
 	$(document).ready(function(){
 		$('#status').on('change', function(e){
 			var id = e.target.value;
-			$.get('{{ url('orangTua/filterfinansial')}}/'+id, function(data){
+			$.get('{{ url("orangTua/filterfinansial")}}/'+id, function(data){
 			console.log(id);
 			console.log(data);
 			$('#finansial').empty();

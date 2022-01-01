@@ -75,7 +75,8 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
 
     // jadwal kelas √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/jadwalKelas', [OrangTuaController::class, 'jadwalKelas']);
-    
+    Route::get('/filterjadwal/{id}', [OrangTuaController::class, 'filterjadwal'])->name('orangTua.filterjadwal');
+
     // jadwal non dan aka √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/jadwalAkadanNonAkademik', [OrangTuaController::class, 'jadwalAkadanNonAkademik']);
     Route::get('/jadwalAkademik', [OrangTuaController::class, 'jadwalAkademik']);

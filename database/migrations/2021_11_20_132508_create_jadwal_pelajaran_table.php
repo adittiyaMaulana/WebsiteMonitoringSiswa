@@ -20,7 +20,8 @@ class CreateJadwalPelajaranTable extends Migration
             $table->unsignedBigInteger('id_mapel');
             $table->foreign('id_siswa')->references('id')->on('profil_siswa')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('id_mapel')->references('id')->on('mata_pelajaran')->onDelete('cascade')->onUpdate('cascade');
-            $table->dateTime('jam_pelajaran');
+            $table->string('jam_pelajaran');
+            $table->string('hari');
         });
     }
 

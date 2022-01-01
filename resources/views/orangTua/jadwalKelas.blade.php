@@ -154,78 +154,57 @@
     <!-- table -->
 
     <div class="my-table mt-5 ml-4 mr-4">
+        <select class="form-select mb-5" aria-label="Default select example" id="hari">
+            <option value="" selected>Pilih Status</option>
+            <option value="Senin">Senin</option>
+            <option value="Selasa">Selasa</option>
+            <option value="Rabu">Rabu</option>
+            <option value="Kamis">Kamis</option>
+            <option value="Jumat">Jumat</option>
+        </select>
+
         <table id="tableOrangTua" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
-                    <th>Kelas</th>
-                    <th>Semester</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                    <th>Salary</th>
+                    <th>Mata Pelajaran</th>
+                    <th>Jeni Pelajaran</th>
+                    <th>Jam Pelajaran</th>
+                    <th>Hari</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="jadwal">
+                @forelse($jadwal as $data)
                 <tr>
-                    <td>Kelas 7</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
+                    <td>{{$data->nama}}</td>
+                    <td>{{$data->jenis}}</td>
+                    <td>{{$data->jam_pelajaran}}</td>
+                    <td>{{$data->hari}}</td>
                 </tr>
+                @empty
                 <tr>
-                    <td>Kelas 9</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>56</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
+                    <td colspan="6" class="text-center">Tidak ada data</td>
                 </tr>
-                <tr>
-                    <td>Kelas 9</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>66</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr>
-                    <td>Kelas 8</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>20</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr>
-                    <td>Kelas 7</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>1</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr>
-                    <td>Kelas 9</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>6</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-
+                @endforelse
             </tbody>
         </table>
     </div>
 
 </div>
+
+<script>
+	$(document).ready(function(){
+		$('#hari').on('change', function(e){
+			var id = e.target.value;
+			$.get('{{ url("orangTua/filterjadwal")}}/'+id, function(data){
+			console.log(id);
+			console.log(data);
+			$('#jadwal').empty();
+			$.each(data, function(index, element){
+				$('#jadwal').append("<tr><td>"+element.nama+"</td><td>"+element.jenis+"</td><td>"+element.jam_pelajaran+"</td><td>"+element.hari+"</td></tr>")
+			});
+			});
+		});	
+	});
+</script>
 
 @endsection

@@ -247,7 +247,46 @@ class OrangTuaController extends Controller
     // jadwal Kelas
     public function jadwalKelas()
     {
-        return view('orangTua.jadwalKelas');
+        //get email orang tua berdasar login
+        $email_login = Auth::user()->email;
+
+        //get jadwal pelajaran di kelas
+        $jadwal = DB::table('jadwal_pelajaran')
+            ->join('profil_siswa', 'jadwal_pelajaran.id_siswa','=','profil_siswa.id')
+            ->join('mata_pelajaran', 'jadwal_pelajaran.id_mapel', '=', 'mata_pelajaran.id')
+            ->join('orang_tua','profil_siswa.id_orang_tua','=','orang_tua.id')
+            ->select('mata_pelajaran.nama', 'mata_pelajaran.jenis', 'jadwal_pelajaran.jam_pelajaran', 'jadwal_pelajaran.hari')
+            ->where('orang_tua.email','=',$email_login)
+            ->where('jadwal_pelajaran.hari','=',"Senin")
+            ->get();
+        return view('orangTua.jadwalKelas',compact('jadwal'));
+    }
+
+    public function filterjadwal($id){
+
+        //get email orang tua berdasar login
+        $email_login = Auth::user()->email;
+
+        if($id!=''){
+            $jadwal = DB::table('jadwal_pelajaran')
+            ->join('profil_siswa', 'jadwal_pelajaran.id_siswa','=','profil_siswa.id')
+            ->join('mata_pelajaran', 'jadwal_pelajaran.id_mapel', '=', 'mata_pelajaran.id')
+            ->join('orang_tua','profil_siswa.id_orang_tua','=','orang_tua.id')
+            ->select('mata_pelajaran.nama', 'mata_pelajaran.jenis', 'jadwal_pelajaran.jam_pelajaran', 'jadwal_pelajaran.hari')
+            ->where('orang_tua.email','=',"$email_login")
+            ->where('jadwal_pelajaran.hari','=',"$id")
+            ->get();
+        }else{
+            $jadwal = DB::table('jadwal_pelajaran')
+            ->join('profil_siswa', 'jadwal_pelajaran.id_siswa','=','profil_siswa.id')
+            ->join('mata_pelajaran', 'jadwal_pelajaran.id_mapel', '=', 'mata_pelajaran.id')
+            ->join('orang_tua','profil_siswa.id_orang_tua','=','orang_tua.id')
+            ->select('mata_pelajaran.nama', 'mata_pelajaran.jenis', 'jadwal_pelajaran.jam_pelajaran', 'jadwal_pelajaran.hari')
+            ->where('orang_tua.email','=',"$email_login")
+            ->get();
+        }
+
+        return $jadwal;
     }
 
     // jadwal Non Akademik
@@ -270,8 +309,8 @@ class OrangTuaController extends Controller
                 ->join('profil_siswa', 'finansial.id_siswa','=','profil_siswa.id')
                 ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
                 ->select('finansial.nama_bayaran', 'finansial.jumlah', 'finansial.jatuh_tempo', 'finansial.status')
-                ->where('orang_tua.email','=',$email_login,'AND',
-                'finansial.status', '=', '"belum terbayar"')
+                ->where('orang_tua.email','=',$email_login)
+                ->where('finansial.status', '=', "terbayar")
                 ->get();
         return view('orangTua.finansial', compact('finansial'));
     }

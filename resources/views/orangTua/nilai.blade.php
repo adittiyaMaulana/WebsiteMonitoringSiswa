@@ -210,7 +210,7 @@
 	$(document).ready(function(){
 		$('#sem').on('change', function(e){
 			var id = e.target.value;
-			$.get('{{ url('orangTua/filternilai')}}/'+id, function(data){
+			$.get('{{ url("orangTua/filternilai")}}/'+id, function(data){
 			console.log(id);
 			console.log(data);
 			$('#nilai').empty();
