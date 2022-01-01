@@ -40,7 +40,7 @@
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
                 </span>
-                <span class="title">Pusat Bantuan</span>
+                <span class="title">Pusat Unduhan</span>
             </a>
         </li>
 
