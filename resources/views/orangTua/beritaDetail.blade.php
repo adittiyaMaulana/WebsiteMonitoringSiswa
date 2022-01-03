@@ -70,15 +70,6 @@
             </a>
         </li>
 
-        <!-- <li class="list">
-            <a href="/orangTua/tentangSekolah">
-                <span class="icon">
-                    <ion-icon name="alert-circle-outline"></ion-icon>
-                </span>
-                <span class="title">Tentang</span>
-            </a>
-        </li> -->
-
         <li class="list">
             <a href="{{ route('login') }}" onclick="event.preven-tDefault();
                             document.getElementById('logout-form').submit();">

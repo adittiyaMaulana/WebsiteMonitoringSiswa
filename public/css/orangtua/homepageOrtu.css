@@ -16,7 +16,7 @@
 }
 
 /* bagian berita */
-.bagianinformasi{
+.bagianberitas{
     height: auto;
     width: 95%;
 }
@@ -80,3 +80,5 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  

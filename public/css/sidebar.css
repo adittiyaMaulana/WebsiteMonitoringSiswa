@@ -9,7 +9,7 @@
 }
 
 body{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background-color: #F0F0F0;
 }
 
@@ -84,3 +84,9 @@ body{
     line-height: 60px;
     white-space: normal;
 }
+
+@media screen and (max-width: 760px) {
+    .sidebar {
+      width: 250px;
+    }
+  }

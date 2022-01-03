@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700,800,900&display=swap');
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -12,11 +12,15 @@ body {
     color: #F0F0F0;
 }
 
-.my-content{
+.my-content {
     margin-left: 320px;
 }
 
-.container1{
+.my-contentRev2 {
+    margin-left: 320px;
+}
+
+.container1 {
     width: 100%;
     height: auto;
     display: flex;
@@ -24,14 +28,14 @@ body {
     justify-content: space-around;
 }
 
-.box{
+.box {
     width: 100vh;
     height: 312px;
     margin: 20px;
     box-sizing: border-box;
     border-radius: 20px;
     box-shadow: 0 8px 8px -4px lightblue;
-    background:#fff;
+    background: #fff;
 
 }
 
@@ -42,19 +46,19 @@ body {
     text-align: center;
 }
 
-.profile h4{
+.profile h4 {
     font-weight: 500;
     color: #404040;
     font-size: 30px;
 }
 
-.nis{
+.nis {
     font-weight: 400;
     color: #CEBCBC;
 }
 
 /* untuk finansial sebagian */
-.finansial_sebagian{
+.finansial_sebagian {
     padding: 30px;
     height: 312px;
 }
@@ -69,3 +73,8 @@ body {
     font-weight: 400;
 }
 
+@media screen and (max-width: 760px) {
+    .my-content {
+        margin-left: 250px;
+    }
+}
