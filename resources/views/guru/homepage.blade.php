@@ -83,7 +83,7 @@
 <div class="my-content">
 
     <style>
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 899px) {
             .container1 {
                 width: 1000px;
             }
@@ -91,6 +91,7 @@
                 width: 1000px;
             }
         }
+
     </style>
 
     <!-- ====================================================================================== -->

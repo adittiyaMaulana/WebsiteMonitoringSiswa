@@ -66,7 +66,7 @@
     <style>
         @media screen and (max-width: 900px) {
             .content {
-                width: 900px;
+                width: 700px;
             }
         }
     </style>

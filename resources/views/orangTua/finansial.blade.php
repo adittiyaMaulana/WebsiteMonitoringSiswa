@@ -99,6 +99,15 @@
 
 <div class="my-content">
 
+    <style>
+        @media screen and (max-width: 900px) {
+            .finansial {
+                width: 1000px;
+            }
+
+        }
+    </style>
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -131,8 +140,7 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
-                        loading="lazy" />
+                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -146,55 +154,59 @@
 
     <!-- table -->
 
-    <div class="my-table mt-5 ml-4 mr-4">
 
-        <select class="form-select mb-5" aria-label="Default select example" id="status">
-            <option value="" selected>Pilih Status</option>
-            <option value="terbayar">Sudah dibayar</option>
-            <option value="belum terbayar">Belum dibayar</option>
-        </select>
-
-        <table id="tableOrangTua" class="table table-hover" style="width:100%">
-            <thead class="table-dark">
-                <tr>
-                    <th>Pembayaran</th>
-                    <th>Jumlah</th>
-                    <th>Jatuh Tempo</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody id="finansial">
-                @forelse ($finansial as $data)
-                <tr>
-                    <td>{{$data->nama_bayaran }}</td>
-                    <td>{{$data->jumlah}}</td>
-                    <td>{{$data->jatuh_tempo}}</td>
-                    <td>{{$data->status}}</td>
-                </tr>
-                @empty
-                <tr>
-                    <td colspan="6" class="text-center">Tidak ada data</td>
-                </tr>
-                @endforelse
-            </tbody>
-        </table>
+    <div class="finansial">
+        <div class="my-table mt-5 ml-4 mr-4">
+    
+            <select class="form-select mb-5" aria-label="Default select example" id="status">
+                <option value="" selected>Pilih Status</option>
+                <option value="terbayar">Sudah dibayar</option>
+                <option value="belum terbayar">Belum dibayar</option>
+            </select>
+    
+            <table id="tableOrangTua" class="table table-hover" style="width:100%">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Pembayaran</th>
+                        <th>Jumlah</th>
+                        <th>Jatuh Tempo</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="finansial">
+                    @forelse ($finansial as $data)
+                    <tr>
+                        <td>{{$data->nama_bayaran }}</td>
+                        <td>{{$data->jumlah}}</td>
+                        <td>{{$data->jatuh_tempo}}</td>
+                        <td>{{$data->status}}</td>
+                    </tr>
+                    @empty
+                    <tr>
+                        <td colspan="6" class="text-center">Tidak ada data</td>
+                    </tr>
+                    @endforelse
+                </tbody>
+            </table>
+        </div>
     </div>
+
 
 </div>
 
 <script>
-	$(document).ready(function(){
-		$('#status').on('change', function(e){
-			var id = e.target.value;
-			$.get('{{ url("orangTua/filterfinansial")}}/'+id, function(data){
-			console.log(id);
-			console.log(data);
-			$('#finansial').empty();
-			$.each(data, function(index, element){
-				$('#finansial').append("<tr><td>"+element.nama_bayaran+"</td><td>"+element.jumlah+"</td><td>"+element.jatuh_tempo+"</td><td>"+element.status+"</td></tr>")
-			});
-			});
-		});	
-	});
+    $(document).ready(function() {
+        $('#status').on('change', function(e) {
+            var id = e.target.value;
+            $.get('{{ url("orangTua/filterfinansial")}}/' + id, function(data) {
+                console.log(id);
+                console.log(data);
+                $('#finansial').empty();
+                $.each(data, function(index, element) {
+                    $('#finansial').append("<tr><td>" + element.nama_bayaran + "</td><td>" + element.jumlah + "</td><td>" + element.jatuh_tempo + "</td><td>" + element.status + "</td></tr>")
+                });
+            });
+        });
+    });
 </script>
 @endsection

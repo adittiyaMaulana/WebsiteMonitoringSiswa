@@ -62,6 +62,15 @@
 
 <div class="my-content">
 
+    <style>
+        @media screen and (max-width: 900px) {
+            .saran-masukan-detail {
+                width: 1000px;
+            }
+        }
+    </style>
+
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -106,15 +115,17 @@
         </div>
     </nav>
 
-    <div class="detailsaranmasukan mt-5 ml-4 mr-4">
-        <p class="dari">Dari</p>
-        <p class="namaUser">nama User</p>
-
-        <p class="mt-5">Saran</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatibus quisquam pariatur corrupti facere a eligendi eaque excepturi minima rem est, at earum accusamus ratione officiis possimus deleniti consequatur dolor.</p>
-
-        <p class="mt-5">masukan</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatibus quisquam pariatur corrupti facere a eligendi eaque excepturi minima rem est, at earum accusamus ratione officiis possimus deleniti consequatur dolor.</p>
+    <div class="saran-masukan-detail">
+        <div class="detailsaranmasukan mt-5 ml-4 mr-4">
+            <p class="dari">Dari</p>
+            <p class="namaUser">nama User</p>
+    
+            <p class="mt-5">Saran</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatibus quisquam pariatur corrupti facere a eligendi eaque excepturi minima rem est, at earum accusamus ratione officiis possimus deleniti consequatur dolor.</p>
+    
+            <p class="mt-5">masukan</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatibus quisquam pariatur corrupti facere a eligendi eaque excepturi minima rem est, at earum accusamus ratione officiis possimus deleniti consequatur dolor.</p>
+        </div>
     </div>
 
 

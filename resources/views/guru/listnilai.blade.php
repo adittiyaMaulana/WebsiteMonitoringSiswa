@@ -83,6 +83,15 @@
 
 <div class="my-content">
 
+    <style>
+        @media screen and (max-width: 900px) {
+            .detail-nilai-siswa {
+                width: 1000px;
+            }
+
+        }
+    </style>
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -115,8 +124,7 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
-                        loading="lazy" />
+                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -130,70 +138,72 @@
 
     <!-- table -->
 
-    <div class="my-table mt-5 ml-4 mr-4 mb-5">
-
-
-        <p>Nama : {{$siswa->nama}}</p>
-        <table id="nilai" class="table table-hover" style="width:100%">
-            <thead class="table-dark">
-                <tr>
-                    <th>Kelas</th>
-                    <th>Semester</th>
-                    <th>Mapel</th>
-                    <th>N. Tugas</th>
-                    <th>N. UTS</th>
-                    <th>N. UAS</th>
-                </tr>
-            </thead>
-            <tbody id="nilai">
-
-                @forelse ($nilai as $data)
-                <tr>
-                    <td>{{$data->kelas}}</td>
-                    <td>{{$data->semester}}</td>
-                    <td>{{$data->nama}}</td>
-                    <td>{{$data->nilai_tugas}}</td>
-                    <td>{{$data->nilai_uts}}</td>
-                    <td>{{$data->nilai_uas}}</td>
-
-                </tr>
-                @empty
-                <tr>
-                    <td colspan="6" class="text-center">Tidak ada data</td>
-                </tr>
-                @endforelse
-
-            </tbody>
-        </table>
-
-
-
-
+    <div class="detail-nilai-siswa">
+        <div class="my-table mt-5 ml-4 mr-4 mb-5">
+    
+    
+            <p>Nama : {{$siswa->nama}}</p>
+            <table id="nilai" class="table table-hover" style="width:100%">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Kelas</th>
+                        <th>Semester</th>
+                        <th>Mapel</th>
+                        <th>N. Tugas</th>
+                        <th>N. UTS</th>
+                        <th>N. UAS</th>
+                    </tr>
+                </thead>
+                <tbody id="nilai">
+    
+                    @forelse ($nilai as $data)
+                    <tr>
+                        <td>{{$data->kelas}}</td>
+                        <td>{{$data->semester}}</td>
+                        <td>{{$data->nama}}</td>
+                        <td>{{$data->nilai_tugas}}</td>
+                        <td>{{$data->nilai_uts}}</td>
+                        <td>{{$data->nilai_uas}}</td>
+    
+                    </tr>
+                    @empty
+                    <tr>
+                        <td colspan="6" class="text-center">Tidak ada data</td>
+                    </tr>
+                    @endforelse
+    
+                </tbody>
+            </table>
+    
+    
+    
+    
+        </div>
     </div>
 
 
-</div>
 
 </div>
 
-<script
-			  src="https://code.jquery.com/jquery-2.2.4.js"
-			  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-			  crossorigin="anonymous">
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
 </script>
 <script>
-	$(document).ready(function(){
-		$('#sem').on('change', function(e){
-			var id = e.target.value;
-			$.get('{{ url('orangTua/filternilai')}}/'+id, function(data){
-			console.log(id);
-			console.log(data);
-			$('#nilai').empty();
-			$.each(data, function(index, element){
-				$('#nilai').append("<tr><td>"+element.kelas+"</td><td>"+element.semester+"</td><td>"+element.nama+"</td><td>"+element.nilai_tugas+"</td><td>"+element.nilai_uts+"</td><td>"+element.nilai_uas+"</td></tr>")
-			});
-			});
-		});	
-	});
+    $(document).ready(function() {
+        $('#sem').on('change', function(e) {
+            var id = e.target.value;
+            $.get('{{ url('
+                orangTua / filternilai ')}}/' + id,
+                function(data) {
+                    console.log(id);
+                    console.log(data);
+                    $('#nilai').empty();
+                    $.each(data, function(index, element) {
+                        $('#nilai').append("<tr><td>" + element.kelas + "</td><td>" + element.semester + "</td><td>" + element.nama + "</td><td>" + element.nilai_tugas + "</td><td>" + element.nilai_uts + "</td><td>" + element.nilai_uas + "</td></tr>")
+                    });
+                });
+        });
+    });
 </script>
 @endsection

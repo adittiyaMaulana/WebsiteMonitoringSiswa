@@ -17,7 +17,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/jadwal">
+            <a href="/orangTua/jadwalKelas">
                 <span class="icon">
                     <ion-icon name="calendar-outline"></ion-icon>
                 </span>
@@ -70,15 +70,6 @@
             </a>
         </li>
 
-        <!-- <li class="list">
-            <a href="/orangTua/tentangSekolah">
-                <span class="icon">
-                    <ion-icon name="alert-circle-outline"></ion-icon>
-                </span>
-                <span class="title">Tentang</span>
-            </a>
-        </li> -->
-
         <li class="list">
             <a href="{{ route('login') }}" onclick="event.preven-tDefault();
                             document.getElementById('logout-form').submit();">
@@ -98,6 +89,19 @@
 <!-- contentt -->
 
 <div class="my-content">
+    <style>
+        .beritadata {
+            width: auto;
+            height: auto;
+            min-width: 760px;
+        }
+
+        @media screen and (max-width: 760px) {
+            .beritadata {
+                margin-bottom: 160px;
+            }
+        }
+    </style>
 
     <!-- ====================================================================================== -->
     <!-- Navbar -->
@@ -143,19 +147,7 @@
         </div>
     </nav>
 
-    <style>
-        .beritadata {
-            width: auto;
-            height: auto;
-            min-width: 760px;
-        }
 
-        @media screen and (max-width: 760px) {
-            .beritadata {
-                margin-bottom: 160px;
-            }
-        }
-    </style>
 
     <div class=" mt-5 ml-4 mr-5">
 

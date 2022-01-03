@@ -82,6 +82,15 @@
 
 <div class="my-content">
 
+    <style>
+        @media screen and (max-width: 900px) {
+            .tabel {
+                width: 1000px;
+            }
+
+        }
+    </style>
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -128,7 +137,7 @@
 
     <!-- table -->
 
-    <div class="my-table mt-5 ml-3 mr-4">
+    <div class="tabel mt-5 ml-3 mr-4">
         <table id="tableAdmin" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
@@ -140,20 +149,20 @@
             </thead>
             <tbody>
                 @forelse ($berita as $data)
-                                        <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>{{$data->judul}}</td>
-                                            <td>{{$data->created_at}}</td>
-                                            <td>
-                                                <a href="{{route('guru.lihatberita', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
-                                               
-                                            </td>
-                                        </tr>
-                                        @empty
-                                        <tr>
-                                            <td colspan="6" class="text-center">Tidak ada data</td>
-                                        </tr>
-                                        @endforelse
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{$data->judul}}</td>
+                    <td>{{$data->created_at}}</td>
+                    <td>
+                        <a href="{{route('guru.lihatberita', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
+
+                    </td>
+                </tr>
+                @empty
+                <tr>
+                    <td colspan="6" class="text-center">Tidak ada data</td>
+                </tr>
+                @endforelse
             </tbody>
         </table>
     </div>

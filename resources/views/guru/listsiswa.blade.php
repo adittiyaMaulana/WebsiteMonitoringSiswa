@@ -82,6 +82,15 @@
 
 <div class="my-content">
 
+    <style>
+        @media screen and (max-width: 900px) {
+            .detail-nilai {
+                width: 1000px;
+            }
+
+        }
+    </style>
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -128,34 +137,36 @@
 
     <!-- table -->
 
-    <div class="my-table mt-5 ml-3 mr-4">
-        <table id="tableAdmin" class="table table-hover" style="width:100%">
-            <thead class="table-dark">
-                <tr>
-                    <th>No</th>
-                    <th>Nama Siswa</th>
-                    <th>Nama Kelas</th>
-                    <th>aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                @forelse ($siswa as $data)
-                                        <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>{{$data->nama}}</td>
-                                            <td>{{$data->kelas->nama_kelas}}</td>
-                                            <td>
-                                                <a href="{{route('guru.listnilai', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
-                                               
-                                            </td>
-                                        </tr>
-                                        @empty
-                                        <tr>
-                                            <td colspan="6" class="text-center">Tidak ada data</td>
-                                        </tr>
-                                        @endforelse
-            </tbody>
-        </table>
+    <div class="detail-nilai">
+        <div class="my-table mt-5 ml-3 mr-4">
+            <table id="tableAdmin" class="table table-hover" style="width:100%">
+                <thead class="table-dark">
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Siswa</th>
+                        <th>Nama Kelas</th>
+                        <th>aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @forelse ($siswa as $data)
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{$data->nama}}</td>
+                        <td>{{$data->kelas->nama_kelas}}</td>
+                        <td>
+                            <a href="{{route('guru.listnilai', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
+    
+                        </td>
+                    </tr>
+                    @empty
+                    <tr>
+                        <td colspan="6" class="text-center">Tidak ada data</td>
+                    </tr>
+                    @endforelse
+                </tbody>
+            </table>
+        </div>
     </div>
 
 

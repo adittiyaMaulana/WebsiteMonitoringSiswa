@@ -85,7 +85,7 @@
     <style>
         @media screen and (max-width: 760px) {
             .tabel {
-                width: 100%;
+                width: 1000px;
             }
 
         }

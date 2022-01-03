@@ -82,6 +82,15 @@
 
 <div class="my-content">
 
+    <style>
+        @media screen and (max-width: 900px) {
+            .tabel {
+                width: 1000px;
+            }
+
+        }
+    </style>
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -114,8 +123,7 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
-                        loading="lazy" />
+                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -127,34 +135,36 @@
         </div>
     </nav>
 
-    <table id="tableAdmin" class="table table-hover" style="width:100%">
-        <thead class="table-dark">
-            <tr>
-                <th>No</th>
-                <th>Nama</th>
-                <th>Ukuran</th>
-                <th>aksi</th>
-            </tr>
-        </thead>
-        <tbody>
-            @forelse ($unduhan as $data)
-            <tr>
-                <td>{{ $loop->iteration }}</td>
-                <td>{{$data->nama}}</td>
-                <td>{{ number_format((float)$data->ukuran/1000, 2, '.', '')}} Kb</td>
-                <td>
-                    <a href="/unduhan/{{$data->nama}}" class="btn btn-success" download><i class="far fa-download"></i>
-                        Download</a>
-
-                </td>
-            </tr>
-            @empty
-            <tr>
-                <td colspan="6" class="text-center">Tidak ada data</td>
-            </tr>
-            @endforelse
-        </tbody>
-    </table>
+    <div class="tabel mt-5 ml-4 mr-4 mb-4">
+        <table id="tableAdmin" class="table table-hover" style="width:100%">
+            <thead class="table-dark">
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Ukuran</th>
+                    <th>aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                @forelse ($unduhan as $data)
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{$data->nama}}</td>
+                    <td>{{ number_format((float)$data->ukuran/1000, 2, '.', '')}} Kb</td>
+                    <td>
+                        <a href="/unduhan/{{$data->nama}}" class="btn btn-success" download><i class="far fa-download"></i>
+                            Download</a>
+    
+                    </td>
+                </tr>
+                @empty
+                <tr>
+                    <td colspan="6" class="text-center">Tidak ada data</td>
+                </tr>
+                @endforelse
+            </tbody>
+        </table>
+    </div>
 
 
     <!-- end my-content / semua content -->

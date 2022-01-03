@@ -93,7 +93,7 @@
     <style>
         @media screen and (max-width: 900px) {
             .grafik-nilai {
-                width: 800px;
+                width: 900px;
             }
 
             .bagianberitas {
