@@ -64,6 +64,16 @@
 
 <div class="my-content">
 
+
+    <style>
+        @media screen and (max-width: 900px) {
+            .formunduhan {
+                width: 900px;
+            }
+
+        }
+    </style>
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -110,7 +120,7 @@
 
     <!-- table -->
 
-    <div class="my-table mt-5 ml-3 mr-4">
+    <div class="formunduhan mt-5 ml-3 mr-4">
         <div class="col-md-8 col-sm-12 bg-white p-4">
             @if($errors->any())
             {{ implode('', $errors->all(':message')) }}

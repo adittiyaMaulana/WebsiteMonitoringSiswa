@@ -82,6 +82,17 @@
 
 <div class="my-content">
 
+    <style>
+        @media screen and (max-width: 900px) {
+            .container1 {
+                width: 1000px;
+            }
+            .nilaiSiswa{
+                width: 1000px;
+            }
+        }
+    </style>
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">

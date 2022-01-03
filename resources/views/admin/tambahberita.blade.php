@@ -64,6 +64,15 @@
 
 <div class="my-content">
 
+    <style>
+        @media screen and (max-width: 900px) {
+            .formberita {
+                width: 900px;
+            }
+
+        }
+    </style>
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -102,14 +111,7 @@
     </nav>
 
 
-    <!-- buttonn -->
-    <!-- <div class="button_area">
-        <a href="/admin/formBerita"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
-    </div> -->
-
-    <!-- table -->
-
-    <div class="my-table mt-5 ml-3 mr-4">
+    <div class="formberita mt-5 ml-3 mr-4">
         <div class="col-md-8 col-sm-12 bg-white p-4">
             <form class="was-validated" method="post" action="{{route('admin.saveberita')}}" enctype="multipart/form-data">
                 @csrf
@@ -130,8 +132,6 @@
                     <input type="submit" class="form-control btn btn-primary" value="Simpan">
                 </div>
         </div>
-
-
 
         </form>
     </div>

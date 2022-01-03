@@ -64,6 +64,14 @@
 
 <div class="my-content">
 
+    <style>
+        @media screen and (max-width: 900px) {
+            .tabel {
+                width: 1000px;
+            }
+
+        }
+    </style>
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -102,45 +110,41 @@
         </div>
     </nav>
 
-
-
     <!-- table -->
-    <div class="card-header">
+    <div class="ml-4 mt-5">
         <a href="{{ route('admin.tambahberita')}}" class="btn btn-success"><i class="fas fa-plus"></i> Tambah</a>
     </div>
-    <div class="my-table mt-5 ml-3 mr-4">
-        <table id="tableAdmin" class="table table-hover" style="width:100%">
-            <thead class="table-dark">
-                <tr>
-                    <th>No</th>
-                    <th>Judul</th>
-                    <th>Tanggal</th>
-                    <th>aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                @forelse ($berita as $data)
-                <tr>
-                    <td>{{ $loop->iteration }}</td>
-                    <td>{{$data->judul}}</td>
-                    <td>{{$data->created_at}}</td>
-                    <td>
-                        <a href="{{route('admin.lihatberita', $data->id)}}" class="btn btn-success"><i
-                                class="far fa-eye"></i></a>
-                        <a href="{{route('admin.editberita', $data->id)}}" class="btn btn-warning"><i
-                                class="fas fa-pen"></i></a>
-                        <a href="{{route('admin.hapusberita', $data->id)}}" class="btn btn-danger"
-                            onclick="return confirm('Anda Yakin Ingin Menghapus ?')"><i
-                                class="fas fa-trash-alt"></i></a>
-                    </td>
-                </tr>
-                @empty
-                <tr>
-                    <td colspan="6" class="text-center">Tidak ada data</td>
-                </tr>
-                @endforelse
-            </tbody>
-        </table>
+    <div class="tabel">
+        <div class="my-table mt-5 ml-4 mr-4">
+            <table id="tableAdmin" class="table table-hover" style="width:100%">
+                <thead class="table-dark">
+                    <tr>
+                        <th>No</th>
+                        <th>Judul</th>
+                        <th>Tanggal</th>
+                        <th>aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @forelse ($berita as $data)
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{$data->judul}}</td>
+                        <td>{{$data->created_at}}</td>
+                        <td>
+                            <a href="{{route('admin.lihatberita', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
+                            <a href="{{route('admin.editberita', $data->id)}}" class="btn btn-warning"><i class="fas fa-pen"></i></a>
+                            <a href="{{route('admin.hapusberita', $data->id)}}" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus ?')"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    @empty
+                    <tr>
+                        <td colspan="6" class="text-center">Tidak ada data</td>
+                    </tr>
+                    @endforelse
+                </tbody>
+            </table>
+        </div>
     </div>
 
 

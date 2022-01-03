@@ -63,6 +63,14 @@
 
 <div class="my-content">
 
+    <style>
+        @media screen and (max-width: 900px) {
+            .importdata {
+                width: 900px;
+            }
+
+        }
+    </style>
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -101,7 +109,7 @@
     </nav>
 
     <!-- vertical tab -->
-    <div class="mr-4 ml-4 mt-5 mb-4">
+    <div class=" importdata mr-4 ml-4 mt-5 mb-4">
 
         <div class="tab">
             <button class="tablinks" style="border-top-left-radius: 20px ;" onclick="openCity(event, 'orangTua')" id="defaultOpen">OrangTua</button>
@@ -181,7 +189,7 @@
         <div id="JadwalKelas" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Jadwal Kelas</h4>
-            <form class="was-validated"> 
+            <form class="was-validated">
                 <div class="mb-3">
                     <input class="form-control mb-3" type="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
