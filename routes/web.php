@@ -96,6 +96,7 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
 
     // kehadiran √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/kehadiran', [OrangTuaController::class, 'kehadiran']);
+    Route::get('/filterabsensi/{id}', [OrangTuaController::class, 'filterabsensi'])->name('orangTua.filterabsensi');
 
     // fitur bantuan √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/fiturBantuan', [OrangTuaController::class, 'fiturBantuan']);

@@ -20,11 +20,12 @@ class CreateAbsensiTable extends Migration
             $table->foreign('id_siswa')->references('id')->on('profil_siswa')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('id_kelas');
             $table->foreign('id_kelas')->references('id')->on('kelas')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('bulan');
+            $table->integer('bulan');
             $table->integer('kehadiran');
             $table->integer('alpa');
             $table->integer('sakit');
             $table->integer('izin');
+            $table->integer('semester');
         });
     }
 

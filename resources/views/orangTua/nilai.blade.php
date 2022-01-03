@@ -132,7 +132,8 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
+                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
+                        loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -148,7 +149,7 @@
 
     <div class="my-table mt-5 ml-4 mr-4 mb-5">
 
-        
+
         <select class="form-select mb-5" aria-label="Default select example" id="sem">
             <option selected>Pilih Semester</option>
             <option value="71">Kelas 7 Semester Ganjil</option>
@@ -158,7 +159,7 @@
             <option value="91">Kelas 9 Semester Ganjil</option>
             <option value="92">Kelas 9 Semester Genap</option>
         </select>
-    
+
         <table id="tableOrangTua" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
@@ -171,34 +172,25 @@
                 </tr>
             </thead>
             <tbody id="nilai">
-        
-                 @forelse ($nilai as $data)
-                                        <tr>
-                                            <td>{{ $data->kelas }}</td>
-                                            <td>{{$data->semester}}</td>
-                                            <td>{{$data->nama}}</td>
-                                            <td>{{$data->nilai_tugas}}</td>
-                                            <td>{{$data->nilai_uts}}</td>
-                                            <td>{{$data->nilai_uas}}</td>
-                                           
-                                        </tr>
-                                        @empty
-                                        <tr>
-                                            <td colspan="6" class="text-center">Tidak ada data</td>
-                                        </tr>
-                                        @endforelse
-    
+                @forelse ($nilai as $data)
+                <tr>
+                    <td>{{ $data->kelas }}</td>
+                    <td>{{$data->semester}}</td>
+                    <td>{{$data->nama}}</td>
+                    <td>{{$data->nilai_tugas}}</td>
+                    <td>{{$data->nilai_uts}}</td>
+                    <td>{{$data->nilai_uas}}</td>
+                </tr>
+                @empty
+                <tr>
+                    <td colspan="6" class="text-center">Tidak ada data</td>
+                </tr>
+                @endforelse
+
             </tbody>
         </table>
-
-
-        
-
     </div>
-
-
 </div>
-
 </div>
 
 <script

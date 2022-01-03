@@ -147,71 +147,62 @@
     <!-- table -->
 
     <div class="my-table mt-5 ml-4 mr-4">
+
+        <select class="form-select mb-5" aria-label="Default select example" id="semester">
+            <option selected>Pilih Semester</option>
+            <option value="71">Kelas 7 Semester Ganjil</option>
+            <option value="72">Kelas 7 Semester Genap</option>
+            <option value="81">Kelas 8 Semester Ganjil</option>
+            <option value="82">Kelas 8 Semester Genap</option>
+            <option value="91">Kelas 9 Semester Ganjil</option>
+            <option value="92">Kelas 9 Semester Genap</option>
+        </select>
+
         <table id="tableOrangTua" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
-                    <th>Kelas</th>
-                    <th>Semester</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
+                    <th>Bulan</th>
+                    <th>Kehadiran</th>
+                    <th>Alpa</th>
+                    <th>Sakit</th>
+                    <th>Izin</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="absensi">
+                @forelse($absensi as $data)
                 <tr>
-                    <td>Kelas 7</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
+                    <td>{{$data->bulan }}</td>
+                    <td>{{$data->kehadiran}}</td>
+                    <td>{{$data->alpa}}</td>
+                    <td>{{$data->sakit}}</td>
+                    <td>{{$data->izin}}</td>
                 </tr>
+                @empty
                 <tr>
-                    <td>Kelas 9</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>56</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
+                    <td colspan="6" class="text-center">Tidak ada data</td>
                 </tr>
-                <tr>
-                    <td>Kelas 9</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>66</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr>
-                    <td>Kelas 8</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>20</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr>
-                    <td>Kelas 7</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>1</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr>
-                    <td>Kelas 9</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>6</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                </tr>
-
+                @endforelse
             </tbody>
         </table>
     </div>
 
 </div>
+
+
+<script>
+	$(document).ready(function(){
+		$('#semester').on('change', function(e){
+			var id = e.target.value;
+			$.get('{{ url("orangTua/filterabsensi")}}/'+id, function(data){
+			console.log(id);
+			console.log(data);
+			$('#absensi').empty();
+			$.each(data, function(index, element){
+				$('#absensi').append("<tr><td>"+element.bulan+"</td><td>"+element.kehadiran+"</td><td>"+element.alpa+"</td><td>"+element.sakit+"</td><td>"+element.izin+"</td></tr>")
+			});
+			});
+		});	
+	});
+</script>
 
 @endsection

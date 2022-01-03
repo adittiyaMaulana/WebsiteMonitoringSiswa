@@ -12,6 +12,7 @@ use App\Models\PusatUnduhan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\Berita;
+use App\Models\Kelas;
 
 class GuruController extends Controller
 {

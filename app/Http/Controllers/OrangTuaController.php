@@ -459,7 +459,67 @@ class OrangTuaController extends Controller
     // kehadiran
     public function kehadiran()
     {
-        return view('orangTua.kehadiran');
+        //get email orang tua berdasar login
+        $email_login = Auth::user()->email;
+
+        $absensi = DB::table('absensi')
+        ->join('profil_siswa','profil_siswa.id','=','absensi.id_siswa')
+        ->join('kelas','kelas.id','=','absensi.id_kelas')
+        ->join('orang_tua','orang_tua.id','=','profil_siswa.id_orang_tua')
+        ->select('absensi.bulan','absensi.kehadiran','absensi.alpa','absensi.sakit','absensi.izin')
+        ->where('orang_tua.email','=',$email_login)
+        ->where('kelas.kelas','=',7)
+        ->where('absensi.semester','=',1)
+        ->orderBy('absensi.bulan')
+        ->orderBy('absensi.kehadiran')
+        ->orderBy('absensi.alpa')
+        ->orderBy('absensi.sakit')
+        ->orderBy('absensi.izin')
+        ->get();
+        return view('orangTua.kehadiran',compact('absensi'));
+    }
+
+    public function filterabsensi($id){
+
+        //get email orang tua berdasar login
+        $email_login = Auth::user()->email;
+
+  	    if($id==0){
+            $absensi = DB::table('absensi')
+            ->join('profil_siswa','profil_siswa.id','=','absensi.id_siswa')
+            ->join('kelas','kelas.id','=','absensi.id_kelas')
+            ->join('orang_tua','orang_tua.id','=','profil_siswa.id_orang_tua')
+            ->select('absensi.bulan','absensi.kehadiran','absensi.alpa','absensi.sakit','absensi.izin')
+            ->where('orang_tua.email','=',$email_login)
+            ->where('kelas.kelas','=',7)
+            ->where('absensi.semester','=',1)
+            ->orderBy('absensi.bulan')
+            ->orderBy('absensi.kehadiran')
+            ->orderBy('absensi.alpa')
+            ->orderBy('absensi.sakit')
+            ->orderBy('absensi.izin')
+            ->get();
+		}else{
+            $string = "$id";
+			$kelas = $string[0];
+			$semester = $string[1]; 
+
+            $absensi = DB::table('absensi')
+            ->join('profil_siswa','profil_siswa.id','=','absensi.id_siswa')
+            ->join('kelas','kelas.id','=','absensi.id_kelas')
+            ->join('orang_tua','orang_tua.id','=','profil_siswa.id_orang_tua')
+            ->select('absensi.bulan','absensi.kehadiran','absensi.alpa','absensi.sakit','absensi.izin')
+            ->where('orang_tua.email','=',$email_login)
+            ->where('kelas.kelas','=',$kelas)
+            ->where('absensi.semester','=',$semester)
+            ->orderBy('absensi.bulan')
+            ->orderBy('absensi.kehadiran')
+            ->orderBy('absensi.alpa')
+            ->orderBy('absensi.sakit')
+            ->orderBy('absensi.izin')
+            ->get();
+		}
+            return $absensi;
     }
 
     // fitur Bantuan
