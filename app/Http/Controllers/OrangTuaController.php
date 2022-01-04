@@ -21,26 +21,33 @@ class OrangTuaController extends Controller
 
 
         // proses olah data nilai // START
-        $tugas_7_1[] = null;
-        $tugas_7_2[] = null;
-        $tugas_8_1[] = null;
-        $tugas_8_2[] = null;
-        $tugas_9_1[] = null;
-        $tugas_9_2[] = null;
+        // $tugas_7_1[] = null;
+        // $tugas_7_2[] = null;
+        // $tugas_8_1[] = null;
+        // $tugas_8_2[] = null;
+        // $tugas_9_1[] = null;
+        // $tugas_9_2[] = null;
 
-        $uts_7_1[] = null;
-        $uts_7_2[] = null;
-        $uts_8_1[] = null;
-        $uts_8_2[] = null;
-        $uts_9_1[] = null;
-        $uts_9_2[] = null;
+        // $uts_7_1[] = null;
+        // $uts_7_2[] = null;
+        // $uts_8_1[] = null;
+        // $uts_8_2[] = null;
+        // $uts_9_1[] = null;
+        // $uts_9_2[] = null;
 
-        $uas_7_1[] = null;
-        $uas_7_2[] = null;
-        $uas_8_1[] = null;
-        $uas_8_2[] = null;
-        $uas_9_1[] = null;
-        $uas_9_2[] = null;
+        // $uas_7_1[] = null;
+        // $uas_7_2[] = null;
+        // $uas_8_1[] = null;
+        // $uas_8_2[] = null;
+        // $uas_9_1[] = null;
+        // $uas_9_2[] = null;
+
+        $nilai_7_1[] = null;
+        $nilai_7_2[] = null;
+        $nilai_8_1[] = null;
+        $nilai_8_2[] = null;
+        $nilai_9_1[] = null;
+        $nilai_9_2[] = null;
 
         //get email orang tua berdasar login
         $email_login = Auth::user()->email;
@@ -48,12 +55,8 @@ class OrangTuaController extends Controller
 
         $title         = 'Tabel Contoh';
       
-        $label         = ["Nilai Tugas","Nilai UTS","Nilai UAS",
-                        "Nilai Tugas","Nilai UTS","Nilai UAS",
-                        "Nilai Tugas","Nilai UTS","Nilai UAS",
-                        "Nilai Tugas","Nilai UTS","Nilai UAS",
-                        "Nilai Tugas","Nilai UTS","Nilai UAS",
-                        "Nilai Tugas","Nilai UTS","Nilai UAS"];
+        $label         = ["Kelas 7 Semester Ganjil","Kelas 7 Semester Genap","Kelas 8 Semester Ganjil",
+                        "Kelas 8 Semester Genap","Kelas 9 Semester Ganjil","Kelas 9 Semester Genap",];
         
         //get kelas siswa berdasar login orang tua
         $kelas_sekarang = collect(DB::SELECT("SELECT
@@ -87,68 +90,119 @@ class OrangTuaController extends Controller
         try {
 
             if($riwayat_kelas[0] == 7 && $riwayat_semester[0] == 1){
-                $tugas_7_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_tugas) AS INT) nilai_tugas FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 7 AND a.semester = 1"))->first()->nilai_tugas;
+                // $tugas_7_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_tugas) AS INT) nilai_tugas FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 7 AND a.semester = 1"))->first()->nilai_tugas;
                 
-                $uts_7_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uts) AS INT) nilai_uts FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 7 AND a.semester = 1"))->first()->nilai_uts;
+                // $uts_7_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uts) AS INT) nilai_uts FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 7 AND a.semester = 1"))->first()->nilai_uts;
     
-                $uas_7_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uas) AS INT) nilai_uas FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 7 AND a.semester = 1"))->first()->nilai_uas;
+                // $uas_7_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uas) AS INT) nilai_uas FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 7 AND a.semester = 1"))->first()->nilai_uas;
+
+                $nilai_7_1[] = collect(DB::SELECT("SELECT
+                CAST((AVG(a.nilai_tugas) * 0.25) + (AVG(a.nilai_uts) * 0.35) + (AVG(a.nilai_uas) * 0.4) AS INT)
+                AS nilai
+                FROM
+                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
+                JOIN orang_tua c ON b.id_orang_tua = c.id
+                JOIN mata_pelajaran d ON a.id_mapel = d.id
+                JOIN kelas e ON b.id_kelas = e.id
+                WHERE
+                c.email = '$email_login'
+                AND
+                a.kelas = 7
+                AND
+                a.semester = 1"))->first()->nilai;
             }
           
           } catch (\Exception $e) {
-                $tugas_7_1[] = 0;
-                $uts_7_1[] = 0;
-                $uas_7_1[] =  0;
+                // $tugas_7_1[] = 0;
+                // $uts_7_1[] = 0;
+                // $uas_7_1[] =  0;
+
+                $nilai_7_1 = 0;
           }
           
         //KELAS 7 SEMESTER 2
           try {
 
             if($riwayat_kelas[0] == 7 && $riwayat_semester[1] == 2){
-                $tugas_7_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_tugas) AS INT) nilai_tugas FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 7 AND a.semester = 2"))->first()->nilai_tugas;
+                // $tugas_7_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_tugas) AS INT) nilai_tugas FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 7 AND a.semester = 2"))->first()->nilai_tugas;
                 
-                $uts_7_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uts) AS INT) nilai_uts FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 7 AND a.semester = 2"))->first()->nilai_uts;
+                // $uts_7_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uts) AS INT) nilai_uts FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 7 AND a.semester = 2"))->first()->nilai_uts;
 
-                $uas_7_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uas) AS INT) nilai_uas FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 7 AND a.semester = 2"))->first()->nilai_uas;
+                // $uas_7_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uas) AS INT) nilai_uas FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 7 AND a.semester = 2"))->first()->nilai_uas;
+
+                $nilai_7_2[] = collect(DB::SELECT("SELECT
+                CAST((AVG(a.nilai_tugas) * 0.25) + (AVG(a.nilai_uts) * 0.35) + (AVG(a.nilai_uas) * 0.4) AS INT)
+                AS nilai
+                FROM
+                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
+                JOIN orang_tua c ON b.id_orang_tua = c.id
+                JOIN mata_pelajaran d ON a.id_mapel = d.id
+                JOIN kelas e ON b.id_kelas = e.id
+                WHERE
+                c.email = '$email_login'
+                AND
+                a.kelas = 7
+                AND
+                a.semester = 2"))->first()->nilai;
             }
           
           } catch (\Exception $e) {
-                $tugas_7_2[] = 0;
-                $uts_7_2[] = 0;
-                $uas_7_2[] =  0;
+                // $tugas_7_2[] = 0;
+                // $uts_7_2[] = 0;
+                // $uas_7_2[] =  0;
+
+                $nilai_7_2 = 0;
           }
 
           // //KELAS 8 SEMESTER 1
           try {
             if($riwayat_kelas[1] == 8 && $riwayat_semester[0] == 1){
-                $tugas_8_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_tugas) AS INT) nilai_tugas FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 8 AND a.semester = 1"))->first()->nilai_tugas;
+                // $tugas_8_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_tugas) AS INT) nilai_tugas FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 8 AND a.semester = 1"))->first()->nilai_tugas;
                 
-                $uts_8_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uts) AS INT) nilai_uts FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 8 AND a.semester = 1"))->first()->nilai_uts;
+                // $uts_8_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uts) AS INT) nilai_uts FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 8 AND a.semester = 1"))->first()->nilai_uts;
     
-                $uas_8_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uas) AS INT) nilai_uas FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 8 AND a.semester = 1"))->first()->nilai_uas;
+                // $uas_8_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uas) AS INT) nilai_uas FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 8 AND a.semester = 1"))->first()->nilai_uas;
+
+                $nilai_8_1[] = collect(DB::SELECT("SELECT
+                CAST((AVG(a.nilai_tugas) * 0.25) + (AVG(a.nilai_uts) * 0.35) + (AVG(a.nilai_uas) * 0.4) AS INT)
+                AS nilai
+                FROM
+                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
+                JOIN orang_tua c ON b.id_orang_tua = c.id
+                JOIN mata_pelajaran d ON a.id_mapel = d.id
+                JOIN kelas e ON b.id_kelas = e.id
+                WHERE
+                c.email = '$email_login'
+                AND
+                a.kelas = 8
+                AND
+                a.semester = 1"))->first()->nilai;
             }
           
           } catch (\Exception $e) {
-                $tugas_8_1[] = 0;
-                $uts_8_1[] = 0;
-                $uas_8_1[] =  0;
+                // $tugas_8_1[] = 0;
+                // $uts_8_1[] = 0;
+                // $uas_8_1[] =  0;
+
+                $nilai_8_1 = 0;
           }
         
 
@@ -156,45 +210,79 @@ class OrangTuaController extends Controller
           try {
 
             if($riwayat_kelas[1] == 8 && $riwayat_semester[1] == 2){
-                $tugas_8_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_tugas) AS INT) nilai_tugas FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 8 AND a.semester = 2"))->first()->nilai_tugas;
+                // $tugas_8_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_tugas) AS INT) nilai_tugas FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 8 AND a.semester = 2"))->first()->nilai_tugas;
                 
-                $uts_8_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uts) AS INT) nilai_uts FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 8 AND a.semester = 2"))->first()->nilai_uts;
+                // $uts_8_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uts) AS INT) nilai_uts FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 8 AND a.semester = 2"))->first()->nilai_uts;
 
-                $uas_8_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uas) AS INT) nilai_uas FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 8 AND a.semester = 2"))->first()->nilai_uas;
+                // $uas_8_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uas) AS INT) nilai_uas FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 8 AND a.semester = 2"))->first()->nilai_uas;
+
+                $nilai_8_2[] = collect(DB::SELECT("SELECT
+                CAST((AVG(a.nilai_tugas) * 0.25) + (AVG(a.nilai_uts) * 0.35) + (AVG(a.nilai_uas) * 0.4) AS INT)
+                AS nilai
+                FROM
+                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
+                JOIN orang_tua c ON b.id_orang_tua = c.id
+                JOIN mata_pelajaran d ON a.id_mapel = d.id
+                JOIN kelas e ON b.id_kelas = e.id
+                WHERE
+                c.email = '$email_login'
+                AND
+                a.kelas = 8
+                AND
+                a.semester = 2"))->first()->nilai;
             }
           } catch (\Exception $e) {
-                $tugas_8_2[] = 0;
-                $uts_8_2[] = 0;
-                $uas_8_2[] =  0;
+                // $tugas_8_2[] = 0;
+                // $uts_8_2[] = 0;
+                // $uas_8_2[] =  0;
+
+                $nilai_8_2 = 0;
           }
 
         // //KELAS 9 SEMESTER 1
           try {
 
             if($riwayat_kelas[2] == 9 && $riwayat_semester[0] == 1){
-                $tugas_9_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_tugas) AS INT) nilai_tugas FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 9 AND a.semester = 1"))->first()->nilai_tugas;
+                // $tugas_9_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_tugas) AS INT) nilai_tugas FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 9 AND a.semester = 1"))->first()->nilai_tugas;
                 
-                $uts_9_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uts) AS INT) nilai_uts FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 9 AND a.semester = 1"))->first()->nilai_uts;
+                // $uts_9_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uts) AS INT) nilai_uts FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 9 AND a.semester = 1"))->first()->nilai_uts;
     
-                $uas_9_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uas) AS INT) nilai_uas FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 9 AND a.semester = 1"))->first()->nilai_uas;
+                // $uas_9_1[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uas) AS INT) nilai_uas FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 9 AND a.semester = 1"))->first()->nilai_uas;
+
+                $nilai_9_1[] = collect(DB::SELECT("SELECT
+                CAST((AVG(a.nilai_tugas) * 0.25) + (AVG(a.nilai_uts) * 0.35) + (AVG(a.nilai_uas) * 0.4) AS INT)
+                AS nilai
+                FROM
+                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
+                JOIN orang_tua c ON b.id_orang_tua = c.id
+                JOIN mata_pelajaran d ON a.id_mapel = d.id
+                JOIN kelas e ON b.id_kelas = e.id
+                WHERE
+                c.email = '$email_login'
+                AND
+                a.kelas = 9
+                AND
+                a.semester = 1"))->first()->nilai;
             }
           
           } catch (\Exception $e) {
-                $tugas_9_1[] = 0;
-                $uts_9_1[] = 0;
-                $uas_9_1[] =  0;
+                // $tugas_9_1[] = 0;
+                // $uts_9_1[] = 0;
+                // $uas_9_1[] =  0;
+
+                $nilai_9_1 = 0;
           }
         
 
@@ -202,23 +290,40 @@ class OrangTuaController extends Controller
         try {
 
             if($riwayat_kelas[2] == 9 && $riwayat_semester[1] == 2){
-                $tugas_9_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_tugas) AS INT) nilai_tugas FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 9 AND a.semester = 2"))->first()->nilai_tugas;
+                // $tugas_9_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_tugas) AS INT) nilai_tugas FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 9 AND a.semester = 2"))->first()->nilai_tugas;
                 
-                $uts_9_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uts) AS INT) nilai_uts FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 9 AND a.semester = 2"))->first()->nilai_uts;
+                // $uts_9_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uts) AS INT) nilai_uts FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 9 AND a.semester = 2"))->first()->nilai_uts;
     
-                $uas_9_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uas) AS INT) nilai_uas FROM 
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
-                WHERE c.email = '$email_login' AND a.kelas = 9 AND a.semester = 2"))->first()->nilai_uas;
+                // $uas_9_2[] = collect(DB::SELECT("SELECT CAST(AVG(a.nilai_uas) AS INT) nilai_uas FROM 
+                // daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id JOIN orang_tua c ON b.id_orang_tua = c.id 
+                // WHERE c.email = '$email_login' AND a.kelas = 9 AND a.semester = 2"))->first()->nilai_uas;
+
+                $nilai_9_2[] = collect(DB::SELECT("SELECT
+                CAST((AVG(a.nilai_tugas) * 0.25) + (AVG(a.nilai_uts) * 0.35) + (AVG(a.nilai_uas) * 0.4) AS INT)
+                AS nilai
+                FROM
+                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
+                JOIN orang_tua c ON b.id_orang_tua = c.id
+                JOIN mata_pelajaran d ON a.id_mapel = d.id
+                JOIN kelas e ON b.id_kelas = e.id
+                WHERE
+                c.email = '$email_login'
+                AND
+                a.kelas = 9
+                AND
+                a.semester = 2"))->first()->nilai;
             }
           
           } catch (\Exception $e) {
-                $tugas_9_2[] = 0;
-                $uts_9_2[] = 0;
-                $uas_9_2[] =  0;
+                // $tugas_9_2[] = 0;
+                // $uts_9_2[] = 0;
+                // $uas_9_2[] =  0;
+
+                $nilai_9_2 = 0;
           }
 
           //END
@@ -238,10 +343,12 @@ class OrangTuaController extends Controller
         
         
         return view('orangTua.homepage',compact('title','label',
-        'tugas_7_1','tugas_7_2', 'tugas_8_1','tugas_8_2', 'tugas_9_1', 'tugas_9_2',
-        'uts_7_1','uts_7_2','uts_8_1','uts_8_2','uts_9_1','uts_9_2',
-        'uas_7_1','uas_7_2','uas_8_1','uas_8_2','uas_9_1','uas_9_2',
+        // 'tugas_7_1','tugas_7_2', 'tugas_8_1','tugas_8_2', 'tugas_9_1', 'tugas_9_2',
+        // 'uts_7_1','uts_7_2','uts_8_1','uts_8_2','uts_9_1','uts_9_2',
+        // 'uas_7_1','uas_7_2','uas_8_1','uas_8_2','uas_9_1','uas_9_2',
     
+        'nilai_7_1','nilai_7_2','nilai_8_1','nilai_8_2','nilai_9_1','nilai_9_2',
+
         'finansial',
     
         'email_login', 'username'));

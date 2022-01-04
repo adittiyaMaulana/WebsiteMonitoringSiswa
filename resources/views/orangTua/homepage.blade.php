@@ -415,12 +415,8 @@
                 label: 'Nilai',
                 backgroundColor: '#F0DB4F',
                 borderColor: '#93C3D2',
-                data: [<?php echo json_encode($tugas_7_1); ?>, <?php echo json_encode($uts_7_1); ?>, <?php echo json_encode($uas_7_1); ?>,
-                    <?php echo json_encode($tugas_7_2); ?>, <?php echo json_encode($uts_7_2); ?>, <?php echo json_encode($uas_7_2); ?>,
-                    <?php echo json_encode($tugas_8_1); ?>, <?php echo json_encode($uts_8_1); ?>, <?php echo json_encode($uas_8_1); ?>,
-                    <?php echo json_encode($tugas_8_2); ?>, <?php echo json_encode($uts_8_2); ?>, <?php echo json_encode($uas_8_2); ?>,
-                    <?php echo json_encode($tugas_9_1); ?>, <?php echo json_encode($uts_9_1); ?>, <?php echo json_encode($uas_9_1); ?>,
-                    <?php echo json_encode($tugas_9_2); ?>, <?php echo json_encode($uts_9_2); ?>, <?php echo json_encode($uas_9_2); ?>,
+                data: [<?php echo json_encode($nilai_7_1); ?>, <?php echo json_encode($nilai_7_2); ?>, <?php echo json_encode($nilai_8_1); ?>,
+                    <?php echo json_encode($nilai_8_2); ?>, <?php echo json_encode($nilai_9_1); ?>, <?php echo json_encode($nilai_9_2); ?>,
                 ]
             }],
             options: {
