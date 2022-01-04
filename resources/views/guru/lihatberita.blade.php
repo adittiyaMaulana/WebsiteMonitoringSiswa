@@ -83,6 +83,20 @@
 
 <div class="my-content">
 
+    <style>
+
+        .detail-berita{
+            width: 100%;
+        }
+
+        @media screen and (max-width: 900px) {
+            .detail-berita {
+                width: 1000px;
+            }
+
+        }
+    </style>
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -133,19 +147,18 @@
         <a href="/admin/formBerita"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
     </div> -->
 
-    <!-- table -->
-<div class="card-header">
-                            
-                        </div>
-    <div class="my-table mt-5 ml-3 mr-4">
-        <div class="col-md-7 col-sm-12 mb-5 bg-white p-0">
-    <img src="/foto/{{$berita->foto}}" class="card-img-top" alt="gambar" >
-    <div class="p-4">
-        <h2>{{ $berita->judul }}</h2>
-        <textarea class="form-control"" readonly> {{ $berita->isi }}</textarea>
+    <div class="detail-berita mt-5 ml-3 mr-4">
+        <div class="my-table mt-5 ml-3 mr-4">
+            <div class="col-md-7 col-sm-12 mb-5 bg-white p-0">
+                <img src="/foto/{{$berita->foto}}" class="card-img-top" alt="gambar">
+                <div class="p-4">
+                    <h2>{{ $berita->judul }}</h2>
+                    <textarea class="form-control"" readonly> {{ $berita->isi }}</textarea>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-    </div>
+
 
 <script>
 	$('textarea').each(function () {

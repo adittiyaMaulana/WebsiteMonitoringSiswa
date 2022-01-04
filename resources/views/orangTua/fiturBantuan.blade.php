@@ -71,15 +71,6 @@
             </a>
         </li>
 
-        <!-- <li class="list">
-            <a href="/orangTua/tentangSekolah">
-                <span class="icon">
-                    <ion-icon name="alert-circle-outline"></ion-icon>
-                </span>
-                <span class="title">Tentang</span>
-            </a>
-        </li> -->
-
         <li class="list">
             <a href="{{ route('login') }}" onclick="event.preven-tDefault();
                             document.getElementById('logout-form').submit();">
@@ -99,6 +90,15 @@
 <!-- contentt -->
 
 <div class="my-content">
+
+    <style>
+        @media screen and (max-width: 900px) {
+            .unduhan {
+                width: 1000px;
+            }
+
+        }
+    </style>
 
     <!-- ====================================================================================== -->
     <!-- Navbar -->
@@ -146,7 +146,8 @@
 
     <!-- table -->
 
-    <table id="tableAdmin" class="table table-hover" style="width:100%">
+    <div class="unduhan">
+        <table id="tableAdmin" class="table table-hover mt-5 mr-4 ml-4 mb-4" style="width:100%">
             <thead class="table-dark">
                 <tr>
                     <th>No</th>
@@ -157,22 +158,24 @@
             </thead>
             <tbody>
                 @forelse ($unduhan as $data)
-                                        <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>{{$data->nama}}</td>
-                                            <td>{{ number_format((float)$data->ukuran/1000, 2, '.', '')}} Kb</td>
-                                            <td>
-                                                <a href="/unduhan/{{$data->nama}}" class="btn btn-success" download><i class="far fa-download"></i> Download</a>
-                                                
-                                            </td>
-                                        </tr>
-                                        @empty
-                                        <tr>
-                                            <td colspan="6" class="text-center">Tidak ada data</td>
-                                        </tr>
-                                        @endforelse
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{$data->nama}}</td>
+                    <td>{{ number_format((float)$data->ukuran/1000, 2, '.', '')}} Kb</td>
+                    <td>
+                        <a href="/unduhan/{{$data->nama}}" class="btn btn-success" download><i class="far fa-download"></i> Download</a>
+    
+                    </td>
+                </tr>
+                @empty
+                <tr>
+                    <td colspan="6" class="text-center">Tidak ada data</td>
+                </tr>
+                @endforelse
             </tbody>
         </table>
+    </div>
+
 
 </div>
 

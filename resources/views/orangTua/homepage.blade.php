@@ -70,15 +70,6 @@
             </a>
         </li>
 
-        <!-- <li class="list">
-            <a href="/orangTua/tentangSekolah">
-                <span class="icon">
-                    <ion-icon name="alert-circle-outline"></ion-icon>
-                </span>
-                <span class="title">Tentang</span>
-            </a>
-        </li> -->
-
         <li class="list">
             <a href="{{ route('login') }}" onclick="event.preven-tDefault();
                             document.getElementById('logout-form').submit();">
@@ -99,9 +90,26 @@
 
 <div class="my-content">
 
+    <style>
+        @media screen and (max-width: 900px) {
+            .grafik-nilai {
+                width: 900px;
+            }
+
+            .bagianberitas {
+                width: 900px;
+            }
+
+            .container1 {
+                width: 1000px;
+            }
+        }
+    </style>
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light ">
+
+    <nav class="navbar navbar-expand-lg navbar-light sizebar">
         <!-- Container wrapper -->
         <div class="container-fluid">
 
@@ -145,6 +153,7 @@
 
     <!-- ===================================================================== -->
     <!-- content 1 profile dan finansial -->
+
 
     <div class="container1">
         <div class="box">
@@ -195,23 +204,23 @@
 
 
     <!-- bagian grafik nilai -->
-    <div class="ml-4 mr-4 mt-4 mb-3">
+    <div class="grafik-nilai ml-4 mr-4 mt-4 mb-3">
         <div class="card">
             <div class="card-header">
                 Nilai
             </div>
             <div class="card-body">
                 <div id="bar-chart">
-                <div class="row mt-4">
-                    <div class="col-sm-11 col-xl-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title" align="center">Grafik Nilai</h4>
-                                <canvas id="mataChart" class="chartjs" width="5000" height="4000"></canvas>
+                    <div class="row mt-4">
+                        <div class="col-sm-11 col-xl-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title" align="center">Grafik Nilai</h4>
+                                    <canvas id="mataChart" class="chartjs" width="5000" height="4000"></canvas>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
         </div>
@@ -222,7 +231,7 @@
     <!-- ===================================================================== -->
     <!-- Berita -->
 
-    <div class="bagianinformasi">
+    <div class="bagianberitas">
         <h3 class="title_berita">Informasi</h3>
 
         <div class="listberita ml-4 mr-4 mb-5">
@@ -422,5 +431,7 @@
         },
     });
 </script>
+
+
 
 @endsection

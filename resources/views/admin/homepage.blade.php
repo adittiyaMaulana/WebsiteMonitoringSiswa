@@ -22,7 +22,7 @@
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
                 <span class="title">Berita</span>
-            </a> 
+            </a>
         </li>
 
         <li class="list">
@@ -62,6 +62,14 @@
 <!-- contentt -->
 
 <div class="my-content">
+
+    <style>
+        @media screen and (max-width: 900px) {
+            .content {
+                width: 700px;
+            }
+        }
+    </style>
 
     <!-- ====================================================================================== -->
     <!-- Navbar -->

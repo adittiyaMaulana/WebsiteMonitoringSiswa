@@ -82,6 +82,15 @@
 
 <div class="my-content">
 
+    <style>
+        @media screen and (max-width: 900px) {
+            .tabel {
+                width: 1000px;
+            }
+
+        }
+    </style>
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -126,7 +135,8 @@
         </div>
     </nav>
 
-    <div class="my-table mt-5 ml-4 mr-4">
+    
+    <div class="tabel mt-5 ml-4 mr-4">
         <table id="tableGuru" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>

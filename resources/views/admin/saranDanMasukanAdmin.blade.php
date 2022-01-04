@@ -63,6 +63,14 @@
 
 <div class="my-content">
 
+    <style>
+        @media screen and (max-width: 900px) {
+            .saran-masukan {
+                width: 1000px;
+            }
+        }
+    </style>
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -109,77 +117,79 @@
 
     <!-- table -->
 
-    <div class="my-table mt-5 ml-3 mr-4">
-        <table id="tableAdmin" class="table table-hover" style="width:100%">
-            <thead class="table-dark">
-                <tr>
-                    <th>Kelas</th>
-                    <th>Semester</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                    <th>Salary</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr data-href="/admin/saranDanMasukanAdminDetail">
-                    <td>7-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>67</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr data-href="/admin/saranDanMasukanAdminDetail">
-                    <td>9-3</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>56</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr data-href="/admin/saranDanMasukanAdminDetail">
-                    <td>9-2</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>66</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr data-href="/admin/saranDanMasukanAdminDetail">
-                    <td>8-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>20</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr data-href="/admin/saranDanMasukanAdminDetail">
-                    <td>7-2</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>1</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-                <tr data-href="/admin/saranDanMasukanAdminDetail">
-                    <td>9-1</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>6</td>
-                    <td>2011/04/25</td>
-                    <td>$320,800</td>
-                    <td>$320,800</td>
-                </tr>
-
-            </tbody>
-        </table>
+    <div class="saran-masukan mt-5 ml-4 mr-4">
+        <div class="my-table">
+            <table id="tableAdmin" class="table table-hover" style="width:100%">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Kelas</th>
+                        <th>Semester</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Salary</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-href="/admin/saranDanMasukanAdminDetail">
+                        <td>7-1</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>67</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr data-href="/admin/saranDanMasukanAdminDetail">
+                        <td>9-3</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>56</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr data-href="/admin/saranDanMasukanAdminDetail">
+                        <td>9-2</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>66</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr data-href="/admin/saranDanMasukanAdminDetail">
+                        <td>8-1</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>20</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr data-href="/admin/saranDanMasukanAdminDetail">
+                        <td>7-2</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>1</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr data-href="/admin/saranDanMasukanAdminDetail">
+                        <td>9-1</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>6</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                        <td>$320,800</td>
+                    </tr>
+    
+                </tbody>
+            </table>
+        </div>
     </div>
 
 
