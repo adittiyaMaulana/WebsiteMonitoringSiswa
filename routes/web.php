@@ -65,6 +65,9 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
     //saranDanMasukanAdmin √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/saranDanMasukanAdmin', [AdminController::class, 'saranDanMasukanAdmin'])->name('admin.saranDanMasukanAdmin');
     Route::get('/saranDanMasukanAdminDetail', [AdminController::class, 'saranDanMasukanAdminDetail'])->name('admin.saranDanMasukanAdminDetail');
+
+    //GANTI FOTOOOOOOOOOOOOOOOOOOOOOO
+    Route::get('/gantifoto', [AdminController::class, 'gantiFoto'])->name('admin.gantiFoto');
     
 });
 

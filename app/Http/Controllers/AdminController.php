@@ -335,4 +335,9 @@ class AdminController extends Controller {
         Excel::import(new SiswaImport,request()->file('file'));
         return view('admin.import');  
     }
+    
+    public function gantiFoto()
+    {
+        return view('admin.gantiFoto');  
+    }
 }

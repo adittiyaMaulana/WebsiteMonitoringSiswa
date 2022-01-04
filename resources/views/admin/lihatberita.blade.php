@@ -43,6 +43,15 @@
                 <span class="title">importData</span>
             </a>
         </li>
+        
+        <li class="list">
+            <a href="/admin/gantifoto">
+                <span class="icon">
+                    <ion-icon name="image-outline"></ion-icon>
+                </span>
+                <span class="title">Ganti Foto</span>
+            </a>
+        </li>
 
         <li class="list">
             <a href="{{ route('login') }}" onclick="event.preven-tDefault();
