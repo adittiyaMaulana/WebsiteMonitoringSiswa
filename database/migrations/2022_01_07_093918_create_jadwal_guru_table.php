@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGuruTable extends Migration
+class CreateJadwalGuruTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,17 @@ class CreateGuruTable extends Migration
      */
     public function up()
     {
-        Schema::create('guru', function (Blueprint $table) {
+        Schema::create('jadwal_guru', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('id_kelas');
             $table->unsignedBigInteger('id_mapel');
+            $table->unsignedBigInteger('id_guru');
+            $table->foreign('id_kelas')->references('id')->on('kelas')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('id_mapel')->references('id')->on('mata_pelajaran')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('nama',50);
-            $table->date('ttl');
-            $table->string('alamat',225);
-            $table->string('email')->unique();
+            $table->foreign('id_guru')->references('id')->on('guru')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('hari');
+            $table->string('jam_pelajaran');
         });
     }
 
@@ -32,6 +34,6 @@ class CreateGuruTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('guru');
+        Schema::dropIfExists('jadwal_guru');
     }
 }

@@ -117,7 +117,112 @@ class UserSeeder extends Seeder
                 'role' => 3,
                 'is_online' => 0,
                 'last_activity' => "-"
-            ],
+            ],[
+                'name' => "Syamsul",
+                'email' => "syamsul@gmail.com",
+                'password' => Hash::make('password'),
+                'role' => 3,
+                'is_online' => 0,
+                'last_activity' => "-"
+            ],[
+                'name' => "Nursyahria",
+                'email' => "nursyahria@gmail.com",
+                'password' => Hash::make('password'),
+                'role' => 3,
+                'is_online' => 0,
+                'last_activity' => "-"
+            ],[
+                'name' => "Fajri",
+                'email' => "fajri@gmail.com",
+                'password' => Hash::make('password'),
+                'role' => 3,
+                'is_online' => 0,
+                'last_activity' => "-"
+            ],[
+                'name' => "Leo",
+                'email' => "leo@gmail.com",
+                'password' => Hash::make('password'),
+                'role' => 3,
+                'is_online' => 0,
+                'last_activity' => "-"
+            ],[
+                'name' => "Ika",
+                'email' => "ika@gmail.com",
+                'password' => Hash::make('password'),
+                'role' => 3,
+                'is_online' => 0,
+                'last_activity' => "-"
+            ],[
+                'name' => "Eko",
+                'email' => "eko@gmail.com",
+                'password' => Hash::make('password'),
+                'role' => 3,
+                'is_online' => 0,
+                'last_activity' => "-"
+            ],[
+                'name' => "Isna",
+                'email' => "isna@gmail.com",
+                'password' => Hash::make('password'),
+                'role' => 3,
+                'is_online' => 0,
+                'last_activity' => "-"
+            ],[
+                'name' => "Siti",
+                'email' => "siti@gmail.com",
+                'password' => Hash::make('password'),
+                'role' => 3,
+                'is_online' => 0,
+                'last_activity' => "-"
+            ],[
+                'name' => "Dyah",
+                'email' => "dyah@gmail.com",
+                'password' => Hash::make('password'),
+                'role' => 3,
+                'is_online' => 0,
+                'last_activity' => "-"
+            ],[
+                'name' => "Permata",
+                'email' => "permata@gmail.com",
+                'password' => Hash::make('password'),
+                'role' => 3,
+                'is_online' => 0,
+                'last_activity' => "-"
+            ],[
+                'name' => "Lisa",
+                'email' => "lisa@gmail.com",
+                'password' => Hash::make('password'),
+                'role' => 3,
+                'is_online' => 0,
+                'last_activity' => "-"
+            ],[
+                'name' => "Gilang",
+                'email' => "gilang@gmail.com",
+                'password' => Hash::make('password'),
+                'role' => 3,
+                'is_online' => 0,
+                'last_activity' => "-"
+            ],[
+                'name' => "Tri",
+                'email' => "tri@gmail.com",
+                'password' => Hash::make('password'),
+                'role' => 3,
+                'is_online' => 0,
+                'last_activity' => "-"
+            ],[
+                'name' => "Kris",
+                'email' => "kris@gmail.com",
+                'password' => Hash::make('password'),
+                'role' => 3,
+                'is_online' => 0,
+                'last_activity' => "-"
+            ],[
+                'name' => "Salsa",
+                'email' => "salsa@gmail.com",
+                'password' => Hash::make('password'),
+                'role' => 3,
+                'is_online' => 0,
+                'last_activity' => "-"
+            ]
         ];
         \DB::table('users')->insert($users);
     }
