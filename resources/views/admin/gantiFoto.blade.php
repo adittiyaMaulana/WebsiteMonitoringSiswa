@@ -121,9 +121,11 @@
 
     <div class="formunduhan mt-5 ml-3 mr-4">
         <div class="col-md-8 col-sm-12 bg-white p-4">
-
-            <form class="was-validated" method="post" action="#" enctype="multipart/form-data">
-
+            @if($errors->any())
+            {{ implode('', $errors->all(':message')) }}
+            @endif
+            <form class="was-validated" method="post" action="{{route('admin.savefoto')}}" enctype="multipart/form-data">
+            @csrf
                 <div class="form-group">
                     <label>Upload Gambar (Hanya JPG, JPEG, PNG)</label>
                     <input type="file" name="file" class="form-control" required>
@@ -136,7 +138,6 @@
             </form>
         </div>
     </div>
-
     <!-- end my-content / semua content -->
 </div>
 

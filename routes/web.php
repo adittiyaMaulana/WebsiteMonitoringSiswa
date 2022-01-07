@@ -57,8 +57,6 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
   	Route::get('/tambahunduhan', [AdminController::class, 'tambahunduhan'])->name('admin.tambahunduhan');
     Route::post('/saveunduhan', 'App\Http\Controllers\AdminController@saveunduhan')->name('admin.saveunduhan');
     Route::get('/hapusunduhan/{id}', 'App\Http\Controllers\AdminController@hapusunduhan')->name('admin.hapusunduhan');
-    Route::get('/formFiturBantuan', [AdminController::class, 'formFiturBantuan'])->name('admin.formFiturBantuan');
-    Route::get('/formUpdateFiturBantuan', [AdminController::class, 'formUpdateFiturBantuan'])->name('admin.formUpdateFiturBantuan');
 
     
 
@@ -68,7 +66,8 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
 
     //GANTI FOTOOOOOOOOOOOOOOOOOOOOOO
     Route::get('/gantifoto', [AdminController::class, 'gantiFoto'])->name('admin.gantiFoto');
-    
+    Route::post('/savefoto', 'App\Http\Controllers\AdminController@savefoto')->name('admin.savefoto');
+    Route::get('/hapusfoto/{id}', 'App\Http\Controllers\AdminController@hapusfoto')->name('admin.hapusfoto');
 });
 
 ///////////////////////////////////////ORANG TUA////////////////////////////////////////////////////

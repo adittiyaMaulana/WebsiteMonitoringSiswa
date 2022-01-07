@@ -3,9 +3,14 @@
 @section('content')
 
 <section>
-
+    
+    <?php 
+        use App\Models\Foto;
+        $foto = Foto::first();
+    ?>
+    
     <div class="imageBox">
-        <img src="{{asset('image/school1.jpg')}}" alt="">
+    <img src="/foto/{{$foto->nama}}" class="card-img-top" alt="gambar">
     </div>
 
     <div class="contentBox">

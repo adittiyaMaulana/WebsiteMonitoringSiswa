@@ -10,6 +10,7 @@ use App\Models\ProfilSiswa;
 use App\Models\Finansial;
 use App\Models\PusatUnduhan;
 use App\Models\Berita;
+use App\Models\Foto;
 
 use App\Imports\OrangTuaImport;
 use App\Imports\GuruImport;
@@ -239,11 +240,10 @@ class AdminController extends Controller {
 		$file->move($tujuan_upload,$nama_file);
  
 		PusatUnduhan::create([
-			
 			'nama' => $nama_file,
 			'ukuran' => $ukuran,
 		]);
- 
+
 		return redirect('admin/dokumenFiturBantuan');
     }
     
@@ -338,6 +338,38 @@ class AdminController extends Controller {
     
     public function gantiFoto()
     {
-        return view('admin.gantiFoto');  
+        $foto = Foto::all();
+        return view('admin.gantiFoto',compact('foto'));  
+    }
+
+    public function savefoto(Request $request)
+    {
+    	$this->validate($request, [
+			'file' => 'required|file|mimes:jpg,jpeg,png|max:2048',
+		]);
+
+
+		$file = $request->file('file');
+		$nama_file = $file->getClientOriginalName();
+		$ukuran = $file->getSize();
+		$tujuan_upload = 'foto';
+		$file->move($tujuan_upload,$nama_file);
+        
+        $foto = Foto::first();
+        $foto->delete();
+
+		Foto::create([
+			'nama' => $nama_file,
+			'ukuran' => $ukuran,
+		]);
+
+		return redirect()->route('admin.gantiFoto');
+    }
+
+    public function hapusfoto($id)
+    {
+        $foto = Foto::find($id);
+        $foto->delete();
+        return redirect()->route('admin.gantiFoto');
     }
 }

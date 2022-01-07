@@ -165,9 +165,7 @@
                         <div class="col-md-8">
                             <div class="card-body">
                         <h5 class=" card-title">{{$data->judul}}</h5>
-                                <p class="card-text text">This is a wider card with supporting text below as a natural
-                                    hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a
-                                    little bit longer.</p>
+                                <p class="card-text text">{{$data->isi}}</p>
                             </div>
                         </div>
                     </div>
