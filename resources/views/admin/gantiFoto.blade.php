@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
-@section('title','Berita')
+@section('title','Homepage')
 
 @section('content')
-
 <!-- ============================================================================================= -->
 <!-- sidebar -->
 <div class="sidebar">
@@ -17,7 +16,7 @@
             </a>
         </li>
 
-        <li class="list active">
+        <li class="list">
             <a href="/admin/beritaAdmin">
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
@@ -43,8 +42,8 @@
                 <span class="title">importData</span>
             </a>
         </li>
-        
-        <li class="list">
+
+        <li class="list active">
             <a href="/admin/gantifoto">
                 <span class="icon">
                     <ion-icon name="image-outline"></ion-icon>
@@ -69,18 +68,18 @@
     </ul>
 </div>
 
-<!-- contentt -->
-
 <div class="my-content">
+
 
     <style>
         @media screen and (max-width: 900px) {
-            .tabel {
-                width: 1000px;
+            .formunduhan {
+                width: 900px;
             }
 
         }
     </style>
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -91,7 +90,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Informasi</h4>
+                    <h4>Ganti Foto Login</h4>
                 </a>
             </div>
 
@@ -119,48 +118,27 @@
         </div>
     </nav>
 
-    <!-- table -->
-    <div class="ml-4 mt-5">
-        <a href="{{ route('admin.tambahberita')}}" class="btn btn-success"><i class="fas fa-plus"></i> Tambah</a>
-    </div>
-    <div class="tabel">
-        <div class="my-table mt-5 ml-4 mr-4">
-            <table id="tableAdmin" class="table table-hover" style="width:100%">
-                <thead class="table-dark">
-                    <tr>
-                        <th>No</th>
-                        <th>Judul</th>
-                        <th>Tanggal</th>
-                        <th>aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @forelse ($berita as $data)
-                    <tr>
-                        <td>{{ $loop->iteration }}</td>
-                        <td>{{$data->judul}}</td>
-                        <td>{{$data->created_at}}</td>
-                        <td>
-                            <a href="{{route('admin.lihatberita', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
-                            <a href="{{route('admin.editberita', $data->id)}}" class="btn btn-warning"><i class="fas fa-pen"></i></a>
-                            <a href="{{route('admin.hapusberita', $data->id)}}" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus ?')"><i class="fas fa-trash-alt"></i></a>
-                        </td>
-                    </tr>
-                    @empty
-                    <tr>
-                        <td colspan="6" class="text-center">Tidak ada data</td>
-                    </tr>
-                    @endforelse
-                </tbody>
-            </table>
+
+    <div class="formunduhan mt-5 ml-3 mr-4">
+        <div class="col-md-8 col-sm-12 bg-white p-4">
+
+            <form class="was-validated" method="post" action="#" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label>Upload Gambar (Hanya JPG, JPEG, PNG)</label>
+                    <input type="file" name="file" class="form-control" required>
+                </div>
+                <div class="form-group">
+
+                    <input type="submit" class="form-control btn btn-primary" value="Simpan">
+                </div>
+                
+            </form>
         </div>
     </div>
 
-
-
-
-
     <!-- end my-content / semua content -->
 </div>
+
 
 @endsection
