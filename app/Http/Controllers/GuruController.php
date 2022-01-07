@@ -113,7 +113,7 @@ class GuruController extends Controller
     // informasi
     public function beritaGuru()
     {
-       $berita = Berita::All();
+        $berita = Berita::All();
         return view('guru.berita',compact('berita'));
     }
     
@@ -127,7 +127,6 @@ class GuruController extends Controller
     public function beritaDetailGuru()
     {
         return view('guru.beritaDetail');
-        
     }
 
 

@@ -413,7 +413,7 @@
             labels: <?php echo json_encode($label); ?>,
             datasets: [{
                 label: 'Nilai',
-                backgroundColor: '#F0DB4F',
+                backgroundColor: '#2E90E8',
                 borderColor: '#93C3D2',
                 data: [<?php echo json_encode($nilai_7_1); ?>, <?php echo json_encode($nilai_7_2); ?>, <?php echo json_encode($nilai_8_1); ?>,
                     <?php echo json_encode($nilai_8_2); ?>, <?php echo json_encode($nilai_9_1); ?>, <?php echo json_encode($nilai_9_2); ?>,

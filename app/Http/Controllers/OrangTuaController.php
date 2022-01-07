@@ -460,7 +460,7 @@ class OrangTuaController extends Controller
     {
        
         $berita = Berita::where('id',$request->id)->first(); 
-        return view('orangtua.lihatberita', compact('berita'));
+        return view('orangTua.lihatberita', compact('berita'));
     }
 
     public function beritaDetail()

@@ -101,6 +101,7 @@
                 margin-bottom: 160px;
             }
         }
+
     </style>
 
     <!-- ====================================================================================== -->
@@ -135,7 +136,8 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
+                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
+                        loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -151,158 +153,30 @@
 
     <div class=" mt-5 ml-4 mr-5">
 
+        @forelse ($berita as $data)
         <div class="beritadata">
-            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
+            <a href="{{route('orangTua.lihatberita', $data->id)}}" style="text-decoration: none; color: black;">
                 <div class="card mb-3 ml-4 w-100" style="height: 165px; ">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; width: 100%; " alt="...">
+                            <img src="/foto/{{$data->foto}}" class="img-fluid"
+                                style="height: 164px; width: 100%; " alt="...">
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body"">
-                        <h5 class=" card-title">Card title</h5>
-                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <div class="card-body">
+                        <h5 class=" card-title">{{$data->judul}}</h5>
+                                <p class="card-text text">This is a wider card with supporting text below as a natural
+                                    hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a
+                                    little bit longer.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </a>
         </div>
-
+        @empty
         <div class="beritadata">
-            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
-                <div class="card mb-3 ml-4 w-100" style="height: 165px; ">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; width: 100%; " alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body"">
-                        <h5 class=" card-title">Card title</h5>
-                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="beritadata">
-            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
-                <div class="card mb-3 ml-4 w-100" style="height: 165px; ">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; width: 100%; " alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body"">
-                        <h5 class=" card-title">Card title</h5>
-                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="beritadata">
-            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
-                <div class="card mb-3 ml-4 w-100" style="height: 165px; ">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; width: 100%; " alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body"">
-                        <h5 class=" card-title">Card title</h5>
-                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="beritadata">
-            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
-                <div class="card mb-3 ml-4 w-100" style="height: 165px; ">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; width: 100%; " alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body"">
-                        <h5 class=" card-title">Card title</h5>
-                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="beritadata">
-            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
-                <div class="card mb-3 ml-4 w-100" style="height: 165px; ">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; width: 100%; " alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body"">
-                        <h5 class=" card-title">Card title</h5>
-                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="beritadata">
-            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
-                <div class="card mb-3 ml-4 w-100" style="height: 165px; ">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; width: 100%; " alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body"">
-                        <h5 class=" card-title">Card title</h5>
-                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="beritadata">
-            <a href="/orangTua/beritaDetail" style="text-decoration: none; color: black;">
-                <div class="card mb-3 ml-4 w-100" style="height: 165px; ">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{{asset('image/school1.jpg')}}" class="img-fluid" style="height: 164px; width: 100%; " alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body"">
-                        <h5 class=" card-title">Card title</h5>
-                                <p class="card-text text">This is a wider card with supporting text below as a natural hjdbnf sdjbfhjksd bnfsdjkbfjksdlead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-
+        @endforelse
 
         <!-- <table id="tableOrangTua" class="table table-hover" style="width:100%">
             <thead class="table-dark">
@@ -315,20 +189,21 @@
             </thead>
             <tbody>
                 @forelse ($berita as $data)
-                                        <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>{{$data->judul}}</td>
-                                            <td>{{$data->created_at}}</td>
-                                            <td>
-                                                <a href="{{route('orangTua.lihatberita', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
-                                               
-                                            </td>
-                                        </tr>
-                                        @empty
-                                        <tr>
-                                            <td colspan="6" class="text-center">Tidak ada data</td>
-                                        </tr>
-                                        @endforelse
+                <tr>
+                    <td>{{$loop->iteration}}</td>
+                    <td>{{$data->judul}}</td>
+                    <td>{{$data->created_at}}</td>
+                    <td>
+                        <a href="{{route('orangTua.lihatberita', $data->id)}}" class="btn btn-success"><i
+                                class="far fa-eye"></i></a>
+
+                    </td>
+                </tr>
+                @empty
+                <tr>
+                    <td colspan="6" class="text-center">Tidak ada data</td>
+                </tr>
+                @endforelse
             </tbody>
         </table> -->
 
