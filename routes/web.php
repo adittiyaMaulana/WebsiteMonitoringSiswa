@@ -122,6 +122,8 @@ Route::group(['prefix'=>'guru', 'middleware'=>['isGuru','auth']], function(){
 
     // kehadiran siswa
     Route::get('/kehadiranSiswa', [GuruController::class, 'kehadiranSiswa']);
+    Route::get('/listKehadiranSiswa/{id}', 'App\Http\Controllers\GuruController@listKehadiranSiswa')->name('guru.listKehadiranSiswa');
+    Route::get('/listKehadiran/{id}', 'App\Http\Controllers\GuruController@listKehadiran')->name('guru.listKehadiran');
     Route::get('/updatekehadiranSiswa', [GuruController::class, 'updatekehadiranSiswa']);
 
     // saranDanMasukan

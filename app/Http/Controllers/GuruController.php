@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Http\Controllers\Controller;
+use App\Models\Absensi;
 use Illuminate\Http\Request;
 use App\Models\OrangTua;
 use App\Models\Guru;
@@ -75,7 +76,26 @@ class GuruController extends Controller
     // kehadiran siswa
     public function kehadiranSiswa()
     {
-        return view('guru.kehadiranSiswa');
+        $kelas = Kelas::All();
+        return view('guru.kehadiranSiswa', compact('kelas'));
+    }
+
+    public function listKehadiranSiswa(Request $request)
+    {
+       
+        $siswa = ProfilSiswa::where('id_kelas',$request->id)->get(); 
+        return view('guru.listKehadiranSiswa', compact('siswa'));
+    }
+
+    public function listKehadiran(Request $request){
+        $absen = DB::table('absensi')
+                ->join('profil_siswa', 'absensi.id_siswa','=','profil_siswa.id')
+                ->select('absensi.bulan', 
+                'absensi.kehadiran', 'absensi.alpa', 'absensi.sakit', 'absensi.izin')
+                ->where('profil_siswa.id','=',$request->id)
+                ->get();
+       $siswa = ProfilSiswa::where('id',$request->id)->first(); 
+       return view('guru.listKehadiran', compact('siswa','absen'));
     }
 
     public function updatekehadiranSiswa()

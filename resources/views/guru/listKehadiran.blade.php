@@ -17,7 +17,7 @@
             </a>
         </li>
 
-        <li class="list active">
+        <li class="list">
             <a href="/guru/nilaiSiswa">
                 <span class="icon">
                     <ion-icon name="bar-chart-outline"></ion-icon>
@@ -26,7 +26,7 @@
             </a>
         </li>
 
-        <li class="list">
+        <li class="list active">
             <a href="/guru/kehadiranSiswa">
                 <span class="icon">
                     <ion-icon name="create-outline"></ion-icon>
@@ -146,24 +146,22 @@
             <table id="nilai" class="table table-hover" style="width:100%">
                 <thead class="table-dark">
                     <tr>
-                        <th>Kelas</th>
-                        <th>Semester</th>
-                        <th>Mapel</th>
-                        <th>N. Tugas</th>
-                        <th>N. UTS</th>
-                        <th>N. UAS</th>
+                        <th>Bulan</th>
+                        <th>Kehadiran</th>
+                        <th>Alpa</th>
+                        <th>Sakit</th>
+                        <th>Izin</th>
                     </tr>
                 </thead>
                 <tbody id="nilai">
     
-                    @forelse ($nilai as $data)
+                    @forelse ($absen as $data)
                     <tr>
-                        <td>{{$data->kelas}}</td>
-                        <td>{{$data->semester}}</td>
-                        <td>{{$data->nama}}</td>
-                        <td>{{$data->nilai_tugas}}</td>
-                        <td>{{$data->nilai_uts}}</td>
-                        <td>{{$data->nilai_uas}}</td>
+                        <td>{{$data->bulan}}</td>
+                        <td>{{$data->kehadiran}}</td>
+                        <td>{{$data->alpa}}</td>
+                        <td>{{$data->sakit}}</td>
+                        <td>{{$data->izin}}</td>
     
                     </tr>
                     @empty

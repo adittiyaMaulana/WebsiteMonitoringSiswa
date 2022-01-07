@@ -136,75 +136,31 @@
 
     <!-- table -->
 
-    <div class="tabel">
-        <div class="my-table mt-5 ml-3 mr-3">
+    <div class="list-nilai mt-5 ml-3 mr-3">
+        <div class="my-table">
             <table id="tableGuru" class="table table-hover" style="width:100%">
                 <thead class="table-dark">
                     <tr>
-                        <th>Kelas</th>
-                        <th>Semester</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                        <th>Salary</th>
+                        <th>No</th>
+                        <th>Nama Kelas</th>
+                        <th>Lihat</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr data-href="/guru/updatekehadiranSiswa">
-                        <td>7-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>67</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
+                    @forelse ($kelas as $data)
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{$data->nama_kelas}}</td>
+                        <td>
+                            <a href="{{route('guru.listKehadiranSiswa', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
+                            <i>lihat disini</i>
+                        </td>
                     </tr>
-                    <tr data-href="/guru/updatekehadiranSiswa">
-                        <td>9-3</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>56</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
+                    @empty
+                    <tr>
+                        <td colspan="6" class="text-center">Tidak ada data</td>
                     </tr>
-                    <tr data-href="/guru/updatekehadiranSiswa">
-                        <td>9-2</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>66</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                    </tr>
-                    <tr data-href="/guru/updatekehadiranSiswa">
-                        <td>8-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>20</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                    </tr>
-                    <tr data-href="/guru/updatekehadiranSiswa">
-                        <td>7-2</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>1</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                    </tr>
-                    <tr data-href="/guru/updatekehadiranSiswa">
-                        <td>9-1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>6</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                    </tr>
+                    @endforelse
     
                 </tbody>
             </table>
