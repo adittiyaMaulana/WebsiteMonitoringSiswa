@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Carbon\Carbon;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\OrangTua;
@@ -18,7 +18,22 @@ class GuruController extends Controller
 {
     public function homepageGuru()
     {
-        return view('guru.homepage');
+         //get email guru berdasar login
+        $email_login = Auth::user()->email;
+        $username = Auth::user()->name;
+
+        $today = Carbon::now()->isoFormat('dddd');
+
+        $jadwal_guru = DB::table('jadwal_guru')
+        ->join('guru','guru.id','=','jadwal_guru.id_guru')
+        ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
+        ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
+        ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+        'kelas.nama_kelas')
+        ->where('guru.email','=',$email_login)
+        ->where('jadwal_guru.hari','LIKE',$today)
+        ->get();
+        return view('guru.homepage',compact('jadwal_guru','today'));
     }
 
     // nilaiSiswa

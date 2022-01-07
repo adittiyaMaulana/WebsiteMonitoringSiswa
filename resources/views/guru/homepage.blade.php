@@ -219,59 +219,26 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">NIS</th>
-                            <th scope="col">Nama Siswa</th>
+                            <th scope="col">Hari</th>
+                            <th scope="col">Jam</th>
+                            <th scope="col">Mata Pelajaran</th>
                             <th scope="col">Kelas</th>
-                            <th scope="col">UAS</th>
-                            <th scope="col">UTS</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @forelse ($jadwal_guru as $data)
                         <tr>
-                            <td>17283945</td>
-                            <td class="name">
-                                <p class="limit_name_nilai">OTONGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG</p>
-                            </td>
-                            <td>7-1</td>
-                            <td>100</td>
-                            <td>-</td>
+                            <td>{{$data->hari}}</td>
+                            <td>{{$data->jam_pelajaran}}</td>
+                            <td>{{$data->nama}}</td>
+                            <td>{{$data->nama_kelas}}</td>
+                            <td>{{$today}}</td>
                         </tr>
+                        @empty
                         <tr>
-                            <td>17283945</td>
-                            <td class="name">
-                                <p class="limit_name_nilai">Manusia Biasa</p>
-                            </td>
-                            <td>7-1</td>
-                            <td>100</td>
-                            <td>-</td>
+                            <td colspan="6" class="text-center">Tidak ada data</td>
                         </tr>
-                        <tr>
-                            <td>17283945</td>
-                            <td class="name">
-                                <p class="limit_name_nilai">hai</p>
-                            </td>
-                            <td>7-1</td>
-                            <td>100</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>17283945</td>
-                            <td class="name">
-                                <p class="limit_name_nilai">hai</p>
-                            </td>
-                            <td>7-1</td>
-                            <td>100</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>17283945</td>
-                            <td class="name">
-                                <p class="limit_name_nilai">hai</p>
-                            </td>
-                            <td>7-1</td>
-                            <td>100</td>
-                            <td>-</td>
-                        </tr>
+                        @endforelse
                     </tbody>
                 </table>
             </div>
