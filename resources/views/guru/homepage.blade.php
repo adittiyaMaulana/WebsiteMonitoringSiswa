@@ -210,7 +210,7 @@
         <div class="boxNilai">
             <div class="isi">
                 <p style="text-align:left;">
-                    Nilai Siswa
+                    Jadwal Mengajar
                     <a href="/guru/nilaiSiswa"><span style="float:right;">
                             Lihat Semua >>>
                         </span></a>
@@ -232,7 +232,6 @@
                             <td>{{$data->jam_pelajaran}}</td>
                             <td>{{$data->nama}}</td>
                             <td>{{$data->nama_kelas}}</td>
-                            <td>{{$today}}</td>
                         </tr>
                         @empty
                         <tr>
