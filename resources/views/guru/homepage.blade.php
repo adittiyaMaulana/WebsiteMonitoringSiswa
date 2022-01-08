@@ -44,7 +44,7 @@
         </li>
 
         <li class="list">
-            <a href="/guru/jadwalAkadaNonAkaGuru">
+            <a href="/guru/jadwalGuru">
                 <span class="icon">
                     <ion-icon name="calendar-outline"></ion-icon>
                 </span>
@@ -150,52 +150,6 @@
                 <h4>Username</h4>
                 <h5 class="nis">Nomer induk guru</h5>
                 <h5>Email</h5>
-
-            </div>
-        </div>
-
-        <!-- ====================== kehadiran siswa ========================== -->
-        <div class="box">
-            <div class="kehadiran_sebagian">
-                <p style="text-align:left;">
-                    Kehadiran Siswa
-                    <a href="/guru/kehadiranSiswa"><span style="float:right;">
-                            Lihat Semua >>>
-                        </span></a>
-                </p>
-
-                <table class="table table-borderless">
-                    <thead>
-                        <tr>
-                            <th scope="col">NIS</th>
-                            <th scope="col">Nama</th>
-                            <th scope="col">Hadir</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>17283945</td>
-                            <td>
-                                <p class="limit_kehadiran">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                            </td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>17283947</td>
-                            <td>
-                                <p class="limit_kehadiran">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                            </td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>17283960</td>
-                            <td>
-                                <p class="limit_kehadiran">teeeeeeeeeeeeeeeeeeeeeeeeeeeeees</p>
-                            </td>
-                            <td>4</td>
-                        </tr>
-                    </tbody>
-                </table>
 
             </div>
         </div>

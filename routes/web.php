@@ -37,6 +37,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
     Route::post('importMataPelajaran', [AdminController::class, 'importMataPelajaran'])->name('importMataPelajaran');
     Route::post('importFinansial', [AdminController::class, 'importFinansial'])->name('importFinansial');
     Route::post('importSiswa', [AdminController::class, 'importSiswa'])->name('importSiswa');
+    Route::post('importJadwalAkademikNonAkademik', [AdminController::class, 'importJadwalAkademikNonAkademik'])->name('importJadwalAkademikNonAkademik');
     // END OF IMPORT DATA SESSION //
 
 
@@ -138,6 +139,7 @@ Route::group(['prefix'=>'guru', 'middleware'=>['isGuru','auth']], function(){
     
     // jadwalll
     Route::get('/jadwalAkadaNonAkaGuru', [GuruController::class, 'jadwalAkadaNonAkaGuru']);
+    Route::get('/jadwalGuru', [GuruController::class, 'jadwalGuru']);
     
     // beritaa
     Route::get('/beritaGuru', [GuruController::class, 'beritaGuru']);

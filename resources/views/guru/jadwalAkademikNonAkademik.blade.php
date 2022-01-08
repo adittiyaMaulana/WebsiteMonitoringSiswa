@@ -135,7 +135,14 @@
         </div>
     </nav>
 
-    
+    <!-- navbar pilihan -->
+    <div class="navbar_pilihan mt-5 ml-4">
+        <ul>
+            <li><a href="/guru/jadwalGuru">Mengajar</a></li>
+            <li><a class="active" href="/guru/jadwalAkadaNonAkaGuru">Akademik dan Non Akademik</a></li>
+        </ul>
+    </div>
+
     <div class="tabel mt-5 ml-4 mr-4">
         <table id="tableGuru" class="table table-hover" style="width:100%">
             <thead class="table-dark">

@@ -34,7 +34,7 @@
             </a>
         </li>
 
-        <li class="list active">
+        <li class="list">
             <a href="/guru/pusatBantuanGuru">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
@@ -43,8 +43,8 @@
             </a>
         </li>
 
-        <li class="list">
-            <a href="/guru/jadwalGuru">
+        <li class="list active">
+            <a href="/guru/jadwalAkadaNonAkaGuru">
                 <span class="icon">
                     <ion-icon name="calendar-outline"></ion-icon>
                 </span>
@@ -57,7 +57,7 @@
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
-                <span class="title">Informasi</span>
+                <span class="title">Berita</span>
             </a>
         </li>
 
@@ -101,7 +101,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Pusat bantuan</h4>
+                    <h4>jadwal Akademik & Non Akademik</h4>
                 </a>
             </div>
 
@@ -135,33 +135,24 @@
         </div>
     </nav>
 
-    <div class="tabel mt-5 ml-4 mr-4 mb-4">
-        <table id="tableAdmin" class="table table-hover" style="width:100%">
+    <!-- navbar pilihan -->
+    <div class="navbar_pilihan mt-5 ml-4">
+        <ul>
+            <li><a class="active" href="/guru/jadwalGuru">Mengajar</a></li>
+            <li><a href="/guru/jadwalAkadaNonAkaGuru">Akademik dan Non Akademik</a></li>
+        </ul>
+    </div>
+    
+    <div class="tabel mt-5 ml-4 mr-4">
+        <table id="tableGuru" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>Ukuran</th>
-                    <th>aksi</th>
+                    <th>Kegiatan</th>
+                    <th>Jadwal</th>
                 </tr>
             </thead>
             <tbody>
-                @forelse ($unduhan as $data)
-                <tr>
-                    <td>{{ $loop->iteration }}</td>
-                    <td>{{$data->nama}}</td>
-                    <td>{{ number_format((float)$data->ukuran/1000, 2, '.', '')}} Kb</td>
-                    <td>
-                        <a href="/unduhan/{{$data->nama}}" class="btn btn-success" download><i class="far fa-download"></i>
-                            Download</a>
-    
-                    </td>
-                </tr>
-                @empty
-                <tr>
-                    <td colspan="6" class="text-center">Tidak ada data</td>
-                </tr>
-                @endforelse
+
             </tbody>
         </table>
     </div>

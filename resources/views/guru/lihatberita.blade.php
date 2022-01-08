@@ -45,7 +45,7 @@
         </li>
 
         <li class="list">
-            <a href="/guru/jadwalAkadaNonAkaGuru">
+            <a href="/guru/jadwalGuru">
                 <span class="icon">
                     <ion-icon name="calendar-outline"></ion-icon>
                 </span>

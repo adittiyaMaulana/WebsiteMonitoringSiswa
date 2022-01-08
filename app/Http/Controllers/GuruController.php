@@ -129,6 +129,11 @@ class GuruController extends Controller
                 ->get();
         return view('guru.jadwalAkademikNonAkademik',compact('jadwal'));
     }
+
+    public function jadwalGuru()
+    {
+        return view('guru.jadwalGuru');
+    }
     
     // informasi
     public function beritaGuru()

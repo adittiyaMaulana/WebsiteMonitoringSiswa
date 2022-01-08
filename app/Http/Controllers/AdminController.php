@@ -335,6 +335,11 @@ class AdminController extends Controller {
         return view('admin.import');  
     }
     
+    public function importJadwalAkademikNonAkademik(){
+        Excel::import(new JadwalAkademikDanNonAkademikImport,request()->file('file'));
+        return view('admin.import');  
+    }
+
     public function gantiFoto()
     {
         $foto = Foto::all();

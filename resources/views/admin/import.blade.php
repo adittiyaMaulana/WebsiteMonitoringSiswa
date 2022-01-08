@@ -209,7 +209,8 @@
         <div id="JadwalAkaNoAka" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Jadwal Akademik / Non Akademik</h4>
-            <form class="was-validated">
+            <form class="was-validated" class="was-validated" method="POST" action="{{ route('importJadwalAkademikNonAkademik') }}" enctype="multipart/form-data">
+                @csrf
                 <div class="mb-3">
                     <input class="form-control mb-3" type="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
