@@ -15,7 +15,11 @@ class GuruImport implements ToModel
     public function model(array $row)
     {
         return new Guru([
-            //
+            'id_mapel' => $row['id_mapel'],
+            'nama' => $row['nama'],
+            'ttl' => $row['ttl'],
+            'alamat' => $row['alamat'],
+            'email' => $row['email']
         ]);
     }
 }

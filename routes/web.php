@@ -46,7 +46,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
     Route::post('/saveberita', 'App\Http\Controllers\AdminController@saveberita')->name('admin.saveberita');
     Route::get('/lihatberita/{id}', 'App\Http\Controllers\AdminController@lihatberita')->name('admin.lihatberita');
     Route::get('/editberita/{id}', 'App\Http\Controllers\AdminController@editberita')->name('admin.editberita');
-	Route::put('/updateberita/{id}', 'App\Http\Controllers\AdminController@updateberita')->name('admin.updateberita');
+	Route::post('/updateberita/{id}', 'App\Http\Controllers\AdminController@updateberita')->name('admin.updateberita');
 	Route::get('/hapusberita/{id}', 'App\Http\Controllers\AdminController@hapusberita')->name('admin.hapusberita');
     // Route::get('/formBerita', [AdminController::class, 'formBerita'])->name('admin.formBerita');
     Route::get('/formBerita', [AdminController::class, 'formBerita'])->name('admin.formBerita');

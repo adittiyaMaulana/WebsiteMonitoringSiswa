@@ -15,7 +15,8 @@ class MataPelajaranImport implements ToModel
     public function model(array $row)
     {
         return new MataPelajaran([
-            //
+            'nama' => $row['nama'],
+            'jenis' => $row['jenis']
         ]);
     }
 }

@@ -143,7 +143,6 @@ class AdminController extends Controller {
     }
     public function lihatberita(Request $request)
     {
-       
         $berita = Berita::where('id',$request->id)->first(); 
         return view('admin.lihatberita', compact('berita'));
     }

@@ -43,7 +43,7 @@
                 <span class="title">importData</span>
             </a>
         </li>
-        
+
         <li class="list">
             <a href="/admin/gantifoto">
                 <span class="icon">
@@ -98,7 +98,8 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
+                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
+                        loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -117,18 +118,19 @@
     </div> -->
 
     <!-- table -->
-<div class="card-header">
-                            
-                        </div>
+    <div class="card-header">
+
+    </div>
     <div class="my-table mt-5 ml-3 mr-4">
         <div class="col-md-7 col-sm-12 mb-5 bg-white p-0">
-    <img src="/foto/{{$berita->foto}}" class="card-img-top" alt="gambar" >
-    <div class="p-4">
-        <h2>{{ $berita->judul }}</h2>
-        <textarea class="form-control"" readonly> {{ $berita->isi }}</textarea>
+            <img src="/foto/{{$berita->foto}}" class="card-img-top" alt="gambar">
+                <div class="p-4">
+                    <h2>{{ $berita->judul }}</h2>
+                    <textarea class="form-control"" readonly> {{ $berita->isi }}</textarea>
+        </div>
     </div>
 </div>
-    </div>
+
 
 <script>
 	$('textarea').each(function () {
@@ -138,7 +140,6 @@
   this.style.height = (this.scrollHeight) + 'px';
 });
 </script>
-
 
 
     <!-- end my-content / semua content -->
