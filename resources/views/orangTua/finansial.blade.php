@@ -145,7 +145,7 @@
 
                 <!-- nama user -->
                 <a class=" d-flex align-items-center ml-3 mt-3" style="text-decoration: none; color: #404040;">
-                    <p>user</p>
+                    <p>{{$username}}</p>
                 </a>
 
             </div>
@@ -159,7 +159,7 @@
         <div class="my-table mt-5 ml-4 mr-4">
     
             <select class="form-select mb-5" aria-label="Default select example" id="status">
-                <option value="" selected>Pilih Hari</option>
+                <option value="" selected>Pilih Status</option>
                 <option value="terbayar">Sudah dibayar</option>
                 <option value="belum terbayar">Belum dibayar</option>
             </select>

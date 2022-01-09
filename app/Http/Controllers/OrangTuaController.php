@@ -237,11 +237,12 @@ class OrangTuaController extends Controller
         'berita'));
     }
 
-    // jadwal Kelas
+    // jadwal Pelajaran
     public function jadwalKelas()
     {
         //get email orang tua berdasar login
         $email_login = Auth::user()->email;
+        $username = Auth::user()->name;
 
         //get jadwal pelajaran di kelas
         $jadwal = DB::table('jadwal_pelajaran')
@@ -252,13 +253,15 @@ class OrangTuaController extends Controller
             ->where('orang_tua.email','=',$email_login)
             ->where('jadwal_pelajaran.hari','=',"Senin")
             ->get();
-        return view('orangTua.jadwalKelas',compact('jadwal'));
+        return view('orangTua.jadwalKelas',compact('jadwal','username'));
     }
 
     public function filterjadwal($id){
 
         //get email orang tua berdasar login
         $email_login = Auth::user()->email;
+        $username = Auth::user()->name;
+
 
         if($id!=''){
             $jadwal = DB::table('jadwal_pelajaran')
@@ -285,10 +288,13 @@ class OrangTuaController extends Controller
     // jadwal Non Akademik
     public function jadwalAkadanNonAkademik()
     {
+
+        $username = Auth::user()->name;
+
         $jadwal = DB::table('jadwal_akademik')
                 ->select('nama_kegiatan','jadwal_kegiatan')
                 ->get();
-        return view('orangTua.jadwalAkadanNonAkademik',compact('jadwal'));
+        return view('orangTua.jadwalAkadanNonAkademik',compact('jadwal','username'));
     }
 
     // finansial
@@ -296,6 +302,8 @@ class OrangTuaController extends Controller
     {
         //get email orang tua berdasar login
         $email_login = Auth::user()->email;
+        $username = Auth::user()->name;
+
 
         // menampilkan data yang belum terbayar
         $finansial = DB::table('finansial')
@@ -305,7 +313,7 @@ class OrangTuaController extends Controller
                 ->where('orang_tua.email','=',$email_login)
                 ->where('finansial.status', '=', "terbayar")
                 ->get();
-        return view('orangTua.finansial', compact('finansial'));
+        return view('orangTua.finansial', compact('finansial', 'username'));
     }
 
     public function filterfinansial($id){
@@ -336,14 +344,17 @@ class OrangTuaController extends Controller
     public function berita()
     {
     	$berita = Berita::All();
-        return view('orangTua.berita',compact('berita'));
+        $username = Auth::user()->name;
+
+        return view('orangTua.berita',compact('berita','username'));
     }
     
      public function lihatberita(Request $request)
     {
-       
+        $username = Auth::user()->name;
+
         $berita = Berita::where('id',$request->id)->first(); 
-        return view('orangTua.lihatberita', compact('berita'));
+        return view('orangTua.lihatberita', compact('berita','username'));
     }
 
     public function beritaDetail()
@@ -357,6 +368,8 @@ class OrangTuaController extends Controller
 
         //get email orang tua berdasar login
         $email_login = Auth::user()->email;
+        $username = Auth::user()->name;
+
 
         //get riwayat kelas siswa
         $riwayat_kelas = collect(DB::SELECT("SELECT
@@ -386,7 +399,7 @@ class OrangTuaController extends Controller
                 ->where('daftar_nilai.kelas', '=', $riwayat_kelas)
                 ->where('daftar_nilai.semester', '=', $riwayat_semester)
                 ->get();
-        return view('orangTua.nilai', compact('nilai'));
+        return view('orangTua.nilai', compact('nilai','username'));
     }
     
     public function filternilai($id)
@@ -394,6 +407,8 @@ class OrangTuaController extends Controller
         
         //get email orang tua berdasar login
         $email_login = Auth::user()->email;
+        $username = Auth::user()->name;
+
 
         //get riwayat kelas siswa
         $riwayat_kelas = collect(DB::SELECT("SELECT
@@ -451,6 +466,8 @@ class OrangTuaController extends Controller
     {
         //get email orang tua berdasar login
         $email_login = Auth::user()->email;
+        $username = Auth::user()->name;
+
 
         $absensi = DB::table('absensi')
         ->join('profil_siswa','profil_siswa.id','=','absensi.id_siswa')
@@ -466,13 +483,15 @@ class OrangTuaController extends Controller
         ->orderBy('absensi.sakit')
         ->orderBy('absensi.izin')
         ->get();
-        return view('orangTua.kehadiran',compact('absensi'));
+        return view('orangTua.kehadiran',compact('absensi','username'));
     }
 
     public function filterabsensi($id){
 
         //get email orang tua berdasar login
         $email_login = Auth::user()->email;
+        $username = Auth::user()->name;
+
 
   	    if($id==0){
             $absensi = DB::table('absensi')
@@ -516,18 +535,23 @@ class OrangTuaController extends Controller
     public function fiturBantuan()
     {
     	$unduhan = PusatUnduhan::all();
-        return view('orangTua.fiturBantuan',compact('unduhan'));
+        $username = Auth::user()->name;
+
+        return view('orangTua.fiturBantuan',compact('unduhan','username'));
     }
     
     // pusatbantuan
     public function saranDanMasukan()
     {
-        return view('orangTua.saranDanMasukan');
+        $username = Auth::user()->name;
+
+        return view('orangTua.saranDanMasukan',compact('username'));
     }
 
     // pesan
     public function pesan()
     {
+        
         return view('orangTua.pesan');
     }
 }
