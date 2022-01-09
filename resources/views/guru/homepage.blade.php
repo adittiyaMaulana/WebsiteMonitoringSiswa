@@ -126,7 +126,7 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
+                    <img src="/foto/profil.png" class="rounded-circle" height="25" alt="" loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -146,7 +146,7 @@
 
             <!-- ==================== bagian profile======================== -->
             <div class="profile">
-                <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="105" alt="" loading="lazy" />
+                <img src="/foto/profil.png" class="rounded-circle" height="105" alt="" loading="lazy" />
                 <h4>{{$username}}</h4>
                 <h5 class="nis">Nomer induk guru</h5>
                 <h5>{{$email_login}}</h5>

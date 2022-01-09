@@ -124,7 +124,7 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
+                    <img src="/foto/profil.png" class="rounded-circle" height="25" alt=""
                         loading="lazy" />
                 </a>
 
