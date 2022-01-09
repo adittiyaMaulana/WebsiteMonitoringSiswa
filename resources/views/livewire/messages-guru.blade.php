@@ -1,10 +1,10 @@
 <div>
-    <nav class="navbar navbar-light" style="background: #8dcff4;">
+    <nav class="navbar navbar-light" style="background: #323333">
         <div class="container">
             <!-- <a class="navbar-brand" href="#">
                 <img src="{{asset('image/logo.png')}}" alt="" width="50" height="50">
             </a> -->
-            <h1 class="navbar-brand">MOS System Chating</h1>
+            <h1 class="navbar-brand" style="color: white;">MOS Chating</h1>
         </div>
     </nav>
 
@@ -14,7 +14,7 @@
             <!-- list user -->
             <div class="col-md-4">
                 <div class="card">
-                    <div class="card-header" style="background: #8dcff4; color: white;">
+                    <div class="card-header" style="background: #323333; color: white;">
                         Users
                     </div>
 
@@ -71,7 +71,7 @@
                 <div class="card">
 
                     <!-- munculin nama usernya pas di klik -->
-                    <div class="card-header" style="background: #8dcff4; color: white;">
+                    <div class="card-header" style="background: #323333; color: white;">
                         @if(isset($sender))
                         {{$sender->name}}
                         @endif
@@ -103,7 +103,7 @@
                                 </div>
 
                                 <div class="col-md-4">
-                                    <button class="btn btn-primary d-inline-block w-100" type="submit"><i class="far fa-paper-plane"></i>Send</button>
+                                    <button class="btn btn-primary d-inline-block w-100" type="submit">Kirim</button>
                                 </div>
                             </div>
                         </form>
