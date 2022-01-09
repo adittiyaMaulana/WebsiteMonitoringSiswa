@@ -155,7 +155,7 @@
 
     <div class="my-table mt-5 ml-4 mr-4">
         <select class="form-select mb-5" aria-label="Default select example" id="hari">
-            <option value="" selected>Pilih Status</option>
+            <option value="" selected>Pilih Hari</option>
             <option value="Senin">Senin</option>
             <option value="Selasa">Selasa</option>
             <option value="Rabu">Rabu</option>
