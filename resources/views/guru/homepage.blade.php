@@ -131,7 +131,7 @@
 
                 <!-- nama user -->
                 <a class=" d-flex align-items-center ml-3 mt-3" style="text-decoration: none; color: #404040;">
-                    <p>user</p>
+                    <p>{{$username}}</p>
                 </a>
 
             </div>
@@ -147,9 +147,9 @@
             <!-- ==================== bagian profile======================== -->
             <div class="profile">
                 <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="105" alt="" loading="lazy" />
-                <h4>Username</h4>
+                <h4>{{$username}}</h4>
                 <h5 class="nis">Nomer induk guru</h5>
-                <h5>Email</h5>
+                <h5>{{$email_login}}</h5>
 
             </div>
         </div>

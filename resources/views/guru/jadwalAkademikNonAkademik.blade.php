@@ -101,7 +101,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>jadwal Akademik & Non Akademik</h4>
+                    <h4>Jadwal Akademik & Non Akademik</h4>
                 </a>
             </div>
 
