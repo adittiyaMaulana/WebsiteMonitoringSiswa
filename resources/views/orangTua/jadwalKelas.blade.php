@@ -109,7 +109,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Jadwal Kelas</h4>
+                    <h4>Jadwal Pelajaran</h4>
                 </a>
             </div>
 
