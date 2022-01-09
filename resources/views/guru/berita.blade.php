@@ -135,9 +135,36 @@
         </div>
     </nav>
 
+
+    <div class=" mt-5 ml-4 mr-5">
+
+        @forelse ($berita as $data)
+        <div class="beritadata">
+            <a href="{{route('guru.lihatberita', $data->id)}}" style="text-decoration: none; color: black;">
+                <div class="card mb-3 ml-4 w-100" style="height: 165px; ">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/foto/{{$data->foto}}" class="img-fluid"
+                                style="height: 164px; width: 100%; " alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                        <h5 class=" card-title">{{$data->judul}}</h5>
+                                <p class="card-text text">{{$data->isi}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        @empty
+        <div class="beritadata">
+        @endforelse
+
+    </div>
     <!-- table -->
 
-    <div class="tabel mt-5 ml-3 mr-4">
+    <!-- <div class="tabel mt-5 ml-3 mr-4">
         <table id="tableAdmin" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
@@ -165,7 +192,7 @@
                 @endforelse
             </tbody>
         </table>
-    </div>
+    </div> -->
 
 
     <!-- end my-content / semua content -->
