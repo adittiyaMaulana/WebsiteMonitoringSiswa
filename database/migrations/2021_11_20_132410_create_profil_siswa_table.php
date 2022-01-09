@@ -21,6 +21,7 @@ class CreateProfilSiswaTable extends Migration
             $table->unsignedBigInteger('id_orang_tua');
             $table->foreign('id_orang_tua')->references('id')->on('orang_tua')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nama',50);
+            $table->string('nis',11);
             $table->date('ttl');
             $table->string('alamat');
             $table->string('semester',2);

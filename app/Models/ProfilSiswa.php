@@ -13,6 +13,7 @@ class ProfilSiswa extends Model
         'id_kelas',
         'id_orang_tua',
         'nama',
+        'nis',
         'ttl',
         'alamat',
         'semester'

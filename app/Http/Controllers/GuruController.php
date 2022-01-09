@@ -22,8 +22,12 @@ class GuruController extends Controller
          //get email guru berdasar login
         $email_login = Auth::user()->email;
         $username = Auth::user()->name;
-
         $today = Carbon::now()->isoFormat('dddd');
+
+        $nuptk = DB::table('guru')
+        ->select('nuptk')
+        ->where('email','=',"$email_login")
+        ->get();
 
         $jadwal_guru = DB::table('jadwal_guru')
         ->join('guru','guru.id','=','jadwal_guru.id_guru')
@@ -34,7 +38,7 @@ class GuruController extends Controller
         ->where('guru.email','=',$email_login)
         ->where('jadwal_guru.hari','LIKE',$today)
         ->get();
-        return view('guru.homepage',compact('jadwal_guru','today','username','email_login'));
+        return view('guru.homepage',compact('jadwal_guru','today','username','email_login','nuptk'));
     }
 
     // nilaiSiswa

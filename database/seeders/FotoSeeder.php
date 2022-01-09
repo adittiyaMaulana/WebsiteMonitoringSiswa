@@ -14,7 +14,7 @@ class FotoSeeder extends Seeder
     public function run()
     {
         $foto = [
-            'nama' => 'harvard.jpg',
+            'nama' => 'Shchool_Example.jpg',
             'ukuran' => '136'
         ];
         \DB::table('foto')->insert($foto);

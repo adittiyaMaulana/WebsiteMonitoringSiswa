@@ -148,7 +148,7 @@
             <div class="profile">
                 <img src="/foto/profil.png" class="rounded-circle" height="105" alt="" loading="lazy" />
                 <h4>{{$username}}</h4>
-                <h5 class="nis">Nomer induk guru</h5>
+                <h5>{{$nuptk}}</h5>
                 <h5>{{$email_login}}</h5>
 
             </div>
