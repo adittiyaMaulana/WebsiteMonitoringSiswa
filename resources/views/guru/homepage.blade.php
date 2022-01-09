@@ -165,7 +165,7 @@
             <div class="isi">
                 <p style="text-align:left;">
                     Jadwal Mengajar
-                    <a href="/guru/nilaiSiswa"><span style="float:right;">
+                    <a href="/guru/jadwalGuru"><span style="float:right;">
                             Lihat Semua >>>
                         </span></a>
                 </p>
@@ -189,7 +189,7 @@
                         </tr>
                         @empty
                         <tr>
-                            <td colspan="6" class="text-center">Tidak ada data</td>
+                            <td colspan="6" class="text-center">Tidak ada jadwal hari ini</td>
                         </tr>
                         @endforelse
                     </tbody>

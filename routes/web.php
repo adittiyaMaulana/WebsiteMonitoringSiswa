@@ -140,6 +140,7 @@ Route::group(['prefix'=>'guru', 'middleware'=>['isGuru','auth']], function(){
     // jadwalll
     Route::get('/jadwalAkadaNonAkaGuru', [GuruController::class, 'jadwalAkadaNonAkaGuru']);
     Route::get('/jadwalGuru', [GuruController::class, 'jadwalGuru']);
+    Route::get('/filterJadwalGuru/{id}', [GuruController::class, 'filterJadwalGuru'])->name('guru.filterJadwalGuru');
     
     // beritaa
     Route::get('/beritaGuru', [GuruController::class, 'beritaGuru']);

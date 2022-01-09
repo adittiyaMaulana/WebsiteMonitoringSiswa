@@ -89,6 +89,7 @@
             }
 
         }
+
     </style>
 
     <!-- ====================================================================================== -->
@@ -123,7 +124,8 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt="" loading="lazy" />
+                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="25" alt=""
+                        loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -142,17 +144,38 @@
             <li><a href="/guru/jadwalAkadaNonAkaGuru">Akademik dan Non Akademik</a></li>
         </ul>
     </div>
-    
+
     <div class="tabel mt-5 ml-4 mr-4">
+        <select class="form-select mb-5" aria-label="Default select example" id="hari">
+            <option value="" selected>Pilih Hari</option>
+            <option value="Senin">Senin</option>
+            <option value="Selasa">Selasa</option>
+            <option value="Rabu">Rabu</option>
+            <option value="Kamis">Kamis</option>
+            <option value="Jumat">Jumat</option>
+        </select>
         <table id="tableGuru" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
-                    <th>Kegiatan</th>
-                    <th>Jadwal</th>
+                    <th>Hari</th>
+                    <th>Jam Pelajaran</th>
+                    <th>Mata Pelajaran</th>
+                    <th>Kelas</th>
                 </tr>
             </thead>
-            <tbody>
-
+            <tbody id="jadwal_guru">
+                @forelse ($jadwal_guru as $data)
+                <tr>
+                    <td>{{$data->hari }}</td>
+                    <td>{{$data->jam_pelajaran}}</td>
+                    <td>{{$data->nama}}</td>
+                    <td>{{$data->nama_kelas}}</td>
+                </tr>
+                @empty
+                <tr>
+                    <td colspan="6" class="text-center">Tidak ada jadwal</td>
+                </tr>
+                @endforelse
             </tbody>
         </table>
     </div>
@@ -160,5 +183,19 @@
 
     <!-- end my-content / semua content -->
 </div>
-
+<script>
+    $(document).ready(function() {
+        $('#hari').on('change', function(e) {
+            var id = e.target.value;
+            $.get('{{ url("guru/filterJadwalGuru")}}/' + id, function(data) {
+                console.log(id);
+                console.log(data);
+                $('#jadwal_guru').empty();
+                $.each(data, function(index, element) {
+                    $('#jadwal_guru').append("<tr><td>" + element.hari + "</td><td>" + element.jam_pelajaran + "</td><td>" + element.nama + "</td><td>" + element.nama_kelas + "</td></tr>")
+                });
+            });
+        });
+    });
+</script>
 @endsection

@@ -132,9 +132,98 @@ class GuruController extends Controller
 
     public function jadwalGuru()
     {
-        return view('guru.jadwalGuru');
+        //get email orang tua berdasar login
+        $email_login = Auth::user()->email;
+        $username = Auth::user()->name;
+
+        $today = Carbon::now()->isoFormat('dddd');
+
+        if ($today == 'Sabtu'){
+            $jadwal_guru = DB::table('jadwal_guru')
+            ->join('guru','guru.id','=','jadwal_guru.id_guru')
+            ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
+            ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
+            ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+            'kelas.nama_kelas')
+            ->where('guru.email','=',$email_login)
+            ->where('jadwal_guru.hari','LIKE','Jumat')
+            ->get();
+        } else if ($today == 'Minggu'){
+            $jadwal_guru = DB::table('jadwal_guru')
+            ->join('guru','guru.id','=','jadwal_guru.id_guru')
+            ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
+            ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
+            ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+            'kelas.nama_kelas')
+            ->where('guru.email','=',$email_login)
+            ->where('jadwal_guru.hari','LIKE','Jumat')
+            ->get();
+        } else{
+            $jadwal_guru = DB::table('jadwal_guru')
+            ->join('guru','guru.id','=','jadwal_guru.id_guru')
+            ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
+            ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
+            ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+            'kelas.nama_kelas')
+            ->where('guru.email','=',$email_login)
+            ->where('jadwal_guru.hari','LIKE',$today)
+            ->get();
+        }
+
+        return view('guru.jadwalGuru', compact('jadwal_guru'));
     }
     
+    public function filterJadwalGuru($id){
+        //get email orang tua berdasar login
+        $email_login = Auth::user()->email;
+        $today = Carbon::now()->isoFormat('dddd');
+
+        if($id!=''){
+            $jadwal_guru = DB::table('jadwal_guru')
+            ->join('guru','guru.id','=','jadwal_guru.id_guru')
+            ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
+            ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
+            ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+            'kelas.nama_kelas')
+            ->where('guru.email','=',$email_login)
+            ->where('jadwal_guru.hari','LIKE',"$id")
+            ->get();
+    }else{
+        if ($today == 'Sabtu'){
+            $jadwal_guru = DB::table('jadwal_guru')
+            ->join('guru','guru.id','=','jadwal_guru.id_guru')
+            ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
+            ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
+            ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+            'kelas.nama_kelas')
+            ->where('guru.email','=',$email_login)
+            ->where('jadwal_guru.hari','LIKE','Jumat')
+            ->get();
+        } else if ($today == 'Minggu'){
+            $jadwal_guru = DB::table('jadwal_guru')
+            ->join('guru','guru.id','=','jadwal_guru.id_guru')
+            ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
+            ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
+            ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+            'kelas.nama_kelas')
+            ->where('guru.email','=',$email_login)
+            ->where('jadwal_guru.hari','LIKE','Jumat')
+            ->get();
+        } else{
+            $jadwal_guru = DB::table('jadwal_guru')
+            ->join('guru','guru.id','=','jadwal_guru.id_guru')
+            ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
+            ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
+            ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+            'kelas.nama_kelas')
+            ->where('guru.email','=',$email_login)
+            ->where('jadwal_guru.hari','LIKE',$today)
+            ->get();
+        }
+    }
+        return $jadwal_guru;
+    }
+
     // informasi
     public function beritaGuru()
     {

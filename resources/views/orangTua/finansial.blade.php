@@ -159,7 +159,7 @@
         <div class="my-table mt-5 ml-4 mr-4">
     
             <select class="form-select mb-5" aria-label="Default select example" id="status">
-                <option value="" selected>Pilih Status</option>
+                <option value="" selected>Pilih Hari</option>
                 <option value="terbayar">Sudah dibayar</option>
                 <option value="belum terbayar">Belum dibayar</option>
             </select>
