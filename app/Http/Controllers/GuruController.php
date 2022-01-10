@@ -37,7 +37,7 @@ class GuruController extends Controller
         'kelas.nama_kelas')
         ->where('guru.email','=',$email_login)
         ->where('jadwal_guru.hari','LIKE',$today)
-        ->get();
+        ->paginate(5);
         return view('guru.homepage',compact('jadwal_guru','today','username','email_login','nuptk'));
     }
 

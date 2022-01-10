@@ -228,13 +228,19 @@ class OrangTuaController extends Controller
         
           //BERITA CAROUSEL
           
-    	    $berita = Berita::All();
+    	    $berita = Berita::paginate(5);
+
+            $nis = DB::table('profil_siswa')
+            ->join('orang_tua','orang_tua.id','profil_siswa.id')
+            ->select('nis')
+            ->where('orang_tua.email','=',"$email_login")
+            ->get();
         
         return view('orangTua.homepage',compact('title','label',
         'nilai_7_1','nilai_7_2','nilai_8_1','nilai_8_2','nilai_9_1','nilai_9_2',
         'finansial',
         'email_login', 'username',
-        'berita'));
+        'berita','nis'));
     }
 
     // jadwal Pelajaran
