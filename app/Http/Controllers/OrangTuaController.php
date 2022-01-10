@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Models\Berita;
+use App\Models\SaranDanMasukan;
 
 class OrangTuaController extends Controller
 {
@@ -552,6 +553,19 @@ class OrangTuaController extends Controller
         $username = Auth::user()->name;
 
         return view('orangTua.saranDanMasukan',compact('username'));
+    }
+
+    public function sendSaranMasukan(Request $request){
+
+        $id = Auth::user()->id;
+
+        SaranDanMasukan::create([
+                'id_user' => $id,
+                'judul' => $request->judul,
+                'isi' => $request->isi
+		]);
+
+        return redirect('orangTua/saranDanMasukan');
     }
 
     // pesan

@@ -109,6 +109,7 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
 
     // saranDanMasukan √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/saranDanMasukan', [OrangTuaController::class, 'saranDanMasukan']);
+    Route::post('/sendSaranMasukan', 'App\Http\Controllers\AdminController@sendSaranMasukan')->name('orangTua.sendSaranMasukan');
   
 });
 

@@ -161,7 +161,7 @@
     <div class="ml-4 mr-4 mt-5">
 
         <div class="saran"></div>
-        <form class="was-validated">
+        <form class="was-validated" method="post" action="{{route('orangTua.sendSaranMasukan')}}" enctype="multipart/form-data">    
             <div class="saran mb-3 mr-4">
                 <label for="exampleInputEmail1" class="form-label">Saran</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
