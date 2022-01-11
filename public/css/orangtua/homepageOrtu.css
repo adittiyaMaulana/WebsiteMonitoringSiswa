@@ -15,6 +15,23 @@
     font-style: normal;
 }
 
+.limit_isi_masukansaran{
+    width: 650px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+}
+
+
+.limit_judul_masukansaran{
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+}
+
 /* bagian berita */
 .bagianberitas{
     height: auto;

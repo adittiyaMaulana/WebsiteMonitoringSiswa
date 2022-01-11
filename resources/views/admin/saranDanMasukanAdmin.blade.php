@@ -139,10 +139,10 @@
                 </thead>
                 <tbody>
                     @forelse ($saranmasukan as $data)
-                    <tr data-href="/admin/saranDanMasukanAdminDetail">
+                    <tr>
                         <td>{{$data->id_user}}</td>
-                        <td>{{$data->judul}}</td>
-                        <td>{{$data->isi}}</td>
+                        <td><p class="limit_judul_masukansaran">{{$data->judul}}</p></td>
+                        <td><p class="limit_isi_masukansaran">{{$data->isi}}</p></td>
                         <td>
                             <a href="{{route('admin.saranDanMasukanAdminDetail', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
                             <a href="{{route('admin.hapusSaranDanMasukanAdmin', $data->id)}}" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus ?')"><i class="fas fa-trash-alt"></i></a>
