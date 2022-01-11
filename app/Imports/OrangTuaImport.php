@@ -16,10 +16,12 @@ class OrangTuaImport implements ToModel, WithHeadingRow
     public function model(array $row)
     {
         return new OrangTua([
-            'nama'     => $row['nama'], 
-            'ttl'     => $row['ttl'],
-            'alamat'     => $row['alamat'],
-            'email'    => $row['email']
+            'nama' => $row['nama'],
+            'ttl' => $row['ttl'],
+            'alamat' => $row['alamat'],
+            'email' => $row['email'],
+            'created_at' => $row['created_at'],
+            'updated_at' => $row['updated_at']
         ]);
     }
 }
