@@ -48,7 +48,7 @@
                 <span class="icon">
                     <ion-icon name="image-outline"></ion-icon>
                 </span>
-                <span class="title">Ganti Foto</span>
+                <span class="title">Ubah Foto</span>
             </a>
         </li>
 
@@ -90,7 +90,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Ganti Foto Login</h4>
+                    <h4>Ubah Foto Login</h4>
                 </a>
             </div>
 
