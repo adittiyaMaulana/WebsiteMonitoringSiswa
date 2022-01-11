@@ -20,8 +20,10 @@ use App\Imports\MataPelajaranImport;
 use App\Imports\NilaiImport;
 use App\Imports\SiswaImport;
 use App\Imports\UsersImport;
-
+use App\Models\SaranDanMasukan;
 use Maatwebsite\Excel\Facades\Excel;
+
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller {
     
@@ -265,12 +267,18 @@ class AdminController extends Controller {
 
     public function saranDanMasukanAdmin()
     {
-        return view('admin.saranDanMasukanAdmin');
+        $saranmasukan = SaranDanMasukan::all();
+        return view('admin.saranDanMasukanAdmin',compact('saranmasukan'));
     }
 
-    public function saranDanMasukanAdminDetail()
+    public function saranDanMasukanAdminDetail($id)
     {
-        return view('admin.saranDanMasukanAdminDetail');
+        $data = DB::table('saran_dan_masukan')
+        ->join('users','saran_dan_masukan.id_user','=','users.id')
+        ->select('users.email','users.role','users.name','saran_dan_masukan.judul','saran_dan_masukan.isi')
+        ->where('saran_dan_masukan.id','=',$id)
+        ->get();
+        return view('admin.saranDanMasukanAdminDetail',compact('data'));
     }
     
     // fitur pesan

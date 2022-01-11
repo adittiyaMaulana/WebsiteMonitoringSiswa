@@ -162,13 +162,14 @@
 
         <div class="saran"></div>
         <form class="was-validated" method="post" action="{{route('orangTua.sendSaranMasukan')}}" enctype="multipart/form-data">    
+            @csrf
             <div class="saran mb-3 mr-4">
-                <label for="exampleInputEmail1" class="form-label">Judul</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                <label for="judul" class="form-label">Judul</label>
+                <textarea class="form-control" id="judul" rows="3" name="judul" required></textarea>
             </div>
             <div class="masukan mb-3 mr-4">
-                <label for="exampleFormControlTextarea1" class="form-label">Saran dan Masukan</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                <label for="isi" class="form-label">Saran dan Masukan</label>
+                <textarea class="form-control" id="isi" name="isi" rows="3" required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">Kirim</button>

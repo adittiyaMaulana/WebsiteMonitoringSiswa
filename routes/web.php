@@ -63,7 +63,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
 
     //saranDanMasukanAdmin √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/saranDanMasukanAdmin', [AdminController::class, 'saranDanMasukanAdmin'])->name('admin.saranDanMasukanAdmin');
-    Route::get('/saranDanMasukanAdminDetail', [AdminController::class, 'saranDanMasukanAdminDetail'])->name('admin.saranDanMasukanAdminDetail');
+    Route::get('/saranDanMasukanAdminDetail/{id}', [AdminController::class, 'saranDanMasukanAdminDetail'])->name('admin.saranDanMasukanAdminDetail');
 
     //GANTI FOTOOOOOOOOOOOOOOOOOOOOOO
     Route::get('/gantifoto', [AdminController::class, 'gantiFoto'])->name('admin.gantiFoto');
@@ -109,7 +109,7 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
 
     // saranDanMasukan √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/saranDanMasukan', [OrangTuaController::class, 'saranDanMasukan']);
-    Route::post('/sendSaranMasukan', 'App\Http\Controllers\AdminController@sendSaranMasukan')->name('orangTua.sendSaranMasukan');
+    Route::post('/sendSaranMasukan', 'App\Http\Controllers\OrangTuaController@sendSaranMasukan')->name('orangTua.sendSaranMasukan');
   
 });
 

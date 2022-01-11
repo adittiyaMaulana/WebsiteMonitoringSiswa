@@ -125,18 +125,25 @@
         </div>
     </nav>
 
+    @foreach($data as $data)
     <div class="saran-masukan-detail">
         <div class="detailsaranmasukan mt-5 ml-4 mr-4">
-            <p class="dari">Dari</p>
-            <p class="namaUser">nama User</p>
+            @if( $data->role == 2 )
+                <p class="dari">Dari Orang Tua</p>
+            @endif
+            @if( $data->role == 3 )
+                <p class="dari">Dari Guru</p>
+            @endif
+            <hr style="border: 1px solid black">
+            <p class="nama">{{$data->name}} - {{$data->email}}</p>
     
-            <p class="mt-5">Saran</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatibus quisquam pariatur corrupti facere a eligendi eaque excepturi minima rem est, at earum accusamus ratione officiis possimus deleniti consequatur dolor.</p>
-    
-            <p class="mt-5">masukan</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptatibus quisquam pariatur corrupti facere a eligendi eaque excepturi minima rem est, at earum accusamus ratione officiis possimus deleniti consequatur dolor.</p>
+            
+            <p class="mt-5">Mengenai {{$data->judul}}</p>
+            <hr style="border: 2px solid black">
+            <p>{{$data->isi}}</p>
         </div>
     </div>
+    @endforeach
 
 
     <!-- end my-content / semua content -->
