@@ -45,6 +45,7 @@ class GuruController extends Controller
 
     public function nilaiSiswa()
     {
+        $username = Auth::user()->name;
         $kelas = Kelas::All();
         $username = Auth::user()->name;
 
@@ -54,7 +55,6 @@ class GuruController extends Controller
    public function listsiswa(Request $request)
     {
         $username = Auth::user()->name;
-
         $siswa = ProfilSiswa::where('id_kelas',$request->id)->get(); 
         return view('guru.listsiswa', compact('siswa','username'));
     }
@@ -82,10 +82,11 @@ class GuruController extends Controller
     {
         return view('guru.form.formUpdateNilai');
     }
-
+    
     // kehadiran siswa
     public function kehadiranSiswa()
     {
+        $username = Auth::user()->name;
         $kelas = Kelas::All();
         $username = Auth::user()->name;
 
@@ -94,6 +95,7 @@ class GuruController extends Controller
 
     public function listKehadiranSiswa(Request $request)
     {
+        $username = Auth::user()->name;
        
         $siswa = ProfilSiswa::where('id_kelas',$request->id)->get(); 
         $username = Auth::user()->name;
@@ -147,6 +149,7 @@ class GuruController extends Controller
     // fitur bantuan
     public function pusatBantuanGuru()
     {
+        $username = Auth::user()->name;
     	$unduhan = PusatUnduhan::all();
         $username = Auth::user()->name;
 
@@ -157,7 +160,6 @@ class GuruController extends Controller
     public function jadwalAkadaNonAkaGuru()
     {
         $username = Auth::user()->name;
-
         $jadwal = DB::table('jadwal_akademik')
                 ->select('nama_kegiatan','jadwal_kegiatan')
                 ->get();
@@ -262,7 +264,6 @@ class GuruController extends Controller
     public function beritaGuru()
     {
         $username = Auth::user()->name;
-
         $berita = Berita::All();
         return view('guru.berita',compact('berita','username'));
     }
@@ -279,6 +280,5 @@ class GuruController extends Controller
     {
         return view('guru.beritaDetail');
     }
-
 
 }
