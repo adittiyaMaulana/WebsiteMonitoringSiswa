@@ -145,8 +145,7 @@
                         <td>{{$data->isi}}</td>
                         <td>
                             <a href="{{route('admin.saranDanMasukanAdminDetail', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
-                            <a href="" class="btn btn-warning"><i class="fas fa-pen"></i></a>
-                            <a href="" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus ?')"><i class="fas fa-trash-alt"></i></a>
+                            <a href="{{route('admin.hapusSaranDanMasukanAdmin', $data->id)}}" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus ?')"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                     @empty

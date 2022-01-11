@@ -252,7 +252,7 @@ class AdminController extends Controller {
     public function hapusunduhan($id)
     {
         $unduhan = PusatUnduhan::find($id);
-        $unduhan-> delete();
+        $unduhan->delete();
         return redirect('admin/dokumenFiturBantuan');
     }
     
@@ -279,6 +279,12 @@ class AdminController extends Controller {
         ->where('saran_dan_masukan.id','=',$id)
         ->get();
         return view('admin.saranDanMasukanAdminDetail',compact('data'));
+    }
+
+    public function hapusSaranDanMasukanAdmin($id){
+        $data = SaranDanMasukan::find($id);
+        $data->delete();
+        return redirect('admin/saranDanMasukanAdmin');
     }
     
     // fitur pesan

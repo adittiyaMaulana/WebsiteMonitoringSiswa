@@ -64,6 +64,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
     //saranDanMasukanAdmin √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/saranDanMasukanAdmin', [AdminController::class, 'saranDanMasukanAdmin'])->name('admin.saranDanMasukanAdmin');
     Route::get('/saranDanMasukanAdminDetail/{id}', [AdminController::class, 'saranDanMasukanAdminDetail'])->name('admin.saranDanMasukanAdminDetail');
+    Route::get('/hapusSaranDanMasukanAdmin/{id}', [AdminController::class, 'hapusSaranDanMasukanAdmin'])->name('admin.hapusSaranDanMasukanAdmin');
 
     //GANTI FOTOOOOOOOOOOOOOOOOOOOOOO
     Route::get('/gantifoto', [AdminController::class, 'gantiFoto'])->name('admin.gantiFoto');
@@ -130,6 +131,7 @@ Route::group(['prefix'=>'guru', 'middleware'=>['isGuru','auth']], function(){
 
     // saranDanMasukan
     Route::get('/saranDanMasukanGuru', [GuruController::class, 'saranDanMasukanGuru']);
+    Route::post('/sendSaranMasukan', 'App\Http\Controllers\GuruController@sendSaranMasukan')->name('guru.sendSaranMasukan');
     
     // PESAN
     // Route::get('/pesanGuru', [GuruController::class, 'pesanGuru']);

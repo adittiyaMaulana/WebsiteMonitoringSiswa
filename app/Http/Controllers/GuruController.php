@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\OrangTua;
 use App\Models\Guru;
 use App\Models\ProfilSiswa;
-use App\Models\Finansial;
+use App\Models\SaranDanMasukan;
 use App\Models\PusatUnduhan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -109,7 +109,20 @@ class GuruController extends Controller
 
     public function saranDanMasukanGuru()
     {
-        return view('guru.saranDanMasukanGuru');
+        $username = Auth::user()->name;
+        return view('guru.saranDanMasukanGuru', compact('username'));
+    }
+
+    public function sendSaranMasukan(Request $request){
+        $id = Auth::user()->id;
+
+        SaranDanMasukan::create([
+                'id_user' => $id,
+                'judul' => $request->judul,
+                'isi' => $request->isi
+		]);
+
+        return redirect('guru/saranDanMasukanGuru');
     }
     
     // pesan
