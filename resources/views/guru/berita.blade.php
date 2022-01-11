@@ -128,7 +128,7 @@
 
                 <!-- nama user -->
                 <a class=" d-flex align-items-center ml-3 mt-3" style="text-decoration: none; color: #404040;">
-                    <p>user</p>
+                    <p>{{$username}}</p>
                 </a>
 
             </div>
