@@ -131,11 +131,11 @@
 
         <form class="was-validated">
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Saran</label>
+                <label for="exampleInputEmail1" class="form-label">Judul</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Masukan</label>
+                <label for="exampleFormControlTextarea1" class="form-label">Saran dan Masukan</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
             </div>
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Nilai')
+@section('title','Kehadiran')
 
 @section('content')
 
@@ -102,7 +102,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Nilai</h4>
+                    <h4>Kehadiran</h4>
                 </a>
             </div>
 
