@@ -49,7 +49,7 @@
                 <span class="icon">
                     <ion-icon name="image-outline"></ion-icon>
                 </span>
-                <span class="title">Ganti Foto</span>
+                <span class="title">Ubah Foto</span>
             </a>
         </li>
 

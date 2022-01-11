@@ -47,6 +47,8 @@ class GuruController extends Controller
     {
         $username = Auth::user()->name;
         $kelas = Kelas::All();
+        $username = Auth::user()->name;
+
         return view('guru.nilaiSiswa',compact('kelas','username'));
     }
     
@@ -59,8 +61,10 @@ class GuruController extends Controller
     
     public function listnilai(Request $request)
     {
+
         $username = Auth::user()->name;
-        $nilai = DB::table('daftar_nilai')
+
+       $nilai = DB::table('daftar_nilai')
                 ->join('profil_siswa', 'daftar_nilai.id_siswa','=','profil_siswa.id')
                 ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
                 ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'daftar_nilai.id_mapel')
@@ -73,12 +77,19 @@ class GuruController extends Controller
        $siswa = ProfilSiswa::where('id',$request->id)->first(); 
         return view('guru.listnilai', compact('nilai','siswa','username'));
     }
+
+    public function updateNilaiSiswa()
+    {
+        return view('guru.form.formUpdateNilai');
+    }
     
     // kehadiran siswa
     public function kehadiranSiswa()
     {
         $username = Auth::user()->name;
         $kelas = Kelas::All();
+        $username = Auth::user()->name;
+
         return view('guru.kehadiranSiswa', compact('kelas','username'));
     }
 
@@ -87,11 +98,15 @@ class GuruController extends Controller
         $username = Auth::user()->name;
        
         $siswa = ProfilSiswa::where('id_kelas',$request->id)->get(); 
+        $username = Auth::user()->name;
+
         return view('guru.listKehadiranSiswa', compact('siswa','username'));
     }
 
     public function listKehadiran(Request $request){
+
         $username = Auth::user()->name;
+
         $absen = DB::table('absensi')
                 ->join('profil_siswa', 'absensi.id_siswa','=','profil_siswa.id')
                 ->select('absensi.bulan', 
@@ -100,6 +115,11 @@ class GuruController extends Controller
                 ->get();
        $siswa = ProfilSiswa::where('id',$request->id)->first(); 
        return view('guru.listKehadiran', compact('siswa','absen','username'));
+    }
+
+    public function updatekehadiranSiswa()
+    {
+        return view('guru.form.formUpdateKehadiran');
     }
 
     public function saranDanMasukanGuru()
@@ -131,6 +151,8 @@ class GuruController extends Controller
     {
         $username = Auth::user()->name;
     	$unduhan = PusatUnduhan::all();
+        $username = Auth::user()->name;
+
         return view('guru.fiturBantuan',compact('unduhan','username'));
     }
     
@@ -249,8 +271,14 @@ class GuruController extends Controller
      public function lihatberita(Request $request)
     {
         $username = Auth::user()->name;
+
         $berita = Berita::where('id',$request->id)->first(); 
         return view('guru.lihatberita', compact('berita','username'));
+    }
+    
+    public function beritaDetailGuru()
+    {
+        return view('guru.beritaDetail');
     }
 
 }
