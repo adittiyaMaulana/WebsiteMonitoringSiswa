@@ -70,6 +70,8 @@ class OrangTuaController extends Controller
         //KELAS 7 SEMESTER 1
         try {
 
+            //UBAH LAGI
+
             if($riwayat_kelas[0] == 7 && $riwayat_semester[0] == 1){
                 $nilai_7_1[] = collect(DB::SELECT("SELECT
                 CAST((AVG(a.nilai_tugas) * 0.25) + (AVG(a.nilai_uts) * 0.35) + (AVG(a.nilai_uas) * 0.4) AS INT)

@@ -161,9 +161,29 @@ class GuruController extends Controller
     {
         $username = Auth::user()->name;
         $jadwal = DB::table('jadwal_akademik')
-                ->select('nama_kegiatan','jadwal_kegiatan')
-                ->get();
+            ->select('nama_kegiatan','jadwal_kegiatan','periode')
+            ->where('periode','=','2021 - 2022')
+            ->get();
         return view('guru.jadwalAkademikNonAkademik',compact('jadwal','username'));
+    }
+
+    public function filterJadwalAkaNonAka($id){
+
+        //get email orang tua berdasar login
+
+        if($id!=''){
+            $jadwal = DB::table('jadwal_akademik')
+                ->select('nama_kegiatan','jadwal_kegiatan','periode')
+                ->where('periode','=',"$id")
+                ->get();
+        }else{
+            $jadwal = DB::table('jadwal_akademik')
+            ->select('nama_kegiatan','jadwal_kegiatan','periode')
+            ->where('periode','=','2021 - 2022')
+            ->get();
+        }
+
+        return $jadwal;
     }
 
     public function jadwalGuru()
@@ -224,7 +244,7 @@ class GuruController extends Controller
             ->where('guru.email','=',$email_login)
             ->where('jadwal_guru.hari','LIKE',"$id")
             ->get();
-    }else{
+        }else{
         if ($today == 'Sabtu'){
             $jadwal_guru = DB::table('jadwal_guru')
             ->join('guru','guru.id','=','jadwal_guru.id_guru')

@@ -19,14 +19,14 @@ class DatabaseSeeder extends Seeder
         $this->call(GuruSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(FotoSeeder::class);
-        // $this->call(KelasSeeder::class);
-        // $this->call(ProfilSiswaSeeder::class);
-        // $this->call(DaftarNilaiSeeder::class);
-        // $this->call(FinansialSeeder::class);
-        // $this->call(BeritaSeeder::class);
-        // $this->call(JadwalAkademikDanNonAkademikSeeder::class);
-        // $this->call(JadwalPelajaranSeeder::class);
-        // $this->call(AbsensiSeeder::class);
-        // $this->call(JadwalGuruSeeder::class);
+        $this->call(KelasSeeder::class);
+        $this->call(ProfilSiswaSeeder::class);
+        $this->call(DaftarNilaiSeeder::class);
+        $this->call(FinansialSeeder::class);
+        $this->call(BeritaSeeder::class);
+        $this->call(JadwalAkademikDanNonAkademikSeeder::class);
+        $this->call(JadwalPelajaranSeeder::class);
+        $this->call(AbsensiSeeder::class);
+        $this->call(JadwalGuruSeeder::class);
     }
 }

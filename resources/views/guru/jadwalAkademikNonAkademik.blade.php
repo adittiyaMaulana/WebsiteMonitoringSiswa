@@ -144,20 +144,31 @@
     </div>
 
     <div class="tabel mt-5 ml-4 mr-4">
+        <select class="form-select mb-5" aria-label="Default select example" id="periode">
+            <option value="" selected>Pilih Periode</option>
+            <option value="2020 - 2021">2020 / 2021</option>
+            <option value="2021 - 2022">2021 / 2022</option>
+        </select>
         <table id="tableGuru" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
                     <th>Kegiatan</th>
                     <th>Jadwal</th>
+                    <th>Periode</th>
                 </tr>
             </thead>
-            <tbody>
-                @foreach($jadwal as $data)
+            <tbody id="jadwalAkademikNonAkademik">
+                @forelse($jadwal as $data)
                 <tr>
                     <td>{{$data->nama_kegiatan}}</td>
                     <td>{{$data->jadwal_kegiatan}}</td>
+                    <td>{{$data->periode}}</td>
                 </tr>
-                @endforeach
+                @empty
+                <tr>
+                    <td colspan="6" class="text-center">Tidak ada jadwal</td>
+                </tr>
+                @endforelse
             </tbody>
         </table>
     </div>
@@ -165,5 +176,22 @@
 
     <!-- end my-content / semua content -->
 </div>
+
+
+<script>
+    $(document).ready(function() {
+        $('#periode').on('change', function(e) {
+            var id = e.target.value;
+            $.get('{{ url("guru/filterJadwalAkaNonAka")}}/' + id, function(data) {
+                console.log(id);
+                console.log(data);
+                $('#jadwalAkademikNonAkademik').empty();
+                $.each(data, function(index, element) {
+                    $('#jadwalAkademikNonAkademik').append("<tr><td>" + element.nama_kegiatan + "</td><td>" + element.jadwal_kegiatan + "</td><td>" + element.periode + "</td></tr>")
+                });
+            });
+        });
+    });
+</script>
 
 @endsection

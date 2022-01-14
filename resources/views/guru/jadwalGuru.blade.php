@@ -192,7 +192,7 @@
                 console.log(data);
                 $('#jadwal_guru').empty();
                 $.each(data, function(index, element) {
-                    $('#jadwal_guru').append("<tr><td>" + element.hari + "</td><td>" + element.jam_pelajaran + "</td><td>" + element.nama + "</td><td>" + element.nama_kelas + "</td></tr>")
+                    $('#jadwal_guru').append("<tr><td>" + element.hari + "</td><td>" + element.jam_pelajaran + "</td><td>" + element.periode + "</td></tr>")
                 });
             });
         });

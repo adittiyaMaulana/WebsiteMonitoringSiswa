@@ -18,6 +18,7 @@ class CreateJadwalAkademikTable extends Migration
             $table->timestamps();
             $table->string('nama_kegiatan',100);
             $table->string('jadwal_kegiatan');
+            $table->string('periode');
         });
     }
 
