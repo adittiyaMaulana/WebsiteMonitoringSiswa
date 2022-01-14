@@ -93,6 +93,7 @@
                     <h4>Import Data</h4>
                 </a>
             </div>
+           
 
             <!-- Right elements -->
             <div class="d-flex align-items-center">
@@ -119,7 +120,30 @@
 
     <!-- vertical tab -->
     <div class=" importdata mr-4 ml-4 mt-5 mb-4">
-
+    @if (session()->has('success'))
+<div class="alert alert-success">
+    @if(is_array(session('success')))
+        <ul>
+            @foreach (session('success') as $message)
+                <li>{{ $message }}</li>
+            @endforeach
+        </ul>
+    @else
+        {{ session('success') }}
+    @endif
+</div>
+@endif
+@if (session()->has('errors'))
+ <div class="row">
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </ul>
+        </div>
+    </div>
+    @endif
         <div class="tab">
             <button class="tablinks" style="border-top-left-radius: 20px ;" onclick="openCity(event, 'orangTua')" id="defaultOpen">OrangTua</button>
             <button class="tablinks" onclick="openCity(event, 'Guru')">Guru</button>
@@ -257,7 +281,7 @@
         <div id="Siswa" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Siswa</h4>
-            <form class="was-validated" method="POST" action="" enctype="multipart/form-data">
+            <form class="was-validated" method="POST" action="{{ route('importSiswa')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                     <input class="form-control mb-3" type="file" name="file" id="formFile" required>

@@ -16,9 +16,9 @@ class CreateProfilSiswaTable extends Migration
         Schema::create('profil_siswa', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->unsignedBigInteger('id_kelas');
+            $table->unsignedBigInteger('id_kelas')->nullable();
             $table->foreign('id_kelas')->references('id')->on('kelas')->onDelete('cascade')->onUpdate('cascade');
-            $table->unsignedBigInteger('id_orang_tua');
+            $table->unsignedBigInteger('id_orang_tua')->nullable();
             $table->foreign('id_orang_tua')->references('id')->on('orang_tua')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nama',50);
             $table->string('nis',11);

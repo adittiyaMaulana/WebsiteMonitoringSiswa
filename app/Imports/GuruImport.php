@@ -3,12 +3,12 @@
 namespace App\Imports;
 
 use Illuminate\Validation\Rule;
-use App\Models\Kelas;
+use App\Models\Guru;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithStartRow;
 use Maatwebsite\Excel\Concerns\WithValidation;
 
-class KelasImport implements ToModel, WithStartRow, WithValidation
+class GuruImport implements ToModel, WithStartRow, WithValidation
 {
     /**
     * @param array $row
@@ -17,23 +17,27 @@ class KelasImport implements ToModel, WithStartRow, WithValidation
     */
     public function model(array $row)
     {
-        return new Kelas([
-            'nama_kelas' => $row[0],
-            'kelas' => $row[1]
+        return new Guru([
+            'id_mapel' => $row[0],
+            'nama' => $row[1],
+            'nuptk'=> $row[2],
+            'ttl'=> $row[3],
+            'alamat' => $row[4],
+            'email' => $row[5]
         ]);
     }
     public function rules(): array {
-    return [
-   '0' => Rule::unique('kelas','nama_kelas'), // Table name, field in your db
-    ];
+        return [
+            '3' => Rule::unique('guru','nuptk'), // Table name, field in your db
+        ];
     }
     public function customValidationMessages() {
         return [
-        '0.unique' => 'Gagal Import, Data Duplikat!',
+            '3.unique' => 'Gagal Import, Data Duplikat!',
         ];
     }
     public function startRow(): int
     {
-        return 2;
+            return 2;
     }
 }

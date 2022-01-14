@@ -3,12 +3,12 @@
 namespace App\Imports;
 
 use Illuminate\Validation\Rule;
-use App\Models\Kelas;
+use App\Models\MataPelajaran;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithStartRow;
 use Maatwebsite\Excel\Concerns\WithValidation;
 
-class KelasImport implements ToModel, WithStartRow, WithValidation
+class MataPelajaranImport implements ToModel, WithStartRow, WithValidation
 {
     /**
     * @param array $row
@@ -17,14 +17,14 @@ class KelasImport implements ToModel, WithStartRow, WithValidation
     */
     public function model(array $row)
     {
-        return new Kelas([
-            'nama_kelas' => $row[0],
-            'kelas' => $row[1]
+        return new MataPelajaran([
+            'nama' => $row[0],
+            'jenis' => $row[1]
         ]);
     }
     public function rules(): array {
     return [
-   '0' => Rule::unique('kelas','nama_kelas'), // Table name, field in your db
+   '0' => Rule::unique('mata_pelajaran','nama'), // Table name, field in your db
     ];
     }
     public function customValidationMessages() {

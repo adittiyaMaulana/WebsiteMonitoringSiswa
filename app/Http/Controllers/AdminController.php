@@ -301,57 +301,138 @@ class AdminController extends Controller {
         return view('admin.import');
     }
 
-    public function importOrangTua()
+    public function importOrangTua(Request $request)
     {
-        Excel::import(new OrangTuaImport,request()->file('file'));
-        return view('admin.import');  
+        // validasi
+		$this->validate($request, [
+			'file' => 'required|mimes:xls,xlsx'
+		]);
+		
+		$data = Excel::import(new OrangTuaImport, request()->file('file'));      
+		
+		if($data){
+			return redirect()->route('admin.importData')->withSuccess(['Berhasil Melakukan Import Data!']);
+		}else{
+			return redirect()->route('admin.importData');
+		}
     }
 
-    public function importGuru()
+    public function importGuru(Request $request)
     {
-        Excel::import(new GuruImport,request()->file('file'));
-        return view('admin.import');  
+        // validasi
+		$this->validate($request, [
+			'file' => 'required|mimes:xls,xlsx'
+		]);
+		
+		$data = Excel::import(new GuruImport, request()->file('file'));      
+		
+		if($data){
+			return redirect()->route('admin.importData')->withSuccess(['Berhasil Melakukan Import Data!']);
+		}else{
+			return redirect()->route('admin.importData');
+		}
     }
 
-    public function importUsers()
+    public function importUsers(Request $request)
     {
-        Excel::import(new UsersImport,request()->file('file'));
-        return view('admin.import');  
+        // validasi
+		$this->validate($request, [
+			'file' => 'required|mimes:xls,xlsx'
+		]);
+		
+		$data = Excel::import(new UsersImport, request()->file('file'));      
+		
+		if($data){
+			return redirect()->route('admin.importData')->withSuccess(['Berhasil Melakukan Import Data!']);
+		}else{
+			return redirect()->route('admin.importData');
+		}
     }
 
-    public function importNilai()
+    public function importNilai(Request $request)
     {
-        Excel::import(new NilaiImport,request()->file('file'));
-        return view('admin.import');  
+        // validasi
+		$this->validate($request, [
+			'file' => 'required|mimes:xls,xlsx'
+		]);
+		
+		$data = Excel::import(new NilaiImport, request()->file('file'));      
+		
+		if($data){
+			return redirect()->route('admin.importData')->withSuccess(['Berhasil Melakukan Import Data!']);
+		}else{
+			return redirect()->route('admin.importData');
+		}
     }
 
-    public function importKelas()
+    public function importKelas(Request $request)
     {
-        Excel::import(new KelasImport,request()->file('file'));
-        return view('admin.import');  
+        // validasi
+		$this->validate($request, [
+			'file' => 'required|mimes:xls,xlsx'
+		]);
+		
+		$data = Excel::import(new KelasImport, request()->file('file'));      
+		
+		if($data){
+			return redirect()->route('admin.importData')->withSuccess(['Berhasil Melakukan Import Data!']);
+		}else{
+			return redirect()->route('admin.importData');
+		}
     }
 
-    public function importMataPelajaran()
+    public function importMataPelajaran(Request $request)
     {
-        Excel::import(new MataPelajaranImport,request()->file('file'));
-        return view('admin.import');  
+         // validasi
+		$this->validate($request, [
+			'file' => 'required|mimes:xls,xlsx'
+		]);
+		
+		$data = Excel::import(new MataPelajaranImport, request()->file('file'));      
+		
+		if($data){
+			return redirect()->route('admin.importData')->withSuccess(['Berhasil Melakukan Import Data!']);
+		}else{
+			return redirect()->route('admin.importData');
+		} 
     }
 
-    public function importFinansial()
+    public function importFinansial(Request $request)
     {
-        Excel::import(new FinansialImport,request()->file('file'));
-        return view('admin.import');  
+         // validasi
+		$this->validate($request, [
+			'file' => 'required|mimes:xls,xlsx'
+		]);
+		
+		$data = Excel::import(new FinansialImport, request()->file('file'));      
+		
+		if($data){
+			return redirect()->route('admin.importData')->withSuccess(['Berhasil Melakukan Import Data!']);
+		}else{
+			return redirect()->route('admin.importData');
+		}  
     }
 
-    public function importSiswa()
+    public function importSiswa(Request $request)
     {
-        Excel::import(new SiswaImport,request()->file('file'));
-        return view('admin.import');  
+    	// validasi
+		$this->validate($request, [
+			'file' => 'required|mimes:xls,xlsx'
+		]);
+		
+		$data = Excel::import(new SiswaImport, request()->file('file'));      
+		
+		if($data){
+			return redirect()->route('admin.importData')->withSuccess(['Berhasil Melakukan Import Data!']);
+		}else{
+			return redirect()->route('admin.importData');
+		}
+        
+        
     }
     
-    public function importJadwalAkademikNonAkademik(){
-        Excel::import(new JadwalAkademikDanNonAkademikImport,request()->file('file'));
-        return view('admin.import');  
+    public function importJadwalAkademikNonAkademik(Request $request){
+         
     }
 
     public function gantiFoto()

@@ -10,6 +10,7 @@ class Guru extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id_mapel',
         'nama',
         'nuptk',
         'ttl',

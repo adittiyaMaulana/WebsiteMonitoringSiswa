@@ -56,8 +56,10 @@
                 </div>
 
                 <div class="inputBox">
-                    <input type="submit" value="Masuk" name="">
+                    <input type="submit" value="Masuk" name=""><br><center>atau</center>
+                    <a class="btn btn-danger form-control" style="border-radius: 30px;"  href="{{ '/auth/redirect'}}">Login Google</a>
                 </div>
+               
 
                 <div class="inputBox">
                     <p>Lupa Password ?

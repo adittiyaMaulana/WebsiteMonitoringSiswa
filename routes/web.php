@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OrangTuaController;
 use App\Http\Controllers\GuruController;
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -18,6 +19,8 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Auth::routes();
+Route::get('/auth/redirect', 'App\Http\Controllers\Auth\LoginController@redirectToProvider');
+Route::get('/auth/callback', 'App\Http\Controllers\Auth\LoginController@handleProviderCallback');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
