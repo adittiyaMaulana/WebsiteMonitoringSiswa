@@ -73,6 +73,15 @@
 
 <div class="my-content">
 
+    <style>
+        @media screen and (max-width: 900px) {
+            .formberita {
+                width: 900px;
+            }
+
+        }
+    </style>
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -119,38 +128,31 @@
 
     <!-- table -->
 
-    <div class="my-table mt-5 ml-3 mr-4">
-        <div class="col-md-8 col-sm-12 bg-white p-4">
-            <form class="was-validated" method="post" action="{{route('admin.updateberita', $berita->id)}}" enctype="multipart/form-data">
-                @csrf
-                <div class="form-group">
-                    <label>Judul Artikel</label>
-                    <input type="text" class="form-control" name="judul" placeholder="Judul artikel" value="{{$berita->judul}}" required>
-                </div>
-                <div class="form-group">
-                    <label>Isi Artikel</label>
-                    <textarea class="form-control" name="isi" rows="15" required>{{$berita->isi}}</textarea>
-                </div>
-                <div class="form-group">
-                    <label>Upload Foto</label>
-                    <input type="file" name="foto" class="form-control">
-                    <input type="hidden" name="foto2" class="form-control" value="{{$berita->foto}}" required>
-                </div>
-                <div class="form-group">
+    <div class="formberita mt-5 ml-3 mr-4">
+        <!-- <div class="col-md-8 col-sm-12 bg-white p-4"> -->
+        <form class="was-validated" method="post" action="{{route('admin.updateberita', $berita->id)}}" enctype="multipart/form-data">
+            @csrf
+            <div class="form-group">
+                <label>Judul Artikel</label>
+                <input type="text" class="form-control" name="judul" placeholder="Judul artikel" value="{{$berita->judul}}" required>
+            </div>
+            <div class="form-group">
+                <label>Isi Artikel</label>
+                <textarea class="form-control" name="isi" rows="15" required>{{$berita->isi}}</textarea>
+            </div>
+            <div class="form-group">
+                <label>Upload Foto</label>
+                <input type="file" name="foto" class="form-control">
+                <input type="hidden" name="foto2" class="form-control" value="{{$berita->foto}}" required>
+            </div>
+            <div class="form-group">
 
-                    <input type="submit" class="form-control btn btn-primary" value="Simpan">
-                </div>
-        </div>
-
-
+                <input type="submit" class="form-control btn btn-primary" value="Simpan">
+            </div>
 
         </form>
+        <!-- </div> -->
     </div>
-
-
-
-
-
     <!-- end my-content / semua content -->
 </div>
 

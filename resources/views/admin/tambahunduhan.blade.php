@@ -130,7 +130,7 @@
     <!-- table -->
 
     <div class="formunduhan mt-5 ml-3 mr-4">
-        <div class="col-md-8 col-sm-12 bg-white p-4">
+        <!-- <div class="col-md-8 col-sm-12 bg-white p-4"> -->
             @if($errors->any())
             {{ implode('', $errors->all(':message')) }}
             @endif
@@ -145,15 +145,9 @@
 
                     <input type="submit" class="form-control btn btn-primary" value="Simpan">
                 </div>
-        </div>
-
-
-
-        </form>
+            </form>
+        <!-- </div> -->
     </div>
-
-
-
 
 
     <!-- end my-content / semua content -->
