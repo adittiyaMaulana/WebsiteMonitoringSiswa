@@ -23,6 +23,7 @@ class CreateDaftarNilaiTable extends Migration
             $table->integer('nilai_tugas');
             $table->integer('nilai_uts');
             $table->integer('nilai_uas');
+            $table->integer('nilai_rata');
             $table->integer('semester');
             $table->integer('kelas');
         });

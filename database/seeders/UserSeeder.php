@@ -36,9 +36,9 @@ class UserSeeder extends Seeder
             //orang tua
 
             [
-                'name' => "Darmin",
-                'email' => "darmi@gmail.com",
-                'password' => Hash::make('password'),
+                'name' => "Darmi",
+                'email' => "darmidar511@gmail.com",
+                'password' => Hash::make('asdfg1_234'),
                 'role' => 2,
                 'is_online' => 0,
                 'last_activity' => "-"

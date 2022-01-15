@@ -166,6 +166,7 @@
                 <h5>{{$data->nis}}</h5>
                 @endforeach
                 <h5>{{$email_login}}</h5>
+                <h5></h5>
             </div>
         </div>
 

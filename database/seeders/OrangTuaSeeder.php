@@ -18,7 +18,7 @@ class OrangTuaSeeder extends Seeder
                 'nama' => "Darmi",
                 'ttl' => '1980-07-13',
                 'alamat' => 'Jl. Cendrawasih, Cengkareng Barat',
-                'email' => "darmi@gmail.com",
+                'email' => "darmidar511@gmail.com",
 
             ],[
                 'nama' => 'Sutomo',

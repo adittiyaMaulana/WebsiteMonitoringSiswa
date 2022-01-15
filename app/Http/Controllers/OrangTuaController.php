@@ -23,12 +23,12 @@ class OrangTuaController extends Controller
 
         // proses olah data nilai // START
 
-        $nilai_7_1[] = null;
-        $nilai_7_2[] = null;
-        $nilai_8_1[] = null;
-        $nilai_8_2[] = null;
-        $nilai_9_1[] = null;
-        $nilai_9_2[] = null;
+        $nilai_7_1[] = 0;
+        $nilai_7_2[] = 0;
+        $nilai_8_1[] = 0;
+        $nilai_8_2[] = 0;
+        $nilai_9_1[] = 0;
+        $nilai_9_2[] = 0;
 
         //get email orang tua berdasar login
         $email_login = Auth::user()->email;
@@ -74,18 +74,16 @@ class OrangTuaController extends Controller
 
             if($riwayat_kelas[0] == 7 && $riwayat_semester[0] == 1){
                 $nilai_7_1[] = collect(DB::SELECT("SELECT
-                CAST((AVG(a.nilai_tugas) * 0.25) + (AVG(a.nilai_uts) * 0.35) + (AVG(a.nilai_uas) * 0.4) AS INT)
-                AS nilai
+                CAST(SUM(a.nilai_rata) / COUNT(a.id_siswa) AS INT) AS nilai
                 FROM
                 daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
-                JOIN orang_tua c ON b.id_orang_tua = c.id
-                JOIN mata_pelajaran d ON a.id_mapel = d.id
-                JOIN kelas e ON b.id_kelas = e.id
+                JOIN mata_pelajaran c ON a.id_mapel = c.id
+                JOIN orang_tua d ON b.id_orang_tua = d.id
                 WHERE
-                c.email = '$email_login'
+                d.email = '$email_login'
                 AND
                 a.kelas = 7
-                AND
+                AND 
                 a.semester = 1"))->first()->nilai;
             }
           
@@ -99,15 +97,13 @@ class OrangTuaController extends Controller
             if($riwayat_kelas[0] == 7 && $riwayat_semester[1] == 2){
 
                 $nilai_7_2[] = collect(DB::SELECT("SELECT
-                CAST((AVG(a.nilai_tugas) * 0.25) + (AVG(a.nilai_uts) * 0.35) + (AVG(a.nilai_uas) * 0.4) AS INT)
-                AS nilai
+                CAST(SUM(a.nilai_rata) / COUNT(a.id_siswa) AS INT) AS nilai
                 FROM
                 daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
-                JOIN orang_tua c ON b.id_orang_tua = c.id
-                JOIN mata_pelajaran d ON a.id_mapel = d.id
-                JOIN kelas e ON b.id_kelas = e.id
+                JOIN mata_pelajaran c ON a.id_mapel = c.id
+                JOIN orang_tua d ON b.id_orang_tua = d.id
                 WHERE
-                c.email = '$email_login'
+                d.email = '$email_login'
                 AND
                 a.kelas = 7
                 AND
@@ -122,15 +118,13 @@ class OrangTuaController extends Controller
           try {
             if($riwayat_kelas[1] == 8 && $riwayat_semester[0] == 1){
                 $nilai_8_1[] = collect(DB::SELECT("SELECT
-                CAST((AVG(a.nilai_tugas) * 0.25) + (AVG(a.nilai_uts) * 0.35) + (AVG(a.nilai_uas) * 0.4) AS INT)
-                AS nilai
+                CAST(SUM(a.nilai_rata) / COUNT(a.id_siswa) AS INT) AS nilai
                 FROM
                 daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
-                JOIN orang_tua c ON b.id_orang_tua = c.id
-                JOIN mata_pelajaran d ON a.id_mapel = d.id
-                JOIN kelas e ON b.id_kelas = e.id
+                JOIN mata_pelajaran c ON a.id_mapel = c.id
+                JOIN orang_tua d ON b.id_orang_tua = d.id
                 WHERE
-                c.email = '$email_login'
+                d.email = '$email_login'
                 AND
                 a.kelas = 8
                 AND
@@ -147,15 +141,13 @@ class OrangTuaController extends Controller
 
             if($riwayat_kelas[1] == 8 && $riwayat_semester[1] == 2){
                 $nilai_8_2[] = collect(DB::SELECT("SELECT
-                CAST((AVG(a.nilai_tugas) * 0.25) + (AVG(a.nilai_uts) * 0.35) + (AVG(a.nilai_uas) * 0.4) AS INT)
-                AS nilai
+                CAST(SUM(a.nilai_rata) / COUNT(a.id_siswa) AS INT) AS nilai
                 FROM
                 daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
-                JOIN orang_tua c ON b.id_orang_tua = c.id
-                JOIN mata_pelajaran d ON a.id_mapel = d.id
-                JOIN kelas e ON b.id_kelas = e.id
+                JOIN mata_pelajaran c ON a.id_mapel = c.id
+                JOIN orang_tua d ON b.id_orang_tua = d.id
                 WHERE
-                c.email = '$email_login'
+                d.email = '$email_login'
                 AND
                 a.kelas = 8
                 AND
@@ -170,15 +162,13 @@ class OrangTuaController extends Controller
 
             if($riwayat_kelas[2] == 9 && $riwayat_semester[0] == 1){
                 $nilai_9_1[] = collect(DB::SELECT("SELECT
-                CAST((AVG(a.nilai_tugas) * 0.25) + (AVG(a.nilai_uts) * 0.35) + (AVG(a.nilai_uas) * 0.4) AS INT)
-                AS nilai
+                CAST(SUM(a.nilai_rata) / COUNT(a.id_siswa) AS INT) AS nilai
                 FROM
                 daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
-                JOIN orang_tua c ON b.id_orang_tua = c.id
-                JOIN mata_pelajaran d ON a.id_mapel = d.id
-                JOIN kelas e ON b.id_kelas = e.id
+                JOIN mata_pelajaran c ON a.id_mapel = c.id
+                JOIN orang_tua d ON b.id_orang_tua = d.id
                 WHERE
-                c.email = '$email_login'
+                d.email = '$email_login'
                 AND
                 a.kelas = 9
                 AND
@@ -195,15 +185,13 @@ class OrangTuaController extends Controller
 
             if($riwayat_kelas[2] == 9 && $riwayat_semester[1] == 2){
                 $nilai_9_2[] = collect(DB::SELECT("SELECT
-                CAST((AVG(a.nilai_tugas) * 0.25) + (AVG(a.nilai_uts) * 0.35) + (AVG(a.nilai_uas) * 0.4) AS INT)
-                AS nilai
+                CAST(SUM(a.nilai_rata) / COUNT(a.id_siswa) AS INT) AS nilai
                 FROM
                 daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
-                JOIN orang_tua c ON b.id_orang_tua = c.id
-                JOIN mata_pelajaran d ON a.id_mapel = d.id
-                JOIN kelas e ON b.id_kelas = e.id
+                JOIN mata_pelajaran c ON a.id_mapel = c.id
+                JOIN orang_tua d ON b.id_orang_tua = d.id
                 WHERE
-                c.email = '$email_login'
+                d.email = '$email_login'
                 AND
                 a.kelas = 9
                 AND
