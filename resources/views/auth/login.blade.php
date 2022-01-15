@@ -44,7 +44,7 @@
                     </span>
                     @enderror
                 </div>
-
+<!-- 
                 <div class="remember">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -53,7 +53,7 @@
                             Ingatkan Saya!!!
                         </label>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="inputBox">
                     <input type="submit" value="Masuk" name=""><br><center>atau</center>
