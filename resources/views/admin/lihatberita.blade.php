@@ -83,7 +83,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Informasi</h4>
+                    <h4>Berita</h4>
                 </a>
             </div>
 
