@@ -73,6 +73,15 @@
 
 <div class="my-content">
 
+    <style>
+        @media screen and (max-width: 900px) {
+            .formberita {
+                width: 900px;
+            }
+
+        }
+    </style>
+
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -83,7 +92,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Informasi</h4>
+                    <h4>Berita</h4>
                 </a>
             </div>
 
@@ -98,8 +107,7 @@
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
-                    <img src="/foto/profil.png" class="rounded-circle" height="25" alt=""
-                        loading="lazy" />
+                    <img src="/foto/profil.png" class="rounded-circle" height="25" alt="" loading="lazy" />
                 </a>
 
                 <!-- nama user -->
@@ -117,16 +125,13 @@
         <a href="/admin/formBerita"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
     </div> -->
 
-    <!-- table -->
-    <div class="card-header">
 
-    </div>
-    <div class="my-table mt-5 ml-3 mr-4">
-        <div class="col-md-7 col-sm-12 mb-5 bg-white p-0">
+    <div class="formberita mt-5 ml-3 mr-4">
+        <div class="col-md-7 col-sm-12 mb-5 bg-white p-0 mr-4">
             <img src="/foto/{{$berita->foto}}" class="card-img-top" alt="gambar">
-                <div class="p-4">
-                    <h2>{{ $berita->judul }}</h2>
-                    <textarea class="form-control"" readonly> {{ $berita->isi }}</textarea>
+            <div class="p-4">
+                <h2>{{ $berita->judul }}</h2>
+                <textarea class="form-control"" readonly> {{ $berita->isi }}</textarea>
         </div>
     </div>
 </div>

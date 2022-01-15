@@ -91,7 +91,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Fitur Bantuan</h4>
+                    <h4>Pusat Unduhan</h4>
                 </a>
             </div>
 

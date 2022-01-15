@@ -121,7 +121,7 @@
 
 
     <div class="formberita mt-5 ml-3 mr-4">
-        <div class="col-md-8 col-sm-12 bg-white p-4">
+        <!-- <div class="col-md-8 col-sm-12 bg-white p-4"> -->
             <form class="was-validated" method="post" action="{{route('admin.saveberita')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
@@ -140,7 +140,7 @@
 
                     <input type="submit" class="form-control btn btn-primary" value="Simpan">
                 </div>
-        </div>
+        <!-- </div> -->
 
         </form>
     </div>
