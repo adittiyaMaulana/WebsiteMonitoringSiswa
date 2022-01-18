@@ -19,8 +19,13 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Auth::routes();
-Route::get('/auth/redirect', 'App\Http\Controllers\Auth\LoginController@redirectToProvider');
-Route::get('/auth/callback', 'App\Http\Controllers\Auth\LoginController@handleProviderCallback');
+
+//auth ini buat google
+// Route::get('/auth/redirect', 'App\Http\Controllers\Auth\LoginController@redirectToProvider');
+// Route::get('/auth/callback', 'App\Http\Controllers\Auth\LoginController@handleProviderCallback');
+
+Route::get('/lupapassword', 'App\Http\Controllers\Auth\LoginController@lupapassword')->name('lupapassword');
+Route::post('/lupapasswordsubmit', 'App\Http\Controllers\Auth\LoginController@lupapasswordsubmit')->name('lupapasswordsubmit');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

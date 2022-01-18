@@ -21,11 +21,15 @@
 
     <div class="contentBox">
         <div class="formBox">
-            <h4>Selamat Datang</h4>
+            <h4>Lupa Password</h4>
             <br>
-            <h1>Silahkan Login</h1>
-
-            <form class="was-validated" method="POST" action="{{ route('login') }}">
+            <h1>Silahkan Isi form</h1>
+			<ul>
+     @foreach ($errors->all() as $error)
+         <li>{{ $error }}</li>
+     @endforeach
+</ul>
+            <form class="was-validated" method="POST" action="{{ route('lupapasswordsubmit') }}">
                 @csrf
                 <div class="inputBox">
                     <span>Email</span>
@@ -38,7 +42,7 @@
                 </div>
 
                 <div class="inputBox">
-                    <span>Password</span>
+                    <span>Password Baru</span>
                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                     @error('password')
@@ -47,24 +51,27 @@
                     </span>
                     @enderror
                 </div>
+                
+                 <div class="inputBox">
+                    <span>Konfirmasi Password</span>
+                    <input id="password_confirmation" type="password" class="form-control @error('password') is-invalid @enderror" name="password_confirmation" required autocomplete="current-password">
 
-                <div class="remember">
-                    <label for="">
-                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                        Ingat Saya!</label>
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
+
+                
 
                 <div class="inputBox">
                     <button type="submit" class="btn btn-primary">
-                        {{ __('Login') }}
+                        Ganti
                     </button>
                 </div>
 
-                @if (Route::has('password.request'))
-                <a class="btn btn-link" href="{{ route('auth/lupapassword') }}">
-                    {{ __('Lupa Password ?') }}
-                </a>
-                @endif
+               
 
             </form>
         </div>
