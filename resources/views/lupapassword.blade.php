@@ -5,6 +5,11 @@
 @section('content')
 
 
+    <?php 
+        use App\Models\Foto;
+        $foto = Foto::first();
+    ?>
+
 <section>
 
     <style>
@@ -16,7 +21,7 @@
     </style>
 
     <div class="imageBox">
-        <img src="{{asset('image/school1.jpg')}}" alt="">
+        <img src="/foto/{{$foto->nama}}" alt="">
     </div>
 
     <div class="contentBox">
