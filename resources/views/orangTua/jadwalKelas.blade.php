@@ -167,7 +167,7 @@
             <thead class="table-dark">
                 <tr>
                     <th>Mata Pelajaran</th>
-                    <th>Jeni Pelajaran</th>
+                    <th>Jenis Pelajaran</th>
                     <th>Jam Pelajaran</th>
                     <th>Hari</th>
                 </tr>
