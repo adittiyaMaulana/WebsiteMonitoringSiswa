@@ -242,7 +242,7 @@ class GuruController extends Controller
             ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
             'kelas.nama_kelas')
             ->where('guru.email','=',$email_login)
-            ->where('jadwal_guru.hari','LIKE',$today)
+            ->where('jadwal_guru.hari','LIKE',$id)
             ->get();
         }else{
         if ($today == 'Sabtu'){
