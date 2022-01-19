@@ -3,14 +3,16 @@
 @section('content')
 
 <section>
-    
-    <?php 
-        use App\Models\Foto;
-        $foto = Foto::first();
+
+    <?php
+
+    use App\Models\Foto;
+
+    $foto = Foto::first();
     ?>
-    
+
     <div class="imageBox">
-    <img src="/foto/{{$foto->nama}}" class="card-img-top" alt="gambar">
+        <img src="/foto/{{$foto->nama}}" class="card-img-top" alt="gambar">
     </div>
 
     <div class="contentBox">
@@ -19,7 +21,7 @@
             <br>
             <h1>Silahkan Login</h1>
             <form method="POST" action="{{ route('login') }}">
-                
+
                 @csrf
 
                 <div class="inputBox">
@@ -44,7 +46,9 @@
                     </span>
                     @enderror
                 </div>
-<!-- 
+
+                <input type="checkbox" onclick="myFunction()"> Lihat Password
+                <!-- 
                 <div class="remember">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -59,7 +63,7 @@
                     <input type="submit" value="Masuk" name=""><br>
                     <!-- <a class="btn btn-danger form-control" style="border-radius: 30px;"  href="{{ '/auth/redirect'}}">Login Google</a> -->
                 </div>
-               
+
 
                 <div class="inputBox">
                     <p>Lupa Password ?
@@ -76,4 +80,15 @@
         </div>
     </div>
 </section>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
 @endsection
