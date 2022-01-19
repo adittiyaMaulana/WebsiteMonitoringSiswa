@@ -285,13 +285,31 @@ class OrangTuaController extends Controller
     // jadwal Non Akademik
     public function jadwalAkadanNonAkademik()
     {
-
         $username = Auth::user()->name;
-
         $jadwal = DB::table('jadwal_akademik')
-                ->select('nama_kegiatan','jadwal_kegiatan')
-                ->get();
+            ->select('nama_kegiatan','jadwal_kegiatan','periode')
+            ->where('periode','=','2021 - 2022')
+            ->get();
         return view('orangTua.jadwalAkadanNonAkademik',compact('jadwal','username'));
+    }
+
+    public function filterJadwalAkaNonAka($id){
+
+        //get email orang tua berdasar login
+
+        if($id!=''){
+            $jadwal = DB::table('jadwal_akademik')
+                ->select('nama_kegiatan','jadwal_kegiatan','periode')
+                ->where('periode','=',"$id")
+                ->get();
+        }else{
+            $jadwal = DB::table('jadwal_akademik')
+            ->select('nama_kegiatan','jadwal_kegiatan','periode')
+            ->where('periode','=','2021 - 2022')
+            ->get();
+        }
+
+        return $jadwal;
     }
 
     // finansial
