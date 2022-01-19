@@ -109,7 +109,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Jadwal Akademik dan Non Akademik</h4>
+                    <h4>Kalender Akademik</h4>
                 </a>
             </div>
 
@@ -147,7 +147,7 @@
     <div class="navbar_pilihan ml-2 mt-5">
         <ul>
             <li><a href="/orangTua/jadwalKelas">Pelajaran</a></li>
-            <li><a class="active" href="/orangTua/jadwalAkadanNonAkademik">Akademik dan Non Akademik</a></li>
+            <li><a class="active" href="/orangTua/jadwalAkadanNonAkademik">Kalender Akademik</a></li>
         </ul>
     </div>
 

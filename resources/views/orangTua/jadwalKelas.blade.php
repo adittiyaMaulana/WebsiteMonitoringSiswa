@@ -147,7 +147,7 @@
     <div class="navbar_pilihan mt-5 ml-4">
         <ul>
             <li><a class="active" href="/orangTua/jadwalKelas">Pelajaran</a></li>
-            <li><a href="/orangTua/jadwalAkadanNonAkademik">Akademik dan Non Akademik</a></li>
+            <li><a href="/orangTua/jadwalAkadanNonAkademik">Kalender Akademik</a></li>
         </ul>
     </div>
 
