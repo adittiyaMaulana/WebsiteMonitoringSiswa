@@ -126,8 +126,6 @@
             <p>Silahkan memulai aktivitas anda</p>
         </div>
 
-        <img src="{{asset('image/chracter.svg')}}" style="margin-top: 20px;">
-
     </div>
 
 
