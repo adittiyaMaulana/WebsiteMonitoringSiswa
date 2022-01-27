@@ -109,7 +109,7 @@ class AdminController extends Controller {
 			'foto' => $nama_file,
 		]);
  
-		return redirect('admin/beritaAdmin');
+		return redirect('admin/beritaAdmin')->with('simpan', 'Data Berhasil Disimpan');
     }
     
     public function editberita(Request $request)
@@ -135,13 +135,13 @@ class AdminController extends Controller {
 		}
         
         $berita->update();
-        return redirect('admin/beritaAdmin');
+        return redirect('admin/beritaAdmin')->with('ubah', 'Data Berhasil Diperbarui');
     }
     public function hapusberita($id)
     {
         $berita = Berita::find($id);
         $berita-> delete();
-        return redirect('admin/beritaAdmin');
+        return redirect('admin/beritaAdmin')->with('hapus', 'Data Berhasil Dihapus');
     }
     public function lihatberita(Request $request)
     {
@@ -245,7 +245,7 @@ class AdminController extends Controller {
 			'ukuran' => $ukuran,
 		]);
 
-		return redirect('admin/dokumenFiturBantuan');
+		return redirect('admin/dokumenFiturBantuan')->with('simpan', 'Data Berhasil Disimpan');
     }
     
    
@@ -253,7 +253,7 @@ class AdminController extends Controller {
     {
         $unduhan = PusatUnduhan::find($id);
         $unduhan->delete();
-        return redirect('admin/dokumenFiturBantuan');
+        return redirect('admin/dokumenFiturBantuan')->with('hapus', 'Data Berhasil Dihapus');
     }
     
     
@@ -284,7 +284,7 @@ class AdminController extends Controller {
     public function hapusSaranDanMasukanAdmin($id){
         $data = SaranDanMasukan::find($id);
         $data->delete();
-        return redirect('admin/saranDanMasukanAdmin');
+        return redirect('admin/saranDanMasukanAdmin')->with('hapus', 'Data Berhasil Dihapus');
     }
     
     // fitur pesan
@@ -462,7 +462,7 @@ class AdminController extends Controller {
 			'ukuran' => $ukuran,
 		]);
 
-		return redirect()->route('admin.gantiFoto');
+		return redirect()->route('admin.gantiFoto')->with('ubah', 'Foto Login Berhasil Diperbarui');
     }
 
     public function hapusfoto($id)

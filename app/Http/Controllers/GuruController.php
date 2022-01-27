@@ -137,7 +137,7 @@ class GuruController extends Controller
                 'isi' => $request->isi
 		]);
 
-        return redirect('guru/saranDanMasukanGuru');
+        return redirect('guru/saranDanMasukanGuru')->with('kirim', 'Saran dan Masukan Berhasil Dikrim');
     }
     
     // pesan

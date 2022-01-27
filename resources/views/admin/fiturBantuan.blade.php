@@ -119,12 +119,40 @@
     </nav>
 
 
+    <!-- alert -->
 
-    <!-- table -->
+    @if(session()->has('simpan'))
+    <div class="alert alert-success d-flex align-items-center alert-dismissible fade show ml-4 mt-5 mr-4" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+            <use xlink:href="#check-circle-fill" />
+        </svg>
+        <div>
+            {{ session()->get('simpan') }}
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+    </div>
+
+    @elseif(session()->has('hapus'))
+    <div class="alert alert-success d-flex align-items-center alert-dismissible fade show ml-4 mt-5 mr-4" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+            <use xlink:href="#check-circle-fill" />
+        </svg>
+        <div>
+            {{ session()->get('hapus') }}
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+    </div>
+
+    @endif
+
     <div class="ml-4 mt-5">
         <a href="{{ route('admin.tambahunduhan')}}" class="btn btn-success"><i class="fas fa-plus"></i> Tambah</a>
     </div>
 
+
+    <!-- table -->
     <div class="tabel mt-5 ml-4 mr-4">
         <table id="tableAdmin" class="table table-hover" style="width:100%">
             <thead class="table-dark">
