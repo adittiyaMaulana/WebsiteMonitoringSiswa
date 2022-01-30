@@ -119,28 +119,30 @@
         </div>
     </nav>
 
-
     <div class="formberita mt-5 ml-3 mr-4">
+        @if($errors->any())
+        {{ implode('', $errors->all(':message')) }}
+        @endif
         <!-- <div class="col-md-8 col-sm-12 bg-white p-4"> -->
-            <form class="was-validated" method="post" action="{{route('admin.saveberita')}}" enctype="multipart/form-data">
-                @csrf
-                <div class="form-group">
-                    <label>Judul Artikel</label>
-                    <input type="text" class="form-control" name="judul" placeholder="Judul artikel" required>
-                </div>
-                <div class="form-group">
-                    <label>Isi Artikel</label>
-                    <textarea class="form-control" name="isi" rows="15" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label>Upload Foto</label>
-                    <input type="file" name="foto" class="form-control" required>
-                </div>
-                <div class="form-group">
+        <form class="was-validated" method="post" action="{{route('admin.saveberita')}}" enctype="multipart/form-data">
+            @csrf
+            <div class="form-group">
+                <label>Judul Artikel</label>
+                <input type="text" class="form-control" name="judul" placeholder="Judul artikel" required>
+            </div>
+            <div class="form-group">
+                <label>Isi Artikel</label>
+                <textarea class="form-control" name="isi" rows="15" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Upload Foto</label>
+                <input type="file" name="foto" class="form-control" required>
+            </div>
+            <div class="form-group">
 
-                    <input type="submit" class="form-control btn btn-primary" value="Simpan">
-                </div>
-        <!-- </div> -->
+                <input type="submit" class="form-control btn btn-primary" value="Simpan">
+            </div>
+            <!-- </div> -->
 
         </form>
     </div>
