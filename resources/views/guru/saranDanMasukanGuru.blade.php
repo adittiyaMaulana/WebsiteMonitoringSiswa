@@ -126,13 +126,27 @@
         </div>
     </nav>
 
-    <!-- bagian form -->
-    <div class="pusatbantuan ml-4 mr-4">
+    <!-- alert  -->
+    @if(session()->has('kirim'))
+    <div class="alert alert-success d-flex align-items-center alert-dismissible fade show ml-4 mt-5 mr-4" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+            <use xlink:href="#check-circle-fill" />
+        </svg>
+        <div>
+            {{ session()->get('kirim') }}
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 
-        <form class="was-validated" method="post" action="{{route('guru.sendSaranMasukan')}}" enctype="multipart/form-data">    
+    @endif
+
+    <!-- bagian form -->
+    <div class="pusatbantuan ml-4 mr-4 mt-5">
+
+        <form class="was-validated" method="post" action="{{route('guru.sendSaranMasukan')}}" enctype="multipart/form-data">
             @csrf
             <div class="saran mb-3 mr-4">
-                <label for="judul" class="form-label">Judul</label>
+                <label for="judul" class="form-label">Judul Permasalahan</label>
                 <textarea class="form-control" id="judul" rows="3" name="judul" required></textarea>
             </div>
             <div class="masukan mb-3 mr-4">

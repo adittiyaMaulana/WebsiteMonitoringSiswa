@@ -138,7 +138,7 @@
                 @csrf
 
                 <div class="form-group">
-                    <label>Upload File (Pdf Only)</label>
+                    <label>Upload File (Hanya Pdf)</label>
                     <input type="file" name="file" class="form-control" required>
                 </div>
                 <div class="form-group">

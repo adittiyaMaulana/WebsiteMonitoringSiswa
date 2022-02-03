@@ -98,7 +98,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Jadwal Akademik & Non Akademik</h4>
+                    <h4>Kalender Akademik</h4>
                 </a>
             </div>
 
@@ -136,7 +136,7 @@
     <div class="navbar_pilihan mt-5 ml-4">
         <ul>
             <li><a href="/guru/jadwalGuru">Mengajar</a></li>
-            <li><a class="active" href="/guru/jadwalAkadaNonAkaGuru">Akademik dan Non Akademik</a></li>
+            <li><a class="active" href="/guru/jadwalAkadaNonAkaGuru">Kalender Akademik</a></li>
         </ul>
     </div>
 

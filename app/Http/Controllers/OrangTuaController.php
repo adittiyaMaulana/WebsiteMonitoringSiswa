@@ -573,7 +573,7 @@ class OrangTuaController extends Controller
                 'isi' => $request->isi
 		]);
 
-        return redirect('orangTua/saranDanMasukan');
+        return redirect('orangTua/saranDanMasukan')->with('kirim', 'Saran dan Masukan Berhasil Dikrim');
     }
 
     // pesan
