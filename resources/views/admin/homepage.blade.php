@@ -68,7 +68,7 @@
                     <ion-icon name="log-out-outline"></ion-icon>
                 </span>
                 <span class="title">Sign Out</span>
-                <form id="logout-form" action="{{ route('login') }}" method="POST" class="d-none">
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
                 </form>
             </a>

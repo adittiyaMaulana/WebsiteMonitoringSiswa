@@ -76,7 +76,7 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->redirectTo = route('login');
-        $this->middleware('guest')->except('logout');
+        // $this->middleware('guest')->except('logout');
     }
     
     public function lupapassword()

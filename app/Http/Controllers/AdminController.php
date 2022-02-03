@@ -96,19 +96,19 @@ class AdminController extends Controller {
 		DB::table('daftar_nilai')->truncate();
 		DB::table('finansial')->truncate();
 		DB::table('foto')->truncate();
-		DB::table('guru')->truncate();
+		//DB::table('guru')->truncate();
 		DB::table('jadwal_akademik')->truncate();
 		DB::table('jadwal_guru')->truncate();
 		DB::table('jadwal_pelajaran')->truncate();
 		DB::table('kelas')->truncate();
 		DB::table('mata_pelajaran')->truncate();
 		DB::table('messages')->truncate();
-		DB::table('orang_tua')->truncate();
+		//DB::table('orang_tua')->truncate();
 		DB::table('pesan')->truncate();
 		DB::table('profil_siswa')->truncate();
 		DB::table('pusat_unduhan')->truncate();
 		DB::table('saran_dan_masukan')->truncate();
-		DB::delete('delete from users where role != 1');
+		//DB::delete('delete from users where role != 1');
 		DB::statement("SET foreign_key_checks=1");
         return view('admin.hapus');
     }
