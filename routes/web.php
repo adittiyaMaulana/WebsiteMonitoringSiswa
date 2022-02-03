@@ -36,6 +36,8 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
 
     // IMPORT DATA //
     Route::get('/importData', [AdminController::class, 'importData'])->name('admin.importData');
+    Route::get('/hapusData', [AdminController::class, 'hapusData'])->name('admin.hapusData');
+    Route::get('/hapusDataAct', [AdminController::class, 'hapusDataAct'])->name('admin.hapusDataAct');
 
     Route::post('importOrangTua', [AdminController::class, 'importOrangTua'])->name('importOrangTua');
     Route::post('importGuru', [AdminController::class, 'importGuru'])->name('importGuru');

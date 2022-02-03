@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title','Homepage')
+@section('title','Hapus Data')
 
 @section('content')
 <!-- ============================================================================================= -->
 <!-- sidebar -->
 <div class="sidebar">
     <ul>
-        <li class="list active">
+        <li class="list">
             <a href="/admin/homepageAdmin">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
@@ -34,7 +34,7 @@
             </a>
         </li>
 
-        <li class="list">
+        <li class="list ">
             <a href="/admin/importData">
                 <span class="icon">
                     <ion-icon name="cloud-upload-outline"></ion-icon>
@@ -43,7 +43,7 @@
             </a>
         </li>
         
-        <li class="list">
+        <li class="list active">
             <a href="/admin/hapusData">
                 <span class="icon">
                     <ion-icon name="trash-outline"></ion-icon>
@@ -83,12 +83,12 @@
 
     <style>
         @media screen and (max-width: 900px) {
-            .content {
-                width: 700px;
+            .importdata {
+                width: 900px;
             }
+
         }
     </style>
-
     <!-- ====================================================================================== -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
@@ -99,9 +99,10 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>MOS</h4>
+                    <h4>Hapus Data</h4>
                 </a>
             </div>
+           
 
             <!-- Right elements -->
             <div class="d-flex align-items-center">
@@ -111,7 +112,6 @@
                         <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
                 </a>
-
 
                 <!-- gambar user -->
                 <a class=" d-flex align-items-center">
@@ -127,15 +127,15 @@
         </div>
     </nav>
 
-    <div class="content">
+   <div class="content">
         <div class="judul">
-            <p>Selamat Datang!!!!!</p>
+            <p>Tekan tombol ini untuk menghapus seluruh data!</p>
         </div>
         <div class="note">
-            <p>Silahkan memulai aktivitas anda</p>
+            <p>WARNING!!</p>
         </div>
 
-        <img src="{{asset('image/chracter.svg')}}" style="margin-top: 20px;">
+        <a href="{{route("admin.hapusDataAct")}}" class="btn btn-danger" onclick="return confirm('Yakin menghapus seluruh data?');">HAPUS DATA</a>
 
     </div>
 

@@ -33,15 +33,15 @@ class LoginController extends Controller
     protected $redirectTo = RouteServiceProvider::HOME;
 
 
-    protected function redirectTo(){
-        if( Auth()->user()->role == 1 ){
-            return route('admin.homepage');
-        }elseif( Auth()->user()->role == 2 ){
-            return route('orangTua.homepage');
-        }elseif( Auth()->user()->role == 3 ){
-            return route('guru.homepage');
-        }
-    }
+    // protected function redirectTo(){
+    //     if( Auth()->user()->role == 1 ){
+    //         return route('admin.homepage');
+    //     }elseif( Auth()->user()->role == 2 ){
+    //         return route('orangTua.homepage');
+    //     }elseif( Auth()->user()->role == 3 ){
+    //         return route('guru.homepage');
+    //     }
+    // }
 
     public function login(Request $request){
         $input = $request->all();
@@ -76,13 +76,27 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->redirectTo = route('login');
-        //$this->middleware('guest')->except('logout');
+        $this->middleware('guest')->except('logout');
     }
     
     public function lupapassword()
     {
         return view('lupapassword');
     }
+    
+    public function lupapasswordsubmit(Request $request)
+    {
+    	$this->validate($request, [
+		    'password' => 'min:6',
+		    'password_confirmation' => 'required_with:password|same:password|min:6'
+			]);
+    	$email = $request->input('email');
+        $user = User::where('email', $email)->firstOrFail();
+        $user->password = Hash::make($request->input('password'));
+        $user->update();
+        return redirect('login');
+    }
+
     
     //ini buat login google
     // public function redirectToProvider()
@@ -122,16 +136,4 @@ class LoginController extends Controller
     
     //     }
     //     //sampai ini
-    public function lupapasswordsubmit(Request $request)
-    {
-    	$this->validate($request, [
-		    'password' => 'min:6',
-		    'password_confirmation' => 'required_with:password|same:password|min:6'
-			]);
-    	$email = $request->input('email');
-        $user = User::where('email', $email)->firstOrFail();
-        $user->password = Hash::make($request->input('password'));
-        $user->update();
-        return redirect('login');
-    }
 }
