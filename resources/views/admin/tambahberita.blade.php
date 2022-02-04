@@ -45,6 +45,15 @@
         </li>
 
         <li class="list">
+            <a href="/admin/hapusData">
+                <span class="icon">
+                    <ion-icon name="trash-outline"></ion-icon>
+                </span>
+                <span class="title">Hapus Data</span>
+            </a>
+        </li>
+
+        <li class="list">
             <a href="/admin/gantifoto">
                 <span class="icon">
                     <ion-icon name="image-outline"></ion-icon>
