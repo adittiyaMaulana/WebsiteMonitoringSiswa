@@ -135,28 +135,36 @@
     </div> -->
 
 
-    <div class="formberita mt-5 ml-3 mr-4">
+    <!-- <div class="formberita mt-5 ml-3 mr-4">
         <div class="col-md-7 col-sm-12 mb-5 bg-white p-0 mr-4">
             <img src="/foto/{{$berita->foto}}" class="card-img-top" alt="gambar">
             <div class="p-4">
                 <h2>{{ $berita->judul }}</h2>
                 <textarea class="form-control"" readonly> {{ $berita->isi }}</textarea>
         </div>
+    </div> -->
+
+
+    <div class="mt-5 mr-4 ml-4">
+        <h2 class="judulBerita mt-5">{{ $berita->judul }}</h2>
+        <img src="/foto/{{$berita->foto}}" class="gambar mt-5" alt="gambar">
+        <p class="isiBerita mt-5">{{ $berita->isi }}</p>
     </div>
+
 </div>
 
 
 <script>
-	$('textarea').each(function () {
-  this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;' + 'background-color: white');
-}).on('input', function () {
-  this.style.height = 'auto';
-  this.style.height = (this.scrollHeight) + 'px';
-});
+    $('textarea').each(function() {
+        this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;' + 'background-color: white');
+    }).on('input', function() {
+        this.style.height = 'auto';
+        this.style.height = (this.scrollHeight) + 'px';
+    });
 </script>
 
 
-    <!-- end my-content / semua content -->
+<!-- end my-content / semua content -->
 </div>
 
 @endsection

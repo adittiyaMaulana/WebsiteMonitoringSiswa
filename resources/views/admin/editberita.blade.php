@@ -101,7 +101,7 @@
             <div class="collapse navbar-collapse">
                 <!-- Navbar brand -->
                 <a class="navbar-brand mt-2">
-                    <h4>Edit Berita</h4>
+                    <h4>Memperbarui Berita</h4>
                 </a>
             </div>
 
