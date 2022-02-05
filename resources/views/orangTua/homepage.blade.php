@@ -76,7 +76,7 @@
                 <span class="icon">
                     <ion-icon name="log-out-outline"></ion-icon>
                 </span>
-                <span class="title">Sign Out</span>
+                <span class="title">Logout</span>
                 <form id="logout-form" action="{{ route('login') }}" method="POST" class="d-none">
                     @csrf
                 </form>
@@ -235,7 +235,7 @@
     <!-- Berita -->
 
     <div class="bagianberitas">
-        <h3 class="title_berita">Informasi</h3>
+        <h3 class="title_berita">Berita</h3>
 
         <div class="listberita ml-4 mr-4 mb-5">
             <div class="owl-informasi owl-carousel owl-theme">

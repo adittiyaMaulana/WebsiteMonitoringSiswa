@@ -77,7 +77,7 @@
                 <span class="icon">
                     <ion-icon name="log-out-outline"></ion-icon>
                 </span>
-                <span class="title">Sign Out</span>
+                <span class="title">Logout</span>
                 <form id="logout-form" action="{{ route('login') }}" method="POST" class="d-none">
                     @csrf
                 </form>
@@ -146,8 +146,8 @@
 
     <!-- table -->
 
-    <div class="unduhan">
-        <table id="tableAdmin" class="table table-hover mt-5 mr-4 ml-4 mb-4" style="width:100%">
+    <div class="unduhan mt-5 mr-4 ml-4 mb-4">
+        <table id="tableAdmin" class="table table-hover" style="width:100%">
             <thead class="table-dark">
                 <tr>
                     <th>No</th>
