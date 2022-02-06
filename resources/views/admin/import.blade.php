@@ -245,7 +245,7 @@
             <form class="was-validated" class="was-validated" method="POST" action="{{ route('importJadwalAkademikNonAkademik') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control mb-3" type="file" id="formFile" required>
+                    <input class="form-control mb-3" type="file" name="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>

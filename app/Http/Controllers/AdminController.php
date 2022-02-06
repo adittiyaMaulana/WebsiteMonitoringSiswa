@@ -20,6 +20,7 @@ use App\Imports\MataPelajaranImport;
 use App\Imports\NilaiImport;
 use App\Imports\SiswaImport;
 use App\Imports\UsersImport;
+use App\Imports\KalenderAkademikImport;
 use App\Models\SaranDanMasukan;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -463,7 +464,19 @@ class AdminController extends Controller {
     }
     
     public function importJadwalAkademikNonAkademik(Request $request){
-         
+         // validasi
+		$this->validate($request, [
+			'file' => 'required|mimes:xls,xlsx'
+		]);
+		
+		$data = Excel::import(new KalenderAkademikImport, request()->file('file'));      
+		
+		if($data){
+			return redirect()->route('admin.importData')->withSuccess(['Berhasil Melakukan Import Data!']);
+		}else{
+			return redirect()->route('admin.importData');
+		}
+        
     }
 
     public function gantiFoto()
