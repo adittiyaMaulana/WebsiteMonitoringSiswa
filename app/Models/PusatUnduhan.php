@@ -10,6 +10,7 @@ class PusatUnduhan extends Model
     use HasFactory;
     
     protected $fillable = [
+        'id_kreator',
         'nama',
         'ukuran'
     ];

@@ -19,8 +19,4 @@ class Guru extends Model
     ];
 
     protected $table = "guru";
-    // public function user()
-    // {
-    //     return $this->belongsTo(User::class);
-    // }
 }

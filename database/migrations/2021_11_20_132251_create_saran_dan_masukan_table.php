@@ -17,7 +17,7 @@ class CreateSaranDanMasukanTable extends Migration
             $table->id();
             $table->timestamps();
             $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('judul',50);
             $table->string('isi',1000);
         });

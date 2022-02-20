@@ -15,8 +15,6 @@ class DaftarNilaiSeeder extends Seeder
     {
         $daftar_nilai = [
             [
-                'id_siswa' => 1,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -24,8 +22,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 1,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -33,8 +29,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 1,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -42,8 +36,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 1,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -51,8 +43,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 1,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -60,8 +50,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 1,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -69,8 +57,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 1,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -78,8 +64,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 1,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -87,8 +71,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 1,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -96,8 +78,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -105,8 +85,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -114,8 +92,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -123,8 +99,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -132,8 +106,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -141,8 +113,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -150,8 +120,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -159,8 +127,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -168,8 +134,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 2,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -177,8 +141,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -186,8 +148,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -195,8 +155,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -204,8 +162,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -213,8 +169,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -222,8 +176,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -231,8 +183,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -240,8 +190,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -249,8 +197,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 3,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -262,8 +208,6 @@ class DaftarNilaiSeeder extends Seeder
 
             // id siswa 4
             [
-                'id_siswa' => 4,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 90,
@@ -271,8 +215,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 95,
                 'nilai_uas' => 90,
@@ -280,8 +222,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 90,
@@ -289,8 +229,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 50,
                 'nilai_uas' => 80,
@@ -298,8 +236,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -307,8 +243,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 70,
                 'nilai_uas' => 80,
@@ -316,8 +250,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -325,8 +257,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -334,8 +264,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -343,8 +271,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -352,8 +278,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -361,8 +285,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 60,
                 'nilai_uas' => 80,
@@ -370,8 +292,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 50,
@@ -379,8 +299,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -388,8 +306,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -397,8 +313,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -406,8 +320,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -415,8 +327,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -424,8 +334,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -433,8 +341,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -442,8 +348,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 70,
                 'nilai_uas' => 60,
@@ -451,8 +355,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 70,
@@ -460,8 +362,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -469,8 +369,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 60,
                 'nilai_uas' => 50,
@@ -478,8 +376,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -487,8 +383,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 80,
                 'nilai_uas' => 80,
@@ -496,8 +390,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 4,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -505,8 +397,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -514,8 +404,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -523,8 +411,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -532,8 +418,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -541,8 +425,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -550,8 +432,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -559,8 +439,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -568,8 +446,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -577,8 +453,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -586,8 +460,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -595,8 +467,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -604,8 +474,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -613,8 +481,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -622,8 +488,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -631,8 +495,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -640,8 +502,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -649,8 +509,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -658,8 +516,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -667,8 +523,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -676,8 +530,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -685,8 +537,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -694,8 +544,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -703,8 +551,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -712,8 +558,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -721,8 +565,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -730,8 +572,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -739,8 +579,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 5,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -748,8 +586,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -757,8 +593,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -766,8 +600,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -775,8 +607,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -784,8 +614,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -793,8 +621,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -802,8 +628,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -811,8 +635,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -820,8 +642,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -829,8 +649,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -838,8 +656,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -847,8 +663,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -856,8 +670,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -865,8 +677,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -874,8 +684,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -883,8 +691,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -892,8 +698,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -901,8 +705,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -910,8 +712,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -919,8 +719,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -928,8 +726,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -937,8 +733,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -946,8 +740,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -955,8 +747,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -964,8 +754,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -973,8 +761,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -982,8 +768,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 6,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -994,8 +778,6 @@ class DaftarNilaiSeeder extends Seeder
 
             // id siswa 7
             [
-                'id_siswa' => 7,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1003,8 +785,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1012,8 +792,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1021,8 +799,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1030,8 +806,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1039,8 +813,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1048,8 +820,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1057,8 +827,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1066,8 +834,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1075,8 +841,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1084,8 +848,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1093,8 +855,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1102,8 +862,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1111,8 +869,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1120,8 +876,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1129,8 +883,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1138,8 +890,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1147,8 +897,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1156,8 +904,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1165,8 +911,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1174,8 +918,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1183,8 +925,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1192,8 +932,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1201,8 +939,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1210,8 +946,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1219,8 +953,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1228,8 +960,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1237,8 +967,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1246,8 +974,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1255,8 +981,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1264,8 +988,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1273,8 +995,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1282,8 +1002,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1291,8 +1009,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1300,8 +1016,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1309,8 +1023,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1318,8 +1030,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1327,8 +1037,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1336,8 +1044,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1345,8 +1051,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1354,8 +1058,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1363,8 +1065,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1372,8 +1072,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1381,8 +1079,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1390,8 +1086,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 7,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1399,8 +1093,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1408,8 +1100,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1417,8 +1107,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1426,8 +1114,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1435,8 +1121,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1444,8 +1128,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1453,8 +1135,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1462,8 +1142,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1471,8 +1149,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1480,8 +1156,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1489,8 +1163,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1498,8 +1170,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1507,8 +1177,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1516,8 +1184,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1525,8 +1191,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1534,8 +1198,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1543,8 +1205,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1552,8 +1212,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1561,8 +1219,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1570,8 +1226,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1579,8 +1233,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1588,8 +1240,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1597,8 +1247,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1606,8 +1254,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1615,8 +1261,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1624,8 +1268,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1633,8 +1275,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1642,8 +1282,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1651,8 +1289,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1660,8 +1296,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1669,8 +1303,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1678,8 +1310,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1687,8 +1317,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1696,8 +1324,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1705,8 +1331,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1714,8 +1338,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1723,8 +1345,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1732,8 +1352,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1741,8 +1359,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1750,8 +1366,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1759,8 +1373,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1768,8 +1380,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1777,8 +1387,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1786,8 +1394,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1795,8 +1401,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 8,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1804,8 +1408,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1813,8 +1415,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1822,8 +1422,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1831,8 +1429,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1840,8 +1436,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1849,8 +1443,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1858,8 +1450,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1867,8 +1457,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1876,8 +1464,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1885,8 +1471,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1894,8 +1478,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1903,8 +1485,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1912,8 +1492,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1921,8 +1499,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1930,8 +1506,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1939,8 +1513,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1948,8 +1520,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1957,8 +1527,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1966,8 +1534,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 7
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1975,8 +1541,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1984,8 +1548,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -1993,8 +1555,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2002,8 +1562,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2011,8 +1569,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2020,8 +1576,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2029,8 +1583,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2038,8 +1590,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2047,8 +1597,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2056,8 +1604,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2065,8 +1611,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2074,8 +1618,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2083,8 +1625,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2092,8 +1632,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2101,8 +1639,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2110,8 +1646,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2119,8 +1653,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2128,8 +1660,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 2,
                 'kelas' => 8
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 1,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2137,8 +1667,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 2,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2146,8 +1674,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 3,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2155,8 +1681,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 4,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2164,8 +1688,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 5,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2173,8 +1695,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 6,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2182,8 +1702,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 7,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2191,8 +1709,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 8,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -2200,8 +1716,6 @@ class DaftarNilaiSeeder extends Seeder
                 'semester' => 1,
                 'kelas' => 9
             ],[
-                'id_siswa' => 9,
-                'id_mapel' => 9,
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,

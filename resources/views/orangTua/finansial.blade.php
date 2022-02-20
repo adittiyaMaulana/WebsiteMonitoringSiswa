@@ -8,7 +8,7 @@
 <div class="sidebar">
     <ul>
         <li class="list">
-            <a href="/orangTua/homepage">
+            <a href="/orangTua/homepage_ortu">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -17,7 +17,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/jadwalKelas">
+            <a href="/orangTua/jadwalPelajaran">
                 <span class="icon">
                     <ion-icon name="calendar-outline"></ion-icon>
                 </span>
@@ -44,7 +44,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/nilai">
+            <a href="/orangTua/daftarNilai">
                 <span class="icon">
                     <ion-icon name="bar-chart-outline"></ion-icon>
                 </span>
@@ -53,7 +53,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/kehadiran">
+            <a href="/orangTua/absensi">
                 <span class="icon">
                     <ion-icon name="create-outline"></ion-icon>
                 </span>
@@ -62,22 +62,13 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/fiturBantuan">
+            <a href="/orangTua/pusatUnduhan">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
                 </span>
                 <span class="title">Pusat Unduhan</span>
             </a>
         </li>
-
-        <!-- <li class="list">
-            <a href="/orangTua/tentangSekolah">
-                <span class="icon">
-                    <ion-icon name="alert-circle-outline"></ion-icon>
-                </span>
-                <span class="title">Tentang</span>
-            </a>
-        </li> -->
 
         <li class="list">
             <a href="{{ route('login') }}" onclick="event.preven-tDefault();

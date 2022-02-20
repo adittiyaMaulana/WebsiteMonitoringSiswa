@@ -2,10 +2,9 @@
 
 namespace App\Imports;
 
-use App\Models\JadwalAkademikDanNonAkademik;
+use App\Models\KalenderAkademik;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithStartRow;
-use Maatwebsite\Excel\Concerns\WithValidation;
 
 class KalenderAkademikImport implements ToModel, WithStartRow
 {
@@ -16,7 +15,7 @@ class KalenderAkademikImport implements ToModel, WithStartRow
     */
     public function model(array $row)
     {
-        return new JadwalAkademikDanNonAkademik([
+        return new KalenderAkademik([
             'nama_kegiatan' => $row[0],
             'jadwal_kegiatan' => $row[1],
             'periode' => $row[2]

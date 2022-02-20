@@ -14,6 +14,7 @@ class FotoSeeder extends Seeder
     public function run()
     {
         $foto = [
+            'id_kreator' => 1,
             'nama' => 'Shchool_Example.jpg',
             'ukuran' => '136'
         ];

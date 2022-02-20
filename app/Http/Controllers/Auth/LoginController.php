@@ -53,13 +53,13 @@ class LoginController extends Controller
        if( auth()->attempt(array('email'=>$input['email'], 'password'=>$input['password'])) ){
 
         if( auth()->user()->role == 1 ){
-            return redirect()->route('admin.homepage');
+            return redirect()->route('admin.homepage_admin');
         }
         elseif( auth()->user()->role == 2 ){
-            return redirect()->route('orangTua.homepage');
+            return redirect()->route('orangTua.homepage_ortu');
         }
         elseif( auth()->user()->role == 3 ){
-            return redirect()->route('guru.homepage');
+            return redirect()->route('guru.homepage_guru');
         }
 
        }else{
@@ -96,44 +96,4 @@ class LoginController extends Controller
         $user->update();
         return redirect('login');
     }
-
-    
-    //ini buat login google
-    // public function redirectToProvider()
-    //     {
-    //         return Socialite::driver('google')->redirect();
-    //     }
-    // public function handleProviderCallback(\Request $request)
-    //     {
-    //         try {
-    //             // $user_google    = Socialite::driver('google')->user();
-    //             $user           = User::where('email', $user_google->getEmail())->first();
-    
-    //             //jika user ada maka langsung di redirect ke halaman home
-    //             //jika user tidak ada maka simpan ke database
-    //             //$user_google menyimpan data google account seperti email, foto, dsb
-    
-    //             if($user != null){
-    //                 \auth()->login($user, true);
-    //                 if( auth()->user()->role == 1 ){
-	// 		            return redirect()->route('admin.homepage');
-	// 		        }
-	// 		        elseif( auth()->user()->role == 2 ){
-	// 		            return redirect()->route('orangTua.homepage');
-	// 		        }
-	// 		        elseif( auth()->user()->role == 3 ){
-	// 		            return redirect()->route('guru.homepage');
-	// 		        }
-    //             }else{
-                    
-    //                 return redirect()->route('home');
-    //             }
-    
-    //         } catch (\Exception $e) {
-    //             return redirect()->route('login');
-    //         }
-    
-    
-    //     }
-    //     //sampai ini
 }

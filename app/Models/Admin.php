@@ -16,8 +16,5 @@ class Admin extends Model
         'email'
     ];
 
-    // public function user()
-    // {
-    //     return $this->belongsTo(User::class);
-    // }
+    protected $table = "admin";
 }

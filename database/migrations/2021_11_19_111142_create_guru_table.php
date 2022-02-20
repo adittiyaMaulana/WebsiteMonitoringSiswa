@@ -16,8 +16,6 @@ class CreateGuruTable extends Migration
         Schema::create('guru', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->unsignedBigInteger('id_mapel');
-            $table->foreign('id_mapel')->references('id')->on('mata_pelajaran')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nama',50);
             $table->string('nuptk',17);
             $table->date('ttl');

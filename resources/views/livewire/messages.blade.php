@@ -2,7 +2,7 @@
     <nav class="navbar navbar-light" style="background: #323333;">
         <div class="container">
             <h1 class="navbar-brand" style="color: white;">MOS Chating</h1>
-            <a href="/orangTua/homepage" style="text-decoration: none; color: white;">Kembali</a>
+            <a href="/orangTua/homepage_ortu" style="text-decoration: none; color: white;">Kembali</a>
         </div>
     </nav>
 

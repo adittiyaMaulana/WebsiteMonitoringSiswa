@@ -8,7 +8,7 @@
 <div class="sidebar">
     <ul>
         <li class="list">
-            <a href="/guru/homepageGuru">
+            <a href="/guru/homepage_guru">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -17,7 +17,7 @@
         </li>
 
         <li class="list">
-            <a href="/guru/nilaiSiswa">
+            <a href="/guru/daftarKelas_nilai">
                 <span class="icon">
                     <ion-icon name="bar-chart-outline"></ion-icon>
                 </span>
@@ -26,7 +26,7 @@
         </li>
 
         <li class="list">
-            <a href="/guru/kehadiranSiswa">
+            <a href="/guru/daftarKelas_absensi">
                 <span class="icon">
                     <ion-icon name="create-outline"></ion-icon>
                 </span>
@@ -35,7 +35,7 @@
         </li>
 
         <li class="list">
-            <a href="/guru/pusatBantuanGuru">
+            <a href="/guru/pusatUnduhan">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
                 </span>
@@ -44,7 +44,7 @@
         </li>
 
         <li class="list">
-            <a href="/guru/jadwalGuru">
+            <a href="/guru/jadwalMengajar">
                 <span class="icon">
                     <ion-icon name="calendar-outline"></ion-icon>
                 </span>
@@ -53,7 +53,7 @@
         </li>
 
         <li class="list active">
-            <a href="/guru/beritaGuru">
+            <a href="/guru/berita">
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
@@ -108,7 +108,7 @@
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon pengaduan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/guru/saranDanMasukanGuru">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/guru/saranDanMasukan">
                     <span class="icon">
                         <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>

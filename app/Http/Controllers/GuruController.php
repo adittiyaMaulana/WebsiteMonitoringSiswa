@@ -17,7 +17,7 @@ use App\Models\Kelas;
 
 class GuruController extends Controller
 {
-    public function homepageGuru()
+    public function homepage()
     {
          //get email guru berdasar login
         $email_login = Auth::user()->email;
@@ -29,45 +29,48 @@ class GuruController extends Controller
         ->where('email','=',"$email_login")
         ->get();
 
-        $jadwal_guru = DB::table('jadwal_guru')
-        ->join('guru','guru.id','=','jadwal_guru.id_guru')
-        ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
-        ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
-        ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+        //##
+        $jadwal_mengajar = DB::table('jadwal_mengajar')
+        ->join('detail_jadwal_mengajar','jadwal_mengajar.id','=','detail_jadwal_mengajar.id_jadwal')
+        ->join('guru','guru.id','=','detail_jadwal_mengajar.id_guru')
+        ->join('mata_pelajaran','mata_pelajaran.id','=','detail_jadwal_mengajar.id_mapel')
+        ->join('kelas','kelas.id','=','detail_jadwal_mengajar.id_kelas')
+        ->select('jadwal_mengajar.hari','jadwal_mengajar.jam_pelajaran','mata_pelajaran.nama',
         'kelas.nama_kelas')
         ->where('guru.email','=',$email_login)
-        ->where('jadwal_guru.hari','LIKE',$today)
+        ->where('jadwal_mengajar.hari','LIKE',$today)
         ->paginate(5);
-        return view('guru.homepage',compact('jadwal_guru','today','username','email_login','nuptk'));
+        return view('guru.homepage_guru',compact('jadwal_mengajar','today','username','email_login','nuptk'));
     }
 
-    // nilaiSiswa
+    // nilaiSiswa##
 
-    public function nilaiSiswa()
+    public function daftarKelas_nilai()
     {
         $username = Auth::user()->name;
         $kelas = Kelas::All();
         $username = Auth::user()->name;
 
-        return view('guru.nilaiSiswa',compact('kelas','username'));
+        return view('guru.daftarKelas_nilai',compact('kelas','username'));
     }
     
-   public function listsiswa(Request $request)
+   public function daftarSiswa_nilai(Request $request)
     {
         $username = Auth::user()->name;
         $siswa = ProfilSiswa::where('id_kelas',$request->id)->get(); 
-        return view('guru.listsiswa', compact('siswa','username'));
+        return view('guru.daftarSiswa_nilai', compact('siswa','username'));
     }
     
-    public function listnilai(Request $request)
+    public function daftarNilai_nilai(Request $request)
     {
 
         $username = Auth::user()->name;
 
        $nilai = DB::table('daftar_nilai')
-                ->join('profil_siswa', 'daftar_nilai.id_siswa','=','profil_siswa.id')
+                ->join('detail_nilai', 'detail_nilai.id_nilai','=','daftar_nilai.id')
+                ->join('profil_siswa', 'detail_nilai.id_siswa','=','profil_siswa.id')
                 ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
-                ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'daftar_nilai.id_mapel')
+                ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'detail_nilai.id_mapel')
                 ->select('mata_pelajaran.nama', 'daftar_nilai.nilai_tugas', 
                 'daftar_nilai.nilai_uts', 'daftar_nilai.nilai_uas', 'daftar_nilai.kelas', 'daftar_nilai.semester')
                 ->where('profil_siswa.id','=',$request->id)
@@ -75,60 +78,51 @@ class GuruController extends Controller
                 ->orderBy('daftar_nilai.semester','desc')
                 ->get();
        $siswa = ProfilSiswa::where('id',$request->id)->first(); 
-        return view('guru.listnilai', compact('nilai','siswa','username'));
-    }
-
-    public function updateNilaiSiswa()
-    {
-        return view('guru.form.formUpdateNilai');
+        return view('guru.daftarNilai_nilai', compact('nilai','siswa','username'));
     }
     
-    // kehadiran siswa
-    public function kehadiranSiswa()
+    // kehadiran siswa##
+    public function daftarKelas_absensi()
     {
         $username = Auth::user()->name;
         $kelas = Kelas::All();
         $username = Auth::user()->name;
 
-        return view('guru.kehadiranSiswa', compact('kelas','username'));
+        return view('guru.daftarKelas_absensi', compact('kelas','username'));
     }
 
-    public function listKehadiranSiswa(Request $request)
+    public function daftarSiswa_absensi(Request $request)
     {
         $username = Auth::user()->name;
        
         $siswa = ProfilSiswa::where('id_kelas',$request->id)->get(); 
         $username = Auth::user()->name;
 
-        return view('guru.listKehadiranSiswa', compact('siswa','username'));
+        return view('guru.daftarSiswa_absensi', compact('siswa','username'));
     }
 
-    public function listKehadiran(Request $request){
+    public function daftarKehadiran_absensi(Request $request){
 
         $username = Auth::user()->name;
 
         $absen = DB::table('absensi')
-                ->join('profil_siswa', 'absensi.id_siswa','=','profil_siswa.id')
+                ->join('detail_absensi', 'detail_absensi.id_absensi','=','absensi.id')
+                ->join('profil_siswa', 'detail_absensi.id_siswa','=','profil_siswa.id')
                 ->select('absensi.bulan', 
                 'absensi.kehadiran', 'absensi.alpa', 'absensi.sakit', 'absensi.izin')
                 ->where('profil_siswa.id','=',$request->id)
                 ->get();
        $siswa = ProfilSiswa::where('id',$request->id)->first(); 
-       return view('guru.listKehadiran', compact('siswa','absen','username'));
+       return view('guru.daftarKehadiran_absensi', compact('siswa','absen','username'));
     }
 
-    public function updatekehadiranSiswa()
-    {
-        return view('guru.form.formUpdateKehadiran');
-    }
-
-    public function saranDanMasukanGuru()
+    public function saranDanMasukan()
     {
         $username = Auth::user()->name;
-        return view('guru.saranDanMasukanGuru', compact('username'));
+        return view('guru.saranDanMasukan', compact('username'));
     }
 
-    public function sendSaranMasukan(Request $request){
+    public function sendSaranDanMasukan(Request $request){
         $id = Auth::user()->id;
 
         SaranDanMasukan::create([
@@ -137,37 +131,32 @@ class GuruController extends Controller
                 'isi' => $request->isi
 		]);
 
-        return redirect('guru/saranDanMasukanGuru')->with('kirim', 'Saran dan Masukan Berhasil Dikrim');
+        return redirect('guru/saranDanMasukan')->with('kirim', 'Saran dan Masukan Berhasil Dikrim');
     }
     
-    // pesan
-    public function pesanGuru()
-    {
-        return view('guru.pesan');
-    }
     
     // fitur bantuan
-    public function pusatBantuanGuru()
+    public function pusatUnduhan()
     {
         $username = Auth::user()->name;
     	$unduhan = PusatUnduhan::all();
         $username = Auth::user()->name;
 
-        return view('guru.fiturBantuan',compact('unduhan','username'));
+        return view('guru.pusatUnduhan',compact('unduhan','username'));
     }
     
     // jadwal
-    public function jadwalAkadaNonAkaGuru()
+    public function kalenderAkademik()
     {
         $username = Auth::user()->name;
         $jadwal = DB::table('jadwal_akademik')
             ->select('nama_kegiatan','jadwal_kegiatan','periode')
             ->where('periode','=','2021 - 2022')
             ->get();
-        return view('guru.jadwalAkademikNonAkademik',compact('jadwal','username'));
+        return view('guru.kalenderAkademik',compact('jadwal','username'));
     }
 
-    public function filterJadwalAkaNonAka($id){
+    public function filterKalender($id){
 
         //get email orang tua berdasar login
 
@@ -186,7 +175,8 @@ class GuruController extends Controller
         return $jadwal;
     }
 
-    public function jadwalGuru()
+    //##
+    public function jadwalMengajar()
     {
         //get email orang tua berdasar login
         $email_login = Auth::user()->email;
@@ -195,93 +185,100 @@ class GuruController extends Controller
         $today = Carbon::now()->isoFormat('dddd');
 
         if ($today == 'Sabtu'){
-            $jadwal_guru = DB::table('jadwal_guru')
-            ->join('guru','guru.id','=','jadwal_guru.id_guru')
-            ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
-            ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
-            ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+            $jadwal_mengajar = DB::table('jadwal_mengajar')
+            ->join('detail_jadwal_mengajar','jadwal_mengajar.id','=','detail_jadwal_mengajar.id_jadwal')
+            ->join('guru','guru.id','=','detail_jadwal_mengajar.id_guru')
+            ->join('mata_pelajaran','mata_pelajaran.id','=','detail_jadwal_mengajar.id_mapel')
+            ->join('kelas','kelas.id','=','detail_jadwal_mengajar.id_kelas')
+            ->select('jadwal_mengajar.hari','jadwal_mengajar.jam_pelajaran','mata_pelajaran.nama',
             'kelas.nama_kelas')
             ->where('guru.email','=',$email_login)
-            ->where('jadwal_guru.hari','LIKE','Jumat')
+            ->where('jadwal_mengajar.hari','LIKE','Jumat')
             ->get();
         } else if ($today == 'Minggu'){
-            $jadwal_guru = DB::table('jadwal_guru')
-            ->join('guru','guru.id','=','jadwal_guru.id_guru')
-            ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
-            ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
-            ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+            $jadwal_mengajar = DB::table('jadwal_mengajar')
+            ->join('detail_jadwal_mengajar','jadwal_mengajar.id','=','detail_jadwal_mengajar.id_jadwal')
+            ->join('guru','guru.id','=','detail_jadwal_mengajar.id_guru')
+            ->join('mata_pelajaran','mata_pelajaran.id','=','detail_jadwal_mengajar.id_mapel')
+            ->join('kelas','kelas.id','=','detail_jadwal_mengajar.id_kelas')
+            ->select('jadwal_mengajar.hari','jadwal_mengajar.jam_pelajaran','mata_pelajaran.nama',
             'kelas.nama_kelas')
             ->where('guru.email','=',$email_login)
-            ->where('jadwal_guru.hari','LIKE','Jumat')
+            ->where('jadwal_mengajar.hari','LIKE','Jumat')
             ->get();
         } else{
-            $jadwal_guru = DB::table('jadwal_guru')
-            ->join('guru','guru.id','=','jadwal_guru.id_guru')
-            ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
-            ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
-            ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+            $jadwal_mengajar = DB::table('jadwal_mengajar')
+            ->join('detail_jadwal_mengajar','jadwal_mengajar.id','=','detail_jadwal_mengajar.id_jadwal')
+            ->join('guru','guru.id','=','detail_jadwal_mengajar.id_guru')
+            ->join('mata_pelajaran','mata_pelajaran.id','=','detail_jadwal_mengajar.id_mapel')
+            ->join('kelas','kelas.id','=','detail_jadwal_mengajar.id_kelas')
+            ->select('jadwal_mengajar.hari','jadwal_mengajar.jam_pelajaran','mata_pelajaran.nama',
             'kelas.nama_kelas')
             ->where('guru.email','=',$email_login)
-            ->where('jadwal_guru.hari','LIKE',$today)
+            ->where('jadwal_mengajar.hari','LIKE',$today)
             ->get();
         }
 
-        return view('guru.jadwalGuru', compact('jadwal_guru','username'));
+        return view('guru.jadwalGuru', compact('jadwal_mengajar','username'));
     }
     
-    public function filterJadwalGuru($id){
+    public function filterJadwal($id){
         //get email orang tua berdasar login
         $email_login = Auth::user()->email;
         $today = Carbon::now()->isoFormat('dddd');
 
         if($id!=''){
-            $jadwal_guru = DB::table('jadwal_guru')
-            ->join('guru','guru.id','=','jadwal_guru.id_guru')
-            ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
-            ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
-            ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+            $jadwal_mengajar = DB::table('jadwal_mengajar')
+            ->join('detail_jadwal_mengajar','jadwal_mengajar.id','=','detail_jadwal_mengajar.id_jadwal')
+            ->join('guru','guru.id','=','detail_jadwal_mengajar.id_guru')
+            ->join('mata_pelajaran','mata_pelajaran.id','=','detail_jadwal_mengajar.id_mapel')
+            ->join('kelas','kelas.id','=','detail_jadwal_mengajar.id_kelas')
+            ->select('jadwal_mengajar.hari','jadwal_mengajar.jam_pelajaran','mata_pelajaran.nama',
             'kelas.nama_kelas')
             ->where('guru.email','=',$email_login)
-            ->where('jadwal_guru.hari','LIKE',$id)
+            ->where('jadwal_mengajar.hari','LIKE',$id)
             ->get();
         }else{
         if ($today == 'Sabtu'){
-            $jadwal_guru = DB::table('jadwal_guru')
-            ->join('guru','guru.id','=','jadwal_guru.id_guru')
-            ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
-            ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
-            ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+            $jadwal_mengajar = DB::table('jadwal_mengajar')
+            ->join('detail_jadwal_mengajar','jadwal_mengajar.id','=','detail_jadwal_mengajar.id_jadwal')
+            ->join('guru','guru.id','=','detail_jadwal_mengajar.id_guru')
+            ->join('mata_pelajaran','mata_pelajaran.id','=','detail_jadwal_mengajar.id_mapel')
+            ->join('kelas','kelas.id','=','detail_jadwal_mengajar.id_kelas')
+            ->select('jadwal_mengajar.hari','jadwal_mengajar.jam_pelajaran','mata_pelajaran.nama',
             'kelas.nama_kelas')
             ->where('guru.email','=',$email_login)
-            ->where('jadwal_guru.hari','LIKE','Jumat')
+            ->where('jadwal_mengajar.hari','LIKE','Jumat')
             ->get();
         } else if ($today == 'Minggu'){
-            $jadwal_guru = DB::table('jadwal_guru')
-            ->join('guru','guru.id','=','jadwal_guru.id_guru')
-            ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
-            ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
-            ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+            $jadwal_mengajar = DB::table('jadwal_mengajar')
+            ->join('detail_jadwal_mengajar','jadwal_mengajar.id','=','detail_jadwal_mengajar.id_jadwal')
+            ->join('guru','guru.id','=','detail_jadwal_mengajar.id_guru')
+            ->join('mata_pelajaran','mata_pelajaran.id','=','detail_jadwal_mengajar.id_mapel')
+            ->join('kelas','kelas.id','=','detail_jadwal_mengajar.id_kelas')
+            ->select('jadwal_mengajar.hari','jadwal_mengajar.jam_pelajaran','mata_pelajaran.nama',
             'kelas.nama_kelas')
             ->where('guru.email','=',$email_login)
-            ->where('jadwal_guru.hari','LIKE','Jumat')
+            ->where('jadwal_mengajar.hari','LIKE','Jumat')
             ->get();
         } else{
-            $jadwal_guru = DB::table('jadwal_guru')
-            ->join('guru','guru.id','=','jadwal_guru.id_guru')
-            ->join('mata_pelajaran','mata_pelajaran.id','=','jadwal_guru.id_mapel')
-            ->join('kelas','kelas.id','=','jadwal_guru.id_kelas')
-            ->select('jadwal_guru.hari','jadwal_guru.jam_pelajaran','mata_pelajaran.nama',
+            $jadwal_mengajar = DB::table('jadwal_mengajar')
+            ->join('detail_jadwal_mengajar','jadwal_mengajar.id','=','detail_jadwal_mengajar.id_jadwal')
+            ->join('guru','guru.id','=','detail_jadwal_mengajar.id_guru')
+            ->join('mata_pelajaran','mata_pelajaran.id','=','detail_jadwal_mengajar.id_mapel')
+            ->join('kelas','kelas.id','=','detail_jadwal_mengajar.id_kelas')
+            ->select('jadwal_mengajar.hari','jadwal_mengajar.jam_pelajaran','mata_pelajaran.nama',
             'kelas.nama_kelas')
             ->where('guru.email','=',$email_login)
-            ->where('jadwal_guru.hari','LIKE',$today)
+            ->where('jadwal_mengajar.hari','LIKE',$today)
             ->get();
         }
     }
-        return $jadwal_guru;
+        return $jadwal_mengajar;
     }
 
     // informasi
-    public function beritaGuru()
+    public function berita()
     {
         $username = Auth::user()->name;
         $berita = Berita::All();
@@ -295,10 +292,4 @@ class GuruController extends Controller
         $berita = Berita::where('id',$request->id)->first(); 
         return view('guru.lihatberita', compact('berita','username'));
     }
-    
-    public function beritaDetailGuru()
-    {
-        return view('guru.beritaDetail');
-    }
-
 }

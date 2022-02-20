@@ -8,8 +8,8 @@
 <!-- sidebar -->
 <div class="sidebar">
     <ul>
-        <li class="list">
-            <a href="/admin/homepageAdmin">
+    <li class="list">
+            <a href="/admin/homepage_admin">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -18,7 +18,7 @@
         </li>
 
         <li class="list active">
-            <a href="/admin/beritaAdmin">
+            <a href="/admin/berita">
                 <span class="icon">
                     <ion-icon name="newspaper-outline"></ion-icon>
                 </span>
@@ -27,7 +27,7 @@
         </li>
 
         <li class="list">
-            <a href="/admin/dokumenFiturBantuan">
+            <a href="/admin/pusatUnduhan">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
                 </span>
@@ -43,13 +43,22 @@
                 <span class="title">importData</span>
             </a>
         </li>
-
+        
         <li class="list">
             <a href="/admin/hapusData">
                 <span class="icon">
                     <ion-icon name="trash-outline"></ion-icon>
                 </span>
                 <span class="title">Hapus Data</span>
+            </a>
+        </li>
+
+        <li class="list">
+            <a href="/admin/gantifoto">
+                <span class="icon">
+                    <ion-icon name="image-outline"></ion-icon>
+                </span>
+                <span class="title">Ubah Foto</span>
             </a>
         </li>
 
@@ -108,7 +117,7 @@
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon pengaduan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/saranDanMasukanAdmin">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/saranDanMasukan">
                     <span class="icon">
                         <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>

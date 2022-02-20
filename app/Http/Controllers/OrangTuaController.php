@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\OrangTua;
 use App\Models\Guru;
 use App\Models\ProfilSiswa;
-use App\Models\Finansial;
+use App\Models\Absensi;
 use App\Models\PusatUnduhan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -39,7 +39,7 @@ class OrangTuaController extends Controller
         $label         = ["Kelas 7 Semester Ganjil","Kelas 7 Semester Genap","Kelas 8 Semester Ganjil",
                         "Kelas 8 Semester Genap","Kelas 9 Semester Ganjil","Kelas 9 Semester Genap",];
         
-        //get kelas siswa berdasar login orang tua
+        //get kelas siswa berdasar login orang tua #
         $kelas_sekarang = collect(DB::SELECT("SELECT
         a.kelas
         FROM
@@ -47,43 +47,46 @@ class OrangTuaController extends Controller
         JOIN orang_tua c ON b.id_orang_tua = c.id 
         JOIN users d ON d.email = c.email WHERE c.email = '$email_login'"))->pluck('kelas');
 
-        //get riwayat kelas siswa
+        //get riwayat kelas siswa #
         $riwayat_kelas = collect(DB::SELECT("SELECT DISTINCT
-        a.kelas
+        a.kelas        
         FROM
-        daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
-        JOIN orang_tua c ON b.id_orang_tua = c.id
+        daftar_nilai a JOIN detail_nilai b ON a.id = b.id_nilai
+        JOIN profil_siswa c ON c.id = b.id_siswa
+        JOIN orang_tua d ON c.id_orang_tua = d.id
         WHERE
-        c.email = '$email_login'"))->pluck('kelas');
+        d.email = '$email_login'"))->pluck('kelas');
 
-        //get semester siswa dalam suatu kelas
+        //get semester siswa dalam suatu kelas #
         $riwayat_semester = collect(DB::SELECT("SELECT DISTINCT
-        a.semester
+        a.semester        
         FROM
-        daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
-        JOIN orang_tua c ON b.id_orang_tua = c.id
+        daftar_nilai a JOIN detail_nilai b ON a.id = b.id_nilai
+        JOIN profil_siswa c ON c.id = b.id_siswa
+        JOIN orang_tua d ON c.id_orang_tua = d.id
         WHERE
-        c.email = '$email_login'"))->pluck('semester');
+        d.email = '$email_login'"))->pluck('semester');
 
         //query untuk proses data nilai berdasarkan kelas
 
         //KELAS 7 SEMESTER 1
         try {
 
-            //UBAH LAGI
+            //grafik nilai ###
 
             if($riwayat_kelas[0] == 7 && $riwayat_semester[0] == 1){
-                $nilai_7_1[] = collect(DB::SELECT("SELECT
-                CAST(SUM(a.nilai_rata) / COUNT(a.id_siswa) AS INT) AS nilai
+                $nilai_7_1[] = collect(DB::SELECT("SELECT 
+                CAST(SUM(a.nilai_rata) / COUNT(e.id) AS INT) AS nilai        
                 FROM
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
-                JOIN mata_pelajaran c ON a.id_mapel = c.id
-                JOIN orang_tua d ON b.id_orang_tua = d.id
+                daftar_nilai a JOIN detail_nilai b ON a.id = b.id_nilai
+                JOIN profil_siswa c ON c.id = b.id_siswa
+                JOIN orang_tua d ON c.id_orang_tua = d.id
+                JOIN mata_pelajaran e ON e.id = b.id_mapel
                 WHERE
                 d.email = '$email_login'
                 AND
                 a.kelas = 7
-                AND 
+                AND
                 a.semester = 1"))->first()->nilai;
             }
           
@@ -96,12 +99,13 @@ class OrangTuaController extends Controller
 
             if($riwayat_kelas[0] == 7 && $riwayat_semester[1] == 2){
 
-                $nilai_7_2[] = collect(DB::SELECT("SELECT
-                CAST(SUM(a.nilai_rata) / COUNT(a.id_siswa) AS INT) AS nilai
+                $nilai_7_2[] = collect(DB::SELECT("SELECT 
+                CAST(SUM(a.nilai_rata) / COUNT(e.id) AS INT) AS nilai        
                 FROM
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
-                JOIN mata_pelajaran c ON a.id_mapel = c.id
-                JOIN orang_tua d ON b.id_orang_tua = d.id
+                daftar_nilai a JOIN detail_nilai b ON a.id = b.id_nilai
+                JOIN profil_siswa c ON c.id = b.id_siswa
+                JOIN orang_tua d ON c.id_orang_tua = d.id
+                JOIN mata_pelajaran e ON e.id = b.id_mapel
                 WHERE
                 d.email = '$email_login'
                 AND
@@ -117,12 +121,13 @@ class OrangTuaController extends Controller
           // //KELAS 8 SEMESTER 1
           try {
             if($riwayat_kelas[1] == 8 && $riwayat_semester[0] == 1){
-                $nilai_8_1[] = collect(DB::SELECT("SELECT
-                CAST(SUM(a.nilai_rata) / COUNT(a.id_siswa) AS INT) AS nilai
+                $nilai_8_1[] = collect(DB::SELECT("SELECT 
+                CAST(SUM(a.nilai_rata) / COUNT(e.id) AS INT) AS nilai        
                 FROM
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
-                JOIN mata_pelajaran c ON a.id_mapel = c.id
-                JOIN orang_tua d ON b.id_orang_tua = d.id
+                daftar_nilai a JOIN detail_nilai b ON a.id = b.id_nilai
+                JOIN profil_siswa c ON c.id = b.id_siswa
+                JOIN orang_tua d ON c.id_orang_tua = d.id
+                JOIN mata_pelajaran e ON e.id = b.id_mapel
                 WHERE
                 d.email = '$email_login'
                 AND
@@ -140,12 +145,13 @@ class OrangTuaController extends Controller
           try {
 
             if($riwayat_kelas[1] == 8 && $riwayat_semester[1] == 2){
-                $nilai_8_2[] = collect(DB::SELECT("SELECT
-                CAST(SUM(a.nilai_rata) / COUNT(a.id_siswa) AS INT) AS nilai
+                $nilai_8_2[] = collect(DB::SELECT("SELECT 
+                CAST(SUM(a.nilai_rata) / COUNT(e.id) AS INT) AS nilai        
                 FROM
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
-                JOIN mata_pelajaran c ON a.id_mapel = c.id
-                JOIN orang_tua d ON b.id_orang_tua = d.id
+                daftar_nilai a JOIN detail_nilai b ON a.id = b.id_nilai
+                JOIN profil_siswa c ON c.id = b.id_siswa
+                JOIN orang_tua d ON c.id_orang_tua = d.id
+                JOIN mata_pelajaran e ON e.id = b.id_mapel
                 WHERE
                 d.email = '$email_login'
                 AND
@@ -161,12 +167,13 @@ class OrangTuaController extends Controller
           try {
 
             if($riwayat_kelas[2] == 9 && $riwayat_semester[0] == 1){
-                $nilai_9_1[] = collect(DB::SELECT("SELECT
-                CAST(SUM(a.nilai_rata) / COUNT(a.id_siswa) AS INT) AS nilai
+                $nilai_9_1[] = collect(DB::SELECT("SELECT 
+                CAST(SUM(a.nilai_rata) / COUNT(e.id) AS INT) AS nilai        
                 FROM
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
-                JOIN mata_pelajaran c ON a.id_mapel = c.id
-                JOIN orang_tua d ON b.id_orang_tua = d.id
+                daftar_nilai a JOIN detail_nilai b ON a.id = b.id_nilai
+                JOIN profil_siswa c ON c.id = b.id_siswa
+                JOIN orang_tua d ON c.id_orang_tua = d.id
+                JOIN mata_pelajaran e ON e.id = b.id_mapel
                 WHERE
                 d.email = '$email_login'
                 AND
@@ -184,12 +191,13 @@ class OrangTuaController extends Controller
         try {
 
             if($riwayat_kelas[2] == 9 && $riwayat_semester[1] == 2){
-                $nilai_9_2[] = collect(DB::SELECT("SELECT
-                CAST(SUM(a.nilai_rata) / COUNT(a.id_siswa) AS INT) AS nilai
+                $nilai_9_2[] = collect(DB::SELECT("SELECT 
+                CAST(SUM(a.nilai_rata) / COUNT(e.id) AS INT) AS nilai        
                 FROM
-                daftar_nilai a JOIN profil_siswa b ON a.id_siswa = b.id
-                JOIN mata_pelajaran c ON a.id_mapel = c.id
-                JOIN orang_tua d ON b.id_orang_tua = d.id
+                daftar_nilai a JOIN detail_nilai b ON a.id = b.id_nilai
+                JOIN profil_siswa c ON c.id = b.id_siswa
+                JOIN orang_tua d ON c.id_orang_tua = d.id
+                JOIN mata_pelajaran e ON e.id = b.id_mapel
                 WHERE
                 d.email = '$email_login'
                 AND
@@ -202,20 +210,21 @@ class OrangTuaController extends Controller
                 $nilai_9_2 = 0;
           }
 
-          //END
+          //END ###
 
           //PROSES OLAHDATA FINANSIAL // START
 
-          // menampilkan data yang belum terbayar
+          // menampilkan data yang belum terbayar #
             $finansial = DB::table('finansial')
-            ->join('profil_siswa', 'finansial.id_siswa','=','profil_siswa.id')
+            ->join('detail_finansial', 'detail_finansial.id_finansial','=','finansial.id')
+            ->join('profil_siswa', 'profil_siswa.id', '=', 'detail_finansial.id_siswa')
             ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
-            ->select('finansial.nama_bayaran', 'finansial.jumlah', 'finansial.jatuh_tempo', 'finansial.status')
+            ->select('finansial.nama_bayaran', 'finansial.jumlah', 'detail_finansial.jatuh_tempo', 'detail_finansial.status')
             ->where('orang_tua.email','=',$email_login)
-            ->where('finansial.status', '=', 'belum terbayar')
+            ->where('detail_finansial.status', '=', 'belum terbayar')
             ->get();
 
-          //END
+          //END #
         
           //BERITA CAROUSEL
           
@@ -227,7 +236,7 @@ class OrangTuaController extends Controller
             ->where('orang_tua.email','=',"$email_login")
             ->get();
         
-        return view('orangTua.homepage',compact('title','label',
+        return view('orangTua.homepage_ortu',compact('title','label',
         'nilai_7_1','nilai_7_2','nilai_8_1','nilai_8_2','nilai_9_1','nilai_9_2',
         'finansial',
         'email_login', 'username',
@@ -235,22 +244,23 @@ class OrangTuaController extends Controller
     }
 
     // jadwal Pelajaran
-    public function jadwalKelas()
+    public function jadwalPelajaran()
     {
         //get email orang tua berdasar login
         $email_login = Auth::user()->email;
         $username = Auth::user()->name;
 
-        //get jadwal pelajaran di kelas
+        //get jadwal pelajaran di kelas #
         $jadwal = DB::table('jadwal_pelajaran')
-            ->join('profil_siswa', 'jadwal_pelajaran.id_siswa','=','profil_siswa.id')
-            ->join('mata_pelajaran', 'jadwal_pelajaran.id_mapel', '=', 'mata_pelajaran.id')
+            ->join('detail_jadwal_pelajaran', 'detail_jadwal_pelajaran.id_jadwal','=','jadwal_pelajaran.id')
+            ->join('profil_siswa', 'detail_jadwal_pelajaran.id_siswa','=','profil_siswa.id')
+            ->join('mata_pelajaran', 'detail_jadwal_pelajaran.id_mapel', '=', 'mata_pelajaran.id')
             ->join('orang_tua','profil_siswa.id_orang_tua','=','orang_tua.id')
             ->select('mata_pelajaran.nama', 'mata_pelajaran.jenis', 'jadwal_pelajaran.jam_pelajaran', 'jadwal_pelajaran.hari')
             ->where('orang_tua.email','=',$email_login)
             ->where('jadwal_pelajaran.hari','=',"Senin")
             ->get();
-        return view('orangTua.jadwalKelas',compact('jadwal','username'));
+        return view('orangTua.jadwalPelajaran',compact('jadwal','username'));
     }
 
     public function filterjadwal($id){
@@ -259,46 +269,49 @@ class OrangTuaController extends Controller
         $email_login = Auth::user()->email;
         $username = Auth::user()->name;
 
-
+        //##
         if($id!=''){
             $jadwal = DB::table('jadwal_pelajaran')
-            ->join('profil_siswa', 'jadwal_pelajaran.id_siswa','=','profil_siswa.id')
-            ->join('mata_pelajaran', 'jadwal_pelajaran.id_mapel', '=', 'mata_pelajaran.id')
+            ->join('detail_jadwal_pelajaran', 'detail_jadwal_pelajaran.id_jadwal','=','jadwal_pelajaran.id')
+            ->join('profil_siswa', 'detail_jadwal_pelajaran.id_siswa','=','profil_siswa.id')
+            ->join('mata_pelajaran', 'detail_jadwal_pelajaran.id_mapel', '=', 'mata_pelajaran.id')
             ->join('orang_tua','profil_siswa.id_orang_tua','=','orang_tua.id')
             ->select('mata_pelajaran.nama', 'mata_pelajaran.jenis', 'jadwal_pelajaran.jam_pelajaran', 'jadwal_pelajaran.hari')
-            ->where('orang_tua.email','=',"$email_login")
+            ->where('orang_tua.email','=',$email_login)
             ->where('jadwal_pelajaran.hari','=',"$id")
             ->get();
         }else{
             $jadwal = DB::table('jadwal_pelajaran')
-            ->join('profil_siswa', 'jadwal_pelajaran.id_siswa','=','profil_siswa.id')
-            ->join('mata_pelajaran', 'jadwal_pelajaran.id_mapel', '=', 'mata_pelajaran.id')
+            ->join('detail_jadwal_pelajaran', 'detail_jadwal_pelajaran.id_jadwal','=','jadwal_pelajaran.id')
+            ->join('profil_siswa', 'detail_jadwal_pelajaran.id_siswa','=','profil_siswa.id')
+            ->join('mata_pelajaran', 'detail_jadwal_pelajaran.id_mapel', '=', 'mata_pelajaran.id')
             ->join('orang_tua','profil_siswa.id_orang_tua','=','orang_tua.id')
             ->select('mata_pelajaran.nama', 'mata_pelajaran.jenis', 'jadwal_pelajaran.jam_pelajaran', 'jadwal_pelajaran.hari')
-            ->where('orang_tua.email','=',"$email_login")
+            ->where('orang_tua.email','=',$email_login)
             ->get();
         }
 
         return $jadwal;
     }
 
-    // jadwal Non Akademik
-    public function jadwalAkadanNonAkademik()
+    // kalender Akademik
+    public function kalenderAkademik()
     {
+        //##
         $username = Auth::user()->name;
-        $jadwal = DB::table('jadwal_akademik')
+        $jadwal = DB::table('kalender_akademik')
             ->select('nama_kegiatan','jadwal_kegiatan','periode')
             ->where('periode','=','2021 - 2022')
             ->get();
-        return view('orangTua.jadwalAkadanNonAkademik',compact('jadwal','username'));
+        return view('orangTua.kalenderAkademik',compact('jadwal','username'));
     }
 
-    public function filterJadwalAkaNonAka($id){
+    public function filterKalender($id){
 
-        //get email orang tua berdasar login
+        //##
 
         if($id!=''){
-            $jadwal = DB::table('jadwal_akademik')
+            $jadwal = DB::table('kalender_akademik')
                 ->select('nama_kegiatan','jadwal_kegiatan','periode')
                 ->where('periode','=',"$id")
                 ->get();
@@ -320,17 +333,23 @@ class OrangTuaController extends Controller
         $username = Auth::user()->name;
 
 
-        // menampilkan data yang belum terbayar
+        // menampilkan data yang belum terbayar##
         $finansial = DB::table('finansial')
-                ->join('profil_siswa', 'finansial.id_siswa','=','profil_siswa.id')
-                ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
-                ->select('finansial.nama_bayaran', 'finansial.jumlah', 'finansial.jatuh_tempo', 'finansial.status')
-                ->where('orang_tua.email','=',$email_login)
-                ->where('finansial.status', '=', "terbayar")
-                ->get();
+            ->join('detail_finansial', 'detail_finansial.id_finansial','=','finansial.id')
+            ->join('profil_siswa', 'profil_siswa.id', '=', 'detail_finansial.id_siswa')
+            ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
+            ->select('finansial.nama_bayaran', 'finansial.jumlah', 'detail_finansial.jatuh_tempo', 'detail_finansial.status')
+            ->where('orang_tua.email','=',$email_login)
+            ->where('detail_finansial.status', '=', 'belum terbayar')
+            ->orderBy('finansial.nama_bayaran')
+            ->orderBy('finansial.jumlah')
+            ->orderBy('detail_finansial.jatuh_tempo')
+            ->orderBy('detail_finansial.status')
+            ->get();
         return view('orangTua.finansial', compact('finansial', 'username'));
     }
 
+    //##
     public function filterfinansial($id){
 
         //get email orang tua berdasar login
@@ -338,24 +357,34 @@ class OrangTuaController extends Controller
 
   	 if($id!=''){
                 $finansial = DB::table('finansial')
-                ->join('profil_siswa', 'finansial.id_siswa','=','profil_siswa.id')
+                ->join('detail_finansial', 'detail_finansial.id_finansial','=','finansial.id')
+                ->join('profil_siswa', 'profil_siswa.id', '=', 'detail_finansial.id_siswa')
                 ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
-                ->select('finansial.nama_bayaran', 'finansial.jumlah', 'finansial.jatuh_tempo', 'finansial.status')
+                ->select('finansial.nama_bayaran', 'finansial.jumlah', 'detail_finansial.jatuh_tempo', 'detail_finansial.status')
                 ->where('orang_tua.email','=',$email_login)
-                ->where('finansial.status', '=', "$id")
+                ->where('detail_finansial.status', '=', "$id")
+                ->orderBy('finansial.nama_bayaran')
+                ->orderBy('finansial.jumlah')
+                ->orderBy('detail_finansial.jatuh_tempo')
+                ->orderBy('detail_finansial.status')
                 ->get();
 		}else{
-			 $finansial = DB::table('finansial')
-                ->join('profil_siswa', 'finansial.id_siswa','=','profil_siswa.id')
+                $finansial = DB::table('finansial')
+                ->join('detail_finansial', 'detail_finansial.id_finansial','=','finansial.id')
+                ->join('profil_siswa', 'profil_siswa.id', '=', 'detail_finansial.id_siswa')
                 ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
-                ->select('finansial.nama_bayaran', 'finansial.jumlah', 'finansial.jatuh_tempo', 'finansial.status')
+                ->select('finansial.nama_bayaran', 'finansial.jumlah', 'detail_finansial.jatuh_tempo', 'detail_finansial.status')
                 ->where('orang_tua.email','=',$email_login)
+                ->orderBy('finansial.nama_bayaran')
+                ->orderBy('finansial.jumlah')
+                ->orderBy('detail_finansial.jatuh_tempo')
+                ->orderBy('detail_finansial.status')
                 ->get();
 		}
             return $finansial;
     }
 
-    // berita
+    // berita##
     public function berita()
     {
     	$berita = Berita::All();
@@ -364,6 +393,7 @@ class OrangTuaController extends Controller
         return view('orangTua.berita',compact('berita','username'));
     }
     
+    //##
      public function lihatberita(Request $request)
     {
         $username = Auth::user()->name;
@@ -372,13 +402,8 @@ class OrangTuaController extends Controller
         return view('orangTua.lihatberita', compact('berita','username'));
     }
 
-    public function beritaDetail()
-    {
-        return view('orangTua.beritaDetail');
-    }
-
     // nilai
-    public function nilai()
+    public function daftarNilai()
     {
 
         //get email orang tua berdasar login
@@ -386,33 +411,42 @@ class OrangTuaController extends Controller
         $username = Auth::user()->name;
 
 
-        //get riwayat kelas siswa
-        $riwayat_kelas = collect(DB::SELECT("SELECT
-        kelas.kelas
+        //get riwayat kelas siswa#
+        $riwayat_kelas = collect(DB::SELECT("SELECT DISTINCT
+        a.kelas        
         FROM
-        profil_siswa JOIN kelas ON profil_siswa.id_kelas = kelas.id
-        JOIN orang_tua ON profil_siswa.id_orang_tua = orang_tua.id
+        daftar_nilai a JOIN detail_nilai b ON a.id = b.id_nilai
+        JOIN profil_siswa c ON c.id = b.id_siswa
+        JOIN orang_tua d ON c.id_orang_tua = d.id
         WHERE
-        orang_tua.email = '$email_login'"))->pluck('kelas');
+        d.email = '$email_login'"))->pluck('kelas');
 
-        //get semester siswa dalam suatu kelas
-        $riwayat_semester = collect(DB::SELECT("SELECT
-        profil_siswa.semester
+        //get semester siswa dalam suatu kelas#
+        $riwayat_semester = collect(DB::SELECT("SELECT DISTINCT
+        a.semester        
         FROM
-        profil_siswa JOIN kelas ON profil_siswa.id_kelas = kelas.id
-        JOIN orang_tua ON profil_siswa.id_orang_tua = orang_tua.id
+        daftar_nilai a JOIN detail_nilai b ON a.id = b.id_nilai
+        JOIN profil_siswa c ON c.id = b.id_siswa
+        JOIN orang_tua d ON c.id_orang_tua = d.id
         WHERE
-        orang_tua.email = '$email_login'"))->pluck('semester');
+        d.email = '$email_login'"))->pluck('semester');
 
         $nilai = DB::table('daftar_nilai')
-                ->join('profil_siswa', 'daftar_nilai.id_siswa','=','profil_siswa.id')
+                ->join('detail_nilai', 'detail_nilai.id_nilai','=','daftar_nilai.id')
+                ->join('profil_siswa', 'detail_nilai.id_siswa','=','profil_siswa.id')
                 ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
-                ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'daftar_nilai.id_mapel')
+                ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'detail_nilai.id_mapel')
                 ->select('mata_pelajaran.nama', 'daftar_nilai.nilai_tugas', 
                 'daftar_nilai.nilai_uts', 'daftar_nilai.nilai_uas', 'daftar_nilai.kelas', 'daftar_nilai.semester')
                 ->where('orang_tua.email','=',$email_login)
                 ->where('daftar_nilai.kelas', '=', $riwayat_kelas)
                 ->where('daftar_nilai.semester', '=', $riwayat_semester)
+                ->orderBy('mata_pelajaran.nama')
+                ->orderBy('daftar_nilai.nilai_tugas')
+                ->orderBy('daftar_nilai.nilai_uts')
+                ->orderBy('daftar_nilai.nilai_uas')
+                ->orderBy('daftar_nilai.kelas')
+                ->orderBy('daftar_nilai.semester')
                 ->get();
         return view('orangTua.nilai', compact('nilai','username'));
     }
@@ -420,53 +454,69 @@ class OrangTuaController extends Controller
     public function filternilai($id)
     {
         
-        //get email orang tua berdasar login
+        //get email orang tua berdasar login#
         $email_login = Auth::user()->email;
         $username = Auth::user()->name;
 
 
-        //get riwayat kelas siswa
-        $riwayat_kelas = collect(DB::SELECT("SELECT
-        kelas.kelas
+        //get riwayat kelas siswa#
+        $riwayat_kelas = collect(DB::SELECT("SELECT DISTINCT
+        a.kelas        
         FROM
-        profil_siswa JOIN kelas ON profil_siswa.id_kelas = kelas.id
-        JOIN orang_tua ON profil_siswa.id_orang_tua = orang_tua.id
+        daftar_nilai a JOIN detail_nilai b ON a.id = b.id_nilai
+        JOIN profil_siswa c ON c.id = b.id_siswa
+        JOIN orang_tua d ON c.id_orang_tua = d.id
         WHERE
-        orang_tua.email = '$email_login'"))->pluck('kelas');
+        d.email = '$email_login'"))->pluck('kelas');
 
-        //get semester siswa dalam suatu kelas
-        $riwayat_semester = collect(DB::SELECT("SELECT
-        profil_siswa.semester
+        //get semester siswa dalam suatu kelas#
+        $riwayat_semester = collect(DB::SELECT("SELECT DISTINCT
+        a.semester        
         FROM
-        profil_siswa JOIN kelas ON profil_siswa.id_kelas = kelas.id
-        JOIN orang_tua ON profil_siswa.id_orang_tua = orang_tua.id
+        daftar_nilai a JOIN detail_nilai b ON a.id = b.id_nilai
+        JOIN profil_siswa c ON c.id = b.id_siswa
+        JOIN orang_tua d ON c.id_orang_tua = d.id
         WHERE
-        orang_tua.email = '$email_login'"))->pluck('semester');
+        d.email = '$email_login'"))->pluck('semester');
 
     	if($id==0){
         $nilai = DB::table('daftar_nilai')
-                ->join('profil_siswa', 'daftar_nilai.id_siswa','=','profil_siswa.id')
+                ->join('detail_nilai', 'detail_nilai.id_nilai','=','daftar_nilai.id')
+                ->join('profil_siswa', 'detail_nilai.id_siswa','=','profil_siswa.id')
                 ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
-                ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'daftar_nilai.id_mapel')
+                ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'detail_nilai.id_mapel')
                 ->select('mata_pelajaran.nama', 'daftar_nilai.nilai_tugas', 
                 'daftar_nilai.nilai_uts', 'daftar_nilai.nilai_uas', 'daftar_nilai.kelas', 'daftar_nilai.semester')
                 ->where('orang_tua.email','=',$email_login)
                 ->where('daftar_nilai.kelas', '=', $riwayat_kelas)
                 ->where('daftar_nilai.semester', '=', $riwayat_semester)
+                ->orderBy('mata_pelajaran.nama')
+                ->orderBy('daftar_nilai.nilai_tugas')
+                ->orderBy('daftar_nilai.nilai_uts')
+                ->orderBy('daftar_nilai.nilai_uas')
+                ->orderBy('daftar_nilai.kelas')
+                ->orderBy('daftar_nilai.semester')
                 ->get();
 		}else{
 			$string = "$id";
 			$kelas = $string[0];
 			$sem = $string[1]; 
 			$nilai = DB::table('daftar_nilai')
-                ->join('profil_siswa', 'daftar_nilai.id_siswa','=','profil_siswa.id')
+                ->join('detail_nilai', 'detail_nilai.id_nilai','=','daftar_nilai.id')
+                ->join('profil_siswa', 'detail_nilai.id_siswa','=','profil_siswa.id')
                 ->join('orang_tua', 'profil_siswa.id_orang_tua', '=', 'orang_tua.id')
-                ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'daftar_nilai.id_mapel')
+                ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'detail_nilai.id_mapel')
                 ->select('mata_pelajaran.nama', 'daftar_nilai.nilai_tugas', 
                 'daftar_nilai.nilai_uts', 'daftar_nilai.nilai_uas', 'daftar_nilai.kelas', 'daftar_nilai.semester')
                 ->where('orang_tua.email','=',$email_login)
                 ->where('daftar_nilai.kelas', '=', $kelas)
                 ->where('daftar_nilai.semester', '=', $sem)
+                ->orderBy('mata_pelajaran.nama')
+                ->orderBy('daftar_nilai.nilai_tugas')
+                ->orderBy('daftar_nilai.nilai_uts')
+                ->orderBy('daftar_nilai.nilai_uas')
+                ->orderBy('daftar_nilai.kelas')
+                ->orderBy('daftar_nilai.semester')
                 ->get();
 		}
                 
@@ -476,8 +526,8 @@ class OrangTuaController extends Controller
     
     
 
-    // kehadiran
-    public function kehadiran()
+    // kehadiran##
+    public function absensi()
     {
         //get email orang tua berdasar login
         $email_login = Auth::user()->email;
@@ -485,8 +535,9 @@ class OrangTuaController extends Controller
 
 
         $absensi = DB::table('absensi')
-        ->join('profil_siswa','profil_siswa.id','=','absensi.id_siswa')
-        ->join('kelas','kelas.id','=','absensi.id_kelas')
+        ->join('detail_absensi','absensi.id','=','detail_absensi.id_absensi')
+        ->join('profil_siswa','profil_siswa.id','=','detail_absensi.id_siswa')
+        ->join('kelas','kelas.id','=','detail_absensi.id_kelas')
         ->join('orang_tua','orang_tua.id','=','profil_siswa.id_orang_tua')
         ->select('absensi.bulan','absensi.kehadiran','absensi.alpa','absensi.sakit','absensi.izin')
         ->where('orang_tua.email','=',$email_login)
@@ -498,20 +549,21 @@ class OrangTuaController extends Controller
         ->orderBy('absensi.sakit')
         ->orderBy('absensi.izin')
         ->get();
-        return view('orangTua.kehadiran',compact('absensi','username'));
+        return view('orangTua.absensi',compact('absensi','username'));
     }
 
-    public function filterabsensi($id){
+    public function filterAbsensi($id){
 
-        //get email orang tua berdasar login
+        //get email orang tua berdasar login##
         $email_login = Auth::user()->email;
         $username = Auth::user()->name;
 
 
   	    if($id==0){
             $absensi = DB::table('absensi')
-            ->join('profil_siswa','profil_siswa.id','=','absensi.id_siswa')
-            ->join('kelas','kelas.id','=','absensi.id_kelas')
+            ->join('detail_absensi','absensi.id','=','detail_absensi.id_absensi')
+            ->join('profil_siswa','profil_siswa.id','=','detail_absensi.id_siswa')
+            ->join('kelas','kelas.id','=','detail_absensi.id_kelas')
             ->join('orang_tua','orang_tua.id','=','profil_siswa.id_orang_tua')
             ->select('absensi.bulan','absensi.kehadiran','absensi.alpa','absensi.sakit','absensi.izin')
             ->where('orang_tua.email','=',$email_login)
@@ -529,8 +581,9 @@ class OrangTuaController extends Controller
 			$semester = $string[1]; 
 
             $absensi = DB::table('absensi')
-            ->join('profil_siswa','profil_siswa.id','=','absensi.id_siswa')
-            ->join('kelas','kelas.id','=','absensi.id_kelas')
+            ->join('detail_absensi','absensi.id','=','detail_absensi.id_absensi')
+            ->join('profil_siswa','profil_siswa.id','=','detail_absensi.id_siswa')
+            ->join('kelas','kelas.id','=','detail_absensi.id_kelas')
             ->join('orang_tua','orang_tua.id','=','profil_siswa.id_orang_tua')
             ->select('absensi.bulan','absensi.kehadiran','absensi.alpa','absensi.sakit','absensi.izin')
             ->where('orang_tua.email','=',$email_login)
@@ -546,16 +599,16 @@ class OrangTuaController extends Controller
             return $absensi;
     }
 
-    // fitur Bantuan
-    public function fiturBantuan()
+    // fitur Bantuan##
+    public function pusatUnduhan()
     {
     	$unduhan = PusatUnduhan::all();
         $username = Auth::user()->name;
 
-        return view('orangTua.fiturBantuan',compact('unduhan','username'));
+        return view('orangTua.pusatUnduhan',compact('unduhan','username'));
     }
     
-    // pusatbantuan
+    // saranDanMasukan##
     public function saranDanMasukan()
     {
         $username = Auth::user()->name;
@@ -563,7 +616,7 @@ class OrangTuaController extends Controller
         return view('orangTua.saranDanMasukan',compact('username'));
     }
 
-    public function sendSaranMasukan(Request $request){
+    public function sendSaranDanMasukan(Request $request){
 
         $id = Auth::user()->id;
 
@@ -574,12 +627,5 @@ class OrangTuaController extends Controller
 		]);
 
         return redirect('orangTua/saranDanMasukan')->with('kirim', 'Saran dan Masukan Berhasil Dikrim');
-    }
-
-    // pesan
-    public function pesan()
-    {
-        
-        return view('orangTua.pesan');
     }
 }

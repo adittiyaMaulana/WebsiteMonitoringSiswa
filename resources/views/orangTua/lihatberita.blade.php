@@ -8,8 +8,8 @@
 <!-- sidebar -->
 <div class="sidebar">
     <ul>
-        <li class="list">
-            <a href="/orangTua/homepage">
+    <li class="list">
+            <a href="/orangTua/homepage_ortu">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -18,7 +18,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/jadwal">
+            <a href="/orangTua/jadwalPelajaran">
                 <span class="icon">
                     <ion-icon name="calendar-outline"></ion-icon>
                 </span>
@@ -45,7 +45,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/nilai">
+            <a href="/orangTua/daftarNilai">
                 <span class="icon">
                     <ion-icon name="bar-chart-outline"></ion-icon>
                 </span>
@@ -54,7 +54,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/kehadiran">
+            <a href="/orangTua/absensi">
                 <span class="icon">
                     <ion-icon name="create-outline"></ion-icon>
                 </span>
@@ -63,7 +63,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/fiturBantuan">
+            <a href="/orangTua/pusatUnduhan">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
                 </span>
@@ -108,7 +108,7 @@
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon pengaduan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/saranDanMasukanAdmin">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/saranDanMasukan">
                     <span class="icon">
                         <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>

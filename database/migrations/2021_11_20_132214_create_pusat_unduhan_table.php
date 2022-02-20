@@ -16,6 +16,8 @@ class CreatePusatUnduhanTable extends Migration
         Schema::create('pusat_unduhan', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('id_kreator');
+            $table->foreign('id_kreator')->references('id')->on('admin')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nama',50);
             $table->integer('ukuran');
         });

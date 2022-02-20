@@ -8,8 +8,8 @@
 <!-- sidebar -->
 <div class="sidebar">
     <ul>
-        <li class="list active">
-            <a href="/orangTua/homepage">
+    <li class="list">
+            <a href="/orangTua/homepage_ortu">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -18,7 +18,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/jadwalKelas">
+            <a href="/orangTua/jadwalPelajaran">
                 <span class="icon">
                     <ion-icon name="calendar-outline"></ion-icon>
                 </span>
@@ -45,7 +45,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/nilai">
+            <a href="/orangTua/daftarNilai">
                 <span class="icon">
                     <ion-icon name="bar-chart-outline"></ion-icon>
                 </span>
@@ -54,7 +54,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/kehadiran">
+            <a href="/orangTua/absensi">
                 <span class="icon">
                     <ion-icon name="create-outline"></ion-icon>
                 </span>
@@ -63,7 +63,7 @@
         </li>
 
         <li class="list">
-            <a href="/orangTua/fiturBantuan">
+            <a href="/orangTua/pusatUnduhan">
                 <span class="icon">
                     <ion-icon name="download-outline"></ion-icon>
                 </span>
@@ -175,7 +175,7 @@
     <div class="ml-4 mr-4 mt-5">
 
         <div class="saran"></div>
-        <form class="was-validated" method="post" action="{{route('orangTua.sendSaranMasukan')}}" enctype="multipart/form-data">
+        <form class="was-validated" method="post" action="{{route('orangTua.sendSaranDanMasukan')}}" enctype="multipart/form-data">
             @csrf
             <div class="saran mb-3 mr-4">
                 <label for="judul" class="form-label">Judul Permasalahan</label>

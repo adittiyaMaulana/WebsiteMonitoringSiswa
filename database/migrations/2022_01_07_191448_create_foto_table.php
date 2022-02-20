@@ -16,6 +16,8 @@ class CreateFotoTable extends Migration
         Schema::create('foto', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('id_kreator');
+            $table->foreign('id_kreator')->references('id')->on('admin')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nama');
             $table->integer('ukuran');
         });

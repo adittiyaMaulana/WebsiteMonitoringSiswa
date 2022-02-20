@@ -20,19 +20,12 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
-//auth ini buat google
-// Route::get('/auth/redirect', 'App\Http\Controllers\Auth\LoginController@redirectToProvider');
-// Route::get('/auth/callback', 'App\Http\Controllers\Auth\LoginController@handleProviderCallback');
-
-Route::get('/lupapassword', 'App\Http\Controllers\Auth\LoginController@lupapassword')->name('lupapassword');
-Route::post('/lupapasswordsubmit', 'App\Http\Controllers\Auth\LoginController@lupapasswordsubmit')->name('lupapasswordsubmit');
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/lupapassword', [LoginController::class,'lupapassword'])->name('lupapassword');
+Route::post('/lupapasswordsubmit', [LoginController::class,'lupapasswordsubmit'])->name('lupapasswordsubmit');
 
 ///////////////////////////////////////ADMIN////////////////////////////////////////////////////
 Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
-    Route::get('/homepageAdmin',[AdminController::class,'homepage'])->name('admin.homepage');
+    Route::get('/homepage_admin',[AdminController::class,'homepage'])->name('admin.homepage_admin');
 
     // IMPORT DATA //
     Route::get('/importData', [AdminController::class, 'importData'])->name('admin.importData');
@@ -47,54 +40,60 @@ Route::group(['prefix'=>'admin', 'middleware'=>['isAdmin','auth']], function(){
     Route::post('importMataPelajaran', [AdminController::class, 'importMataPelajaran'])->name('importMataPelajaran');
     Route::post('importFinansial', [AdminController::class, 'importFinansial'])->name('importFinansial');
     Route::post('importSiswa', [AdminController::class, 'importSiswa'])->name('importSiswa');
-    Route::post('importJadwalAkademikNonAkademik', [AdminController::class, 'importJadwalAkademikNonAkademik'])->name('importJadwalAkademikNonAkademik');
+    Route::post('importKalenderAkademik', [AdminController::class, 'importKalenderAkademik'])->name('importKalenderAkademik');
+    Route::post('importJadwalPelajaran', [AdminController::class, 'importJadwalPelajaran'])->name('importJadwalPelajaran');
+    Route::post('importJadwalMengajar', [AdminController::class, 'importJadwalMengajar'])->name('importJadwalMengajar');
+    Route::post('importAbsensi', [AdminController::class, 'importAbsensi'])->name('importAbsensi');
+    Route::post('importAdmin', [AdminController::class, 'importAdmin'])->name('importAdmin');
+    Route::post('importDetailAbsensi', [AdminController::class, 'importDetailAbsensi'])->name('importDetailAbsensi');
+    Route::post('importDetailFinansial', [AdminController::class, 'importDetailFinansial'])->name('importDetailFinansial');
+    Route::post('importDetailJadwalPelajaran', [AdminController::class, 'importDetailJadwalPelajaran'])->name('importDetailJadwalPelajaran');
+    Route::post('importDetailJadwalMengajar', [AdminController::class, 'importDetailJadwalMengajar'])->name('importDetailJadwalMengajar');
+    Route::post('importDetailNilai', [AdminController::class, 'importDetailNilai'])->name('importDetailNilai');
     // END OF IMPORT DATA SESSION //
 
 
     // berita √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
-    Route::get('/beritaAdmin', [AdminController::class, 'beritaAdmin'])->name('admin.beritaAdmin');
+    Route::get('/berita', [AdminController::class, 'berita'])->name('admin.berita');
     Route::get('/tambahberita', [AdminController::class, 'tambahberita'])->name('admin.tambahberita');
-    Route::post('/saveberita', 'App\Http\Controllers\AdminController@saveberita')->name('admin.saveberita');
-    Route::get('/lihatberita/{id}', 'App\Http\Controllers\AdminController@lihatberita')->name('admin.lihatberita');
-    Route::get('/editberita/{id}', 'App\Http\Controllers\AdminController@editberita')->name('admin.editberita');
-	Route::post('/updateberita/{id}', 'App\Http\Controllers\AdminController@updateberita')->name('admin.updateberita');
-	Route::get('/hapusberita/{id}', 'App\Http\Controllers\AdminController@hapusberita')->name('admin.hapusberita');
-    // Route::get('/formBerita', [AdminController::class, 'formBerita'])->name('admin.formBerita');
-    Route::get('/formBerita', [AdminController::class, 'formBerita'])->name('admin.formBerita');
-    Route::get('/formUpdateBerita', [AdminController::class, 'formUpdateBerita'])->name('admin.formUpdateBerita');
+    Route::post('/saveberita', [AdminController::class, 'saveberita'])->name('admin.saveberita');
+    Route::get('/lihatberita/{id}', [AdminController::class, 'lihatberita'])->name('admin.lihatberita');
+    Route::get('/editberita/{id}', [AdminController::class, 'editberita'])->name('admin.editberita');
+	Route::post('/updateberita/{id}', [AdminController::class, 'updateberita'])->name('admin.updateberita');
+	Route::get('/hapusberita/{id}', [AdminController::class, 'hapusberita'])->name('admin.hapusberita');
+    
 
     // fitur bantuan √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
-    Route::get('/dokumenFiturBantuan', [AdminController::class, 'dokumenFiturBantuan'])->name('admin.dokumenFiturBantuan');
+    Route::get('/pusatUnduhan', [AdminController::class, 'pusatUnduhan'])->name('admin.pusatUnduhan');
   	Route::get('/tambahunduhan', [AdminController::class, 'tambahunduhan'])->name('admin.tambahunduhan');
-    Route::post('/saveunduhan', 'App\Http\Controllers\AdminController@saveunduhan')->name('admin.saveunduhan');
-    Route::get('/hapusunduhan/{id}', 'App\Http\Controllers\AdminController@hapusunduhan')->name('admin.hapusunduhan');
+    Route::post('/saveunduhan', [AdminController::class, 'saveunduhan'])->name('admin.saveunduhan');
+    Route::get('/hapusunduhan/{id}', [AdminController::class, 'hapusunduhan'])->name('admin.hapusunduhan');
 
     
 
     //saranDanMasukanAdmin √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
-    Route::get('/saranDanMasukanAdmin', [AdminController::class, 'saranDanMasukanAdmin'])->name('admin.saranDanMasukanAdmin');
-    Route::get('/saranDanMasukanAdminDetail/{id}', [AdminController::class, 'saranDanMasukanAdminDetail'])->name('admin.saranDanMasukanAdminDetail');
-    Route::get('/hapusSaranDanMasukanAdmin/{id}', [AdminController::class, 'hapusSaranDanMasukanAdmin'])->name('admin.hapusSaranDanMasukanAdmin');
+    Route::get('/saranDanMasukan', [AdminController::class, 'saranDanMasukan'])->name('admin.saranDanMasukan');
+    Route::get('/saranDanMasukanDetail/{id}', [AdminController::class, 'saranDanMasukanDetail'])->name('admin.saranDanMasukanDetail');
+    Route::get('/hapusSaranDanMasukan/{id}', [AdminController::class, 'hapusSaranDanMasukan'])->name('admin.hapusSaranDanMasukan');
 
     //GANTI FOTOOOOOOOOOOOOOOOOOOOOOO
     Route::get('/gantifoto', [AdminController::class, 'gantiFoto'])->name('admin.gantiFoto');
-    Route::post('/savefoto', 'App\Http\Controllers\AdminController@savefoto')->name('admin.savefoto');
-    Route::get('/hapusfoto/{id}', 'App\Http\Controllers\AdminController@hapusfoto')->name('admin.hapusfoto');
+    Route::post('/savefoto', [AdminController::class, 'savefoto'])->name('admin.savefoto');
+    Route::get('/hapusfoto/{id}', [AdminController::class, 'hapusfoto'])->name('admin.hapusfoto');
 });
 
 ///////////////////////////////////////ORANG TUA////////////////////////////////////////////////////
 Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth']], function(){
-    Route::get('/homepage',[OrangTuaController::class,'homepage'])->name('orangTua.homepage');
+    Route::get('/homepage_ortu',[OrangTuaController::class,'homepage'])->name('orangTua.homepage_ortu');
 
 
     // jadwal kelas √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
-    Route::get('/jadwalKelas', [OrangTuaController::class, 'jadwalKelas']);
+    Route::get('/jadwalPelajaran', [OrangTuaController::class, 'jadwalPelajaran']);
     Route::get('/filterjadwal/{id}', [OrangTuaController::class, 'filterjadwal'])->name('orangTua.filterjadwal');
 
     // jadwal non dan aka √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
-    Route::get('/jadwalAkadanNonAkademik', [OrangTuaController::class, 'jadwalAkadanNonAkademik']);
-    Route::get('/filterJadwalAkaNonAka/{id}', [OrangTuaController::class, 'filterJadwalAkaNonAka'])->name('orangTua.filterJadwalAkaNonAka');
-    Route::get('/jadwalAkademik', [OrangTuaController::class, 'jadwalAkademik']);
+    Route::get('/kalenderAkademik', [OrangTuaController::class, 'kalenderAkademik']);
+    Route::get('/filterKalender/{id}', [OrangTuaController::class, 'filterKalender'])->name('orangTua.filterKalender');
 
     // finansial √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/finansial', [OrangTuaController::class, 'finansial']);
@@ -102,65 +101,61 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
 
     // berita √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/berita', [OrangTuaController::class, 'berita']);
-    Route::get('/lihatberita/{id}', 'App\Http\Controllers\OrangTuaController@lihatberita')->name('orangTua.lihatberita');
-    Route::get('/beritaDetail', [OrangTuaController::class, 'beritaDetail']);
+    Route::get('/lihatberita/{id}', [OrangTuaController::class, 'lihatberita'])->name('orangTua.lihatberita');
 
     // nilai √√√√√√√√√√√√√√√√√√√√√√√√√√√√√
-    Route::get('/nilai', [OrangTuaController::class, 'nilai']);
+    Route::get('/daftarNilai', [OrangTuaController::class, 'nilai']);
     Route::get('/filternilai/{id}', [OrangTuaController::class, 'filternilai'])->name('orangTua.filternilai');
 
     // kehadiran √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
-    Route::get('/kehadiran', [OrangTuaController::class, 'kehadiran']);
-    Route::get('/filterabsensi/{id}', [OrangTuaController::class, 'filterabsensi'])->name('orangTua.filterabsensi');
+    Route::get('/absensi', [OrangTuaController::class, 'absensi']);
+    Route::get('/filterAbsensi/{id}', [OrangTuaController::class, 'filterAbsensi'])->name('orangTua.filterAbsensi');
 
     // fitur bantuan √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
-    Route::get('/fiturBantuan', [OrangTuaController::class, 'fiturBantuan']);
+    Route::get('/pusatUnduhan', [OrangTuaController::class, 'pusatUnduhan']);
     
 
     Route::view('/pesan', 'livechatings.messages');
 
     // saranDanMasukan √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
     Route::get('/saranDanMasukan', [OrangTuaController::class, 'saranDanMasukan']);
-    Route::post('/sendSaranMasukan', 'App\Http\Controllers\OrangTuaController@sendSaranMasukan')->name('orangTua.sendSaranMasukan');
+    Route::post('/sendSaranDanMasukan', [OrangTuaController::class, 'sendSaranDanMasukan'])->name('orangTua.sendSaranDanMasukan');
   
 });
 
 ///////////////////////////////////////Guru////////////////////////////////////////////////////
 Route::group(['prefix'=>'guru', 'middleware'=>['isGuru','auth']], function(){
-    Route::get('/homepageGuru',[GuruController::class,'homepageGuru'])->name('guru.homepage');
+    Route::get('/homepage_guru',[GuruController::class,'homepage'])->name('guru.homepage_guru');
     // nilai siswa
-    Route::get('/nilaiSiswa', [GuruController::class, 'nilaiSiswa']);
-    Route::get('/listsiswa/{id}', 'App\Http\Controllers\GuruController@listsiswa')->name('guru.listsiswa');
-    Route::get('/listnilai/{id}', 'App\Http\Controllers\GuruController@listnilai')->name('guru.listnilai');
-    Route::get('/updateNilaiSiswa', [GuruController::class, 'updateNilaiSiswa']);
+    Route::get('/daftarKelas_nilai', [GuruController::class, 'daftarKelas_nilai']);
+    Route::get('/daftarSiswa_nilai/{id}', [GuruController::class, 'daftarSiswa_nilai'])->name('guru.daftarSiswa_nilai');
+    Route::get('/daftarNilai_nilai/{id}', [GuruController::class, 'daftarNilai_nilai'])->name('guru.daftarNilai_nilai');
 
     // kehadiran siswa
-    Route::get('/kehadiranSiswa', [GuruController::class, 'kehadiranSiswa']);
-    Route::get('/listKehadiranSiswa/{id}', 'App\Http\Controllers\GuruController@listKehadiranSiswa')->name('guru.listKehadiranSiswa');
-    Route::get('/listKehadiran/{id}', 'App\Http\Controllers\GuruController@listKehadiran')->name('guru.listKehadiran');
-    Route::get('/updatekehadiranSiswa', [GuruController::class, 'updatekehadiranSiswa']);
+    Route::get('/daftarKelas_absensi', [GuruController::class, 'daftarKelas_absensi']);
+    Route::get('/daftarSiswa_absensi/{id}', [GuruController::class, 'daftarSiswa_absensi'])->name('guru.daftarSiswa_absensi');
+    Route::get('/daftarKehadiran_absensi/{id}', [GuruController::class, 'daftarKehadiran_absensi'])->name('guru.daftarKehadiran_absensi');
 
     // saranDanMasukan
-    Route::get('/saranDanMasukanGuru', [GuruController::class, 'saranDanMasukanGuru']);
-    Route::post('/sendSaranMasukan', 'App\Http\Controllers\GuruController@sendSaranMasukan')->name('guru.sendSaranMasukan');
+    Route::get('/saranDanMasukan', [GuruController::class, 'saranDanMasukan'])->name('guru.saranDanMasukan');
+    Route::post('/sendSaranDanMasukan', [GuruController::class, 'sendSaranDanMasukan'])->name('guru.sendSaranDanMasukan');
     
     // PESAN
     // Route::get('/pesanGuru', [GuruController::class, 'pesanGuru']);
     Route::view('/pesanGuru', 'livechatings.messages-guru');
     
     // FITUR BANTUANNNN
-    Route::get('/pusatBantuanGuru', [GuruController::class, 'pusatBantuanGuru']);
+    Route::get('/pusatUnduhan', [GuruController::class, 'pusatUnduhan']);
     
     // jadwalll
-    Route::get('/jadwalAkadaNonAkaGuru', [GuruController::class, 'jadwalAkadaNonAkaGuru']);
-    Route::get('/filterJadwalAkaNonAka/{id}', [GuruController::class, 'filterJadwalAkaNonAka'])->name('guru.filterJadwalAkaNonAka');
-    Route::get('/jadwalGuru', [GuruController::class, 'jadwalGuru']);
-    Route::get('/filterJadwalGuru/{id}', [GuruController::class, 'filterJadwalGuru'])->name('guru.filterJadwalGuru');
+    Route::get('/kalenderAkademik', [GuruController::class, 'kalenderAkademik']);
+    Route::get('/filterKalender/{id}', [GuruController::class, 'filterKalender'])->name('guru.filterKalender');
+    Route::get('/jadwalMengajar', [GuruController::class, 'jadwalMengajar']);
+    Route::get('/filterJadwal/{id}', [GuruController::class, 'filterJadwal'])->name('guru.filterJadwal');
     
     // beritaa
-    Route::get('/beritaGuru', [GuruController::class, 'beritaGuru']);
-    Route::get('/lihatberita/{id}', 'App\Http\Controllers\GuruController@lihatberita')->name('guru.lihatberita');
-    Route::get('/beritaDetailGuru', [GuruController::class, 'beritaDetailGuru']);
+    Route::get('/berita', [GuruController::class, 'berita']);
+    Route::get('/lihatberita/{id}', [GuruController::class, 'lihatberita'])->name('guru.lihatberita');
 
 });
 

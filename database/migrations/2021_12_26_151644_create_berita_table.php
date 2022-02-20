@@ -16,6 +16,8 @@ class CreateBeritaTable extends Migration
         Schema::create('berita', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('id_kreator');
+            $table->foreign('id_kreator')->references('id')->on('admin')->onDelete('cascade')->onUpdate('cascade');
             $table->string('judul',50);
             $table->string('isi',1000);
             $table->string('foto');

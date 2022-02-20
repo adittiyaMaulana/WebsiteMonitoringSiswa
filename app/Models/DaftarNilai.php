@@ -10,8 +10,6 @@ class DaftarNilai extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id_siswa',
-        'id_mapel',
         'nilai_tugas',
         'nilai_uts',
         'nilai_uas',

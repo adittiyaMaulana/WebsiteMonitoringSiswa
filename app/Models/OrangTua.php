@@ -18,9 +18,4 @@ class OrangTua extends Model
     ];
 
     protected $table = "orang_tua";
-
-    // public function user()
-    // {
-    //     return $this->belongsTo(User::class);
-    // }
 }

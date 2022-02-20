@@ -15,6 +15,7 @@ class BeritaSeeder extends Seeder
     {
         $berita = [
             [
+                'id_kreator' => 1,
                 'judul' => 'Lorem Ipsum',
                 'isi' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -25,6 +26,7 @@ class BeritaSeeder extends Seeder
                  qui officia deserunt mollit anim id est laborum.",
                 'foto' => "1640341902_jepang-umumkan-tidak-akan-kirim-delegasi-pemerintah-ke-olimpiade-beijing-2022.jpeg"
             ],[
+                'id_kreator' => 2,
                 'judul' => 'Lorem Ipsum',
                 'isi' => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

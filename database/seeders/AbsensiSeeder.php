@@ -15,8 +15,6 @@ class AbsensiSeeder extends Seeder
     {
         $absensi = [
             [
-                'id_siswa' => 1,
-                'id_kelas' => 1,
                 'bulan' => 7,
                 'kehadiran' => 20,
                 'alpa' => 1,
@@ -25,8 +23,6 @@ class AbsensiSeeder extends Seeder
                 'semester' => 1
 
             ],[
-                'id_siswa' => 1,
-                'id_kelas' => 1,
                 'bulan' => 8,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -34,8 +30,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 1,
-                'id_kelas' => 1,
                 'bulan' => 9,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -43,8 +37,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 1,
-                'id_kelas' => 1,
                 'bulan' => 10,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -52,8 +44,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 1,
-                'id_kelas' => 1,
                 'bulan' => 11,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -61,8 +51,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 1,
-                'id_kelas' => 1,
                 'bulan' => 12,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -70,8 +58,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 2,
-                'id_kelas' => 1,
                 'bulan' => 7,
                 'kehadiran' => 20,
                 'alpa' => 1,
@@ -80,8 +66,6 @@ class AbsensiSeeder extends Seeder
                 'semester' => 1
 
             ],[
-                'id_siswa' => 2,
-                'id_kelas' => 1,
                 'bulan' => 8,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -89,8 +73,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 2,
-                'id_kelas' => 1,
                 'bulan' => 9,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -98,8 +80,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 2,
-                'id_kelas' => 1,
                 'bulan' => 10,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -107,8 +87,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 2,
-                'id_kelas' => 1,
                 'bulan' => 11,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -116,8 +94,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 2,
-                'id_kelas' => 1,
                 'bulan' => 12,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -125,8 +101,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 3,
-                'id_kelas' => 1,
                 'bulan' => 7,
                 'kehadiran' => 20,
                 'alpa' => 1,
@@ -135,8 +109,6 @@ class AbsensiSeeder extends Seeder
                 'semester' => 1
 
             ],[
-                'id_siswa' => 3,
-                'id_kelas' => 1,
                 'bulan' => 8,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -144,8 +116,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 3,
-                'id_kelas' => 1,
                 'bulan' => 9,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -153,8 +123,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 3,
-                'id_kelas' => 1,
                 'bulan' => 10,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -162,8 +130,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 3,
-                'id_kelas' => 1,
                 'bulan' => 11,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -171,8 +137,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 3,
-                'id_kelas' => 1,
                 'bulan' => 12,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -182,8 +146,6 @@ class AbsensiSeeder extends Seeder
             ],
 
             [
-                'id_siswa' => 4,
-                'id_kelas' => 1,
                 'bulan' => 7,
                 'kehadiran' => 20,
                 'alpa' => 1,
@@ -192,8 +154,6 @@ class AbsensiSeeder extends Seeder
                 'semester' => 1
 
             ],[
-                'id_siswa' => 4,
-                'id_kelas' => 1,
                 'bulan' => 8,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -201,8 +161,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 0,
                 'semester' => 1
             ],[
-                'id_siswa' => 4,
-                'id_kelas' => 1,
                 'bulan' => 9,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -210,8 +168,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 4,
-                'id_kelas' => 1,
                 'bulan' => 10,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -219,8 +175,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 4,
-                'id_kelas' => 1,
                 'bulan' => 11,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -228,8 +182,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 0,
                 'semester' => 1
             ],[
-                'id_siswa' => 4,
-                'id_kelas' => 1,
                 'bulan' => 12,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -237,8 +189,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 1
             ],[
-                'id_siswa' => 4,
-                'id_kelas' => 1,
                 'bulan' => 1,
                 'kehadiran' => 20,
                 'alpa' => 1,
@@ -247,8 +197,6 @@ class AbsensiSeeder extends Seeder
                 'semester' => 2
 
             ],[
-                'id_siswa' => 4,
-                'id_kelas' => 1,
                 'bulan' => 2,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -256,8 +204,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 2
             ],[
-                'id_siswa' => 4,
-                'id_kelas' => 1,
                 'bulan' => 3,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -265,8 +211,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 2
             ],[
-                'id_siswa' => 4,
-                'id_kelas' => 1,
                 'bulan' => 4,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -274,8 +218,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 2
             ],[
-                'id_siswa' => 4,
-                'id_kelas' => 1,
                 'bulan' => 5,
                 'kehadiran' => 20,
                 'alpa' => 0,
@@ -283,8 +225,6 @@ class AbsensiSeeder extends Seeder
                 'izin' => 1,
                 'semester' => 2
             ],[
-                'id_siswa' => 4,
-                'id_kelas' => 1,
                 'bulan' => 6,
                 'kehadiran' => 20,
                 'alpa' => 0,
