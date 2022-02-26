@@ -22,7 +22,6 @@ section .imageBox{
 }
 
 section .imageBox:before{
-    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -101,7 +100,7 @@ section .contentBox .formBox .inputBox input {
     border: 1px solid #bdb2b2;
     font-size: 16px;
     letter-spacing: 1px;
-    color: #607d8b;
+    color: #6c8b60;
     background: transparent;
     border-radius: 30px;
 }
@@ -119,14 +118,6 @@ section .contentBox .formBox .inputBox input[type="submit"] {
 
 section .contentBox .formBox .inputBox input[type="submit"]:hover {
     background: #72aed1;
-}
-
-/* rememberr */
-section .contentBox .formBox .remember{
-    margin-bottom: 10px;
-    color: #4A5568;
-    font-weight: 400;
-    font-size: 14px;
 }
 
 /* lupa pass */
