@@ -104,7 +104,7 @@ Route::group(['prefix'=>'orangTua', 'middleware'=>['isOrangTuaMiddleware','auth'
     Route::get('/lihatberita/{id}', [OrangTuaController::class, 'lihatberita'])->name('orangTua.lihatberita');
 
     // nilai √√√√√√√√√√√√√√√√√√√√√√√√√√√√√
-    Route::get('/daftarNilai', [OrangTuaController::class, 'nilai']);
+    Route::get('/daftarNilai', [OrangTuaController::class, 'daftarNilai']);
     Route::get('/filternilai/{id}', [OrangTuaController::class, 'filternilai'])->name('orangTua.filternilai');
 
     // kehadiran √√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√
