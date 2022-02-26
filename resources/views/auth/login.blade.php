@@ -48,16 +48,6 @@
                 </div>
 
                 <input type="checkbox" onclick="myFunction()"> Lihat Password
-                <!-- 
-                <div class="remember">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                        <label class="form-check-label" for="remember">
-                            Ingatkan Saya!!!
-                        </label>
-                    </div>
-                </div> -->
 
                 <div class="inputBox">
                     <input type="submit" value="Masuk" name=""><br>
