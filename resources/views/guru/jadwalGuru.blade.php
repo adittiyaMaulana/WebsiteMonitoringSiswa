@@ -141,7 +141,7 @@
     <div class="navbar_pilihan mt-5 ml-4">
         <ul>
             <li><a class="active" href="/guru/jadwalGuru">Mengajar</a></li>
-            <li><a href="/guru/jadwalAkadaNonAkaGuru">Kalender Akademik</a></li>
+            <li><a href="/guru/kalenderAkademik">Kalender Akademik</a></li>
         </ul>
     </div>
 

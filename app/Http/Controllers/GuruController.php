@@ -74,6 +74,10 @@ class GuruController extends Controller
                 ->select('mata_pelajaran.nama', 'daftar_nilai.nilai_tugas', 
                 'daftar_nilai.nilai_uts', 'daftar_nilai.nilai_uas', 'daftar_nilai.kelas', 'daftar_nilai.semester')
                 ->where('profil_siswa.id','=',$request->id)
+                ->orderBy('mata_pelajaran.nama')
+                ->orderBy('daftar_nilai.nilai_tugas')
+                ->orderBy('daftar_nilai.nilai_uts')
+                ->orderBy('daftar_nilai.nilai_uas')
                 ->orderBy('daftar_nilai.kelas','desc')
                 ->orderBy('daftar_nilai.semester','desc')
                 ->get();
@@ -111,6 +115,11 @@ class GuruController extends Controller
                 ->select('absensi.bulan', 
                 'absensi.kehadiran', 'absensi.alpa', 'absensi.sakit', 'absensi.izin')
                 ->where('profil_siswa.id','=',$request->id)
+                ->orderBy('absensi.bulan')
+                ->orderBy('absensi.kehadiran')
+                ->orderBy('absensi.alpa')
+                ->orderBy('absensi.sakit')
+                ->orderBy('absensi.izin')
                 ->get();
        $siswa = ProfilSiswa::where('id',$request->id)->first(); 
        return view('guru.daftarKehadiran_absensi', compact('siswa','absen','username'));
@@ -149,9 +158,12 @@ class GuruController extends Controller
     public function kalenderAkademik()
     {
         $username = Auth::user()->name;
-        $jadwal = DB::table('jadwal_akademik')
+        $jadwal = DB::table('kalender_akademik')
             ->select('nama_kegiatan','jadwal_kegiatan','periode')
             ->where('periode','=','2021 - 2022')
+            ->orderBy('nama_kegiatan')
+            ->orderBy('jadwal_kegiatan')
+            ->orderBy('periode')
             ->get();
         return view('guru.kalenderAkademik',compact('jadwal','username'));
     }
@@ -161,14 +173,20 @@ class GuruController extends Controller
         //get email orang tua berdasar login
 
         if($id!=''){
-            $jadwal = DB::table('jadwal_akademik')
+            $jadwal = DB::table('kalender_akademik')
                 ->select('nama_kegiatan','jadwal_kegiatan','periode')
                 ->where('periode','=',"$id")
+                ->orderBy('nama_kegiatan')
+                ->orderBy('jadwal_kegiatan')
+                ->orderBy('periode')
                 ->get();
         }else{
-            $jadwal = DB::table('jadwal_akademik')
+            $jadwal = DB::table('kalender_akademik')
             ->select('nama_kegiatan','jadwal_kegiatan','periode')
             ->where('periode','=','2021 - 2022')
+            ->orderBy('nama_kegiatan')
+            ->orderBy('jadwal_kegiatan')
+            ->orderBy('periode')
             ->get();
         }
 
@@ -194,6 +212,10 @@ class GuruController extends Controller
             'kelas.nama_kelas')
             ->where('guru.email','=',$email_login)
             ->where('jadwal_mengajar.hari','LIKE','Jumat')
+            ->orderBy('jadwal_mengajar.hari')
+            ->orderBy('jadwal_mengajar.jam_pelajaran')
+            ->orderBy('mata_pelajaran.nama')
+            ->orderBy('kelas.nama_kelas')
             ->get();
         } else if ($today == 'Minggu'){
             $jadwal_mengajar = DB::table('jadwal_mengajar')
@@ -205,6 +227,10 @@ class GuruController extends Controller
             'kelas.nama_kelas')
             ->where('guru.email','=',$email_login)
             ->where('jadwal_mengajar.hari','LIKE','Jumat')
+            ->orderBy('jadwal_mengajar.hari')
+            ->orderBy('jadwal_mengajar.jam_pelajaran')
+            ->orderBy('mata_pelajaran.nama')
+            ->orderBy('kelas.nama_kelas')
             ->get();
         } else{
             $jadwal_mengajar = DB::table('jadwal_mengajar')
@@ -216,6 +242,10 @@ class GuruController extends Controller
             'kelas.nama_kelas')
             ->where('guru.email','=',$email_login)
             ->where('jadwal_mengajar.hari','LIKE',$today)
+            ->orderBy('jadwal_mengajar.hari')
+            ->orderBy('jadwal_mengajar.jam_pelajaran')
+            ->orderBy('mata_pelajaran.nama')
+            ->orderBy('kelas.nama_kelas')
             ->get();
         }
 
@@ -237,6 +267,10 @@ class GuruController extends Controller
             'kelas.nama_kelas')
             ->where('guru.email','=',$email_login)
             ->where('jadwal_mengajar.hari','LIKE',$id)
+            ->orderBy('jadwal_mengajar.hari')
+            ->orderBy('jadwal_mengajar.jam_pelajaran')
+            ->orderBy('mata_pelajaran.nama')
+            ->orderBy('kelas.nama_kelas')
             ->get();
         }else{
         if ($today == 'Sabtu'){
@@ -249,6 +283,10 @@ class GuruController extends Controller
             'kelas.nama_kelas')
             ->where('guru.email','=',$email_login)
             ->where('jadwal_mengajar.hari','LIKE','Jumat')
+            ->orderBy('jadwal_mengajar.hari')
+            ->orderBy('jadwal_mengajar.jam_pelajaran')
+            ->orderBy('mata_pelajaran.nama')
+            ->orderBy('kelas.nama_kelas')
             ->get();
         } else if ($today == 'Minggu'){
             $jadwal_mengajar = DB::table('jadwal_mengajar')
@@ -260,6 +298,10 @@ class GuruController extends Controller
             'kelas.nama_kelas')
             ->where('guru.email','=',$email_login)
             ->where('jadwal_mengajar.hari','LIKE','Jumat')
+            ->orderBy('jadwal_mengajar.hari')
+            ->orderBy('jadwal_mengajar.jam_pelajaran')
+            ->orderBy('mata_pelajaran.nama')
+            ->orderBy('kelas.nama_kelas')
             ->get();
         } else{
             $jadwal_mengajar = DB::table('jadwal_mengajar')
@@ -271,6 +313,10 @@ class GuruController extends Controller
             'kelas.nama_kelas')
             ->where('guru.email','=',$email_login)
             ->where('jadwal_mengajar.hari','LIKE',$today)
+            ->orderBy('jadwal_mengajar.hari')
+            ->orderBy('jadwal_mengajar.jam_pelajaran')
+            ->orderBy('mata_pelajaran.nama')
+            ->orderBy('kelas.nama_kelas')
             ->get();
         }
     }

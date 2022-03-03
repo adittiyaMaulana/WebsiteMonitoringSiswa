@@ -37,8 +37,8 @@ class UserSeeder extends Seeder
 
             [
                 'name' => "Darmi",
-                'email' => "darmidar511@gmail.com",
-                'password' => Hash::make('asdfg1_234'),
+                'email' => "darmi@gmail.com",
+                'password' => Hash::make('password'),
                 'role' => 2,
                 'is_online' => 0,
                 'last_activity' => "-"
@@ -52,48 +52,6 @@ class UserSeeder extends Seeder
             ],[
                 'name' => "Joko",
                 'email' => "joko@gmail.com",
-                'password' => Hash::make('password'),
-                'role' => 2,
-                'is_online' => 0,
-                'last_activity' => "-"
-            ],[
-                'name' => "Santoso",
-                'email' => "santoso@gmail.com",
-                'password' => Hash::make('password'),
-                'role' => 2,
-                'is_online' => 0,
-                'last_activity' => "-"
-            ],[
-                'name' => "Dedi",
-                'email' => "dedi@gmail.com",
-                'password' => Hash::make('password'),
-                'role' => 2,
-                'is_online' => 0,
-                'last_activity' => "-"
-            ],[
-                'name' => "Paijo",
-                'email' => "paijo@gmail.com",
-                'password' => Hash::make('password'),
-                'role' => 2,
-                'is_online' => 0,
-                'last_activity' => "-"
-            ],[
-                'name' => "Tono",
-                'email' => "tono@gmail.com",
-                'password' => Hash::make('password'),
-                'role' => 2,
-                'is_online' => 0,
-                'last_activity' => "-"
-            ],[
-                'name' => "Burhan",
-                'email' => "burhan@gmail.com",
-                'password' => Hash::make('password'),
-                'role' => 2,
-                'is_online' => 0,
-                'last_activity' => "-"
-            ],[
-                'name' => "Rian",
-                'email' => "rian@gmail.com",
                 'password' => Hash::make('password'),
                 'role' => 2,
                 'is_online' => 0,

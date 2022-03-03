@@ -154,7 +154,7 @@
                     <th>Periode</th>
                 </tr>
             </thead>
-            <tbody id="jadwalAkademikNonAkademik">
+            <tbody id="kalenderAkademik">
                 @forelse($jadwal as $data)
                 <tr>
                     <td>{{$data->nama_kegiatan}}</td>
@@ -179,12 +179,12 @@
     $(document).ready(function() {
         $('#periode').on('change', function(e) {
             var id = e.target.value;
-            $.get('{{ url("guru/filterJadwalAkaNonAka")}}/' + id, function(data) {
+            $.get('{{ url("guru/filterKalender")}}/' + id, function(data) {
                 console.log(id);
                 console.log(data);
-                $('#jadwalAkademikNonAkademik').empty();
+                $('#kalenderAkademik').empty();
                 $.each(data, function(index, element) {
-                    $('#jadwalAkademikNonAkademik').append("<tr><td>" + element.nama_kegiatan + "</td><td>" + element.jadwal_kegiatan + "</td><td>" + element.periode + "</td></tr>")
+                    $('#kalenderAkademik').append("<tr><td>" + element.nama_kegiatan + "</td><td>" + element.jadwal_kegiatan + "</td><td>" + element.periode + "</td></tr>")
                 });
             });
         });

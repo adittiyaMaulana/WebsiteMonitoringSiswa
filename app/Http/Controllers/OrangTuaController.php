@@ -318,6 +318,9 @@ class OrangTuaController extends Controller
         $jadwal = DB::table('kalender_akademik')
             ->select('nama_kegiatan','jadwal_kegiatan','periode')
             ->where('periode','=','2021 - 2022')
+            ->orderBy('nama_kegiatan')
+            ->orderBy('jadwal_kegiatan')
+            ->orderBy('periode')
             ->get();
         return view('orangTua.kalenderAkademik',compact('jadwal','username'));
     }
@@ -330,11 +333,17 @@ class OrangTuaController extends Controller
             $jadwal = DB::table('kalender_akademik')
                 ->select('nama_kegiatan','jadwal_kegiatan','periode')
                 ->where('periode','=',"$id")
+                ->orderBy('nama_kegiatan')
+                ->orderBy('jadwal_kegiatan')
+                ->orderBy('periode')
                 ->get();
         }else{
-            $jadwal = DB::table('jadwal_akademik')
+            $jadwal = DB::table('kalender_akademik')
             ->select('nama_kegiatan','jadwal_kegiatan','periode')
             ->where('periode','=','2021 - 2022')
+            ->orderBy('nama_kegiatan')
+            ->orderBy('jadwal_kegiatan')
+            ->orderBy('periode')
             ->get();
         }
 
@@ -505,7 +514,7 @@ class OrangTuaController extends Controller
                 ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'detail_nilai.id_mapel')
                 ->select('mata_pelajaran.nama', 'daftar_nilai.nilai_tugas', 
                 'daftar_nilai.nilai_uts', 'daftar_nilai.nilai_uas', 'daftar_nilai.kelas', 'daftar_nilai.semester')
-                ->where('orang_tua.email','=',$email_login)
+                ->where('orang_tua.email','=',"$email_login")
                 ->where('daftar_nilai.kelas', '=', $riwayat_kelas)
                 ->where('daftar_nilai.semester', '=', $riwayat_semester)
                 ->orderBy('mata_pelajaran.nama')
@@ -526,7 +535,7 @@ class OrangTuaController extends Controller
                 ->join('mata_pelajaran', 'mata_pelajaran.id', '=', 'detail_nilai.id_mapel')
                 ->select('mata_pelajaran.nama', 'daftar_nilai.nilai_tugas', 
                 'daftar_nilai.nilai_uts', 'daftar_nilai.nilai_uas', 'daftar_nilai.kelas', 'daftar_nilai.semester')
-                ->where('orang_tua.email','=',$email_login)
+                ->where('orang_tua.email','=',"$email_login")
                 ->where('daftar_nilai.kelas', '=', $kelas)
                 ->where('daftar_nilai.semester', '=', $sem)
                 ->orderBy('mata_pelajaran.nama')

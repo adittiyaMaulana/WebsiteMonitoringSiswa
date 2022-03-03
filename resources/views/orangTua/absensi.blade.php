@@ -184,7 +184,7 @@
 	$(document).ready(function(){
 		$('#semester').on('change', function(e){
 			var id = e.target.value;
-			$.get('{{ url("orangTua/filterabsensi")}}/'+id, function(data){
+			$.get('{{ url("orangTua/filterAbsensi")}}/'+id, function(data){
 			console.log(id);
 			console.log(data);
 			$('#absensi').empty();

@@ -14,6 +14,8 @@ class JadwalPelajaranSeeder extends Seeder
     public function run()
     {
         $jadwal_pelajaran = [
+
+            //7
             [
                 'jam_pelajaran' => '08.00 - 09.30',
                 'hari' => 'Senin'
@@ -31,6 +33,8 @@ class JadwalPelajaranSeeder extends Seeder
                 'hari' => 'Senin'
             ],
 
+
+            //8
             [
                 'jam_pelajaran' => '08.00 - 09.30',
                 'hari' => 'Senin'
@@ -48,6 +52,8 @@ class JadwalPelajaranSeeder extends Seeder
                 'hari' => 'Senin'
             ],
 
+
+            //9
             [
                 'jam_pelajaran' => '08.00 - 09.30',
                 'hari' => 'Senin'
@@ -65,108 +71,7 @@ class JadwalPelajaranSeeder extends Seeder
                 'hari' => 'Senin'
             ],
 
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Senin'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Senin'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Senin'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Senin'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Senin'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Senin'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Senin'
-            ],
-
+            //7
             [
                 'jam_pelajaran' => '08.00 - 09.30',
                 'hari' => 'Selasa'
@@ -184,6 +89,7 @@ class JadwalPelajaranSeeder extends Seeder
                 'hari' => 'Selasa'
             ],
 
+            //8
             [
                 'jam_pelajaran' => '08.00 - 09.30',
                 'hari' => 'Selasa'
@@ -201,6 +107,7 @@ class JadwalPelajaranSeeder extends Seeder
                 'hari' => 'Selasa'
             ],
 
+            //9
             [
                 'jam_pelajaran' => '08.00 - 09.30',
                 'hari' => 'Selasa'
@@ -218,108 +125,8 @@ class JadwalPelajaranSeeder extends Seeder
                 'hari' => 'Selasa'
             ],
 
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Selasa'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Selasa'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Selasa'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Selasa'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Selasa'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Selasa'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Selasa'
-            ],
-
+            
+            //7
             [
                 'jam_pelajaran' => '08.00 - 09.30',
                 'hari' => 'Rabu'
@@ -337,6 +144,7 @@ class JadwalPelajaranSeeder extends Seeder
                 'hari' => 'Rabu'
             ],
 
+            //8
             [
                 'jam_pelajaran' => '08.00 - 09.30',
                 'hari' => 'Rabu'
@@ -354,6 +162,7 @@ class JadwalPelajaranSeeder extends Seeder
                 'hari' => 'Rabu'
             ],
 
+            //9
             [
                 'jam_pelajaran' => '08.00 - 09.30',
                 'hari' => 'Rabu'
@@ -371,108 +180,8 @@ class JadwalPelajaranSeeder extends Seeder
                 'hari' => 'Rabu'
             ],
 
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Rabu'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Rabu'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Rabu'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Rabu'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Rabu'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Rabu'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Rabu'
-            ],
-
+            
+            //7
             [
                 'jam_pelajaran' => '08.00 - 09.30',
                 'hari' => 'Kamis'
@@ -490,6 +199,7 @@ class JadwalPelajaranSeeder extends Seeder
                 'hari' => 'Kamis'
             ],
 
+            //8
             [
                 'jam_pelajaran' => '08.00 - 09.30',
                 'hari' => 'Kamis'
@@ -507,6 +217,7 @@ class JadwalPelajaranSeeder extends Seeder
                 'hari' => 'Kamis'
             ],
 
+            //9
             [
                 'jam_pelajaran' => '08.00 - 09.30',
                 'hari' => 'Kamis'
@@ -524,108 +235,8 @@ class JadwalPelajaranSeeder extends Seeder
                 'hari' => 'Kamis'
             ],
 
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Kamis'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Kamis'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Kamis'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Kamis'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Kamis'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Kamis'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Kamis'
-            ],
-
+            
+            //7
             [
                 'jam_pelajaran' => '08.00 - 09.30',
                 'hari' => 'Jumat'
@@ -643,6 +254,7 @@ class JadwalPelajaranSeeder extends Seeder
                 'hari' => 'Jumat'
             ],
 
+            //8
             [
                 'jam_pelajaran' => '08.00 - 09.30',
                 'hari' => 'Jumat'
@@ -660,6 +272,7 @@ class JadwalPelajaranSeeder extends Seeder
                 'hari' => 'Jumat'
             ],
 
+            //9
             [
                 'jam_pelajaran' => '08.00 - 09.30',
                 'hari' => 'Jumat'
@@ -677,107 +290,6 @@ class JadwalPelajaranSeeder extends Seeder
                 'hari' => 'Jumat'
             ],
 
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Jumat'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Jumat'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Jumat'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Jumat'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Jumat'
-            ],
-
-            [
-                'jam_pelajaran' => '08.00 - 09.30',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '09.30 - 11.00',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '11.00 - 11.45',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '12.30 - 14.00',
-                'hari' => 'Jumat'
-            ],[
-                'jam_pelajaran' => '14.00 - 15.30',
-                'hari' => 'Jumat'
-            ]
         ];
         \DB::table('jadwal_pelajaran')->insert($jadwal_pelajaran);
     }

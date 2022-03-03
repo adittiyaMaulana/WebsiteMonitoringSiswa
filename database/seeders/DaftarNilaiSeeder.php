@@ -14,6 +14,7 @@ class DaftarNilaiSeeder extends Seeder
     public function run()
     {
         $daftar_nilai = [
+            //id 1
             [
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
@@ -77,7 +78,10 @@ class DaftarNilaiSeeder extends Seeder
                 'nilai_rata' => 84,
                 'semester' => 1,
                 'kelas' => 7
-            ],[
+            ],
+            
+            //id 2
+            [
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -140,7 +144,139 @@ class DaftarNilaiSeeder extends Seeder
                 'nilai_rata' => 84,
                 'semester' => 1,
                 'kelas' => 7
+            ],
+            
+            [
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 7
             ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 7
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 7
+            ],
+
+            [
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 1,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 1,
+                'kelas' => 8
+            ],
+            //id 3
+            [
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -206,262 +342,9 @@ class DaftarNilaiSeeder extends Seeder
             ],
 
 
-            // id siswa 4
             [
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
-                'nilai_uas' => 90,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 95,
-                'nilai_uas' => 90,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 90,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 50,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 70,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 60,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 50,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 70,
-                'nilai_uas' => 60,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 70,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 60,
-                'nilai_uas' => 50,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 80,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
                 'nilai_uas' => 80,
                 'nilai_rata' => 84,
                 'semester' => 2,
@@ -522,196 +405,9 @@ class DaftarNilaiSeeder extends Seeder
                 'nilai_rata' => 84,
                 'semester' => 2,
                 'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
+            ],
+            
+            [
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
@@ -776,265 +472,78 @@ class DaftarNilaiSeeder extends Seeder
                 'kelas' => 8
             ],
 
-            // id siswa 7
+            
+            [
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 8
+            ],[
+                'nilai_tugas' => 80,
+                'nilai_uts' => 90,
+                'nilai_uas' => 80,
+                'nilai_rata' => 84,
+                'semester' => 2,
+                'kelas' => 8
+            ],
+            
             [
                 'nilai_tugas' => 80,
                 'nilai_uts' => 90,
                 'nilai_uas' => 80,
                 'nilai_rata' => 84,
                 'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
                 'kelas' => 9
             ],[
                 'nilai_tugas' => 80,
@@ -1092,637 +601,7 @@ class DaftarNilaiSeeder extends Seeder
                 'nilai_rata' => 84,
                 'semester' => 1,
                 'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 7
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 2,
-                'kelas' => 8
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ],[
-                'nilai_tugas' => 80,
-                'nilai_uts' => 90,
-                'nilai_uas' => 80,
-                'nilai_rata' => 84,
-                'semester' => 1,
-                'kelas' => 9
-            ]
+            ],
         ];
         \DB::table('daftar_nilai')->insert($daftar_nilai);
     }
