@@ -143,7 +143,7 @@
     
     
             <p>Nama : {{$siswa->nama}}</p>
-            <table id="nilai" class="table table-hover" style="width:100%">
+            <table id="tableGuru" class="table table-hover" style="width:100%">
                 <thead class="table-dark">
                     <tr>
                         <th>Kelas</th>
@@ -187,8 +187,6 @@
 
 </div>
 
-<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
-</script>
 <script>
     $(document).ready(function() {
         $('#sem').on('change', function(e) {

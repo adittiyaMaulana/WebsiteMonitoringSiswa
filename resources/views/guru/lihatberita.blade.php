@@ -114,14 +114,14 @@
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon pengaduan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/saranDanMasukan">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/guru/saranDanMasukan">
                     <span class="icon">
                         <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
                 </a>
 
                 <!-- Icon pesan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/pesanAdmin">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/guru/pesanGuru">
                     <span class="icon">
                         <ion-icon name="mail" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
@@ -140,24 +140,6 @@
             </div>
         </div>
     </nav>
-
-
-    <!-- buttonn -->
-    <!-- <div class="button_area">
-        <a href="/admin/formBerita"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
-    </div> -->
-
-    <!-- <div class="detail-berita mt-5 ml-3 mr-4">
-        <div class="my-table mt-5 ml-3 mr-4">
-            <div class="col-md-7 col-sm-12 mb-5 bg-white p-0">
-                <img src="/foto/{{$berita->foto}}" class="card-img-top" alt="gambar">
-                <div class="p-4">
-                    <h2>{{ $berita->judul }}</h2>
-                    <textarea class="form-control"" readonly> {{ $berita->isi }}</textarea>
-                </div>
-            </div>
-        </div>
-    </div> -->
     
     <div class="mt-5 mr-4 ml-4">
         <h2 class="judulBerita mt-5">{{ $berita->judul }}</h2>

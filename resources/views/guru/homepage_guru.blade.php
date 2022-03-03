@@ -160,10 +160,10 @@
     </div>
 
     <!-- ===================================================================== -->
-    <!-- Nilai Siswa -->
+    <!-- jadwal mengajar -->
 
-    <div class="nilaiSiswa ml-3 mr-5">
-        <div class="boxNilai">
+    <div class="jadwalMengajar ml-3 mr-5">
+        <div class="shadowBox">
             <div class="isi">
                 <p style="text-align:left;">
                     Jadwal Mengajar

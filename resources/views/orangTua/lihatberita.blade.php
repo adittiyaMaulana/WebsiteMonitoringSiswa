@@ -108,14 +108,14 @@
             <!-- Right elements -->
             <div class="d-flex align-items-center">
                 <!-- Icon pengaduan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/saranDanMasukan">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/orangTua/saranDanMasukan">
                     <span class="icon">
                         <ion-icon name="chatbox-ellipses" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
                 </a>
 
                 <!-- Icon pesan -->
-                <a class=" d-flex align-items-center mr-3 mt-2" href="/admin/pesanAdmin">
+                <a class=" d-flex align-items-center mr-3 mt-2" href="/orangTua/pesan">
                     <span class="icon">
                         <ion-icon name="mail" style="font-size: 1.3em; color: #D6C8C8;"></ion-icon>
                     </span>
@@ -135,13 +135,6 @@
             </div>
         </div>
     </nav>
-
-
-    <!-- buttonn -->
-    <!-- <div class="button_area">
-        <a href="/admin/formBerita"><button type="button" class="btn btn-success">Tambah Data<i class="bi bi-plus ml-2"></i></button></a>
-    </div> -->
-
 
     <div class="mt-5 mr-4 ml-4">
         <h2 class="judulBerita mt-5">{{ $berita->judul }}</h2>

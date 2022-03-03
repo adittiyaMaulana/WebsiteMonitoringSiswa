@@ -44,11 +44,6 @@
     font-size: 30px;
 }
 
-.nis {
-    font-weight: 400;
-    color: #CEBCBC;
-}
-
 /* untuk kehadiean siswa sebagian */
 .kehadiran_sebagian {
     padding: 30px;
@@ -66,7 +61,7 @@
 }
 
 /* nilai siswa */
-.nilaiSiswa {
+.jadwalMengajar {
     width: 100%;
     height: auto;
     padding-bottom: 40px;
@@ -74,7 +69,7 @@
     padding-right: 40px;
 }
 
-.boxNilai {
+.shadowBox {
     background: #ffffff;
     height: 428px;
     border-radius: 20px;
@@ -96,20 +91,4 @@
     font-weight: 400;
 }
 
-/* limit text row nilai siswa sebagian di homepage*/
-.limit_name_nilai{
-    width: 150px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-style: normal;
-}
-
-/* .limit_kehadiran{
-    width: 170px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-style: normal;
-} */
 

@@ -33,7 +33,8 @@
     <link rel="stylesheet" href="{{ asset('css/content.css')}}">
     <link rel="stylesheet" href="{{ asset('css/jadwal.css')}}">
     <link rel="stylesheet" href="{{ asset('css/tentangsekolah.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/main.css')}}">
+    
+    <link rel="stylesheet" href="{{ asset('css/pesans.css')}}">
 
 
     <!-- orang tua -->

@@ -16,10 +16,6 @@ body {
     margin-left: 320px;
 }
 
-.my-contentRev2 {
-    margin-left: 320px;
-}
-
 .container1 {
     width: 100%;
     height: auto;
@@ -39,39 +35,7 @@ body {
 
 }
 
-/* untuk profile */
-.profile {
-    padding: 30px;
-    height: 312px;
-    text-align: center;
-}
 
-.profile h4 {
-    font-weight: 500;
-    color: #404040;
-    font-size: 30px;
-}
-
-.nis {
-    font-weight: 400;
-    color: #CEBCBC;
-}
-
-/* untuk finansial sebagian */
-.finansial_sebagian {
-    padding: 30px;
-    height: 312px;
-}
-
-.finansial_sebagian p {
-    font-weight: 600;
-}
-
-.finansial_sebagian p a {
-    text-decoration: none;
-    color: #A79494;
-    font-weight: 400;
-}
 
 @media screen and (max-width: 760px) {
     .my-content {

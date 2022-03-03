@@ -1,37 +1,36 @@
-/* limit text row finansial sebagian di homepage*/
-.limit_name_nilai{
-    width: 150px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-style: normal;
+
+/*  ============ */
+/* untuk profile */
+.profile {
+    padding: 30px;
+    height: 312px;
+    text-align: center;
 }
 
-.limit_kehadiran{
-    width: 170px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-style: normal;
+.profile h4 {
+    font-weight: 500;
+    color: #404040;
+    font-size: 30px;
 }
 
-.limit_isi_masukansaran{
-    width: 650px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-style: normal;
+/* =========== */
+/* untuk finansial sebagian */
+.finansial_sebagian {
+    padding: 30px;
+    height: 312px;
 }
 
-
-.limit_judul_masukansaran{
-    width: 150px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-style: normal;
+.finansial_sebagian p {
+    font-weight: 600;
 }
 
+.finansial_sebagian p a {
+    text-decoration: none;
+    color: #A79494;
+    font-weight: 400;
+}
+
+/* ====== */
 /* bagian berita */
 .bagianberitas{
     height: auto;
@@ -39,43 +38,13 @@
 }
 
 .title_berita{
-    padding-top: 10vh;
     font-weight: 600;
-    padding-left: 3vh;
-    padding-bottom: 2vh;
-}
-
-.berita{
-    height: auto;
-    width: 95%;
-    margin-bottom: 20px;
-    display: flex;
 }
 
 .listberita{
     height: auto;
     width: auto;
     margin-bottom: 20px;
-    display: flex;
-}
-
-.cardBerita {
-    width: 446px;
-    height: 312px;
-    margin: 20px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    box-shadow: 0 8px 8px -4px lightblue;
-    background:#fff;
-}
-
-.image {
-    width: 20px;
-    height: 20px;
-}
-
-.text-berita{
-    width: 400px;
 }
 
 .limit_berita_text{

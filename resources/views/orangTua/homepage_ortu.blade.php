@@ -235,7 +235,7 @@
     <!-- Berita -->
 
     <div class="bagianberitas">
-        <h3 class="title_berita">Berita</h3>
+        <h3 class="title_berita ml-4 mt-5">Berita</h3>
 
         <div class="listberita ml-4 mr-4 mb-5">
             <div class="owl-informasi owl-carousel owl-theme">
@@ -245,11 +245,9 @@
                         <a href="{{route('orangTua.lihatberita', $data->id)}}" style="text-decoration: none; color: black;">
                             <img src="/foto/{{$data->foto}}" class="card-img-top" style="border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="...">
                             <div class="card-body">
-                                <div class="text-berita">
-                                    <p class="card-text limit_berita_text">
-                                        {{$data->isi}}
-                                    </p>
-                                </div>
+                                <p class="card-text limit_berita_text">
+                                    {{$data->isi}}
+                                </p>
                             </div>
                         </a>
                     </div>
