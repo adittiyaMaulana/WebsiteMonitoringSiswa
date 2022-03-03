@@ -24,39 +24,36 @@
 
                             @foreach($users as $user)
 
-                            {{-- untuk menghilangkan daftar data diri di list user --}}
-                            @if($user->id !== auth()->id())
+                                {{-- untuk menghilangkan daftar data diri di list user --}}
+                                @if($user->id !== auth()->id())
 
-                            @php
+                                    @php
 
-                            $not_seen = App\Models\Message::where('user_id',$user->id)->where('receiver_id', auth()->id())->where('is_seen', false)->get() ?? null
+                                        $not_seen = App\Models\Message::where('user_id',$user->id)->where('receiver_id', auth()->id())->where('is_seen', false)->get() ?? null
 
-                            @endphp
+                                    @endphp
 
-                            @if($user->role != 1 && $user->role == 2 && $user->role != 3)
-                            <a wire:click="getUser({{ $user->id }})" class="text-dark link" style="text-decoration: none;">
-                                <li class="list-group-item">
-                                    <img class="img-fluid avatar" src="https://www.jobstreet.co.id/en/cms/employer/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="">
+                                    @if($user->role != 1 && $user->role == 2 && $user->role != 3)
+                                    <a wire:click="getUser({{ $user->id }})" class="text-dark link" style="text-decoration: none;">
+                                        <li class="list-group-item">
+                                            <img class="img-fluid avatar" src="https://www.jobstreet.co.id/en/cms/employer/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="">
 
-                                    <!-- status online -- ngaturnya ada di OnlineMiddleware-->
-                                    @if($user->is_online == true)
-                                    <i class="fa fa-circle text-success online-icon"></i>
+                                            <!-- status online -- ngaturnya ada di OnlineMiddleware-->
+                                            @if($user->is_online == true)
+                                                <i class="fa fa-circle text-success online-icon"></i>
+                                            @endif
+
+                                            {{ $user->name}}
+
+                                            @if(filled(($not_seen)))
+                                                <div class="badge badge-success rounded">
+                                                    {{ $not_seen->count() }}
+                                                </div>
+                                            @endif
+                                        </li>
+                                    </a>
                                     @endif
-
-                                    {{ $user->name}}
-
-                                    @if(filled(($not_seen)))
-                                    <div class="badge badge-success rounded">
-                                        {{ $not_seen->count() }}
-                                    </div>
-                                    @endif
-                                </li>
-                            </a>
-                            @endif
-
-
-                            @endif
-
+                                @endif
                             @endforeach
                         </ul>
 
@@ -71,7 +68,7 @@
                     <!-- munculin nama usernya pas di klik -->
                     <div class="card-header" style="background: #323333; color: white;">
                         @if(isset($sender))
-                        {{$sender->name}}
+                            {{$sender->name}}
                         @endif
                     </div>
 
@@ -81,15 +78,15 @@
                     <div class="card-body message-box" wire:poll="mountdata">
                         <!-- buat ketika kita milih user maka chatnya bakal muncul semua sesuai user yg kita pilih -->
                         @if(filled($allmessages))
-                        @foreach($allmessages as $mgs)
+                            @foreach($allmessages as $mgs)
 
-                        <!-- if else yg didalem class adalh untuk ui chat yg kita kirim disebelah kanan dan chat yg kita terima di sebelah kiri -->
-                        <div class="single-message @if($mgs->user_id == auth()->id()) sent @else received @endif">
-                            <p class="font-weight-bolder my-0">{{ $mgs->user->name }}</p> <!-- seting namanya ada di models Message -->
-                            {{$mgs->message}}
-                            <br><small class="text-muted w-100">Sent <em>{{ $mgs->created_at }}</em></small>
-                        </div>
-                        @endforeach
+                                <!-- if else yg didalem class adalh untuk ui chat yg kita kirim disebelah kanan dan chat yg kita terima di sebelah kiri -->
+                                <div class="single-message @if($mgs->user_id == auth()->id()) sent @else received @endif">
+                                    <p class="font-weight-bolder my-0">{{ $mgs->user->name }}</p> <!-- seting namanya ada di models Message -->
+                                        {{$mgs->message}}
+                                    <br><small class="text-muted w-100">Sent <em>{{ $mgs->created_at }}</em></small>
+                                </div>
+                            @endforeach
                         @endif
 
                     </div>
