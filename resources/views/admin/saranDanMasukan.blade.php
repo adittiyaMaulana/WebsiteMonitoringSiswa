@@ -160,8 +160,8 @@
                     @forelse ($saranmasukan as $data)
                     <tr>
                         <td>{{$data->id_user}}</td>
-                        <td><p class="limit_judul_masukansaran">{{$data->judul}}</p></td>
-                        <td><p class="limit_isi_masukansaran">{{$data->isi}}</p></td>
+                        <td><p class="limit_text_judul">{{$data->judul}}</p></td>
+                        <td><p class="limit_text_isi">{{$data->isi}}</p></td>
                         <td>
                             <a href="{{route('admin.saranDanMasukanDetail', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
                             <a href="{{route('admin.hapusSaranDanMasukan', $data->id)}}" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus ?')"><i class="fas fa-trash-alt"></i></a>

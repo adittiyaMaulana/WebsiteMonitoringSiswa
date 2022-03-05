@@ -36,6 +36,15 @@ body {
 }
 
 
+.text_list_berita{
+    display: -webkit-box;
+    height: 3.6em; 
+    line-height: 1.3em;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 @media screen and (max-width: 760px) {
     .my-content {

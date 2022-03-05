@@ -150,7 +150,7 @@
                         <div class="col-md-8">
                             <div class="card-body">
                         <h5 class=" card-title">{{$data->judul}}</h5>
-                                <p class="card-text text">{{$data->isi}}</p>
+                                <p class="card-text text_list_berita">{{$data->isi}}</p>
                             </div>
                         </div>
                     </div>
@@ -162,38 +162,6 @@
         @endforelse
 
     </div>
-    <!-- table -->
-
-    <!-- <div class="tabel mt-5 ml-3 mr-4">
-        <table id="tableAdmin" class="table table-hover" style="width:100%">
-            <thead class="table-dark">
-                <tr>
-                    <th>No</th>
-                    <th>Judul</th>
-                    <th>Tanggal</th>
-                    <th>aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                @forelse ($berita as $data)
-                <tr>
-                    <td>{{ $loop->iteration }}</td>
-                    <td>{{$data->judul}}</td>
-                    <td>{{$data->created_at}}</td>
-                    <td>
-                        <a href="{{route('guru.lihatberita', $data->id)}}" class="btn btn-success"><i class="far fa-eye"></i></a>
-
-                    </td>
-                </tr>
-                @empty
-                <tr>
-                    <td colspan="6" class="text-center">Tidak ada data</td>
-                </tr>
-                @endforelse
-            </tbody>
-        </table>
-    </div> -->
-
 
     <!-- end my-content / semua content -->
 </div>

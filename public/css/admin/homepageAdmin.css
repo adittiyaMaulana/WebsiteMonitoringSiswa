@@ -15,11 +15,3 @@
     font-size: 15px;
     margin-top: 10px;
 }
-
-
-.limit_text{
-    width: 140px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
