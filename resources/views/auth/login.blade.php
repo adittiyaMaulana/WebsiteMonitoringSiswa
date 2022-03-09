@@ -17,6 +17,20 @@
 
     <div class="contentBox">
         <div class="formBox">
+
+        @if(session()->has('error'))
+            <div class="alert alert-danger d-flex align-items-center alert-dismissible fade show ml-4 mt-5 mr-4" role="alert">
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                    <use xlink:href="#exclamation-triangle-fill" />
+                </svg>
+                <div>
+                    {{ session()->get('error') }}
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+            </div>
+        @endif
+        
             <h4>Selamat Datang</h4>
             <br>
             <h1>Silahkan Login</h1>
