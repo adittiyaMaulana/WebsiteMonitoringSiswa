@@ -19,15 +19,14 @@ class OnlineMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        // penjelasan di menit 1.10.00 
         
-        $users_to_offline = User::where('last_activity', '<', now());
-        $users_to_online = User::where('last_activity', '>=', now());
-        if (isset($users_to_offline)) {
-            $users_to_offline->update(['is_online' => false]);
+        $user_offline = User::where('last_activity', '<', now());
+        $user_online = User::where('last_activity', '>=', now());
+        if (isset($user_offline)) {
+            $user_offline->update(['is_online' => false]);
         }
-        if (isset($users_to_online)) {
-            $users_to_online->update(['is_online' => true]);
+        if (isset($user_online)) {
+            $user_online->update(['is_online' => true]);
         }
         if (auth()->check()) {
             $cache_value = Cache::put('user-is-online', auth()->id(), \Carbon\Carbon::now()->addMinutes(1));

@@ -167,7 +167,7 @@
             <div class="isi">
                 <p style="text-align:left;">
                     Jadwal Mengajar
-                    <a href="/guru/jadwalGuru"><span style="float:right;">
+                    <a href="/guru/jadwalMengajar"><span style="float:right;">
                             Lihat Semua >>>
                         </span></a>
                 </p>
