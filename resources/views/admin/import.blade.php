@@ -282,7 +282,7 @@
             </form>
         </div>
 
-        <div id="mapel" class="tabcontent">
+        <div id="MataPelajaran" class="tabcontent">
             <div class="ml-3 mr-3 mt-5"></div>
             <h4 class="mb-5">Import Data Mata Pelajaran</h4>
             <form class="was-validated" method="POST" action="{{ route('importMataPelajaran') }}" enctype="multipart/form-data">
