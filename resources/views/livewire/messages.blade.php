@@ -16,7 +16,7 @@
                         Users
                     </div>
 
-                    <div class="card-body chatbox p-0">
+                    <div class="card-body list-user p-0">
 
                         <!-- list usernya -->
                         <ul class="list-group list-group-flush">
@@ -34,9 +34,9 @@
                                     @endphp
 
                                     @if($user->role != 1 && $user->role != 2 && $user->role == 3)
-                                        <a wire:click="getUser({{ $user->id }})" class="text-dark link" style="text-decoration: none;">
+                                        <a wire:click="getUser({{ $user->id }})" class="text-dark click" style="text-decoration: none;">
                                             <li class="list-group-item">
-                                                <img class="img-fluid avatar" src="https://www.jobstreet.co.id/en/cms/employer/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="">
+                                                <img class="img-fluid profileimg" src="https://www.jobstreet.co.id/en/cms/employer/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="">
 
                                                 <!-- status online -- ngaturnya ada di OnlineMiddleware-->
                                                 @if($user->is_online == true)
@@ -75,13 +75,13 @@
                     <!-- buat pesan (munculin chatnya)-->
                     <!-- fungsi wire:poll="mountdata" adalah untuk ketika kita send messagenya, maka kita g perlu refresh pagenya buat munculin chat yg kita kirim -->
 
-                    <div class="card-body message-box" wire:poll="mountdata">
+                    <div class="card-body chat-box" wire:poll="mountdata">
                         <!-- buat ketika kita milih user maka chatnya bakal muncul semua sesuai user yg kita pilih -->
                         @if(filled($allmessages))
                             @foreach($allmessages as $mgs)
 
                                 <!-- if else yg didalem class adalh untuk ui chat yg kita kirim disebelah kanan dan chat yg kita terima di sebelah kiri -->
-                                <div class="single-message @if($mgs->user_id == auth()->id()) sent @else received @endif">
+                                <div class="chat @if($mgs->user_id == auth()->id()) terkirim @else balasan @endif">
                                     <p class="font-weight-bolder my-0">{{ $mgs->user->name }}</p> <!-- seting namanya ada di models Message -->
                                         {{$mgs->message}}
                                     <br><small class="text-muted w-100">Sent <em>{{ $mgs->created_at }}</em></small>
