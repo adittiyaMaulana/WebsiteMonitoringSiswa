@@ -13,6 +13,7 @@ class DaftarNilai extends Model
         'nilai_tugas',
         'nilai_uts',
         'nilai_uas',
+        'nilai_rata',
         'semester',
         'kelas',
     ];

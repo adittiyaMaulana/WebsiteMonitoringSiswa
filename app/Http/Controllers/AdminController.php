@@ -390,7 +390,7 @@ class AdminController extends Controller {
 		if($data){
 			return redirect()->route('admin.importData')->withSuccess(['Berhasil Melakukan Import Data!']);
 		}else{
-			return redirect()->route('admin.importData');
+			return redirect()->route('admin.importData')->withError(['Gagal']);
 		}
     }
 

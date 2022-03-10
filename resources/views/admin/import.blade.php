@@ -161,7 +161,7 @@
             <button class="tablinks" onclick="openCity(event, 'Nilai')">Nilai</button>
             <button class="tablinks" onclick="openCity(event, 'DetailNilai')">Detail Nilai</button>
             <button class="tablinks" onclick="openCity(event, 'JadwalPelajaran')">Jadwal Pelajaran</button>
-            <button class="tablinks" onclick="openCity(event, 'DetailJadwaPelajaran')">Detail Jadwa Pelajaran</button>
+            <button class="tablinks" onclick="openCity(event, 'DetailJadwalPelajaran')">Detail Jadwa Pelajaran</button>
             <button class="tablinks" onclick="openCity(event, 'JadwalMengajar')">Jadwal Mengajar</button>
             <button class="tablinks" onclick="openCity(event, 'DetailJadwalMengajar')">Detail Jadwal Mengajar</button>
             <button class="tablinks" onclick="openCity(event, 'KalenderAkademik')">Kalender Akademik</button>
@@ -240,7 +240,7 @@
             <form class="was-validated" method="POST" action="{{ route('importJadwalPelajaran') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control mb-3" type="file" id="formFile" required>
+                    <input class="form-control mb-3" type="file" name="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>
@@ -252,7 +252,7 @@
             <form class="was-validated" method="POST" action="{{ route('importJadwalMengajar') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <input class="form-control mb-3" type="file" id="formFile" required>
+                    <input class="form-control mb-3" type="file" name="file" id="formFile" required>
                     <button class="btn btn-success">Import Data</button>
                 </div>
             </form>

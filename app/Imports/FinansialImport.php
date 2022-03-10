@@ -18,11 +18,8 @@ class FinansialImport implements ToModel, WithStartRow, WithValidation
     public function model(array $row)
     {
         return new Finansial([
-            'id_siswa' => $row[0],
-            'nama_bayaran' => $row[1],
-            'jumlah' => $row[2],
-            'jatuh_tempo' => $row[3],
-            'status' => $row[4]
+            'nama_bayaran' => $row[0],
+            'jumlah' => $row[1]
         ]);
     }
     public function rules(): array {
