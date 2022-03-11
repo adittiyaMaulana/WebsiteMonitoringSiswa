@@ -170,7 +170,7 @@ class GuruController extends Controller
 
     public function filterKalender($id){
 
-        //get email orang tua berdasar login
+        //##
 
         if($id!=''){
             $jadwal = DB::table('kalender_akademik')

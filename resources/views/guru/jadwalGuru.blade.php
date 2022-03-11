@@ -187,7 +187,7 @@
     $(document).ready(function() {
         $('#hari').on('change', function(e) {
             var id = e.target.value;
-            $.get('{{ url("guru/filterJadwalGuru")}}/' + id, function(data) {
+            $.get('{{ url("guru/filterJadwal")}}/' + id, function(data) {
                 console.log(id);
                 console.log(data);
                 $('#jadwal_mengajar').empty();
