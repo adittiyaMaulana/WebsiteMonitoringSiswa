@@ -23,13 +23,15 @@ class FinansialImport implements ToModel, WithStartRow, WithValidation
         ]);
     }
     public function rules(): array {
-    return [
-   '1' => Rule::unique('finansial','nama_bayaran'), // Table name, field in your db
-    ];
+        return [
+            '0' => ['required'],
+            '1' => ['required']
+        ];
     }
     public function customValidationMessages() {
         return [
-        '1.unique' => 'Gagal Import, Data Duplikat!',
+            '0.required' => 'Gagal Import, Data Kosong!',
+            '1.required' => 'Gagal Import, Data Kosong!'
         ];
     }
     public function startRow(): int

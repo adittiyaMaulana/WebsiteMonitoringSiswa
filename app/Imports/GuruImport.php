@@ -28,12 +28,22 @@ class GuruImport implements ToModel, WithStartRow, WithValidation
     }
     public function rules(): array {
         return [
-            '3' => Rule::unique('guru','nuptk'), // Table name, field in your db
+            '0' => ['required','numeric'],
+            '1' => ['required'],
+            '2' => ['required','unique:guru,nuptk'],
+            '3' => ['required','date_format:Y-m-d'],
+            '4' => ['required'],
+            '5' => ['required','unique:guru,email']
         ];
     }
     public function customValidationMessages() {
         return [
-            '3.unique' => 'Gagal Import, Data Duplikat!',
+           '0.numeric' => 'Gagal Import, Salah Format!',
+           '1.required' => 'Gagal Import, Data Kosong!',
+           '2.unique' => 'Gagal Import, Data Duplikat!',
+           '3.date_format' => 'Gagal Import, Format Tanggal Salah!',
+           '4.required' => 'Gagal Import, Data Kosong!',
+           '5.unique' => 'Gagal Import, Data Duplikat!'
         ];
     }
     public function startRow(): int
