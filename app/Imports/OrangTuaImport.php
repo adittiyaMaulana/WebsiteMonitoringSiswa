@@ -25,13 +25,19 @@ class OrangTuaImport implements ToModel, WithStartRow, WithValidation
         ]);
     }
     public function rules(): array {
-    return [
-   '3' => Rule::unique('orang_tua','email'), // Table name, field in your db
-    ];
+        return [
+            '0' => ['required'],
+            '1' => ['required','date_format:Y-m-d'],
+            '2' => ['required'],
+            '3' => ['required','unique:orang_tua,email']
+        ];
     }
     public function customValidationMessages() {
         return [
-        '3.unique' => 'Gagal Import, Data Duplikat!',
+            '0.required' => 'Gagal Import, Data Kosong!',
+            '1.required' => 'Gagal Import, Format Tanggal Salah!',
+            '2.required' => 'Gagal Import, Data Kosong!',
+            '3.unique' => 'Gagal Import, Data Duplikat!',
         ];
     }
     public function startRow(): int

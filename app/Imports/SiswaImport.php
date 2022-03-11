@@ -29,12 +29,25 @@ class SiswaImport implements ToModel, WithStartRow, WithValidation
     }
    	public function rules(): array {
    	return [
-      '3' => Rule::unique('profil_siswa', 'nis'), // Table name, field in your db
+   	  '0' => ['required','numeric'],
+   	  '1' => ['required','numeric'],
+   	  '2' => ['required'],
+      '3' => ['required','unique:profil_siswa,nis'],
+      '4' => ['required','date_format:Y-m-d'],
+      '5' => ['required'],
+      '6' => ['required','numeric'],
    	];
 	}
 	public function customValidationMessages() {
 	   return [
+	      '0.numeric' => 'Gagal Import, Salah Format!',
+	      '1.numeric' => 'Gagal Import, Salah Format!',
+	      '2.required' => 'Gagal Import, Data Kosong!',
 	      '3.unique' => 'Gagal Import, Data Duplikat!',
+	      '4.date_format' => 'Gagal Import, Format Tanggal Salah!',
+	      '5.required' => 'Gagal Import, Data Kosong!',
+	      '6.numeric' => 'Gagal Import, Salah Format!',
+	      
 	   ];
 	}
     public function startRow(): int
