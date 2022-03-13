@@ -27,13 +27,23 @@ class UsersImport implements ToModel, WithStartRow, WithValidation
         ]);
     }
     public function rules(): array {
-    return [
-   '1' => Rule::unique('users','email'), // Table name, field in your db
-    ];
+        return [
+            '0' => ['required'],
+            '1' => ['required','unique:users,email'],
+            '2' => ['required'],
+            '3' => ['required'],
+            '4' => ['required'],
+            '5' => ['required']
+        ];
     }
     public function customValidationMessages() {
         return [
-        '1.unique' => 'Gagal Import, Data Duplikat!',
+            '0.required' => 'Gagal Import, Data Kosong!',
+            '1.required' => 'Gagal Import, Data Duplikat!',
+            '2.required' => 'Gagal Import, Data Kosong!',
+            '3.required' => 'Gagal Import, Data Kosong!',
+            '4.required' => 'Gagal Import, Data Kosong!',
+            '5.required' => 'Gagal Import, Data Kosong!'
         ];
     }
     public function startRow(): int

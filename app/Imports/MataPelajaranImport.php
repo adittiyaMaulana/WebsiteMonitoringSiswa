@@ -23,13 +23,15 @@ class MataPelajaranImport implements ToModel, WithStartRow, WithValidation
         ]);
     }
     public function rules(): array {
-    return [
-   '0' => Rule::unique('mata_pelajaran','nama'), // Table name, field in your db
-    ];
+        return [
+            '0' => ['required'],
+            '1' => ['required']
+        ];
     }
     public function customValidationMessages() {
         return [
-        '0.unique' => 'Gagal Import, Data Duplikat!',
+            '0.required' => 'Gagal Import, Data Kosong!',
+            '1.required' => 'Gagal Import, Data Kosong!'
         ];
     }
     public function startRow(): int
