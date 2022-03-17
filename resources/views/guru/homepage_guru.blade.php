@@ -63,13 +63,13 @@
 
 
         <li class="list">
-            <a href="{{ route('login') }}" onclick="event.preven-tDefault();
+            <a href="{{ route('logout') }}" onclick="event.preven-tDefault();
                             document.getElementById('logout-form').submit();">
                 <span class="icon">
                     <ion-icon name="log-out-outline"></ion-icon>
                 </span>
                 <span class="title">Logout</span>
-                <form id="logout-form" action="{{ route('login') }}" method="POST" class="d-none">
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
                 </form>
             </a>

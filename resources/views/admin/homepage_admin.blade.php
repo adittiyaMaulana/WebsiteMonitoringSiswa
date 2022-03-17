@@ -62,7 +62,7 @@
         </li>
 
         <li class="list">
-            <a href="{{ route('login') }}" onclick="event.preven-tDefault();
+            <a href="{{ route('logout') }}" onclick="event.preven-tDefault();
                             document.getElementById('logout-form').submit();">
                 <span class="icon">
                     <ion-icon name="log-out-outline"></ion-icon>

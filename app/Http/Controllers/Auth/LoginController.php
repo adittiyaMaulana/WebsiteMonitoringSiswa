@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite; //tambahkan library socialite
 use App\Models\User; //tambahkan model user
 use Illuminate\Support\Facades\Hash;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -96,4 +97,9 @@ class LoginController extends Controller
         $user->update();
         return redirect('login');
     }
+    
+    public function logout(Request $request) {
+		  Auth::logout();
+		  return redirect('/login');
+		}
 }
