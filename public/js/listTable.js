@@ -1,10 +1,3 @@
-// untuk bagian click pada row table masing-masing
-$(document).ready(function ($) {
-    $("*[data-href]").on("click", function () {
-        window.location = $(this).data("href");
-    });
-});
-
 // Untuk tableOrangTua
 $(document).ready(function () {
     $("#tableOrangTua").DataTable({
@@ -17,7 +10,7 @@ $(document).ready(function () {
     $("#tableGuru").DataTable();
 });
 
-// untuk tableguru
+// untuk tableadmin
 $(document).ready(function () {
     $("#tableAdmin").DataTable();
 });
